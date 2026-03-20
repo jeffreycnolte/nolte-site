@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const posts = [
+  {
+    title: "Why we stopped billing by the hour",
+    date: "2026-03-10",
+    slug: "#",
+    excerpt: "Hourly billing incentivizes the wrong things. We moved to a delivery-based model because we wanted our incentives to match our clients'."
+  },
+  {
+    title: "What makes a good acceptance criterion",
+    date: "2026-02-24",
+    slug: "#",
+    excerpt: "Acceptance criteria are the contract between us and the client. Here is how we write them so they are testable, unambiguous, and useful."
+  },
+  {
+    title: "Forecasting with throughput data",
+    date: "2026-02-10",
+    slug: "#",
+    excerpt: "Story points are opinions. Throughput is data. We use historical delivery rates to forecast timelines — and we stand behind those forecasts."
+  },
+  {
+    title: "The cost of undefined done",
+    date: "2026-01-27",
+    slug: "#",
+    excerpt: "When no one agrees on what done means, every handoff becomes a negotiation. Defining done before you start is the single highest-leverage practice in software delivery."
+  },
+  {
+    title: "Breaking work into deliveries",
+    date: "2026-01-13",
+    slug: "#",
+    excerpt: "Large work items destroy forecast accuracy. Here is how we decompose projects into week-sized deliveries without losing coherence."
+  },
+];
+---
+<Base title="Blog">
+
+  <header class="hero">
+    <span class="eyebrow">Writing</span>
+    <h1>From<br><em>the studio</em></h1>
+    <p class="hero-subtext">Thinking on predictive delivery, software engineering, and building a better model for agencies and clients.</p>
+  </header>
+
+  <section>
+    <ul class="blog-list">
+      {posts.map(post => (
+        <li class="blog-item">
+          <a href={post.slug}>
+            <span class="blog-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <h3>{post.title}</h3>
+            <p>{post.excerpt}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+</Base>

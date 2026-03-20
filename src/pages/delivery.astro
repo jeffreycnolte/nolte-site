@@ -1,0 +1,262 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="What is a Delivery?">
+
+  <header class="hero">
+    <span class="eyebrow">Predictive Delivery Model</span>
+    <h1>What is<br><em>a delivery?</em></h1>
+    <p class="hero-subtext">We bill for what ships, not for time logged. That model only works if everyone — including you — has the same answer to one question: what counts?</p>
+  </header>
+
+  <div class="definition-block">
+    <p>A delivery is a discrete, validated unit of work that produces a measurable change in a business objective — shipped, tested, and observable in production.</p>
+  </div>
+
+  <section>
+    <span class="section-label">The definition</span>
+    <h2>Every word is load-bearing</h2>
+    <p>This is not a general description. It is a precise commitment. Each term below rules something in and rules something out.</p>
+
+    <div class="word-grid">
+      <div class="word-cell">
+        <span class="word-term">Discrete</span>
+        <p>A clear start and end. One delivery does not bleed into another. You can point to it and see exactly when it entered the system and when it shipped.</p>
+      </div>
+      <div class="word-cell">
+        <span class="word-term">Validated</span>
+        <p>Someone other than the person who built it confirmed it does what it was supposed to do. It passed the agreed acceptance criteria defined before implementation started.</p>
+      </div>
+      <div class="word-cell">
+        <span class="word-term">Measurable change</span>
+        <p>Before this delivery, the business or user could not do something — or did it worse, slower, or at greater risk. After it ships, something observable is different.</p>
+      </div>
+      <div class="word-cell">
+        <span class="word-term">In production</span>
+        <p>Staging does not count. A demo does not count. A delivery is live, accessible, and doing its job in the real environment where it creates value.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label">The requirements</span>
+    <h2>Three conditions. All three.</h2>
+    <p>Before any piece of work enters the delivery system, it must satisfy all three of these conditions. Two out of three is not enough.</p>
+
+    <ul class="req-list">
+      <li class="req-item">
+        <span class="req-num"></span>
+        <div class="req-content">
+          <h3>Tied to a business objective</h3>
+          <p>Every delivery must trace back to a real business outcome — revenue, retention, activation, risk reduction, cost savings, time savings. Not a technical objective. A specific, observable result.</p>
+          <p class="test-sentence">"When this ships, [specific business outcome] improves because [mechanism]."</p>
+          <p>If you cannot complete that sentence with a concrete answer, the work is not ready to be committed as a delivery.</p>
+        </div>
+      </li>
+      <li class="req-item">
+        <span class="req-num"></span>
+        <div class="req-content">
+          <h3>Defined, testable acceptance criteria</h3>
+          <p>The delivery must have agreed acceptance criteria written in plain language, verifiable by a non-engineer, and defined before implementation begins. These are the contract between Nolte and the client.</p>
+          <p>Acceptance criteria written after the fact are not acceptance criteria. They are retrospective rationalization.</p>
+        </div>
+      </li>
+      <li class="req-item">
+        <span class="req-num"></span>
+        <div class="req-content">
+          <h3>Completable within one delivery cycle</h3>
+          <p>A delivery must be completable within a single week of active work. If a piece of work is too large, it must be broken into smaller deliveries — each with its own business objective and acceptance criteria.</p>
+          <p>This rule protects forecast accuracy. Consistent sizing is what makes throughput data meaningful.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="section-label">Delivery types</span>
+    <h2>Three types of work count</h2>
+    <p>All three types must satisfy the three requirements above. The type determines the nature of the work — not whether the definition applies.</p>
+
+    <div class="type-grid">
+      <div class="type-cell">
+        <span class="type-tag">Story</span>
+        <h3>User or business-facing capability</h3>
+        <p>A new behavior, feature, or experience that an end user or business stakeholder can observe directly.</p>
+      </div>
+      <div class="type-cell">
+        <span class="type-tag">Task</span>
+        <h3>Operational or technical work</h3>
+        <p>Infrastructure work, dependency upgrades, integrations, and configuration that produces a concrete, observable output.</p>
+      </div>
+      <div class="type-cell">
+        <span class="type-tag">Bug</span>
+        <h3>Verified defect resolved in production</h3>
+        <p>A confirmed defect that causes the system to behave differently from agreed acceptance criteria, resolved and confirmed in production.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label">In practice</span>
+    <h2>What deliveries look like</h2>
+    <p>The definition is abstract. These examples are concrete. Each one shows what qualifies and — equally important — what does not.</p>
+
+    <div style="margin-top: 2.5rem;">
+
+      <div class="example">
+        <div class="example-header" data-toggle>
+          <div class="example-title-group">
+            <span class="example-type-tag">Story</span>
+            <span class="example-title">Insurance brokerage — online quote request form</span>
+          </div>
+          <span class="example-toggle">+</span>
+        </div>
+        <div class="example-body">
+          <p class="example-scenario">A CPG insurance broker wants to reduce friction for small brands seeking general liability coverage. Prospects currently contact the team by email and wait 2–3 days for a quote.</p>
+          <div class="verdict">
+            <span class="verdict-label">This is a delivery</span>
+            <p>Enable prospects to submit a GL quote request via a structured online form that routes directly to the broker's intake workflow, with a confirmation sent within 60 seconds.</p>
+          </div>
+          <div class="not-delivery">
+            <span class="not-delivery-label">These are not deliveries</span>
+            <ul>
+              <li>The form existing in staging but not yet connected to the intake workflow</li>
+              <li>A Figma mockup of the form</li>
+              <li>Each individual input field built separately</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-header" data-toggle>
+          <div class="example-title-group">
+            <span class="example-type-tag">Task</span>
+            <span class="example-title">Any platform — Node.js runtime upgrade</span>
+          </div>
+          <span class="example-toggle">+</span>
+        </div>
+        <div class="example-body">
+          <p class="example-scenario">The platform is running Node.js 16, which reaches end-of-life and will no longer receive security patches.</p>
+          <div class="verdict">
+            <span class="verdict-label">This is a delivery</span>
+            <p>Upgrade Node.js runtime from v16 to v20 LTS across all services, validate that all existing test suites pass, and deploy to production with a rollback plan documented.</p>
+          </div>
+          <div class="not-delivery">
+            <span class="not-delivery-label">These are not deliveries</span>
+            <ul>
+              <li>Upgrading Node.js in the local development environment only</li>
+              <li>Completing the upgrade in staging without deploying to production</li>
+              <li>Each individual service counted as a separate delivery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-header" data-toggle>
+          <div class="example-title-group">
+            <span class="example-type-tag">Bug</span>
+            <span class="example-title">Any engagement — production defect resolved</span>
+          </div>
+          <span class="example-toggle">+</span>
+        </div>
+        <div class="example-body">
+          <p class="example-scenario">A client reports that the password reset flow silently fails for accounts created via Google OAuth. Users receive no error and no email.</p>
+          <div class="verdict">
+            <span class="verdict-label">This is a delivery</span>
+            <p>The bug is verified against the original acceptance criteria, reproduced, fixed, and confirmed resolved in production.</p>
+          </div>
+          <div class="not-delivery">
+            <span class="not-delivery-label">These are not deliveries</span>
+            <ul>
+              <li>The bug identified but only fixed in staging</li>
+              <li>The fix deployed without validation from the client</li>
+              <li>A workaround documented without the underlying defect resolved</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label">Readiness test</span>
+    <h2>Six questions. All six must be yes.</h2>
+    <p>Before any item is committed as a delivery, it goes through this test. If any answer is no, the work is not ready to enter the delivery system.</p>
+
+    <div class="readiness-test">
+      <p class="test-intro">Check each question as you confirm it. All six must be answered yes before the work is a delivery.</p>
+      <ul class="checklist" id="checklist">
+        <li class="check-item" data-check>
+          <div class="check-box"><span class="check-mark">&#10003;</span></div>
+          <span class="check-text">Can I name the business objective this delivery serves?</span>
+        </li>
+        <li class="check-item" data-check>
+          <div class="check-box"><span class="check-mark">&#10003;</span></div>
+          <span class="check-text">Can I describe what is observably different in the business after this ships?</span>
+        </li>
+        <li class="check-item" data-check>
+          <div class="check-box"><span class="check-mark">&#10003;</span></div>
+          <span class="check-text">Are the acceptance criteria written in plain language, before implementation starts?</span>
+        </li>
+        <li class="check-item" data-check>
+          <div class="check-box"><span class="check-mark">&#10003;</span></div>
+          <span class="check-text">Can someone other than the builder validate it against those criteria?</span>
+        </li>
+        <li class="check-item" data-check>
+          <div class="check-box"><span class="check-mark">&#10003;</span></div>
+          <span class="check-text">Will this be live in production when it counts as done?</span>
+        </li>
+        <li class="check-item" data-check>
+          <div class="check-box"><span class="check-mark">&#10003;</span></div>
+          <span class="check-text">Can this be completed within one delivery cycle?</span>
+        </li>
+      </ul>
+      <div class="readiness-result" id="readiness-result">0 / 6 confirmed</div>
+    </div>
+  </section>
+
+  <div class="bottom-line">
+    <h2>A delivery is a commitment, not an activity.</h2>
+    <p>Hourly billing was built around activity. Log the hours, bill the hours. Whether the work moved the business forward was someone else's problem.</p>
+    <p style="margin-top: 1rem;">Predictive software delivery is built around commitment. We commit to a delivery, define what done means before we start, validate it in production against those criteria, and stand behind the forecast with a guarantee.</p>
+    <p style="margin-top: 1rem;">Every forecast we make, every invoice we send, every conversation about what you got for your investment — it all rests on this definition being clear, consistent, and lived.</p>
+  </div>
+
+</Base>
+
+<script>
+  document.querySelectorAll('[data-toggle]').forEach(header => {
+    header.addEventListener('click', () => {
+      const body = header.nextElementSibling;
+      const toggle = header.querySelector('.example-toggle');
+      const isOpen = body?.classList.contains('open');
+      body?.classList.toggle('open', !isOpen);
+      if (toggle) toggle.textContent = isOpen ? '+' : '\u2212';
+    });
+  });
+
+  document.querySelectorAll('[data-check]').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('checked');
+      const box = item.querySelector('.check-box');
+      box?.classList.toggle('checked');
+      updateReadiness();
+    });
+  });
+
+  function updateReadiness() {
+    const checked = document.querySelectorAll('.check-item.checked').length;
+    const result = document.getElementById('readiness-result');
+    if (!result) return;
+    if (checked === 6) {
+      result.classList.add('ready');
+      result.textContent = 'Ready to enter the delivery system';
+    } else {
+      result.classList.remove('ready');
+      result.textContent = checked + ' / 6 confirmed';
+    }
+  }
+</script>

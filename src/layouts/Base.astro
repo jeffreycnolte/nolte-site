@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  navLabel?: string;
+}
+const { title, navLabel } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} — Nolte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="wordmark" href="/">Nolte</a>
+    <div class="nav-links">
+      <a href="/delivery" aria-current={currentPath === "/delivery" || currentPath === "/delivery/" ? "page" : undefined}>Model</a>
+      <a href="/blog" aria-current={currentPath === "/blog" || currentPath === "/blog/" ? "page" : undefined}>Blog</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <slot />
+</div>
+
+<footer>
+  <div class="inner">
+    <p>&copy; Nolte &mdash; nolte.io</p>
+    <p>Predictive Delivery Model</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
