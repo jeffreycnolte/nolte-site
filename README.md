@@ -1,43 +1,150 @@
-# Astro Starter Kit: Minimal
+# Nolte Marketing Site
 
-```sh
-npm create astro@latest -- --template minimal
+Predictable software delivery for leaders who outsource. Built with [Astro 6](https://astro.build).
+
+**Live:** https://nolte-site.netlify.app
+
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+# → http://localhost:4321
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deploy
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+# Deploy to Netlify (requires netlify-cli)
+npx netlify-cli deploy --prod --dir=dist
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Project Structure
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```
+src/
+├── components/        # Reusable components (BaseHead)
+├── content/
+│   ├── authors/       # Author JSON files
+│   ├── blog/          # Blog posts (Markdown)
+│   ├── categories/    # Category JSON files
+│   └── work/          # Case studies (Markdown)
+├── layouts/           # Base layout (nav + footer)
+├── pages/
+│   ├── about/         # About pages (story, team, NolteOS)
+│   ├── blog/          # Blog index, single, category, author, RSS
+│   └── work/          # Work index, single, category
+└── styles/
+    └── global.css     # All styles
 
-Any static assets, like images, can be placed in the `public/` directory.
+public/
+├── images/            # Blog + work images
+└── robots.txt
 
-## 🧞 Commands
+wp-exports/            # WordPress XML exports (reference)
+scripts/               # Migration scripts
+```
 
-All commands are run from the root of the project, from a terminal:
+## Content
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Adding a Blog Post
 
-## 👀 Want to learn more?
+Create a `.md` file in `src/content/blog/`:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```yaml
+---
+title: "Your Post Title"
+description: "Meta description for SEO"
+date: 2026-03-24
+author: jeffrey-nolte
+category: delivery
+image: /images/blog/your-image.jpg  # optional
+imageAlt: "Image description"        # optional
+---
+
+Your markdown content here.
+```
+
+**Categories:** delivery, engineering, founders, product, leadership, culture
+
+**Authors:** jeffrey-nolte, dan-urruela, yanna-lopes
+
+### Adding a Case Study
+
+Create a `.md` file in `src/content/work/`:
+
+```yaml
+---
+title: "Client Name"
+client: "Client Name"
+description: "One-line description"
+category: healthcare
+date: 2024-01-15
+status: "Live"
+partnership: "2+ years"
+services:
+  - Product Strategy
+  - Full-Stack Development
+metrics:
+  deliveries: 47
+  timeline: "4 months"
+  accuracy: "100%"
+  cycleTime: "4.2d"
+  onTime: "98%"
+testimonial:
+  quote: "Quote text"
+  author: "Person Name"
+  role: "Title, Company"
+team:
+  - name: "Jeffrey Nolte"
+    role: "Delivery Lead"
+platforms:
+  - Web
+  - iOS
+phases:
+  - name: "Strategy"
+    duration: "4 weeks"
+  - name: "Build"
+    duration: "12 weeks"
+image: /images/work/client/hero.jpg
+imageAlt: "Description"
+---
+```
+
+## Working with Claude Code
+
+This repo includes a `CLAUDE.md` file that gives Claude context about the project. Any team member with Claude Code can:
+
+```bash
+# Navigate to repo
+cd nolte-site
+
+# Start Claude Code
+claude
+
+# Claude will automatically read CLAUDE.md for project context
+```
+
+See `CLAUDE.md` for project conventions and guidelines.
+
+## Design
+
+See `DESIGN-BRIEF.md` for the full design brief, brand guidelines, and what needs refinement.
+
+## Tech Stack
+
+- **Framework:** Astro 6 (static site generator)
+- **Content:** Markdown with Zod-validated frontmatter schemas
+- **Styling:** Vanilla CSS with custom properties
+- **Fonts:** Instrument Serif, DM Mono, Geist
+- **Hosting:** Netlify
+- **SEO:** Sitemap, RSS, JSON-LD, Open Graph, canonical URLs

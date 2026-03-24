@@ -14,6 +14,8 @@ const { study } = Astro.props;
 const { Content } = await render(study);
 const categories = await getCollection('categories');
 const category = categories.find(c => c.id === study.data.category);
+
+const { metrics, testimonial, team, platforms, phases } = study.data;
 ---
 <Base
   title={`${study.data.client} — Case Study`}
@@ -22,40 +24,551 @@ const category = categories.find(c => c.id === study.data.category);
   image={study.data.image}
   imageAlt={study.data.imageAlt}
 >
-  <article>
-    <div class="work-header">
-      <span class="eyebrow">{category?.data.title || study.data.category}</span>
-      <h1>{study.data.client}</h1>
-      <p>{study.data.description}</p>
-    </div>
+  <article class="case-study">
 
-    <div class="work-sidebar">
-      <div class="work-sidebar-row">
-        <span class="work-sidebar-label">Client</span>
-        <span class="work-sidebar-value">{study.data.client}</span>
+    {/* ===== COMBINED HERO ===== */}
+    <div class="cs-hero">
+      <div class="cs-hero-content">
+        <span class="cs-eyebrow">{category?.data.title || study.data.category}</span>
+        <h1>{study.data.client}</h1>
+        <p class="cs-hero-desc">{study.data.description}</p>
+        <div class="cs-hero-partnership">
+          <span class="cs-partnership-duration">{study.data.partnership}</span>
+          <span class="cs-partnership-label">Partnership</span>
+        </div>
+
+        {metrics && (
+          <div class="cs-metrics-bar">
+            <div class="cs-metric">
+              <span class="cs-metric-val">{metrics.deliveries}</span>
+              <span class="cs-metric-label">Deliveries</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-val">{metrics.timeline}</span>
+              <span class="cs-metric-label">Timeline</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-val">{metrics.accuracy}</span>
+              <span class="cs-metric-label">On Budget</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-val">{metrics.cycleTime}</span>
+              <span class="cs-metric-label">Avg Cycle Time</span>
+            </div>
+          </div>
+        )}
       </div>
-      <div class="work-sidebar-row">
-        <span class="work-sidebar-label">Industry</span>
-        <span class="work-sidebar-value">{category?.data.title || study.data.category}</span>
-      </div>
-      <div class="work-sidebar-row">
-        <span class="work-sidebar-label">Status</span>
-        <span class="work-sidebar-value">{study.data.status}</span>
-      </div>
-      <div class="work-sidebar-row">
-        <span class="work-sidebar-label">Partnership</span>
-        <span class="work-sidebar-value">{study.data.partnership}</span>
-      </div>
-      {study.data.services && (
-        <div class="work-sidebar-row">
-          <span class="work-sidebar-label">Services</span>
-          <span class="work-sidebar-value">{study.data.services.join(', ')}</span>
+      {study.data.image && (
+        <div class="cs-hero-image">
+          <img src={study.data.image} alt={study.data.imageAlt || study.data.client} />
         </div>
       )}
     </div>
 
-    <div class="prose">
-      <Content />
+    {/* ===== PHASE TIMELINE ===== */}
+    {phases && phases.length > 0 && (
+      <div class="cs-phases">
+        <span class="cs-section-label">Project Phases</span>
+        <div class="cs-phase-track">
+          {phases.map((phase, i) => (
+            <div class="cs-phase">
+              <div class="cs-phase-marker">
+                <span class="cs-phase-dot"></span>
+                {i < phases.length - 1 && <span class="cs-phase-line"></span>}
+              </div>
+              <div class="cs-phase-info">
+                <span class="cs-phase-name">{phase.name}</span>
+                <span class="cs-phase-duration">{phase.duration}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {/* ===== CONTENT + SIDEBAR LAYOUT ===== */}
+    <div class="cs-body">
+      <div class="cs-content">
+        <div class="prose">
+          <Content />
+        </div>
+      </div>
+
+      <aside class="cs-sidebar">
+        <div class="cs-sidebar-section">
+          <span class="cs-sidebar-heading">Client</span>
+          <span class="cs-sidebar-value">{study.data.client}</span>
+        </div>
+        <div class="cs-sidebar-section">
+          <span class="cs-sidebar-heading">Industry</span>
+          <span class="cs-sidebar-value">{category?.data.title || study.data.category}</span>
+        </div>
+        <div class="cs-sidebar-section">
+          <span class="cs-sidebar-heading">Status</span>
+          <span class="cs-sidebar-value">{study.data.status}</span>
+        </div>
+        <div class="cs-sidebar-section">
+          <span class="cs-sidebar-heading">Partnership</span>
+          <span class="cs-sidebar-value">{study.data.partnership}</span>
+        </div>
+        {platforms && platforms.length > 0 && (
+          <div class="cs-sidebar-section">
+            <span class="cs-sidebar-heading">Platforms</span>
+            <div class="cs-tag-list">
+              {platforms.map(p => <span class="cs-tag">{p}</span>)}
+            </div>
+          </div>
+        )}
+        {study.data.services && (
+          <div class="cs-sidebar-section">
+            <span class="cs-sidebar-heading">Services</span>
+            <ul class="cs-service-list">
+              {study.data.services.map(s => <li>{s}</li>)}
+            </ul>
+          </div>
+        )}
+      </aside>
     </div>
+
+    {/* ===== DELIVERY DATA VISUALIZATION ===== */}
+    {metrics && (
+      <div class="cs-delivery-data">
+        <span class="cs-section-label">Delivery Data</span>
+        <div class="shot-window shot-window-dark">
+          <div class="shot-toolbar">
+            <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+          </div>
+          <div class="shot-content">
+            <div class="shot-metrics-grid">
+              <div class="shot-metric-card">
+                <span class="shot-metric-label">Total Deliveries</span>
+                <span class="shot-metric-val">{metrics.deliveries}</span>
+              </div>
+              <div class="shot-metric-card">
+                <span class="shot-metric-label">Forecast Accuracy</span>
+                <span class="shot-metric-val">{metrics.accuracy}</span>
+              </div>
+              <div class="shot-metric-card">
+                <span class="shot-metric-label">Avg Cycle Time</span>
+                <span class="shot-metric-val">{metrics.cycleTime}</span>
+              </div>
+              <div class="shot-metric-card">
+                <span class="shot-metric-label">Timeline</span>
+                <span class="shot-metric-val">{metrics.timeline}</span>
+              </div>
+            </div>
+            {metrics.onTime && (
+              <div class="shot-progress">
+                <span class="shot-progress-label">On-Time Delivery Rate</span>
+                <div class="shot-progress-bar">
+                  <div class="shot-progress-fill" style={`width: ${metrics.onTime}`}></div>
+                </div>
+                <div class="shot-progress-legend">
+                  <span>{metrics.onTime} on time</span>
+                  <span>Target: 95%</span>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    )}
+
+    {/* ===== TESTIMONIAL ===== */}
+    {testimonial && (
+      <div class="cs-testimonial">
+        <blockquote>
+          <p>&ldquo;{testimonial.quote}&rdquo;</p>
+          <footer>
+            <strong>{testimonial.author}</strong>
+            <span>{testimonial.role}</span>
+          </footer>
+        </blockquote>
+      </div>
+    )}
+
+    {/* ===== TEAM ===== */}
+    {team && team.length > 0 && (
+      <div class="cs-team">
+        <span class="cs-section-label">Project Team</span>
+        <div class="cs-team-grid">
+          {team.map(member => (
+            <div class="cs-team-member">
+              <div class="cs-team-avatar">
+                {member.name.split(' ').map(n => n[0]).join('')}
+              </div>
+              <div class="cs-team-info">
+                <span class="cs-team-name">{member.name}</span>
+                <span class="cs-team-role">{member.role}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
   </article>
 </Base>
+
+<style>
+  /* ===== COMBINED HERO ===== */
+  .cs-hero {
+    background: var(--black);
+    color: var(--white);
+    margin: -5rem -2rem 0;
+    display: flex;
+    min-height: 480px;
+  }
+  .cs-hero-content {
+    flex: 1;
+    padding: 6rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+  .cs-hero-image {
+    flex: 0 0 45%;
+    overflow: hidden;
+    position: relative;
+  }
+  .cs-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .cs-hero-partnership {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .cs-partnership-duration {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+  }
+  .cs-partnership-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .cs-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .cs-hero h1 {
+    font-family: var(--serif);
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .cs-hero-desc {
+    font-size: 1rem;
+    color: rgba(250,250,248,0.6);
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 2rem;
+  }
+
+  /* Metrics grid */
+  .cs-metrics-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    margin-top: auto;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .cs-metric {
+    background: rgba(255,255,255,0.05);
+    padding: 1.25rem 1.5rem;
+  }
+  .cs-metric-val {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+  }
+  .cs-metric-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ===== PHASE TIMELINE ===== */
+  .cs-phases {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: 3rem;
+  }
+  .cs-section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-400);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .cs-phase-track {
+    display: flex;
+    gap: 0;
+  }
+  .cs-phase {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .cs-phase-marker {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+  .cs-phase-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .cs-phase-line {
+    flex: 1;
+    height: 2px;
+    background: var(--gray-200);
+  }
+  .cs-phase-name {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .cs-phase-duration {
+    display: block;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gray-400);
+    margin-top: 2px;
+  }
+
+  /* ===== BODY LAYOUT ===== */
+  .cs-body {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 3rem;
+    align-items: start;
+  }
+  .cs-content {
+    min-width: 0;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .cs-sidebar {
+    position: sticky;
+    top: 2rem;
+    background: var(--gray-100);
+    padding: 1.5rem;
+    border-radius: 6px;
+  }
+  .cs-sidebar-section {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .cs-sidebar-section:last-child {
+    border-bottom: none;
+  }
+  .cs-sidebar-heading {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray-400);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .cs-sidebar-value {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .cs-tag-list {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .cs-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 3px 8px;
+    background: var(--gray-200);
+    border-radius: 3px;
+    color: var(--gray-600);
+  }
+  .cs-service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .cs-service-list li {
+    font-size: 13px;
+    padding: 3px 0;
+    color: var(--gray-600);
+  }
+
+  /* ===== DELIVERY DATA ===== */
+  .cs-delivery-data {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  /* ===== TESTIMONIAL ===== */
+  .cs-testimonial {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .cs-testimonial blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+  }
+  .cs-testimonial blockquote p {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  .cs-testimonial footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .cs-testimonial footer strong {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .cs-testimonial footer span {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gray-400);
+  }
+
+  /* ===== TEAM ===== */
+  .cs-team {
+    margin-bottom: 4rem;
+  }
+  .cs-team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+  .cs-team-member {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .cs-team-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--dark);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+  .cs-team-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .cs-team-role {
+    display: block;
+    font-size: 12px;
+    color: var(--gray-400);
+    font-family: var(--mono);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .cs-hero {
+      flex-direction: column;
+      min-height: auto;
+    }
+    .cs-hero-content {
+      padding: 4rem 1.5rem 2rem;
+    }
+    .cs-hero-image {
+      flex: none;
+      max-height: 280px;
+    }
+    .cs-hero h1 {
+      font-size: 2.2rem;
+    }
+    .cs-metrics-bar {
+      flex-wrap: wrap;
+      gap: 1.5rem 2rem;
+    }
+    .cs-metric-val {
+      font-size: 22px;
+    }
+    .cs-phase-track {
+      flex-direction: column;
+      gap: 0;
+    }
+    .cs-phase {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding-bottom: 1.25rem;
+    }
+    .cs-phase-marker {
+      flex-direction: column;
+      width: auto;
+      margin-bottom: 0;
+    }
+    .cs-phase-line {
+      width: 2px;
+      height: 24px;
+      flex: none;
+    }
+    .cs-body {
+      grid-template-columns: 1fr;
+    }
+    .cs-sidebar {
+      position: static;
+      order: -1;
+    }
+    .cs-testimonial blockquote p {
+      font-size: 1.25rem;
+    }
+    .cs-team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

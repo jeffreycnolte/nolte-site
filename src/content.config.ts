@@ -51,6 +51,27 @@ const work = defineCollection({
     imageAlt: z.string().optional(),
     services: z.array(z.string()).optional(),
     draft: z.boolean().default(false),
+    metrics: z.object({
+      deliveries: z.number(),
+      timeline: z.string(),
+      accuracy: z.string(),
+      cycleTime: z.string(),
+      onTime: z.string().optional(),
+    }).optional(),
+    testimonial: z.object({
+      quote: z.string(),
+      author: z.string(),
+      role: z.string(),
+    }).optional(),
+    team: z.array(z.object({
+      name: z.string(),
+      role: z.string(),
+    })).optional(),
+    platforms: z.array(z.string()).optional(),
+    phases: z.array(z.object({
+      name: z.string(),
+      duration: z.string(),
+    })).optional(),
   }),
 });
 

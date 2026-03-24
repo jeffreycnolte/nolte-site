@@ -11,8 +11,8 @@ const categories = await getCollection('categories', ({ data }) => data.scope ==
 
   <div class="category-header">
     <span class="eyebrow">Case Studies</span>
-    <h1>From Start to <em>Series A</em></h1>
-    <p>Founders building critical products we've taken from vision to market. Predictably.</p>
+    <h1>Delivery That Speaks for <em>Itself</em></h1>
+    <p>Every engagement is forecasted, priced per delivery, and measured against our predictions.</p>
   </div>
 
   <div class="work-categories">
@@ -25,6 +25,20 @@ const categories = await getCollection('categories', ({ data }) => data.scope ==
   <div class="work-grid">
     {studies.map(study => (
       <a class="work-card" href={`/work/${study.id}`}>
+        {study.data.metrics && (
+          <div class="work-card-preview">
+            <div class="mini-metrics">
+              <div class="mini-metric">
+                <span class="mini-metric-value">{study.data.metrics.deliveries}</span>
+                <span class="mini-metric-label">Deliveries</span>
+              </div>
+              <div class="mini-metric">
+                <span class="mini-metric-value">{study.data.metrics.accuracy}</span>
+                <span class="mini-metric-label">Accuracy</span>
+              </div>
+            </div>
+          </div>
+        )}
         <span class="work-card-type">{study.data.category}</span>
         <h3>{study.data.client}</h3>
         <p>{study.data.description}</p>
