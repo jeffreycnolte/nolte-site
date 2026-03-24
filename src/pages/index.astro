@@ -1,64 +1,372 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Predictive Software Delivery">
+<Base title="Predictable Software Delivery" fullWidth>
 
-  <header class="hero">
-    <span class="eyebrow">Software Agency</span>
-    <h1>We ship software<br><em>you can predict.</em></h1>
-    <p class="hero-subtext">Nolte replaces hourly billing with predictive delivery. You know what ships, when it ships, and what it costs — before we write a line of code.</p>
-  </header>
-
-  <div class="definition-block">
-    <p>We are a software agency that bills for outcomes, not hours. Every engagement is forecast-driven, delivery-guaranteed, and backed by data.</p>
-  </div>
-
-  <section>
-    <span class="section-label">What we do</span>
-    <h2>Four things, done well</h2>
-    <p>We focus on the work that moves the business. Everything we deliver is scoped, forecast, and guaranteed.</p>
-
-    <div class="services-grid">
-      <div class="service-cell">
-        <span class="service-num">01</span>
-        <h3>Product Engineering</h3>
-        <p>Full-stack development for web and mobile products. We build, ship, and iterate — with every delivery tied to a business outcome.</p>
-      </div>
-      <div class="service-cell">
-        <span class="service-num">02</span>
-        <h3>Platform &amp; Infrastructure</h3>
-        <p>Cloud architecture, CI/CD, observability, and runtime upgrades. Technical work with measurable impact on reliability and cost.</p>
-      </div>
-      <div class="service-cell">
-        <span class="service-num">03</span>
-        <h3>Data &amp; Integration</h3>
-        <p>API design, third-party integrations, data pipelines, and migration. We connect your systems and make them talk to each other.</p>
-      </div>
-      <div class="service-cell">
-        <span class="service-num">04</span>
-        <h3>Strategy &amp; Advisory</h3>
-        <p>Technical due diligence, architecture reviews, and roadmap planning. We help you make decisions before committing resources.</p>
+  <!-- DARK HERO -->
+  <div class="hero-dark">
+    <div class="wide-wrap">
+      <h1>Predictable Software<br>Delivery for Leaders<br>Who Can't Afford to <em>Miss</em></h1>
+      <p class="hero-subtext">NolteOS turns 20 years of delivery data into predictable, fixed-price software delivery. Describe what you're building and get a delivery plan with 95% accuracy on scope, timeline, and cost.</p>
+      <div class="hero-actions">
+        <a class="btn-hero btn-hero-primary" href="https://os.nolte.io">Get Your Delivery Plan</a>
+        <a class="btn-hero btn-hero-secondary" href="https://nolte.io/the-predictability-gap">Read The Predictability Gap</a>
       </div>
     </div>
-  </section>
-
-  <section>
-    <span class="section-label">Our model</span>
-    <h2>Predictive, not hourly</h2>
-    <p>Traditional agencies sell time. We sell deliveries — discrete, validated units of work tied to business outcomes. Every delivery is forecast using historical throughput data, so you know what to expect before we start.</p>
-    <p>This means no surprise invoices. No ambiguous updates. Just a clear picture of what ships, when, and what it costs.</p>
-  </section>
-
-  <div class="cta-block">
-    <h2>See how the model works</h2>
-    <p>Learn what counts as a delivery and why it matters.</p>
-    <a class="cta-btn" href="/delivery">Read the Model</a>
   </div>
 
-  <div class="bottom-line">
-    <h2>Software delivery should be predictable.</h2>
-    <p>You would not accept unpredictable timelines and costs from any other vendor. Your software partner should be no different.</p>
-    <p style="margin-top: 1rem;">We built Nolte around one idea: if you define what done means before you start, you can forecast it, guarantee it, and prove it.</p>
+  <!-- PILLARS -->
+  <div class="pillars">
+    <div class="pillars-grid">
+      <div class="pillar">
+        <h3>Guaranteed Delivery</h3>
+        <p>Fixed price per delivery. You only pay for what we ship. Our incentives are structurally aligned with yours.</p>
+      </div>
+      <div class="pillar">
+        <h3>95% Prediction Accuracy</h3>
+        <p>NolteOS uses three years of flow data to forecast delivery. No estimates, no guesswork, no surprises.</p>
+      </div>
+      <div class="pillar">
+        <h3>Founders Who've Exited</h3>
+        <p>We've built companies from zero, scaled them, and sold them. That experience shapes every decision we make.</p>
+      </div>
+      <div class="pillar">
+        <h3>Efficiency Over Activity</h3>
+        <p>We measure outcomes delivered, not hours billed. When your interests come first, speed becomes profitable.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST LOGOS -->
+  <div class="trust-bar">
+    <p class="trust-label">Trusted by teams shipping critical software</p>
+    <div class="trust-logos">
+      <span class="brand-logo brand-hbo">HBO</span>
+      <span class="brand-logo brand-bloomscape">Bloomscape</span>
+      <span class="brand-logo brand-barrys">Barry's</span>
+      <span class="brand-logo brand-odie">Odie</span>
+      <span class="brand-logo brand-amtrak">Amtrak</span>
+      <span class="brand-logo brand-petplate">PetPlate</span>
+      <span class="brand-logo brand-wake">Wake</span>
+      <span class="brand-logo brand-footprint">Footprint</span>
+    </div>
+  </div>
+
+  <!-- HUMAN: WHO WE ARE -->
+  <div class="human-section">
+    <div class="human-row">
+      <div class="human-photo">
+        <div class="human-photo-placeholder">Team at work</div>
+      </div>
+      <div class="human-content">
+        <h2>We've been in your seat</h2>
+        <p>Nolte was founded by operators who've built companies from zero, scaled them, and sold them. We know what it feels like to approve a six-figure software engagement and hope it works out. That's why we built a system that removes hope from the equation.</p>
+        <p>We're a distributed team across the Americas — designers, engineers, and product strategists who measure success by what ships, not what's billed.</p>
+        <a class="human-link" href="/about">Learn about our story &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-value">95<span class="stat-accent">%</span></div>
+      <div class="stat-label">Forecast accuracy</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">20<span class="stat-accent">yrs</span></div>
+      <div class="stat-label">Delivering software</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">75<span class="stat-accent">/mo</span></div>
+      <div class="stat-label">Deliveries shipped</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">0<span class="stat-accent"> hrs</span></div>
+      <div class="stat-label">Billed per hour</div>
+    </div>
+  </div>
+
+  <!-- THE PREDICTABILITY GAP -->
+  <div class="featured-block">
+    <div class="featured-inner">
+      <span class="featured-tag">Featured</span>
+      <h2>The Predictability Gap</h2>
+      <p>Every business function forecasts in order to be predictable. Software development does neither. It's the only function on the P&L where leadership approves spend without knowing what will be delivered, when, or what it will cost.</p>
+      <p>AI didn't close this gap. It made it wider. In industries where compliance deadlines, patient safety, and regulatory obligations are non-negotiable, the gap isn't inefficiency. It's exposure.</p>
+      <a class="featured-link" href="https://nolte.io/the-predictability-gap">Read the full article by Jeffrey Nolte &rarr;</a>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="how-it-works">
+    <div class="wide-wrap">
+      <h2 class="section-heading">How Predictive Delivery Works</h2>
+      <p class="section-sub">Three steps. One forecast. Zero surprises.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-cell">
+        <div class="step-num">1</div>
+        <h3>Situation</h3>
+        <span class="step-subtitle">Describe what you're building</span>
+        <p>Tell us what you need. We break it into discrete, measurable deliveries, each with a clear definition of done. For regulated products, compliance requirements are scoped as deliveries from day one.</p>
+        <div class="step-visual">
+          <span class="sv-key">input</span> &rarr; <span class="sv-val">describe your product</span><br>
+          <span class="sv-key">output</span> &rarr; <span class="sv-val">scoped deliveries</span><br>
+          <span class="sv-key">each</span> &rarr; <span class="sv-val">definition of done</span>
+        </div>
+      </div>
+      <div class="step-cell">
+        <div class="step-num">2</div>
+        <h3>Assessment</h3>
+        <span class="step-subtitle">NolteOS forecasts your build</span>
+        <p>Our delivery operating system uses three years of flow data to predict exactly when each delivery lands, what it costs, and what the total engagement looks like.</p>
+        <div class="step-visual">
+          <span class="sv-key">accuracy</span> &rarr; <span class="sv-val">95.2%</span><br>
+          <span class="sv-key">timeline</span> &rarr; <span class="sv-val">Week 8</span><br>
+          <span class="sv-key">model</span> &rarr; <span class="sv-val">pay per delivery</span>
+        </div>
+      </div>
+      <div class="step-cell">
+        <div class="step-num">3</div>
+        <h3>Plan</h3>
+        <span class="step-subtitle">Get your delivery plan</span>
+        <p>You receive a complete delivery plan: what gets built, in what order, when it ships, and what it costs. Fixed price per delivery. You pay for what ships, nothing more.</p>
+        <div class="step-visual">
+          <span class="sv-key">scope</span> &rarr; <span class="sv-val">guaranteed</span><br>
+          <span class="sv-key">price</span> &rarr; <span class="sv-val">fixed per delivery</span><br>
+          <span class="sv-key">risk</span> &rarr; <span class="sv-val">we carry it</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOLTEOS CALLOUT -->
+  <div class="nolteos-callout">
+    <div class="nolteos-callout-inner">
+      <div class="nolteos-callout-content">
+        <div class="os-tag">NolteOS <span class="live-dot"></span></div>
+        <h2>The predictability engine behind every delivery</h2>
+        <p>NolteOS uses 20 years of delivery data to forecast scope, timeline, and cost before work begins. It's how we price per delivery, not per hour — and how our clients know exactly what they're getting before they commit.</p>
+        <ul class="nolteos-callout-features">
+          <li>95% forecast accuracy across all engagements</li>
+          <li>Real-time delivery tracking and metrics</li>
+          <li>Transparent scope, timeline, and cost visibility</li>
+        </ul>
+        <a class="nolteos-callout-link" href="/about/nolteos">See how NolteOS works &rarr;</a>
+      </div>
+      <div class="nolteos-callout-preview">
+        <div class="shot-window shot-window-dark">
+          <div class="shot-toolbar">
+            <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+          </div>
+          <div class="shot-content">
+            <div class="nolteos-mini-metrics">
+              <div class="nolteos-mini-metric">
+                <span class="nolteos-mini-label">Forecast Accuracy</span>
+                <span class="nolteos-mini-value">95.2%</span>
+              </div>
+              <div class="nolteos-mini-metric">
+                <span class="nolteos-mini-label">Cycle Time</span>
+                <span class="nolteos-mini-value">4.8d</span>
+              </div>
+              <div class="nolteos-mini-metric">
+                <span class="nolteos-mini-label">Weekly Throughput</span>
+                <span class="nolteos-mini-value">18</span>
+              </div>
+              <div class="nolteos-mini-metric">
+                <span class="nolteos-mini-label">On-Time Rate</span>
+                <span class="nolteos-mini-value">97%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDIES -->
+  <div class="case-studies">
+    <h2 class="section-heading">Delivery across regulated industries</h2>
+    <p class="section-sub">Teams building critical software we've taken from vision to production. Predictably.</p>
+
+    <div class="case-grid">
+      <div class="case-card">
+        <div class="case-card-logo">
+          <span class="brand-logo brand-breeze">Breeze</span>
+        </div>
+        <span class="case-type">Healthcare</span>
+        <h3>Breeze Oral Care</h3>
+        <p class="case-desc">HIPAA-compliant dental platform with clinical workflow integrations. Discovery to launch in four months. On time, on budget, to the dollar.</p>
+        <div class="case-meta">
+          <div class="case-meta-item"><span class="case-meta-value">Live</span><span class="case-meta-label">Status</span></div>
+          <div class="case-meta-item"><span class="case-meta-value">2 years</span><span class="case-meta-label">Partnership</span></div>
+        </div>
+        <a class="case-link" href="/work/breeze-oral-care">Read Case Study</a>
+      </div>
+      <div class="case-card">
+        <div class="case-card-logo">
+          <span class="brand-logo brand-pilou">Pilou</span>
+        </div>
+        <span class="case-type">Finance</span>
+        <h3>Pilou</h3>
+        <p class="case-desc">Financial services platform built under regulatory and compliance requirements. From concept to production with full audit trail visibility.</p>
+        <div class="case-meta">
+          <div class="case-meta-item"><span class="case-meta-value">Live</span><span class="case-meta-label">Status</span></div>
+          <div class="case-meta-item"><span class="case-meta-value">2 years</span><span class="case-meta-label">Partnership</span></div>
+        </div>
+        <a class="case-link" href="/work/pilou">Read Case Study</a>
+      </div>
+      <div class="case-card">
+        <div class="case-card-logo">
+          <span class="brand-logo brand-odie">Odie</span>
+        </div>
+        <span class="case-type">Insurance</span>
+        <h3>Odie</h3>
+        <p class="case-desc">Insurance platform built from zero under carrier requirements and state regulatory obligations. Now serving thousands of policyholders.</p>
+        <div class="case-meta">
+          <div class="case-meta-item"><span class="case-meta-value">Live</span><span class="case-meta-label">Status</span></div>
+          <div class="case-meta-item"><span class="case-meta-value">3 years</span><span class="case-meta-label">Partnership</span></div>
+        </div>
+        <a class="case-link" href="/work/odie">Read Case Study</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- VERTICALS -->
+  <div class="verticals">
+    <h2 class="section-heading">Where we deliver</h2>
+    <p class="section-sub">Industries where software delivery has to be predictable — because the cost of getting it wrong is too high.</p>
+
+    <div class="verticals-grid">
+      <div class="vertical-cell">
+        <h3>Insurance</h3>
+        <ul class="vertical-items">
+          <li>State filing deadlines that don't move</li>
+          <li>Carrier and MGA platform builds under regulatory scrutiny</li>
+          <li>Legacy modernization at enterprise scale</li>
+          <li>Claims processing that must work on day one</li>
+        </ul>
+      </div>
+      <div class="vertical-cell">
+        <h3>Healthcare</h3>
+        <ul class="vertical-items">
+          <li>HIPAA compliance from day one, not retrofitted</li>
+          <li>Patient-facing products that can't ship late</li>
+          <li>Clinical workflow integrations with zero downtime</li>
+          <li>Regulatory deadlines set by agencies, not product teams</li>
+        </ul>
+      </div>
+      <div class="vertical-cell">
+        <h3>Finance</h3>
+        <ul class="vertical-items">
+          <li>Regulatory compliance built into every delivery</li>
+          <li>Audit trail visibility from day one</li>
+          <li>Real-time platforms with multi-system dependencies</li>
+          <li>Data handling that meets financial industry standards</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL -->
+  <div class="testimonial">
+    <div class="testimonial-inner">
+      <div class="testimonial-brand">
+        <span class="brand-logo brand-breeze">Breeze</span>
+      </div>
+      <blockquote>They can build anything and do so beautifully and on time. They have also helped me tremendously in thinking strategically, even if it means I'm paying them less in the short term. They act like a partner in my business.</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">JT</div>
+        <div class="testimonial-info">
+          <span class="testimonial-name">Dr. Josh Turnbull</span>
+          <span class="testimonial-role">Founder, Breeze Oral Care</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG POSTS -->
+  <div class="blog-featured">
+    <h2 class="section-heading">From the blog</h2>
+    <p class="section-sub">How we think about software delivery, forecasting, and building products that ship.</p>
+
+    <div class="blog-featured-grid">
+      <a class="blog-featured-card" href="/blog/the-predictability-gap">
+        <div class="blog-featured-visual blog-visual-1">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="30" width="70" height="80" rx="4" fill="rgba(254,81,1,0.06)" stroke="rgba(254,81,1,0.15)" stroke-width="1" />
+            <rect x="110" y="30" width="70" height="80" rx="4" fill="rgba(3,105,252,0.06)" stroke="rgba(3,105,252,0.15)" stroke-width="1" />
+            <rect x="28" y="42" width="54" height="6" rx="3" fill="rgba(254,81,1,0.2)" />
+            <rect x="28" y="54" width="38" height="6" rx="3" fill="rgba(254,81,1,0.15)" />
+            <rect x="28" y="66" width="48" height="6" rx="3" fill="rgba(254,81,1,0.1)" />
+            <rect x="118" y="42" width="54" height="6" rx="3" fill="rgba(3,105,252,0.3)" />
+            <rect x="118" y="54" width="54" height="6" rx="3" fill="rgba(3,105,252,0.25)" />
+            <rect x="118" y="66" width="54" height="6" rx="3" fill="rgba(3,105,252,0.2)" />
+            <text x="55" y="92" font-size="7" fill="rgba(254,81,1,0.4)" font-family="monospace" text-anchor="middle">estimate</text>
+            <text x="145" y="92" font-size="7" fill="rgba(3,105,252,0.5)" font-family="monospace" text-anchor="middle">forecast</text>
+            <line x1="95" y1="25" x2="105" y2="25" stroke="rgba(0,0,0,0.15)" stroke-width="1" />
+            <line x1="100" y1="20" x2="100" y2="30" stroke="rgba(0,0,0,0.15)" stroke-width="1" />
+            <text x="100" y="128" font-size="7" fill="rgba(0,0,0,0.25)" font-family="monospace" text-anchor="middle">the gap</text>
+          </svg>
+        </div>
+        <span class="blog-featured-category">Delivery</span>
+        <h3>The Predictability Gap</h3>
+        <p>Every business function forecasts to be predictable. Software development does neither. Here's why — and how to close the gap.</p>
+      </a>
+      <a class="blog-featured-card" href="/blog/why-we-dont-estimate">
+        <div class="blog-featured-visual blog-visual-2">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="20,110 50,85 80,90 110,60 140,55 170,35 190,40" fill="none" stroke="rgba(3,105,252,0.35)" stroke-width="2" />
+            <polyline points="20,105 50,95 80,88 110,70 140,62 170,50 190,48" fill="none" stroke="rgba(254,81,1,0.25)" stroke-width="1.5" stroke-dasharray="4 3" />
+            <circle cx="170" cy="35" r="4" fill="rgba(3,105,252,0.5)" />
+            <circle cx="140" cy="55" r="3" fill="rgba(3,105,252,0.3)" />
+            <circle cx="110" cy="60" r="3" fill="rgba(3,105,252,0.3)" />
+            <text x="100" y="128" font-size="8" fill="rgba(3,105,252,0.4)" font-family="monospace" text-anchor="middle">throughput over time</text>
+          </svg>
+        </div>
+        <span class="blog-featured-category">Delivery</span>
+        <h3>Why We Don't Estimate</h3>
+        <p>Estimation doesn't make delivery more predictable. We predict using cycle time, throughput, and flow — not guesses.</p>
+      </a>
+      <a class="blog-featured-card" href="/blog/measuring-productivity-in-software-development">
+        <div class="blog-featured-visual blog-visual-3">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="25" y="35" width="30" height="70" rx="3" fill="rgba(254,81,1,0.08)" stroke="rgba(254,81,1,0.12)" stroke-width="1" />
+            <rect x="25" y="65" width="30" height="40" rx="3" fill="rgba(254,81,1,0.15)" />
+            <rect x="65" y="35" width="30" height="70" rx="3" fill="rgba(254,81,1,0.08)" stroke="rgba(254,81,1,0.12)" stroke-width="1" />
+            <rect x="65" y="50" width="30" height="55" rx="3" fill="rgba(254,81,1,0.2)" />
+            <rect x="105" y="35" width="30" height="70" rx="3" fill="rgba(3,105,252,0.08)" stroke="rgba(3,105,252,0.12)" stroke-width="1" />
+            <rect x="105" y="42" width="30" height="63" rx="3" fill="rgba(3,105,252,0.2)" />
+            <rect x="145" y="35" width="30" height="70" rx="3" fill="rgba(3,105,252,0.08)" stroke="rgba(3,105,252,0.12)" stroke-width="1" />
+            <rect x="145" y="38" width="30" height="67" rx="3" fill="rgba(3,105,252,0.25)" />
+            <text x="40" y="120" font-size="6" fill="rgba(0,0,0,0.3)" font-family="monospace" text-anchor="middle">CT</text>
+            <text x="80" y="120" font-size="6" fill="rgba(0,0,0,0.3)" font-family="monospace" text-anchor="middle">TP</text>
+            <text x="120" y="120" font-size="6" fill="rgba(0,0,0,0.3)" font-family="monospace" text-anchor="middle">WIP</text>
+            <text x="160" y="120" font-size="6" fill="rgba(0,0,0,0.3)" font-family="monospace" text-anchor="middle">AGE</text>
+          </svg>
+        </div>
+        <span class="blog-featured-category">Delivery</span>
+        <h3>Measuring Productivity in Software Development</h3>
+        <p>If you can't forecast from your productivity metrics, you're measuring the wrong things. Here are the metrics that actually work.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- THE QUESTION -->
+  <div class="the-question">
+    <span class="eyebrow">One question</span>
+    <blockquote>Can you tell me what I'll get, when it will ship, and what it will cost &mdash; before I sign?</blockquote>
+    <p>If the answer is "it depends," you're not getting predictable software delivery. You're funding the gap.</p>
+  </div>
+
+  <!-- FOOTER CTA -->
+  <div class="footer-cta">
+    <div class="wide-wrap">
+      <h2>See what predictable delivery looks like.</h2>
+      <p>Describe what you're building. NolteOS forecasts the scope, timeline, and cost — before you commit.</p>
+      <a class="btn-accent" href="https://os.nolte.io">See Your Forecast</a>
+    </div>
   </div>
 
 </Base>

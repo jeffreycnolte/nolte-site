@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const studies = (await getCollection('work', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const categories = await getCollection('categories', ({ data }) => data.scope === 'work' || data.scope === 'both');
+---
+<Base title="Work" description="Case studies from healthcare, insurance, and other regulated industries. Predictable delivery from concept to market.">
+
+  <div class="category-header">
+    <span class="eyebrow">Case Studies</span>
+    <h1>From Start to <em>Series A</em></h1>
+    <p>Founders building critical products we've taken from vision to market. Predictably.</p>
+  </div>
+
+  <div class="work-categories">
+    <a href="/work" class="active">All</a>
+    {categories.map(cat => (
+      <a href={`/work/category/${cat.id}`}>{cat.data.title}</a>
+    ))}
+  </div>
+
+  <div class="work-grid">
+    {studies.map(study => (
+      <a class="work-card" href={`/work/${study.id}`}>
+        <span class="work-card-type">{study.data.category}</span>
+        <h3>{study.data.client}</h3>
+        <p>{study.data.description}</p>
+        <div class="work-card-meta">
+          <span>{study.data.status}</span>
+          <span>{study.data.partnership}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+
+</Base>

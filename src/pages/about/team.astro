@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const authors = await getCollection('authors');
+---
+<Base title="Team" description="The people behind Nolte — founders, engineers, and operators who've built companies from zero.">
+
+  <div class="about-hero">
+    <h1>Founders who've <em>built</em> this</h1>
+    <p>We've built companies from zero, scaled them, and sold them. That experience shapes every decision we make for our clients.</p>
+  </div>
+
+  <div class="team-grid">
+    {authors.map(person => {
+      const initials = person.data.name.split(' ').map(n => n[0]).join('');
+      return (
+        <div class="team-card">
+          <div class="team-avatar">{initials}</div>
+          <h3>{person.data.name}</h3>
+          <span class="team-card-role">{person.data.role}</span>
+          <p>{person.data.bio}</p>
+        </div>
+      );
+    })}
+  </div>
+
+</Base>

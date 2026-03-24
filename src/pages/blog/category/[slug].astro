@@ -1,0 +1,44 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const categories = await getCollection('categories', ({ data }) => data.scope === 'blog' || data.scope === 'both');
+  const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+
+  return categories.map(cat => ({
+    params: { slug: cat.id },
+    props: {
+      category: cat,
+      posts: allPosts
+        .filter(p => p.data.category === cat.id)
+        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+---
+<Base title={`${category.data.title} — Blog`} description={category.data.description}>
+
+  <div class="category-header">
+    <span class="eyebrow">Category</span>
+    <h1>{category.data.title}</h1>
+    <p>{category.data.description}</p>
+  </div>
+
+  <ul class="blog-list">
+    {posts.map(post => (
+      <li class="blog-item">
+        <a href={`/blog/${post.id}`}>
+          <span class="blog-date">{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+          <h3>{post.data.title}</h3>
+          <p>{post.data.description}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  {posts.length === 0 && <p style="color: var(--gray-400); margin-top: 2rem;">No posts in this category yet.</p>}
+
+</Base>

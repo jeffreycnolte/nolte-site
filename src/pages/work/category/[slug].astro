@@ -1,0 +1,46 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const categories = await getCollection('categories', ({ data }) => data.scope === 'work' || data.scope === 'both');
+  const allWork = await getCollection('work', ({ data }) => !data.draft);
+
+  return categories.map(cat => ({
+    params: { slug: cat.id },
+    props: {
+      category: cat,
+      studies: allWork
+        .filter(w => w.data.category === cat.id)
+        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { category, studies } = Astro.props;
+---
+<Base title={`${category.data.title} — Work`} description={category.data.description}>
+
+  <div class="category-header">
+    <span class="eyebrow">Work — Category</span>
+    <h1>{category.data.title}</h1>
+    <p>{category.data.description}</p>
+  </div>
+
+  <div class="work-grid">
+    {studies.map(study => (
+      <a class="work-card" href={`/work/${study.id}`}>
+        <span class="work-card-type">{category.data.title}</span>
+        <h3>{study.data.client}</h3>
+        <p>{study.data.description}</p>
+        <div class="work-card-meta">
+          <span>{study.data.status}</span>
+          <span>{study.data.partnership}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  {studies.length === 0 && <p style="color: var(--gray-400); margin-top: 2rem;">No case studies in this category yet.</p>}
+
+</Base>

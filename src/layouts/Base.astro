@@ -1,42 +1,124 @@
 ---
+import BaseHead from '../components/BaseHead.astro';
+
 interface Props {
   title: string;
-  navLabel?: string;
+  description?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: 'website' | 'article';
+  publishedDate?: Date;
+  updatedDate?: Date;
+  author?: string;
+  fullWidth?: boolean;
+  noindex?: boolean;
 }
-const { title, navLabel } = Astro.props;
+const {
+  title,
+  description,
+  image,
+  imageAlt,
+  type,
+  publishedDate,
+  updatedDate,
+  author,
+  fullWidth = false,
+  noindex = false,
+} = Astro.props;
+
 const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/' || currentPath === '';
+
+function isActive(path: string) {
+  return currentPath === path || currentPath === path + '/' || currentPath.startsWith(path + '/');
+}
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} — Nolte</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
+  <BaseHead
+    title={title}
+    description={description}
+    image={image}
+    imageAlt={imageAlt}
+    type={type}
+    publishedDate={publishedDate}
+    updatedDate={updatedDate}
+    author={author}
+    noindex={noindex}
+  />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nolte",
+    "url": Astro.site?.href,
+    "description": "Predictable software delivery. Fixed price per delivery.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@nolte.io"
+    }
+  })} />
 </head>
 <body>
 
-<nav>
+<nav class={isHome ? 'nav-dark' : undefined}>
   <div class="inner">
     <a class="wordmark" href="/">Nolte</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <div class="nav-links">
-      <a href="/delivery" aria-current={currentPath === "/delivery" || currentPath === "/delivery/" ? "page" : undefined}>Model</a>
-      <a href="/blog" aria-current={currentPath === "/blog" || currentPath === "/blog/" ? "page" : undefined}>Blog</a>
+      <a href="/work" aria-current={isActive('/work') ? 'page' : undefined}>Work</a>
+      <a href="/about" aria-current={isActive('/about') ? 'page' : undefined}>About</a>
+      <a href="/blog" aria-current={isActive('/blog') ? 'page' : undefined}>Blog</a>
+      <a href="/delivery" aria-current={isActive('/delivery') ? 'page' : undefined}>Model</a>
+      <a href="https://os.nolte.io" class="nav-cta">See Your Forecast</a>
     </div>
   </div>
 </nav>
 
-<div class="page-wrap">
-  <slot />
-</div>
+{fullWidth ? <slot /> : <div class="page-wrap"><slot /></div>}
 
 <footer>
-  <div class="inner">
-    <p>&copy; Nolte &mdash; nolte.io</p>
-    <p>Predictive Delivery Model</p>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <span class="footer-wordmark">Nolte</span>
+      <p class="footer-tagline">Predictable software delivery for leaders who outsource.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/about">Our Story</a>
+      <a href="/about/team">Team</a>
+      <a href="/about/nolteos">NolteOS</a>
+    </div>
+    <div class="footer-col">
+      <h4>Work</h4>
+      <a href="/work">Case Studies</a>
+      <a href="/delivery">Delivery Model</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="/blog">Blog</a>
+      <a href="https://os.nolte.io">See Your Forecast</a>
+      <a href="mailto:contact@nolte.io">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {new Date().getFullYear()} Nolte &mdash; nolte.io</p>
   </div>
 </footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+</script>
 
 </body>
 </html>

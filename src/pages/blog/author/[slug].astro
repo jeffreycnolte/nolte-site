@@ -1,0 +1,52 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const authors = await getCollection('authors');
+  const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+
+  return authors.map(author => ({
+    params: { slug: author.id },
+    props: {
+      author,
+      posts: allPosts
+        .filter(p => p.data.author === author.id)
+        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { author, posts } = Astro.props;
+const initials = author.data.name.split(' ').map(n => n[0]).join('');
+---
+<Base title={`${author.data.name} — Blog`} description={`Articles by ${author.data.name}, ${author.data.role} at Nolte.`}>
+
+  <div class="author-header">
+    <div class="author-avatar">{initials}</div>
+    <div class="author-info">
+      <h1>{author.data.name}</h1>
+      <span class="author-role">{author.data.role}</span>
+      <p class="author-bio">{author.data.bio}</p>
+      <div class="author-links">
+        {author.data.linkedin && <a href={author.data.linkedin}>LinkedIn</a>}
+        {author.data.twitter && <a href={author.data.twitter}>Twitter</a>}
+      </div>
+    </div>
+  </div>
+
+  <h2 style="font-family: var(--serif); font-size: 1.5rem; margin-bottom: 1.5rem;">Articles</h2>
+
+  <ul class="blog-list">
+    {posts.map(post => (
+      <li class="blog-item">
+        <a href={`/blog/${post.id}`}>
+          <span class="blog-date">{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+          <h3>{post.data.title}</h3>
+          <p>{post.data.description}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+</Base>

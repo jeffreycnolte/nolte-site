@@ -1,0 +1,118 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const authors = await getCollection('authors');
+const author = authors.find(a => a.id === post.data.author);
+const categories = await getCollection('categories');
+const category = categories.find(c => c.id === post.data.category);
+
+// Reading time calculation
+const rawContent = post.body || '';
+const wordCount = rawContent.split(/\s+/).filter(Boolean).length;
+const readingTime = Math.max(1, Math.ceil(wordCount / 250));
+
+const siteUrl = 'https://nolte-site.netlify.app';
+const postUrl = `${siteUrl}/blog/${post.id}/`;
+---
+<Base
+  title={post.data.title}
+  description={post.data.description}
+  type="article"
+  publishedDate={post.data.date}
+  updatedDate={post.data.updated}
+  author={author?.data.name}
+  image={post.data.image}
+  imageAlt={post.data.imageAlt}
+>
+  <article class="blog-article">
+    {post.data.image && (
+      <div class="blog-hero-image">
+        <img src={post.data.image} alt={post.data.imageAlt || post.data.title} loading="eager" />
+      </div>
+    )}
+
+    <div class="blog-header">
+      <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+        <a href="/blog">Blog</a>
+        <span aria-hidden="true">/</span>
+        {category && <a href={`/blog/category/${post.data.category}`}>{category.data.title}</a>}
+      </nav>
+      <h1>{post.data.title}</h1>
+      <p class="blog-description">{post.data.description}</p>
+      <div class="blog-meta">
+        {author && (
+          <div class="blog-author-info">
+            <div class="blog-author-avatar">
+              {author.data.avatar
+                ? <img src={author.data.avatar} alt={author.data.name} />
+                : <span>{author.data.name.split(' ').map(n => n[0]).join('')}</span>
+              }
+            </div>
+            <div>
+              <a href={`/blog/author/${post.data.author}`}>{author.data.name}</a>
+              {author.data.role && <span class="blog-author-role">{author.data.role}</span>}
+            </div>
+          </div>
+        )}
+        <div class="blog-meta-right">
+          <time datetime={post.data.date.toISOString().split('T')[0]}>
+            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          <span class="blog-reading-time">{readingTime} min read</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.data.title,
+    "description": post.data.description,
+    "url": postUrl,
+    "datePublished": post.data.date.toISOString(),
+    "dateModified": (post.data.updated || post.data.date).toISOString(),
+    "author": author ? {
+      "@type": "Person",
+      "name": author.data.name,
+      "jobTitle": author.data.role,
+      "url": `${siteUrl}/blog/author/${post.data.author}/`,
+    } : undefined,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nolte",
+      "url": siteUrl,
+    },
+    "image": post.data.image ? `${siteUrl}${post.data.image}` : undefined,
+    "wordCount": wordCount,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Blog", "item": `${siteUrl}/blog/` },
+      ...(category ? [{ "@type": "ListItem", "position": 2, "name": category.data.title, "item": `${siteUrl}/blog/category/${post.data.category}/` }] : []),
+      { "@type": "ListItem", "position": category ? 3 : 2, "name": post.data.title },
+    ],
+  })} />
+</Base>

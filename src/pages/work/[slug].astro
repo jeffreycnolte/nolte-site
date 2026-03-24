@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const studies = await getCollection('work', ({ data }) => !data.draft);
+  return studies.map(study => ({
+    params: { slug: study.id },
+    props: { study },
+  }));
+}
+
+const { study } = Astro.props;
+const { Content } = await render(study);
+const categories = await getCollection('categories');
+const category = categories.find(c => c.id === study.data.category);
+---
+<Base
+  title={`${study.data.client} — Case Study`}
+  description={study.data.description}
+  type="article"
+  image={study.data.image}
+  imageAlt={study.data.imageAlt}
+>
+  <article>
+    <div class="work-header">
+      <span class="eyebrow">{category?.data.title || study.data.category}</span>
+      <h1>{study.data.client}</h1>
+      <p>{study.data.description}</p>
+    </div>
+
+    <div class="work-sidebar">
+      <div class="work-sidebar-row">
+        <span class="work-sidebar-label">Client</span>
+        <span class="work-sidebar-value">{study.data.client}</span>
+      </div>
+      <div class="work-sidebar-row">
+        <span class="work-sidebar-label">Industry</span>
+        <span class="work-sidebar-value">{category?.data.title || study.data.category}</span>
+      </div>
+      <div class="work-sidebar-row">
+        <span class="work-sidebar-label">Status</span>
+        <span class="work-sidebar-value">{study.data.status}</span>
+      </div>
+      <div class="work-sidebar-row">
+        <span class="work-sidebar-label">Partnership</span>
+        <span class="work-sidebar-value">{study.data.partnership}</span>
+      </div>
+      {study.data.services && (
+        <div class="work-sidebar-row">
+          <span class="work-sidebar-label">Services</span>
+          <span class="work-sidebar-value">{study.data.services.join(', ')}</span>
+        </div>
+      )}
+    </div>
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
