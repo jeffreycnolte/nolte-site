@@ -57,9 +57,9 @@ const ogImage = image ? new URL(image, Astro.site).href : undefined;
 {ogImage && <meta name="twitter:image" content={ogImage}>}
 {ogImage && <meta name="twitter:image:alt" content={imageAlt}>}
 
-<!-- Fonts -->
+<!-- Fonts: self-hosted (Söhne, Söhne Breit, GT Super Display, DM Mono via Google Fonts) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <!-- RSS -->
 <link rel="alternate" type="application/rss+xml" title={siteTitle} href={new URL('/blog/rss.xml', Astro.site).href}>

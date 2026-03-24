@@ -1,3 +1,52 @@
+/* --- @font-face declarations --- */
+
+@font-face {
+  font-family: 'Soehne';
+  src: url('/fonts/soehne-web-leicht.woff2') format('woff2'),
+       url('/fonts/soehne-web-leicht.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Soehne';
+  src: url('/fonts/soehne-web-buch.woff2') format('woff2'),
+       url('/fonts/soehne-web-buch.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Soehne Breit';
+  src: url('/fonts/soehne-breit-web-leicht.woff2') format('woff2'),
+       url('/fonts/soehne-breit-web-leicht.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Soehne Breit';
+  src: url('/fonts/soehne-breit-web-fett.woff2') format('woff2'),
+       url('/fonts/soehne-breit-web-fett.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Super Display';
+  src: url('/fonts/GT-Super-Display-Light-Italic.woff2') format('woff2'),
+       url('/fonts/GT-Super-Display-Light-Italic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* --- Reset & Custom Properties --- */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -12,9 +61,10 @@
   --dark: #050505;
   --dark-surface: #0d0d0d;
   --dark-border: #1e1e1e;
-  --serif: 'Instrument Serif', Georgia, serif;
+  --serif: 'Soehne Breit', sans-serif;
   --mono: 'DM Mono', monospace;
-  --sans: 'Geist', system-ui, sans-serif;
+  --sans: 'Soehne', system-ui, sans-serif;
+  --display: 'GT Super Display', Georgia, serif;
   --gradient-warm: linear-gradient(135deg, #fe5101 0%, #ff6b35 50%, #0369fc 100%);
   --gradient-dark: linear-gradient(180deg, #050505 0%, #0a0f1a 50%, #050505 100%);
   --gradient-hero: linear-gradient(160deg, #050505 0%, #080c18 40%, #0d1020 60%, #050505 100%);
@@ -22,11 +72,22 @@
 
 body {
   font-family: var(--sans);
+  font-weight: 300;
   background: var(--white);
   color: var(--black);
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 300;
 }
 
 .page-wrap {
@@ -39,7 +100,8 @@ body {
 nav {
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--gray-200);
-  margin-bottom: 5rem;
+  position: relative;
+  z-index: 10;
 }
 nav .inner {
   max-width: 780px;
@@ -125,7 +187,7 @@ nav.nav-dark .nav-links a:hover {
 .hero h1 {
   font-family: var(--serif);
   font-size: clamp(2.8rem, 6vw, 4.2rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.1;
   letter-spacing: -0.01em;
   margin-bottom: 2rem;
@@ -152,7 +214,7 @@ nav.nav-dark .nav-links a:hover {
 .definition-block p {
   font-family: var(--serif);
   font-size: clamp(1.25rem, 2.5vw, 1.6rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
   color: var(--black);
 }
@@ -173,7 +235,7 @@ section {
 h2 {
   font-family: var(--serif);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: var(--black);
@@ -612,7 +674,7 @@ footer {
 .blog-item h3 {
   font-family: var(--serif);
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 0.5rem;
   transition: color 0.15s;
 }
@@ -721,7 +783,7 @@ footer {
 .hero-dark h1 {
   font-family: var(--serif);
   font-size: clamp(3rem, 7vw, 5rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--white);
@@ -779,7 +841,7 @@ footer {
 .case-studies .section-heading {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.2;
   color: var(--black);
   margin-bottom: 0.75rem;
@@ -820,7 +882,7 @@ footer {
 .case-card h3 {
   font-family: var(--serif);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 0.5rem;
 }
 .case-card .case-desc {
@@ -877,7 +939,7 @@ footer {
 .solutions .section-heading {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.2;
   color: var(--black);
   margin-bottom: 0.75rem;
@@ -938,7 +1000,7 @@ footer {
 .testimonial blockquote {
   font-family: var(--serif);
   font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
   color: var(--black);
   font-style: italic;
@@ -967,7 +1029,7 @@ footer {
 .footer-cta h2 {
   font-family: var(--serif);
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.2;
   color: var(--white);
 }
@@ -1090,7 +1152,7 @@ footer {
 .stat-value {
   font-family: var(--serif);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--black);
   line-height: 1;
 }
@@ -1159,7 +1221,7 @@ footer {
 .how-it-works .section-heading {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.2;
   color: var(--black);
   margin-bottom: 0.5rem;
@@ -1262,7 +1324,7 @@ footer {
 .dashboard-header h2 {
   font-family: var(--serif);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--white);
   margin-bottom: 0.5rem;
 }
@@ -1301,7 +1363,7 @@ footer {
 .metric-value {
   font-family: var(--serif);
   font-size: 1.75rem;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--white);
   line-height: 1;
 }
@@ -1384,7 +1446,7 @@ footer {
 .verticals .section-heading {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--black);
   margin-bottom: 0.5rem;
   text-align: center;
@@ -1967,25 +2029,31 @@ footer {
   .os-metrics-row { grid-template-columns: 1fr; }
   .os-compare-grid { grid-template-columns: 1fr; }
   .os-hero h1 { font-size: 2.4rem; }
+  .os-hero h1 em { font-size: 2.64rem; }
 }
 
 /* ===== NOLTEOS MARKETING PAGE ===== */
 .os-hero {
-  background: var(--dark);
-  padding: 8rem 2rem 6rem;
+  background: linear-gradient(160deg, #050505 0%, #1a0a08 40%, #200d0a 60%, #050505 100%);
+  padding: 8rem 2rem 5rem;
   text-align: center;
 }
 .os-hero h1 {
   font-family: var(--serif);
   font-size: 3.5rem;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--white);
   max-width: 720px;
   margin: 0 auto;
 }
 .os-hero h1 em {
+  font-family: var(--display);
   font-style: italic;
+  font-weight: 300;
   color: var(--accent);
+  font-size: 4.2rem;
+  display: block;
+  margin-top: 0.15em;
 }
 .os-eyebrow {
   font-family: var(--mono);
@@ -1994,14 +2062,39 @@ footer {
   text-transform: uppercase;
   color: var(--accent);
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 .os-hero-sub {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.5);
   font-size: 17px;
   line-height: 1.7;
-  max-width: 600px;
-  margin: 1.5rem auto 2.5rem;
+  max-width: 480px;
+  margin: 1.5rem auto 0.75rem;
+}
+.os-hero-closing {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin: 0 auto 2rem;
+}
+.os-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+.os-hero-pill {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100px;
+  padding: 0.5rem 1.25rem;
 }
 
 /* OS sections */
@@ -2404,7 +2497,7 @@ footer {
 }
 .shot-metric-of {
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 300;
   color: rgba(255,255,255,0.35);
 }
 .shot-metric-trend {
@@ -3061,7 +3154,7 @@ footer {
 .nolteos-callout-content h2 {
   font-family: var(--serif);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--white);
   margin-bottom: 1rem;
 }
@@ -3134,7 +3227,7 @@ footer {
 .blog-featured .section-heading {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--black);
   margin-bottom: 0.5rem;
 }
@@ -3190,7 +3283,7 @@ footer {
 .blog-featured-card h3 {
   font-family: var(--serif);
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 300;
   padding: 0.5rem 1.5rem 0;
   line-height: 1.3;
 }
