@@ -25,50 +25,71 @@ import Base from '../../layouts/Base.astro';
   <div class="os-product-section">
     <div class="os-product-row">
       <div class="os-product-callout">
-        <span class="os-callout-label">Project Snapshot</span>
+        <span class="os-callout-label nolte-eyebrow--with-line">Project Snapshot</span>
         <h2>Know where your project stands — <em>always</em></h2>
         <p>Every engagement opens to a live snapshot: your active objective, engagement model, velocity, and key stakeholders. No digging through threads or waiting for a status call.</p>
-        <ul class="os-callout-points">
-          <li><strong>Active objective</strong> — the single goal your team is working toward, with a target date</li>
-          <li><strong>Engagement model</strong> — your delivery velocity and what it covers</li>
-          <li><strong>Stakeholders</strong> — who's involved, always visible</li>
-        </ul>
-        <span class="os-callout-why">Why it matters: You should never have to ask "what are we working on?" The answer is always on your dashboard.</span>
+        <div class="snapshot-features">
+          <div class="snapshot-feature" data-highlight="objective">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Active objective</strong>
+              <span class="snapshot-feature-desc">The single goal your team is working toward, with a target date</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="engagement">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Engagement model</strong>
+              <span class="snapshot-feature-desc">Your delivery velocity and what it covers</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="stakeholders">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Stakeholders</strong>
+              <span class="snapshot-feature-desc">Who's involved, always visible</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="os-product-shot">
         <div class="shot-window">
           <div class="shot-toolbar">
             <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
           </div>
-          <div class="shot-content">
-            <div class="shot-header-bar">
-              <div class="shot-project-icon">N</div>
+          <div class="shot-content shot-snapshot-rows">
+            <div class="shot-snapshot-header-bar">
+              <div class="shot-snapshot-icon">B</div>
               <div>
-                <div class="shot-project-name">Breeze Oral Care</div>
-                <div class="shot-project-desc">HIPAA-compliant dental platform with clinical workflow integrations and patient portal.</div>
+                <div class="shot-snapshot-company">Breeze Oral Care</div>
+                <div class="shot-snapshot-company-desc">HIPAA-compliant dental platform with clinical workflow integrations and patient portal.</div>
               </div>
             </div>
-            <div class="shot-objective">
-              <span class="shot-obj-label">Active Objective (Q2 2026)</span>
-              <span class="shot-obj-text">Launch provider onboarding flow and insurance verification module by June 15, 2026</span>
+            <div class="shot-snapshot-row-full" data-zone="objective" data-label="Active Objective">
+              <span class="shot-snapshot-label">Active Objective (Q2 2026)</span>
+              <p class="shot-snapshot-text">Launch provider onboarding flow and insurance verification module by June 15, 2026</p>
             </div>
-            <div class="shot-meta-row">
-              <div class="shot-meta-item">
-                <span class="shot-meta-label">Engagement</span>
-                <span class="shot-meta-val">Velocity &mdash; 24 items/mo</span>
+            <div class="shot-snapshot-row-split">
+              <div class="shot-snapshot-col" data-zone="engagement" data-label="Engagement Model">
+                <span class="shot-snapshot-label">Engagement</span>
+                <span class="shot-snapshot-val">Velocity &mdash; 24 items/mo</span>
               </div>
-              <div class="shot-meta-item">
-                <span class="shot-meta-label">Stakeholders</span>
-                <div class="shot-avatars">
-                  <span class="shot-avatar">JT</span>
-                  <span class="shot-avatar">JN</span>
-                  <span class="shot-avatar">YL</span>
+              <div class="shot-snapshot-col" data-zone="stakeholders" data-label="Stakeholders">
+                <span class="shot-snapshot-label">Stakeholders</span>
+                <div class="shot-avatars shot-avatars-overlap">
+                  <span class="shot-avatar shot-avatar-purple">JT</span>
+                  <span class="shot-avatar shot-avatar-green">JN</span>
+                  <span class="shot-avatar shot-avatar-blue">YL</span>
                   <span class="shot-avatar-more">+2</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="nolte-why-matters os-product-why">
+        <span class="nolte-why-label">Why it matters</span>
+        <p>You should never have to ask "what are we working on?" The answer is always on your dashboard.</p>
       </div>
     </div>
   </div>
@@ -77,15 +98,32 @@ import Base from '../../layouts/Base.astro';
   <div class="os-product-section os-product-dark">
     <div class="os-product-row reverse">
       <div class="os-product-callout">
-        <span class="os-callout-label">Delivery Metrics</span>
+        <span class="os-callout-label nolte-eyebrow--with-line">Delivery Metrics</span>
         <h2>Data that tells you if you're on track — <em>not opinions</em></h2>
         <p>Four numbers that matter. Updated in real time. Delivered this week, monthly progress against target, remaining items, and required weekly pace. When pace changes, you see it before it becomes a problem.</p>
-        <ul class="os-callout-points">
-          <li><strong>Weekly delivery count</strong> — what actually shipped, not what's "almost done"</li>
-          <li><strong>Monthly progress</strong> — percentage against the forecasted target</li>
-          <li><strong>Required pace</strong> — the math on what it takes to hit your timeline</li>
-        </ul>
-        <span class="os-callout-why">Why it matters: Forecasts mean nothing without accountability. These metrics are how we hold ourselves to the plan.</span>
+        <div class="snapshot-features">
+          <div class="snapshot-feature" data-highlight="metrics-weekly">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Weekly delivery count</strong>
+              <span class="snapshot-feature-desc">What actually shipped, not what's "almost done"</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="metrics-monthly">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Monthly progress</strong>
+              <span class="snapshot-feature-desc">Percentage against the forecasted target</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="metrics-pace">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Required pace</strong>
+              <span class="snapshot-feature-desc">The math on what it takes to hit your timeline</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="os-product-shot">
         <div class="shot-window shot-window-dark">
@@ -94,12 +132,12 @@ import Base from '../../layouts/Base.astro';
           </div>
           <div class="shot-content">
             <div class="shot-metrics-grid">
-              <div class="shot-metric-card">
+              <div class="shot-metric-card" data-zone="metrics-weekly" data-label="Weekly Delivery">
                 <span class="shot-metric-label">Delivered This Week</span>
                 <span class="shot-metric-val">10</span>
                 <span class="shot-metric-trend positive">Up from 6 last week</span>
               </div>
-              <div class="shot-metric-card">
+              <div class="shot-metric-card" data-zone="metrics-monthly" data-label="Monthly Progress">
                 <span class="shot-metric-label">March Total</span>
                 <span class="shot-metric-val">16 <span class="shot-metric-of">of 34</span></span>
                 <span class="shot-metric-trend">47% of target</span>
@@ -109,7 +147,7 @@ import Base from '../../layouts/Base.astro';
                 <span class="shot-metric-val">18</span>
                 <span class="shot-metric-trend">2 weeks left in March</span>
               </div>
-              <div class="shot-metric-card">
+              <div class="shot-metric-card" data-zone="metrics-pace" data-label="Required Pace">
                 <span class="shot-metric-label">Required Weekly Pace</span>
                 <span class="shot-metric-val">9.0</span>
                 <span class="shot-metric-trend positive">Down from 9.3</span>
@@ -129,6 +167,10 @@ import Base from '../../layouts/Base.astro';
           </div>
         </div>
       </div>
+      <div class="nolte-why-matters os-product-why">
+        <span class="nolte-why-label">Why it matters</span>
+        <p>Forecasts mean nothing without accountability. These metrics are how we hold ourselves to the plan.</p>
+      </div>
     </div>
   </div>
 
@@ -136,15 +178,32 @@ import Base from '../../layouts/Base.astro';
   <div class="os-product-section">
     <div class="os-product-row">
       <div class="os-product-callout">
-        <span class="os-callout-label">Kanban Flow</span>
+        <span class="os-callout-label nolte-eyebrow--with-line">Kanban Flow</span>
         <h2>See every deliverable move through the <em>pipeline</em></h2>
         <p>Seven stages from specification to done. Click any stage to see every item in it. No ambiguity about where things are or what's blocking them. Flags surface immediately — blocked items, pending approvals, client dependencies.</p>
-        <ul class="os-callout-points">
-          <li><strong>7 clear stages</strong> — Awaiting Spec → In Spec → Ready → In Progress → Done Implementing → Validation → Done</li>
-          <li><strong>Clickable stages</strong> — expand any column to see item details</li>
-          <li><strong>Real-time flags</strong> — blocked items and pending approvals are visible at a glance</li>
-        </ul>
-        <span class="os-callout-why">Why it matters: You should be able to answer "where is my feature?" in under five seconds.</span>
+        <div class="snapshot-features">
+          <div class="snapshot-feature" data-highlight="kanban-stages">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">7 clear stages</strong>
+              <span class="snapshot-feature-desc">Awaiting Spec → In Spec → Ready → In Progress → Done Implementing → Validation → Done</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="kanban-clickable">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Clickable stages</strong>
+              <span class="snapshot-feature-desc">Expand any column to see item details</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="kanban-flags">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Real-time flags</strong>
+              <span class="snapshot-feature-desc">Blocked items and pending approvals are visible at a glance</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="os-product-shot">
         <div class="shot-window">
@@ -152,7 +211,7 @@ import Base from '../../layouts/Base.astro';
             <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
           </div>
           <div class="shot-content">
-            <div class="shot-kanban">
+            <div class="shot-kanban" data-zone="kanban-stages" data-label="Stages">
               <div class="shot-kanban-col">
                 <div class="shot-kanban-header">Awaiting Spec<span class="shot-kanban-count">8</span></div>
                 <div class="shot-kanban-card">Client Dashboard MVP</div>
@@ -162,13 +221,13 @@ import Base from '../../layouts/Base.astro';
               <div class="shot-kanban-col">
                 <div class="shot-kanban-header">In Progress<span class="shot-kanban-count">3</span></div>
                 <div class="shot-kanban-card">Insurance Verification</div>
-                <div class="shot-kanban-card flagged">
+                <div class="shot-kanban-card flagged" data-zone="kanban-flags" data-label="Flags">
                   AWS Migration
                   <span class="shot-flag blocked">Blocked</span>
                 </div>
                 <div class="shot-kanban-card">Auth Flow v2</div>
               </div>
-              <div class="shot-kanban-col">
+              <div class="shot-kanban-col" data-zone="kanban-clickable" data-label="Details">
                 <div class="shot-kanban-header">Validation<span class="shot-kanban-count">2</span></div>
                 <div class="shot-kanban-card">Onboarding Wizard</div>
                 <div class="shot-kanban-card flagged">
@@ -186,6 +245,10 @@ import Base from '../../layouts/Base.astro';
           </div>
         </div>
       </div>
+      <div class="nolte-why-matters os-product-why">
+        <span class="nolte-why-label">Why it matters</span>
+        <p>You should be able to answer "where is my feature?" in under five seconds.</p>
+      </div>
     </div>
   </div>
 
@@ -193,15 +256,32 @@ import Base from '../../layouts/Base.astro';
   <div class="os-product-section os-product-dark">
     <div class="os-product-row reverse">
       <div class="os-product-callout">
-        <span class="os-callout-label">Decisions &amp; Approvals</span>
+        <span class="os-callout-label nolte-eyebrow--with-line">Decisions &amp; Approvals</span>
         <h2>Every decision recorded. Nothing <em>lost.</em></h2>
         <p>Meetings produce decisions and agreements. NolteOS captures them automatically — who decided what, when, and what action items came out of it. Pending approvals surface in your dashboard with due dates so you can act on your schedule.</p>
-        <ul class="os-callout-points">
-          <li><strong>Async approvals</strong> — approve directly from your dashboard, no meeting needed</li>
-          <li><strong>Decision history</strong> — searchable record of every decision across every meeting</li>
-          <li><strong>Action items</strong> — auto-generated from meeting transcripts, assigned and tracked</li>
-        </ul>
-        <span class="os-callout-why">Why it matters: "What did we decide?" is the most expensive question in software. You'll never need to ask it.</span>
+        <div class="snapshot-features">
+          <div class="snapshot-feature" data-highlight="approvals-history">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Decision history</strong>
+              <span class="snapshot-feature-desc">Searchable record of every decision across every meeting</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="approvals-async">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Async approvals</strong>
+              <span class="snapshot-feature-desc">Approve directly from your dashboard, no meeting needed</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="approvals-actions">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Action items</strong>
+              <span class="snapshot-feature-desc">Auto-generated from meeting transcripts, assigned and tracked</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="os-product-shot">
         <div class="shot-window shot-window-dark">
@@ -210,45 +290,70 @@ import Base from '../../layouts/Base.astro';
           </div>
           <div class="shot-content">
             <div class="shot-approvals">
-              <div class="shot-approval-row">
-                <div class="shot-approval-status approved">Approved</div>
-                <div class="shot-approval-info">
-                  <div class="shot-approval-title">Calculator — Shipped & Approved</div>
-                  <div class="shot-approval-detail">All 7 stories delivered. Epic complete.</div>
+              <div class="shot-approval-group" data-zone="approvals-history" data-label="Decision History">
+                <div class="shot-approval-row">
+                  <div class="shot-approval-status approved">Approved</div>
+                  <div class="shot-approval-info">
+                    <div class="shot-approval-title">Calculator — Shipped & Approved</div>
+                    <div class="shot-approval-detail">All 7 stories delivered. Epic complete.</div>
+                  </div>
+                  <div class="shot-approval-date">Mar 14</div>
                 </div>
-                <div class="shot-approval-date">Mar 14</div>
-              </div>
-              <div class="shot-approval-row">
-                <div class="shot-approval-status approved">Approved</div>
-                <div class="shot-approval-info">
-                  <div class="shot-approval-title">Design Direction — Blue Palette</div>
-                  <div class="shot-approval-detail">Approved in Feb 26 design review.</div>
-                </div>
-                <div class="shot-approval-date">Feb 26</div>
-              </div>
-              <div class="shot-approval-row highlight">
-                <div class="shot-approval-status pending-status">Pending</div>
-                <div class="shot-approval-info">
-                  <div class="shot-approval-title">Client Dashboard Design</div>
-                  <div class="shot-approval-detail">Approval needed to move 2 stories to ready.</div>
-                </div>
-                <div class="shot-approval-action">
-                  <button class="shot-approve-btn">Approve</button>
+                <div class="shot-approval-row">
+                  <div class="shot-approval-status approved">Approved</div>
+                  <div class="shot-approval-info">
+                    <div class="shot-approval-title">Design Direction — Blue Palette</div>
+                    <div class="shot-approval-detail">Approved in Feb 26 design review.</div>
+                  </div>
+                  <div class="shot-approval-date">Feb 26</div>
                 </div>
               </div>
-              <div class="shot-approval-row highlight">
-                <div class="shot-approval-status pending-status">Pending</div>
-                <div class="shot-approval-info">
-                  <div class="shot-approval-title">20% Bonus Capacity Model</div>
-                  <div class="shot-approval-detail">Capacity benchmark complete. Due Mar 24.</div>
+              <div class="shot-approval-group" data-zone="approvals-async" data-label="Async Approval">
+                <div class="shot-approval-row highlight">
+                  <div class="shot-approval-status pending-status">Pending</div>
+                  <div class="shot-approval-info">
+                    <div class="shot-approval-title">Client Dashboard Design</div>
+                    <div class="shot-approval-detail">Approval needed to move 2 stories to ready.</div>
+                  </div>
+                  <div class="shot-approval-action">
+                    <button class="shot-approve-btn">Approve</button>
+                  </div>
                 </div>
-                <div class="shot-approval-action">
-                  <button class="shot-approve-btn">Approve</button>
+                <div class="shot-approval-row highlight">
+                  <div class="shot-approval-status pending-status">Pending</div>
+                  <div class="shot-approval-info">
+                    <div class="shot-approval-title">20% Bonus Capacity Model</div>
+                    <div class="shot-approval-detail">Capacity benchmark complete. Due Mar 24.</div>
+                  </div>
+                  <div class="shot-approval-action">
+                    <button class="shot-approve-btn">Approve</button>
+                  </div>
+                </div>
+              </div>
+              <div class="shot-action-items" data-zone="approvals-actions" data-label="Action Items">
+                <div class="shot-action-header">Action Items</div>
+                <div class="shot-action-row">
+                  <span class="shot-action-icon">→</span>
+                  <div class="shot-action-info">
+                    <div class="shot-action-title">Update provider API docs before integration begins</div>
+                    <div class="shot-action-meta">Assigned to JN &middot; Due Mar 28</div>
+                  </div>
+                </div>
+                <div class="shot-action-row">
+                  <span class="shot-action-icon">→</span>
+                  <div class="shot-action-info">
+                    <div class="shot-action-title">Schedule design review for dashboard MVP with client</div>
+                    <div class="shot-action-meta">Assigned to YL &middot; Due Mar 26</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="nolte-why-matters os-product-why">
+        <span class="nolte-why-label">Why it matters</span>
+        <p>"What did we decide?" is the most expensive question in software. You'll never need to ask it.</p>
       </div>
     </div>
   </div>
@@ -257,15 +362,32 @@ import Base from '../../layouts/Base.astro';
   <div class="os-product-section">
     <div class="os-product-row">
       <div class="os-product-callout">
-        <span class="os-callout-label">Meeting Intelligence</span>
+        <span class="os-callout-label nolte-eyebrow--with-line">Meeting Intelligence</span>
         <h2>Meetings that produce <em>outcomes</em>, not confusion</h2>
         <p>Every meeting is transcribed and processed into structured decisions, agreements, and action items. Recaps are finalized and shareable. Work items are generated directly from what was agreed — no manual translation.</p>
-        <ul class="os-callout-points">
-          <li><strong>Structured recaps</strong> — decisions, agreements, and action items extracted automatically</li>
-          <li><strong>Searchable history</strong> — find any decision from any meeting instantly</li>
-          <li><strong>Work item generation</strong> — agreements become deliverables with one click</li>
-        </ul>
-        <span class="os-callout-why">Why it matters: The gap between "what we discussed" and "what we're building" is where most projects fail. NolteOS closes it.</span>
+        <div class="snapshot-features">
+          <div class="snapshot-feature" data-highlight="meeting-recaps">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Structured recaps</strong>
+              <span class="snapshot-feature-desc">Decisions, agreements, and action items extracted automatically</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="meeting-history">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Searchable history</strong>
+              <span class="snapshot-feature-desc">Find any decision from any meeting instantly</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="meeting-workitems">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Work item generation</strong>
+              <span class="snapshot-feature-desc">Agreements become deliverables with one click</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="os-product-shot">
         <div class="shot-window">
@@ -274,11 +396,15 @@ import Base from '../../layouts/Base.astro';
           </div>
           <div class="shot-content">
             <div class="shot-meeting">
+              <div class="shot-meeting-search" data-zone="meeting-history" data-label="Searchable History">
+                <span class="shot-search-icon">&#128269;</span>
+                <span class="shot-search-text">Search decisions, agreements, action items...</span>
+              </div>
               <div class="shot-meeting-header">
                 <div class="shot-meeting-title">Weekly Delivery Meeting</div>
                 <div class="shot-meeting-date">March 17, 2026</div>
               </div>
-              <div class="shot-meeting-tags">
+              <div class="shot-meeting-tags" data-zone="meeting-recaps" data-label="Structured Recaps">
                 <span class="shot-tag decisions">4 Decisions</span>
                 <span class="shot-tag agreements">5 Agreements</span>
                 <span class="shot-tag actions">5 Action Items</span>
@@ -303,11 +429,16 @@ import Base from '../../layouts/Base.astro';
               </div>
               <div class="shot-meeting-recap">
                 <span class="shot-recap-badge">Recap Finalized</span>
-                <span class="shot-recap-actions">Edit &middot; Share &middot; Generate Work Items</span>
+                <span class="shot-recap-actions">Edit &middot; Share</span>
+                <button class="shot-generate-btn" data-zone="meeting-workitems" data-label="Work Items">Generate Work Items</button>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="nolte-why-matters os-product-why">
+        <span class="nolte-why-label">Why it matters</span>
+        <p>The gap between "what we discussed" and "what we're building" is where most projects fail. NolteOS closes it.</p>
       </div>
     </div>
   </div>
@@ -316,15 +447,32 @@ import Base from '../../layouts/Base.astro';
   <div class="os-product-section os-product-dark">
     <div class="os-product-row reverse">
       <div class="os-product-callout">
-        <span class="os-callout-label">Weekly Delivery Status</span>
+        <span class="os-callout-label nolte-eyebrow--with-line">Weekly Delivery Status</span>
         <h2>What shipped. What's next. <em>What's flagged.</em></h2>
         <p>Every week, your dashboard shows exactly what was delivered, grouped by epic. Next to it: what's expected next week, with flags for anything blocked or waiting on you. This is the heartbeat of your engagement.</p>
-        <ul class="os-callout-points">
-          <li><strong>Delivered this week</strong> — grouped by epic, with item-level detail</li>
-          <li><strong>Expected next week</strong> — what's coming, with blocker and approval flags</li>
-          <li><strong>Weekly pace tracking</strong> — actual vs. target, updated in real time</li>
-        </ul>
-        <span class="os-callout-why">Why it matters: A weekly email summary is someone's interpretation. Your dashboard is the source of truth.</span>
+        <div class="snapshot-features">
+          <div class="snapshot-feature" data-highlight="delivery-shipped">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Delivered this week</strong>
+              <span class="snapshot-feature-desc">Grouped by epic, with item-level detail</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="delivery-next">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Expected next week</strong>
+              <span class="snapshot-feature-desc">What's coming, with blocker and approval flags</span>
+            </div>
+          </div>
+          <div class="snapshot-feature" data-highlight="delivery-pace">
+            <span class="snapshot-feature-dot"></span>
+            <div>
+              <strong class="snapshot-feature-name">Weekly pace tracking</strong>
+              <span class="snapshot-feature-desc">Actual vs. target, updated in real time</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="os-product-shot">
         <div class="shot-window shot-window-dark">
@@ -333,7 +481,7 @@ import Base from '../../layouts/Base.astro';
           </div>
           <div class="shot-content">
             <div class="shot-delivery-cols">
-              <div class="shot-delivery-col">
+              <div class="shot-delivery-col" data-zone="delivery-shipped" data-label="Delivered">
                 <div class="shot-delivery-heading">Delivered This Week <span class="shot-delivery-count">10</span></div>
                 <div class="shot-epic-group">
                   <span class="shot-epic-name">Product Calculator</span>
@@ -350,7 +498,7 @@ import Base from '../../layouts/Base.astro';
                   <div class="shot-delivery-item done">&#10003; Slack Execution</div>
                 </div>
               </div>
-              <div class="shot-delivery-col">
+              <div class="shot-delivery-col" data-zone="delivery-next" data-label="Expected Next">
                 <div class="shot-delivery-heading">Expected Next Week <span class="shot-delivery-count">9</span></div>
                 <div class="shot-delivery-item">Otto on AWS Fargate</div>
                 <div class="shot-delivery-item flag-blocked">
@@ -366,8 +514,43 @@ import Base from '../../layouts/Base.astro';
                 <div class="shot-delivery-item faded">+4 more items</div>
               </div>
             </div>
+            <div class="shot-pace-tracker" data-zone="delivery-pace" data-label="Weekly Pace">
+              <div class="shot-pace-weeks">
+                <div class="shot-pace-week">
+                  <span class="shot-pace-label">Week 1</span>
+                  <span class="shot-pace-val">5 <span class="shot-pace-of">/ 7</span></span>
+                  <span class="shot-pace-status below">Below pace</span>
+                </div>
+                <div class="shot-pace-week">
+                  <span class="shot-pace-label">Week 2</span>
+                  <span class="shot-pace-val">10 <span class="shot-pace-of">/ 7</span></span>
+                  <span class="shot-pace-status on">On pace</span>
+                </div>
+                <div class="shot-pace-week">
+                  <span class="shot-pace-label">Week 3</span>
+                  <span class="shot-pace-val">7 <span class="shot-pace-of">/ 7</span></span>
+                  <span class="shot-pace-status on">On pace</span>
+                </div>
+                <div class="shot-pace-week">
+                  <span class="shot-pace-label">Week 4</span>
+                  <span class="shot-pace-val">0 <span class="shot-pace-of">/ 7</span></span>
+                  <span class="shot-pace-status below">Below pace</span>
+                </div>
+              </div>
+              <div class="shot-pace-bar">
+                <div class="shot-pace-fill"></div>
+                <div class="shot-pace-marker"></div>
+              </div>
+              <div class="shot-pace-legend">
+                <span class="shot-pace-legend-label">Expected today</span>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="nolte-why-matters os-product-why">
+        <span class="nolte-why-label">Why it matters</span>
+        <p>A weekly email summary is someone's interpretation. Your dashboard is the source of truth.</p>
       </div>
     </div>
   </div>
@@ -375,10 +558,11 @@ import Base from '../../layouts/Base.astro';
   <!-- COMPARED TO -->
   <div class="os-contrast">
     <div class="wide-wrap">
-      <h2 class="section-heading">What you get vs. <em>what you're used to</em></h2>
+      <span class="os-callout-label nolte-eyebrow--with-line">The Difference</span>
+      <h2 class="section-heading">What you're used to vs. <em>what you get</em></h2>
     </div>
     <div class="os-compare-grid">
-      <div class="os-compare-col">
+      <div class="os-compare-col os-compare-old">
         <span class="os-compare-label old">Typical Agency</span>
         <ul>
           <li>Weekly status calls to learn what happened</li>
@@ -389,7 +573,8 @@ import Base from '../../layouts/Base.astro';
           <li>Invoices based on hours, not outcomes</li>
         </ul>
       </div>
-      <div class="os-compare-col">
+      <span class="os-compare-vs">VS</span>
+      <div class="os-compare-col os-compare-new">
         <span class="os-compare-label new">With NolteOS</span>
         <ul>
           <li>Live dashboard — check anytime, no meetings needed</li>
@@ -404,20 +589,99 @@ import Base from '../../layouts/Base.astro';
   </div>
 
   <!-- TESTIMONIAL -->
-  <div class="testimonial">
-    <div class="testimonial-inner">
+  <div class="os-testimonial">
+    <div class="os-testimonial-inner">
+      <span class="os-testimonial-eyebrow">What Clients Say</span>
+      <span class="os-testimonial-quote-mark">&ldquo;</span>
       <blockquote>They can build anything and do so beautifully and on time. They have also helped me tremendously in thinking strategically, even if it means I'm paying them less in the short term. They act like a partner in my business.</blockquote>
-      <cite>Dr. Josh Turnbull &mdash; Founder, Breeze Oral Care</cite>
+      <div class="os-testimonial-author">
+        <div class="os-testimonial-avatar">JT</div>
+        <div class="os-testimonial-author-info">
+          <span class="os-testimonial-name">Dr. Josh Turnbull</span>
+          <span class="os-testimonial-role">Founder, Breeze Oral Care</span>
+        </div>
+      </div>
+      <div class="os-testimonial-metrics">
+        <div class="os-testimonial-metric">
+          <span class="os-testimonial-metric-val">4<span class="os-testimonial-metric-unit">mo</span></span>
+          <span class="os-testimonial-metric-label">Discovery to Launch</span>
+        </div>
+        <div class="os-testimonial-metric">
+          <span class="os-testimonial-metric-val">100<span class="os-testimonial-metric-unit">%</span></span>
+          <span class="os-testimonial-metric-label">On-Time Rate</span>
+        </div>
+        <div class="os-testimonial-metric">
+          <span class="os-testimonial-metric-val">47</span>
+          <span class="os-testimonial-metric-label">Deliveries Shipped</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="os-testimonial-divider"></div>
+
+    <div class="os-testimonial-cta">
+      <span class="os-testimonial-eyebrow">Ready to Start</span>
+      <div class="os-testimonial-cta-grid">
+        <div class="os-testimonial-cta-text">
+          <h2>See it for <em>yourself.</em></h2>
+          <p>Describe what you're building. Get a predictable delivery plan with scope, timeline, and cost — powered by NolteOS.</p>
+        </div>
+        <div class="os-testimonial-cta-action">
+          <a class="btn-accent" href="https://os.nolte.io">Build a Predictable Plan</a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- CTA -->
-  <div class="footer-cta">
-    <div class="wide-wrap">
-      <h2>See it for <em>yourself.</em></h2>
-      <p>Describe what you're building. Get a predictable delivery plan with scope, timeline, and cost — powered by NolteOS.</p>
-      <a class="btn-accent" href="https://os.nolte.io">Build a Predictable Plan</a>
-    </div>
-  </div>
+<script>
+  // Feature hover → zone highlight mapping (all sections)
+  // Groups features by parent section for independent behavior
+  const features = document.querySelectorAll('.snapshot-feature[data-highlight]');
+  const sections = new Map();
+
+  features.forEach(feature => {
+    const section = feature.closest('.os-product-section');
+    if (!sections.has(section)) sections.set(section, []);
+    sections.get(section).push(feature);
+  });
+
+  // Set first feature in each section as default active
+  sections.forEach((sectionFeatures) => {
+    const first = sectionFeatures[0];
+    if (first) {
+      first.classList.add('is-active');
+      const zones = document.querySelectorAll(`[data-zone="${first.dataset.highlight}"]`);
+      zones.forEach(zone => zone.classList.add('is-highlighted'));
+    }
+  });
+
+  // Hover: activate hovered, deactivate siblings; on leave: revert to first
+  features.forEach(feature => {
+    const section = feature.closest('.os-product-section');
+    const siblings = sections.get(section) || [];
+    const zones = document.querySelectorAll(`[data-zone="${feature.dataset.highlight}"]`);
+
+    feature.addEventListener('mouseenter', () => {
+      siblings.forEach(sib => {
+        sib.classList.remove('is-active');
+        const sibZones = document.querySelectorAll(`[data-zone="${sib.dataset.highlight}"]`);
+        sibZones.forEach(z => z.classList.remove('is-highlighted'));
+      });
+      feature.classList.add('is-active');
+      zones.forEach(zone => zone.classList.add('is-highlighted'));
+    });
+
+    feature.addEventListener('mouseleave', () => {
+      feature.classList.remove('is-active');
+      zones.forEach(zone => zone.classList.remove('is-highlighted'));
+      const first = siblings[0];
+      if (first) {
+        first.classList.add('is-active');
+        const firstZones = document.querySelectorAll(`[data-zone="${first.dataset.highlight}"]`);
+        firstZones.forEach(z => z.classList.add('is-highlighted'));
+      }
+    });
+  });
+</script>
 
 </Base>
