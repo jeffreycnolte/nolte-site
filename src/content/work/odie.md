@@ -45,33 +45,45 @@ phases:
 
 ## The Challenge
 
-Odie set out to build a modern pet insurance platform from scratch. The catch: carrier requirements and state-by-state regulatory obligations meant every feature had hard compliance deadlines that couldn't slip.
+Pet insurance was stuck. Slow claims processes, unpredictable premiums, inflexible policies designed for insurers rather than pet owners. Odie's founders saw an industry ripe for disruption and needed a technology partner who could build a modern digital insurance platform from the ground up — and move fast enough to capture the market.
 
-Filing dates are set by state regulators, not product teams. Missing one means losing the ability to operate in that state — potentially for an entire filing cycle. There's no "we'll push it to next sprint." The date is the date, and the consequences are real.
+The problem wasn't just technical. Pet insurance operates under carrier requirements and state-by-state regulatory obligations. Every feature had hard compliance deadlines. Filing dates are set by state regulators, not product teams. Missing one means losing the ability to operate in an entire state. There's no pushing it to next sprint.
 
-On top of that, the platform had to satisfy carrier underwriting requirements, handle multi-state rate calculations, and provide the kind of consumer experience that would differentiate Odie in a crowded market. Most agencies would look at that list of constraints and pad the timeline by 50%. We looked at it and built a delivery plan.
+![Odie pet insurance platform interface](/images/work/odie/hero.png)
 
-## The Approach
+## Setting the Course
 
-We started with an eight-week foundation phase. This wasn't just architecture — it was mapping every regulatory obligation across target states, understanding carrier integration requirements, and building a delivery plan where compliance deadlines were first-class milestones, not afterthoughts.
+We started with user research and ecosystem analysis. Interviews with pet owners revealed something the industry had missed: people didn't just want the cheapest coverage. They wanted to avoid financial hardship while ensuring their pet's health. That insight shaped everything.
 
-NolteOS decomposed the engagement into phased delivery plans. Each phase was forecasted independently, and each delivery was priced individually. The system tracked regulatory deadlines alongside development milestones, giving Odie real-time visibility into whether they'd make every filing date.
+We ran innovation workshops with Odie's leadership to align brand, product, and business strategy. Features were prioritized by differentiation potential, roadmap alignment, customer impact, and effort. The result was a focused product roadmap that turned strategic clarity into delivery milestones.
 
-The key insight was treating compliance deadlines as immovable constraints and building the delivery sequence around them. When a state filing required a specific feature by a specific date, that delivery was sequenced, staffed, and tracked with zero ambiguity about whether it would ship on time.
+![Odie team collaboration on Google Meet](/images/work/odie/google-meet.jpg)
+
+The brand itself evolved. Odie repositioned from "affordable pet insurance" to "accessible to everyone" — a subtle but meaningful shift that opened up their market positioning. The visual identity got friendlier, the messaging sharper, and both were carried through into every user-facing surface.
+
+![Odie team and company culture](/images/work/odie/people.png)
 
 ## What We Built
 
-**Policy Management System** — End-to-end policy lifecycle management including quoting, binding, renewals, and cancellations. Built to handle multi-state rate variations and carrier-specific underwriting rules without manual intervention.
+![Odie UI design system and components](/images/work/odie/ui.png)
 
-**Claims Processing Pipeline** — Automated claims intake, adjudication workflows, and payment processing. Designed for the complexity of pet insurance claims — vet records, treatment codes, coverage verification — while keeping the consumer experience straightforward.
+**Consumer Enrollment Flow** — A modern quoting and enrollment experience that handles the complexity of insurance (breed, age, location, coverage tiers) while feeling as simple as buying anything else online. Conversion-optimized at every step.
 
-**Agent Portal** — Full-featured portal for insurance agents including commission management, policy administration, and customer relationship tools. Built to scale from a handful of agents to hundreds without rearchitecting.
+**Claims Processing Pipeline** — Automated claims intake, adjudication workflows, and payment processing. Pet insurance claims involve vet records, treatment codes, and coverage verification — we made it straightforward for both policyholders and the operations team.
 
-**Compliance Reporting** — Automated regulatory reporting that satisfies state filing obligations. Every transaction, every policy change, every claim — tracked and reportable in the format each state requires.
+**Policy Management System** — End-to-end lifecycle management including quoting, binding, renewals, and cancellations. Built to handle multi-state rate variations and carrier-specific underwriting rules without manual intervention.
 
-**Consumer Enrollment Flow** — A modern, conversion-optimized enrollment experience that handles the complexity of insurance quoting (breed, age, location, coverage options) while feeling as simple as buying anything else online.
+**Real-Time Reporting and Automation** — Internal optimization that gave Odie's team real-time visibility into operations. Automated testing, builds, and deployments. Lightweight processes that scaled with the team rather than slowing it down.
 
-**Regulatory Filing Documentation** — System-generated documentation packages for state regulatory filings, including rate justifications, actuarial data exports, and policy form management.
+![Odie experimentation and iteration process](/images/work/odie/experimentation.png)
+
+## Scaling Into B2B
+
+A critical inflection point came when Odie outgrew their original no-code platform. Caspio had served its purpose early on, but it limited customization, drove disproportionate costs, and couldn't support the B2B expansion Odie needed. We led the migration to a custom codebase that unlocked the next phase of growth.
+
+That next phase was the Pet Insurance Service API — a white-label, multi-tenant environment that let B2B clients offer Odie-powered insurance under their own brands. Each tenant got personalized brand experiences, segmented payments and claims, scaled quote generation for group policies, and customized customer support flows.
+
+![Odie platform architecture diagram](/images/work/odie/diagram.png)
 
 ## Delivery Data
 
@@ -79,12 +91,12 @@ Over three years and 120+ deliveries, our forecast accuracy held at 95%. The ave
 
 Of those deliveries, 96% shipped on or before their forecasted date. Every single regulatory filing deadline was met. Not most of them. All of them.
 
-The longer cycle time is worth noting because it reflects a conscious decision. Insurance deliveries carry higher stakes than a typical feature release. When a delivery has regulatory implications, we build additional review into the cycle. NolteOS accounts for this — the forecast model adjusts for delivery complexity, not just effort.
+The longer cycle time reflects a conscious decision. Insurance deliveries carry higher stakes than a typical feature release. When a delivery has regulatory implications, we build additional review into the cycle. NolteOS accounts for this — the forecast model adjusts for delivery complexity, not just effort.
 
 ## The Outcome
 
-Odie raised their Series A with a live, compliant platform operating across multiple states and serving thousands of policyholders. They didn't go to investors with a prototype and a promise. They went with a production system, real customers, and a delivery track record that proved the technology was built to scale.
+Over 3.5 years, the partnership took Odie from concept to $6MM in total funding through a Series A. We didn't just build the technology — we helped shape product strategy, evolve the brand, and architect the B2B expansion that diversified their revenue.
 
-The partnership has run for three years. Every engagement has been forecasted. Every delivery has been priced up front. Odie has never received an unexpected invoice, never had a scope conversation that turned into a budget conversation, and never missed a regulatory deadline because of a development delay.
+Odie went to investors with a production system, real customers, and a delivery track record that proved the technology was built to scale. Every engagement was forecasted. Every delivery was priced up front. No surprise invoices, no scope conversations that turned into budget conversations, and no regulatory deadlines missed because of a development delay.
 
-That's what a three-year partnership looks like when both sides know exactly what to expect.
+That's what a multi-year partnership looks like when both sides know exactly what to expect.

@@ -1574,6 +1574,27 @@ footer {
   display: block;
   margin-bottom: 2rem;
 }
+.testimonial-logo-img {
+  height: 24px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.5;
+  margin-bottom: 2rem;
+}
+.testimonial-more-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.testimonial-more-link:hover {
+  color: rgba(255,255,255,0.7);
+}
 .testimonial-featured blockquote {
   font-family: var(--serif);
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
@@ -3881,7 +3902,7 @@ footer {
 .innovation-section { padding: 5rem 2rem; text-align: center; }
 .innovation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); max-width: 1100px; margin: 2.5rem auto 0; }
 .innovation-card { padding: 2rem; background: var(--white); }
-.innovation-card-number { font-family: var(--mono); font-size: 0.6875rem; color: var(--gray-400); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; display: block; }
+.innovation-card-number { font-family: var(--mono); font-size: 0.6875rem; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; display: block; }
 .innovation-card h3 { font-family: var(--serif); font-size: 1.25rem; margin-bottom: 0.75rem; }
 .innovation-card p { color: var(--gray-600); line-height: 1.6; font-size: 0.9375rem; }
 

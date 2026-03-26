@@ -41,33 +41,55 @@ phases:
 
 ## The Challenge
 
-Pilou needed a financial services platform that could operate under strict regulatory requirements while delivering a modern user experience. Every feature had to be built with compliance in mind from day one — not retrofitted after launch.
+Pilou is a Mexico-based fintech platform focused on financial empowerment for underserved populations. When we joined the engagement, the platform had an unclear technology strategy — multiple engineers had contributed over time, leaving confusion around scalability, documentation, code quality, and security. The product needed modernization while maintaining strict compliance with Mexican financial regulations under the CNBV.
 
-The financial services space doesn't give you the luxury of shipping fast and fixing later. Audit trails need to be immutable. Data handling needs to meet regulatory standards before the first user touches the system. And every transaction needs to be traceable end-to-end.
+The founders had a clear mission but a fragmented technical foundation. Pilou needed a partner who could assess what existed, define a coherent strategy, and rebuild the critical user-facing systems without disrupting live operations.
 
-Pilou had talked to agencies that wanted to build the product first and "add compliance later." That's not how regulated industries work. Compliance isn't a feature you bolt on. It's a foundation you build on.
+![Pilou fintech platform hero](/images/work/pilou/hero.png)
 
-## The Approach
+## Strategy and Planning
 
-We spent four weeks in discovery — not building slides, but mapping every regulatory requirement to specific technical decisions. Data residency, encryption standards, audit trail architecture, identity verification flows — all of it defined before we wrote a line of application code.
+We started with a thorough assessment — technical architecture, product design, and digital product evaluation — to identify every improvement area. Then we moved into discovery.
 
-NolteOS decomposed the platform into 85 deliveries. Each one had compliance requirements baked into the acceptance criteria. A delivery wasn't done when the feature worked. It was done when the feature worked and satisfied its regulatory obligations.
+Discovery meant analyzing the competitive landscape across six direct competitors, running user surveys to gather demographic and qualitative data, and conducting Example Mapping sessions to extract business rules from stakeholders and translate them into development-ready specifications.
 
-The forecast model projected the build phase at five months. We shared that projection with Pilou's team on day one of the build — along with a delivery-by-delivery timeline they could track in real time.
+![Competitive landscape analysis](/images/work/pilou/competitive-landscape.png)
+
+![Example Mapping methodology for extracting business rules](/images/work/pilou/example-mapping.png)
+
+The output was a detailed release plan and roadmap, with the onboarding and KYC system identified as the critical first priority — the first touchpoint for every new user and the foundation for regulatory compliance.
+
+![Pilou strategy and planning documentation](/images/work/pilou/strategy.jpg)
 
 ## What We Built
 
-**Regulatory-Compliant Data Architecture** — Built to meet financial industry data handling standards with immutable audit trails from day one. Every state change, every access event, every data modification — logged, timestamped, and tamper-proof.
+![Pilou design system components](/images/work/pilou/design-system.png)
 
-**Transaction Processing Pipeline** — Real-time processing with complete audit visibility across every state change. Designed for the throughput requirements of a growing financial platform while maintaining the traceability regulators require.
+**Investor Profile Quiz** — A complete redesign of Pilou's risk assessment questionnaire. We reduced the question count for efficiency, updated the interface to match the new design system, enhanced the backend scoring and risk algorithms, and implemented email-based result delivery to encourage account creation. AML compliance mechanisms were improved throughout.
 
-**Compliance Reporting Dashboard** — Automated reporting that satisfies regulatory obligations without manual intervention. Reports generate on schedule, flag anomalies automatically, and export in the formats regulators expect.
+![Redesigned investor profile quiz interface](/images/work/pilou/quiz.png)
 
-**Identity Verification Flow** — KYC/AML integration built as discrete deliveries with testable acceptance criteria. Each verification step was scoped, priced, and delivered independently — so Pilou could see exactly what each piece of the compliance stack cost.
+**KYC and Digital Signatures** — We evaluated technical partners based on compliance requirements, cost, scalability, and performance, then integrated identity verification and digital signature infrastructure meeting Mexican financial regulations.
 
-**Client Portal** — A modern, responsive interface that makes complex financial operations feel straightforward. Account management, transaction history, document access — all built with the same attention to compliance that governs the backend.
+![Onboarding flow redesign](/images/work/pilou/onboarding.png)
 
-**Admin and Operations Console** — Internal tooling for Pilou's team to manage accounts, review flagged transactions, and handle compliance workflows. Built for operational efficiency without sacrificing audit trail integrity.
+![Validation flow for KYC compliance](/images/work/pilou/validation.png)
+
+**SDK Integration with Major Mexican Bank** — A direct integration with GBM's banking SDK that reduced account opening from days to near-instant processing. Replaced manual setup procedures with an automated system. Our team served as primary liaison with the bank's technical staff throughout the integration.
+
+![GBM bank SDK integration](/images/work/pilou/gbm-integration.png)
+
+**Regulatory Compliance Framework** — We conducted an in-depth study of Mexico's CNBV financial regulations and held weekly collaboration sessions with Pilou's compliance team. Every backend mechanism was built with security and regulatory adherence as a baseline requirement, not an afterthought.
+
+![Compliance workflow and regulatory framework](/images/work/pilou/compliance.png)
+
+## The Technical Challenge
+
+The hardest problem wasn't any single feature — it was bridging two distinct technology stacks. Pilou's legacy system ran on Ruby. The new frontend was built in Next.js and Nest.js. Making them work together seamlessly required secure API authentication, CORS protocol management, GraphQL API calls for user profile operations, field mapping and data synchronization across platforms, and seamless post-onboarding redirection from the new system back to the legacy dashboard.
+
+![Pilou system architecture diagram](/images/work/pilou/architecture.png)
+
+We tested extensively in development environments before touching production, ensuring backward compatibility at every step. Users experienced a single coherent product even though two distinct systems powered it behind the scenes.
 
 ## Delivery Data
 
@@ -79,8 +101,6 @@ Every delivery was priced before work began. Every invoice matched the agreed pr
 
 ## The Outcome
 
-Pilou launched on time with zero compliance gaps. The platform handles thousands of transactions with full regulatory compliance. Not a single audit finding has been traced to a technical implementation issue.
+Pilou launched on time with zero compliance gaps. The platform serves thousands of users with full regulatory compliance under Mexican financial law. The onboarding experience went from fragmented and slow to streamlined and conversion-optimized. The banking SDK integration eliminated days of manual account setup.
 
-More importantly, the delivery model gave Pilou something most financial services startups don't have: cost predictability. They knew what their platform would cost before it was built. They knew what each phase would cost before it started. And they could plan their runway and fundraising around real numbers, not estimates that might double.
-
-The engagement continues. Every new feature follows the same model — scoped, priced, forecasted, delivered. Two years in, the pattern hasn't changed because the pattern works.
+The engagement gave Pilou something most fintech startups in emerging markets don't have: a coherent technology strategy, a modern user experience, and a delivery model where every feature is scoped, priced, and forecasted before work begins. Two years in, the pattern hasn't changed because the pattern works.
