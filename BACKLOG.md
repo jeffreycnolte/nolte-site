@@ -1,0 +1,48 @@
+# Nolte Site Backlog
+
+Tasks to tackle after launch. Ordered by priority.
+
+---
+
+## P1 — Post-Launch Polish
+
+- [ ] **Blog SVG graphics** — Generate unique data-viz SVG headers for all 26 blog posts (forecast charts, cycle time distributions, throughput patterns, Monte Carlo fans) in the same dark bg + accent line style as the Predictability Gap card
+- [ ] **Jeffrey headshot** — Replace initials placeholder with proper headshot in "We've been in your seat" section
+- [ ] **Testimonials page** — Build `/testimonials` page similar to withcoverage.com/testimonials, pulling from case study testimonials
+- [ ] **Case study images** — Source/create product screenshots for Odie, Pilou (Breeze already has real images)
+- [ ] **Mobile responsive audit** — Full pass on all pages at mobile/tablet breakpoints
+- [ ] **Blog post images** — Assign SVG data graphics or on-brand visuals to all blog posts
+
+## P2 — Content & SEO
+
+- [ ] **Turris & Penelope case studies** — Create case study pages for these clients
+- [ ] **Secure CPG case study** — Create case study page
+- [ ] **Blog internal linking** — Ensure all posts link to The Predictability Gap and cross-reference related posts
+- [ ] **Blog categories cleanup** — Review category assignments, ensure consistency
+- [ ] **Meta descriptions audit** — Some posts had incorrect/missing meta descriptions from WP migration
+- [ ] **301 redirects** — Map old nolte.io URLs to new paths for SEO continuity
+- [ ] **Canonical URLs** — Verify canonical tags point to new domain once DNS is switched
+
+## P3 — Design & Brand
+
+- [ ] **Brand typography** — Evaluate Söhne/GT Super vs current Google Fonts (Instrument Serif, DM Mono, Geist)
+- [ ] **Trust logos on dark sections** — White/light variants for use on dark backgrounds
+- [ ] **Team page photos** — Real headshots for all team members on `/about/team`
+- [ ] **About page content** — Expand "Our Story" with more narrative, timeline, milestones
+- [ ] **Living style guide** — Build `/brand` page showing all components, colors, typography live
+
+## P4 — Features
+
+- [ ] **Live delivery data** — Connect week-over-week chart to real NolteOS API data
+- [ ] **NolteOS integration** — Embed or deep-link to os.nolte.io from case study metrics
+- [ ] **Contact/booking flow** — Cal.com integration or contact form
+- [ ] **Newsletter signup** — Email capture on blog index
+- [ ] **Search** — Blog search functionality
+- [ ] **Dark mode** — Optional, evaluate brand application
+
+## P5 — Infrastructure
+
+- [ ] **Custom domain** — Point nolte.io DNS to Netlify
+- [ ] **Analytics** — Add Plausible/Fathom or GA4
+- [ ] **Performance audit** — Lighthouse scores, image optimization, lazy loading
+- [ ] **WordPress sunset** — Decommission Pantheon site after DNS switch + redirect verification

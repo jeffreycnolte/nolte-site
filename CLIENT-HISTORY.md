@@ -1,0 +1,336 @@
+# Nolte Client History
+
+Complete list of clients since founding. Use this to identify case study candidates aligned with our positioning.
+
+**Total clients:** 319
+
+## All Clients (A-Z)
+
+- [ ] AOLRC
+- [ ] AYIAA
+- [ ] About Fresh
+- [ ] Ace II LLC
+- [ ] Adam Lee Fenton
+- [ ] All In Good Tech
+- [ ] Amtrak
+- [ ] Ana Priscila Hernández Altamirano
+- [ ] Andres Malvestiti.
+- [ ] Andros
+- [ ] Another Company
+- [ ] Antebellum
+- [ ] Ashmin Varma
+- [ ] Association for Computing Machinery
+- [ ] Augusto
+- [ ] Augusto:CM-001 - Coachmate MVP
+- [ ] BB Dakota
+- [ ] BLU Realty Group
+- [ ] BajiBot
+- [ ] Bajibot
+- [ ] Baron Capital (Bamco Inc)
+- [ ] Barry's Bootcamp Holdings LLC (HR Division)
+- [ ] Barry's Bootcamp Holdings LLC (Retail Division)
+- [ ] Barry's Bootcamp Holdings LLC (Retail Division):2315480052.- Barry's Nolte Care
+- [ ] Barry's Bootcamp Holdings LLC (Retail Division):2366318813 - Barry's Instructor Middleware
+- [ ] Barry's Bootcamp Holdings LLC (Retail Division):480860023 - Barry's Bootcamp Middleware App
+- [ ] Be The Match MX
+- [ ] Be The Match MX:BTM-NC - Be The Match NC
+- [ ] BigEyedWish LLC
+- [ ] BigEyedWish LLC:PPF-001 - Playology Pets Finder App
+- [ ] Bloomscape Inc
+- [ ] Bloomscape Inc:BLOOM/NC - Bloomscape NC
+- [ ] Bocce Bar
+- [ ] Bold Worldwide
+- [ ] Brand Sense Partners (BSP)
+- [ ] Brandon Stewart
+- [ ] Breeze Dental
+- [ ] Brick of Gold LLC
+- [ ] Build America Mutual Assurance Company
+- [ ] Build America Mutual Assurance Company:2238736349 - Build America Website Audit
+- [ ] BurgerFi
+- [ ] BurgerFi.com
+- [ ] Cake & Arrow
+- [ ] Cake & Arrow:2022655224 - Cake & Arrow NC
+- [ ] Caleres
+- [ ] Casaverde Pictures
+- [ ] Catherine Redmond
+- [ ] Chillhouse llc
+- [ ] Chillhouse llc:CHILL-001 - Chillhouse Credit App
+- [ ] Chillhouse llc:CHILL-002 - Chillhouse Credit App Second
+- [ ] Citi
+- [ ] City Eventions
+- [ ] Clowns com
+- [ ] Clowns.com
+- [ ] Cly by Matthew
+- [ ] Colibri
+- [ ] Colibri:2236693195 - Shopify
+- [ ] Condesa, LLC DBA Fenix
+- [ ] Contextuall, LLC
+- [ ] CreditSights
+- [ ] Cultural Retail Holdings
+- [ ] Cultural Retail Holdings:LCP-001 - Launch Competition Platform
+- [ ] DF Data
+- [ ] DF Data:2203020786 - DF Data Product
+- [ ] Data Minded Solutions
+- [ ] Data Robot
+- [ ] Data Robot:DBIG-001 - Dream Big Branding
+- [ ] Diabetes Health Sciences, Inc (Swee2ooth)
+- [ ] Diabetes Health Sciences, Inc (Swee2ooth):SWEE2-NC - Swee2ooth NC
+- [ ] Diseno Digital Nolte
+- [ ] Domality
+- [ ] Dustin Davidson
+- [ ] E-Ternal
+- [ ] Edible Studios
+- [ ] Ekahau, Inc.
+- [ ] Ekahau:2280974487 - Ekahau NC
+- [ ] Farrell
+- [ ] Farrell:2022088728 - Farrel Building NC
+- [ ] Federico Obregon
+- [ ] Firstbase.io
+- [ ] Flyp Academy
+- [ ] Footprint Family, Inc.
+- [ ] Forward Innovation Group
+- [ ] Foundation Mortgage
+- [ ] Frank 151 Media Group
+- [ ] G & M Works, LLC
+- [ ] GCC
+- [ ] GCC Cemento (MXN)
+- [ ] GCC Cemento, SA de CV
+- [ ] GCC Cemento, SA de CV:GCC-001 - GCC Website Rebuild
+- [ ] GCSE App
+- [ ] GET PREAM LLC
+- [ ] GET PREAM LLC:2315463596 - Pream NC
+- [ ] Globyte
+- [ ] Globyte:GLOB-NC - Globyte NC
+- [ ] GoBurgerFi.com
+- [ ] Good & Gold
+- [ ] Grey Water Recycling Systems, Inc
+- [ ] Grupo Cemento de Chihuaha
+- [ ] HAAB Project
+- [ ] Hagopianink
+- [ ] Harley and Company
+- [ ] Human Services Council of New York
+- [ ] Human Services Council of New York:HSC-NC - Human Services Council NC
+- [ ] Huntington Investments
+- [ ] Intangilend
+- [ ] JCPR Inc
+- [ ] JConnelly
+- [ ] JDunlap Management
+- [ ] Jakt
+- [ ] Jeffrey Nolte - Customer
+- [ ] Joe's Complete Tree Service
+- [ ] Joshua Jenks - Old
+- [ ] Jules
+- [ ] KAAB United LLC
+- [ ] Kapitall
+- [ ] Kevin Ryan
+- [ ] Kinetic Sequence
+- [ ] Klipster, LLC
+- [ ] Knox Design
+- [ ] Kristen Farrell
+- [ ] L+R
+- [ ] LOWER EAST SIDE TENEMENT MUSEUM
+- [ ] LVLY
+- [ ] La Casa Alma
+- [ ] Lettuce Design
+- [ ] Levin & Riegner LLC
+- [ ] Levin & Riegner LLC:artfizz.com NC Oct Nov 2020
+- [ ] Lit Pix
+- [ ] Lively Group
+- [ ] Lively Group:348141162 - Lively Group NC
+- [ ] Luo
+- [ ] MERPAGO
+- [ ] MESA VERDE
+- [ ] MST - Multi Sensory Technologies
+- [ ] MZ Architect
+- [ ] MZ Architects
+- [ ] Madison Avenue Dental Studio
+- [ ] Madison Avenue Dental Studio:MADS-NC - Madison Ave Dental Studio NC
+- [ ] Madison Capital Funding LLC
+- [ ] Madison Capital Funding LLC:2002086878 - Madison Capital Funding NC
+- [ ] Marine Lane
+- [ ] Marine Lane:NCW-001 - New Center Website
+- [ ] Mass Appeal
+- [ ] Mcfllc
+- [ ] Me Too
+- [ ] Me Too:2334698660 - Me Too Movement LMS
+- [ ] Medical Control Evaluations
+- [ ] Medical Control Evaluations:245233748 - Med Control NC
+- [ ] MirrorBall - Perrier District Tumblr
+- [ ] Mirrorball
+- [ ] Mirrorball - Societe Perrier
+- [ ] Modern Spaces
+- [ ] Modern Spaces:MSP-NC - Modern Spaces NC
+- [ ] Monarch on the merrimack LLC
+- [ ] Montauk Juice Factory
+- [ ] MotaMeet LLC
+- [ ] MotaMeet LLC:MOT-NC - MotaMeet NC
+- [ ] Murphy & McGonigle PC
+- [ ] NEW YORK LEAGUE OF CONSERVATION VOTERS EDUCATION FUND INC
+- [ ] NEW YORK LEAGUE OF CONSERVATION VOTERS EDUCATION FUND INC:2022024142 NYLCVEF NC
+- [ ] NYSTEC
+- [ ] NYSTEC:67917756 - NYSTEC NC
+- [ ] Nack Behavioral Health, LLC
+- [ ] National Philanthropic Trust
+- [ ] National Women's Law Center
+- [ ] National Women's Law Center with sub-customers
+- [ ] Necterine, LLC
+- [ ] Nederlandse Ski Vereniging
+- [ ] New York Center for Child Development
+- [ ] New York Center for Infants & Toddlers
+- [ ] New York Center for Infants & Toddlers:2022124338 - NYCIT NC
+- [ ] New York University
+- [ ] Nolte Care
+- [ ] Nolte New Brand
+- [ ] North Street
+- [ ] NowThis
+- [ ] Odie Pet Insurance Marketing, INC.
+- [ ] Opportunity Housing, Inc.
+- [ ] OpticNerve
+- [ ] Our Man in Havana
+- [ ] PEN America
+- [ ] Pantheon Systems, Inc.
+- [ ] Pasqua USC LLC
+- [ ] Penelope
+- [ ] PepsiCo
+- [ ] Pilou
+- [ ] Point One Percent
+- [ ] Popup Florist
+- [ ] PrimeOne Insurance Company
+- [ ] PrimeOne Insurance Company:2021995062 - PrimeOne Milo NC
+- [ ] PrimeOne Insurance Company:356729552 - Odie CMS Integration
+- [ ] Printmornyc
+- [ ] Printmornyc:2022037852 - PrintMor NC
+- [ ] Propel Electric Bikes
+- [ ] Propel Electric Bikes:1992624883 - Propel Bikes NC
+- [ ] RAVN LABS
+- [ ] RMY-001-B
+- [ ] RVD Communications
+- [ ] RVD Communications:2239341828 - Pream Marketplace MVP
+- [ ] RVD Communications:Pream App
+- [ ] Rabble Works
+- [ ] Rabble Works:RAB-NC - Rabble NC
+- [ ] Ralph Lauren Corporation
+- [ ] Ready Made
+- [ ] RoOomy
+- [ ] Roman Romero
+- [ ] Roselyn Leibowitz
+- [ ] Rubenstein
+- [ ] Rubenstein:RUB/NC - Rubenstein NC
+- [ ] SMITH & CO. CREATIVE STRATEGIES LLC
+- [ ] Safey AI
+- [ ] Sanavita
+- [ ] Sapey AI
+- [ ] Sarva Yoga Academy
+- [ ] Secure CPG
+- [ ] Sharethis
+- [ ] ShootX9
+- [ ] Silvercup Properties
+- [ ] Skaled
+- [ ] Skaled:819719755 - Skaled NC
+- [ ] Speciality Access
+- [ ] Spring Fertility
+- [ ] Squad UP, Inc.
+- [ ] Standard Blockchain
+- [ ] Starworks, LLC
+- [ ] State of New York
+- [ ] StockOx
+- [ ] Stompy Inc
+- [ ] Stompy Inc.:2262600891 - Stompy Ecommerce Jul2020
+- [ ] StoneCastle Cash Management,LLC
+- [ ] StoneCastle Cash Management,LLC:2022135811 - StoneCastle NC
+- [ ] Strand Studio LLC
+- [ ] Stretch*d
+- [ ] Stretch*d:1977290548 - Stretch*d Website Development
+- [ ] Studio Cake
+- [ ] Studio Cake / Beekman 1802
+- [ ] Studio Paradise
+- [ ] Studio Rodrigo
+- [ ] Studio Rodrigo:2210296810 Studio Rodrigo Open Space NC Base
+- [ ] Studio Rodrigo:2285097915 - Better Arguments NC Base
+- [ ] Studio Rodrigo:553467430 - Better Arguments Website
+- [ ] Studio Rodrigo:NYLCV-001 - NY League of Conservation Voters Education Fund
+- [ ] Suka Creative
+- [ ] Suka Creative:BPL-001 - Brookyln Public Library Website
+- [ ] Suka Creative:BPL-002 - BPL Second Phase
+- [ ] Suka Creative:MCA-NC - Madison Capital Funding NC
+- [ ] Suka Creative:SUKA-NC - Suka Creative NC
+- [ ] Suka Creative:SUKA/NC - Suka Creative NC
+- [ ] Suka Creative:TEMU/001 - Tenement Museum
+- [ ] Sunday Dinner LLC
+- [ ] Sunday Dinner LLC:UDC/001 - Udacity Redesign
+- [ ] Sundaze c/o Proof Positive LLC
+- [ ] Sunnylands
+- [ ] Temple GCSE
+- [ ] Temple GCSE:2022722423 - Temple GCSE NC
+- [ ] The Aspen Institute
+- [ ] The CSI Group
+- [ ] The CSI Group:WU/001 - Washington University Occupation Web Apph
+- [ ] The Dive
+- [ ] The Dive Motel
+- [ ] The Dive:687499649 - Dive Motel Website
+- [ ] The Dive:713856149 - The Dive NC
+- [ ] The IWSR US, Inc
+- [ ] The New Center
+- [ ] The New Center:NCW/001 - New Center Website
+- [ ] The Related Companies, L.P.
+- [ ] The Related Companies, L.P.:LOV-NC - Lovejoy Wharf NC
+- [ ] The United State of Women
+- [ ] The United State of Women - Billable
+- [ ] The United State of Women - Billable:USW/NC - The United State of Women
+- [ ] Toast (Butterfly LLC)
+- [ ] Tough Mudder
+- [ ] Tough Mudder:TOUGH/NC - Tough Mudder Bootcamp NC Billable
+- [ ] Tough Mudder:TOUGH/NC - Tough Mudder Bootcamp NC Non Billable
+- [ ] Transferwise
+- [ ] TravelCloud
+- [ ] Truelogic Software LLC
+- [ ] Turris Financial Technologies Inc.
+- [ ] Twin
+- [ ] UWG
+- [ ] Union Square Ventures
+- [ ] Union Square Ventures:USV-001 - Union Square Ventures Website
+- [ ] VECCo (Vital Engineered Components Company)
+- [ ] Vandal
+- [ ] Via Maris
+- [ ] Via Maris:2981362542 - Via Maris NC
+- [ ] Visualhouse USA LLC
+- [ ] Vote Together
+- [ ] WEVOLV
+- [ ] WGS
+- [ ] Wake
+- [ ] We Are Collins
+- [ ] WellSet
+- [ ] WellSet:2280993454 - Wellset 3mons JunAug2020
+- [ ] WellSet:819268758 - Wellset NC
+- [ ] WellSet:WELLSET-NC - WellSet NC
+- [ ] WellSet:WELLSET-NC - WellSet NC:819268758 - Wellset NC 500 Base
+- [ ] Wheels Up
+- [ ] Women's Forum
+- [ ] Women's Forum:221725943 - Women's Forum NC
+- [ ] Women's Forum:WF/NC - WF NC
+- [ ] Women's Forum:WF/NC - Womens Forum NC
+- [ ] Women's Forum:WF/NC - Womens Forum of NY
+- [ ] Zen Payroll
+- [ ] denhospitality.com
+- [ ] iBrands International
+- [ ] iBrands International:67917751 - iBrands NC
+- [ ] iCharter, LLC
+- [ ] marinelane
+- [ ] new york centre for infants and toddlers
+- [ ] nolte.io
+- [ ] roOomy / Loft Inc.
+- [ ] roOomy / Loft Inc.:2022882999 - roOomy NC
+- [ ] roOomy / Loft Inc.:872821979 - RoOomy Password Reset
+- [ ] survivorsagenda.org
+- [ ] the hours llc
+- [ ] wearenolte.com
+- [ ] wearenolte.com:NOLTE-NC - WeAreNolte.com NC
+
+## Case Study Candidates
+
+Review the list above and check off clients that align with our positioning:
+- Predictable software delivery
+- Insurance, Healthcare, Finance (primary verticals)
+- Scaling companies (not pre-seed)
+- Long-term partnerships (1+ year)
+- Strong delivery metrics story

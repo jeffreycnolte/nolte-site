@@ -1356,11 +1356,13 @@ footer {
 
 /* Predictability Gap card */
 .pgap-section {
-  padding: 0 0 5rem;
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .pgap-card {
-  display: block;
-  max-width: 780px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   text-decoration: none;
   color: inherit;
   border: 1px solid var(--gray-200);
@@ -1372,7 +1374,10 @@ footer {
 }
 .pgap-graphic {
   background: var(--black);
-  padding: 1.5rem 1rem;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pgap-svg {
   width: 100%;
@@ -1380,7 +1385,10 @@ footer {
   display: block;
 }
 .pgap-content {
-  padding: 2rem 2.5rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .pgap-tag {
   font-family: var(--mono);
@@ -1411,36 +1419,45 @@ footer {
 }
 
 /* Steps CTA */
-.steps-cta {
+.steps-cta-inline {
   max-width: 1100px;
-  margin: 2rem auto 0;
-  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
   background: var(--gray-100);
   border: 1px solid var(--gray-200);
-  text-align: center;
+  border-top: none;
+  text-decoration: none;
+  transition: background 0.2s;
 }
-.steps-cta-text {
-  font-size: 0.9375rem;
-  color: var(--gray-600);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+.steps-cta-inline:hover {
+  background: var(--gray-200);
 }
-.steps-cta .btn-accent {
+.steps-cta-action {
+  font-family: var(--mono);
   font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--accent);
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+}
+.steps-cta-sub {
+  font-size: 0.8125rem;
+  color: var(--gray-400);
 }
 
 /* Case card restructured */
 .case-card-top {
-  background: var(--dark-surface);
-  padding: 1.5rem 2rem;
+  background: var(--gray-100);
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-.case-card-logo-text {
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  color: var(--white);
 }
 .case-card-metrics {
   display: flex;
@@ -1448,17 +1465,41 @@ footer {
 }
 .case-metric {
   font-family: var(--sans);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--black);
 }
 .case-metric-label {
   font-family: var(--mono);
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: rgba(255,255,255,0.4);
+  color: var(--gray-400);
   margin-left: 0.15rem;
+}
+.case-card-logo-img {
+  height: 20px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+  filter: brightness(0);
+}
+/* Brand-colored pills */
+.case-pill-healthcare {
+  border-color: #0369fc;
+  color: #0369fc;
+  background: rgba(3,105,252,0.05);
+}
+.case-pill-finance {
+  border-color: #1E3A5F;
+  color: #1E3A5F;
+  background: rgba(30,58,95,0.05);
+}
+.case-pill-insurance {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(214,63,24,0.05);
 }
 .case-card-body {
   padding: 1.5rem 2rem 2rem;
@@ -1752,6 +1793,8 @@ footer {
 .step-cell {
   background: var(--white);
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 .step-num {
   width: 32px;
@@ -1782,12 +1825,14 @@ footer {
   font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--black);
+  flex: 1;
 }
 .step-visual {
   background: var(--gray-100);
   border: 1px solid var(--gray-200);
   padding: 1rem;
-  margin-top: 1.25rem;
+  margin-top: auto;
+  padding-top: 1rem;
   font-family: var(--mono);
   font-size: 12px;
   line-height: 1.8;
