@@ -439,12 +439,8 @@ const posts = (await getCollection('blog'))
 
   <!-- BLOG POSTS -->
   <div class="blog-featured">
-    <div class="blog-featured-header">
-      <div>
-        <h2 class="section-heading">From the blog</h2>
-        <p class="section-sub">How we think about software delivery, forecasting, and building products that ship.</p>
-      </div>
-    </div>
+    <h2 class="section-heading">From the blog</h2>
+    <p class="section-sub">How we think about software delivery, forecasting, and building products that ship.</p>
 
     <div class="blog-featured-grid">
       {posts.map(post => (
