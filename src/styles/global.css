@@ -705,7 +705,7 @@ footer {
 /* DARK HERO */
 .hero-dark {
   background: var(--gradient-hero);
-  padding: 10rem 2rem 6rem;
+  padding: 10rem 0 6rem;
   position: relative;
   overflow: hidden;
 }
@@ -2407,7 +2407,7 @@ footer {
   .cta-block { padding: 1.5rem; }
   .pillars-grid { grid-template-columns: 1fr; }
   .pillar { padding-right: 0; }
-  .hero-dark { padding: 5rem 2rem 4rem; }
+  .hero-dark { padding: 5rem 0 4rem; }
   .metrics-grid { grid-template-columns: 1fr; }
   .trust-logos { gap: 1.5rem; }
   .featured-inner { padding: 1.5rem; }
@@ -4130,7 +4130,7 @@ footer {
   .human-row { grid-template-columns: 1fr; gap: 2rem; }
   .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; aspect-ratio: auto; }
   .photo-cell:first-child { grid-row: auto; }
-  .hero-dark { padding: 7rem 2rem 4rem; }
+  .hero-dark { padding: 7rem 0 4rem; }
   .nolteos-callout-inner { grid-template-columns: 1fr; gap: 2rem; }
   .blog-featured-grid { grid-template-columns: 1fr; }
   .testimonial-author { flex-direction: row; }
