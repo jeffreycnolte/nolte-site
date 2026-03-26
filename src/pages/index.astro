@@ -479,43 +479,44 @@ const posts = (await getCollection('blog'))
         <span class="cta-micro">No signup. No sales call. Instant results.</span>
       </div>
       <div class="predictability-cta-visual">
-        <div class="cta-steps">
-          <div class="cta-step">
-            <span class="cta-step-num">1</span>
-            <span class="cta-step-text">Describe your product</span>
+        <div class="os-preview">
+          <!-- Engagement model -->
+          <div class="os-section-label">Engagement Model and Forecast</div>
+          <div class="os-models">
+            <div class="os-model">
+              <div class="os-model-name">Steady</div>
+              <div class="os-model-value">10 <span>deliveries/mo</span></div>
+              <div class="os-model-sub">Select to view timeline</div>
+            </div>
+            <div class="os-model os-model-selected">
+              <div class="os-model-tag">Recommended</div>
+              <div class="os-model-name">Pace</div>
+              <div class="os-model-value">20 <span>deliveries/mo</span></div>
+              <div class="os-model-sub">4 months forecast</div>
+            </div>
+            <div class="os-model">
+              <div class="os-model-name">Velocity</div>
+              <div class="os-model-value">38 <span>deliveries/mo</span></div>
+              <div class="os-model-sub">Select to view timeline</div>
+            </div>
           </div>
-          <div class="cta-step">
-            <span class="cta-step-num">2</span>
-            <span class="cta-step-text">NolteOS scopes &amp; forecasts</span>
-          </div>
-          <div class="cta-step">
-            <span class="cta-step-num">3</span>
-            <span class="cta-step-text">Get scope, timeline, cost</span>
-          </div>
-        </div>
-        <div class="shot-window shot-window-dark" style="max-width: 380px;">
-          <div class="shot-toolbar">
-            <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
-          </div>
-          <div class="shot-content" style="padding: 1.25rem;">
-            <div style="font-family: var(--mono); font-size: 10px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem;">Your Delivery Plan</div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
-              <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 0.75rem;">
-                <div style="font-family: var(--mono); font-size: 9px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.06em;">Deliveries</div>
-                <div style="font-family: var(--serif); font-size: 1.5rem; color: white; margin-top: 0.25rem;">80</div>
-              </div>
-              <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 0.75rem;">
-                <div style="font-family: var(--mono); font-size: 9px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.06em;">Timeline</div>
-                <div style="font-family: var(--serif); font-size: 1.5rem; color: white; margin-top: 0.25rem;">4 mo</div>
-              </div>
-              <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 0.75rem;">
-                <div style="font-family: var(--mono); font-size: 9px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.06em;">Total Cost</div>
-                <div style="font-family: var(--serif); font-size: 1.5rem; color: white; margin-top: 0.25rem;">$108K</div>
-              </div>
-              <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 0.75rem;">
-                <div style="font-family: var(--mono); font-size: 9px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.06em;">Per Delivery</div>
-                <div style="font-family: var(--serif); font-size: 1.5rem; color: white; margin-top: 0.25rem;">$1,350</div>
-              </div>
+          <!-- Forecast metrics -->
+          <div class="os-metrics-row">
+            <div class="os-metric-cell">
+              <div class="os-metric-label">Selected Model</div>
+              <div class="os-metric-val">Pace</div>
+            </div>
+            <div class="os-metric-cell">
+              <div class="os-metric-label">Time to Market</div>
+              <div class="os-metric-val">4 months</div>
+            </div>
+            <div class="os-metric-cell">
+              <div class="os-metric-label">Total Cost</div>
+              <div class="os-metric-val">$108,000</div>
+            </div>
+            <div class="os-metric-cell">
+              <div class="os-metric-label">Cost Per Delivery</div>
+              <div class="os-metric-val">$1,350</div>
             </div>
           </div>
         </div>
