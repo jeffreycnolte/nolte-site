@@ -4095,20 +4095,19 @@ footer {
   text-transform: uppercase;
   color: var(--accent);
   display: block;
-  padding: 1.5rem 1.5rem 0;
+  margin-bottom: 0.5rem;
 }
 .blog-featured-card h3 {
   font-family: var(--serif);
   font-size: 1.25rem;
   font-weight: 400;
-  padding: 0.5rem 1.5rem 0;
   line-height: 1.3;
+  margin-bottom: 0.5rem;
 }
 .blog-featured-card p {
   font-size: 0.875rem;
   color: var(--gray-600);
   line-height: 1.6;
-  padding: 0.5rem 1.5rem 1.5rem;
 }
 
 /* Responsive additions */
