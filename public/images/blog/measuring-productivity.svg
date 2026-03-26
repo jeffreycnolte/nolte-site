@@ -1,26 +1,26 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<rect width="800" height="400" fill="#050505"/>
-<line x1="80" y1="60" x2="80" y2="340" stroke="rgba(255,255,255,0.06)"/>
-<line x1="60" y1="340" x2="740" y2="340" stroke="rgba(255,255,255,0.08)"/>
-<line x1="60" y1="260" x2="740" y2="260" stroke="rgba(255,255,255,0.04)"/>
-<line x1="60" y1="180" x2="740" y2="180" stroke="rgba(255,255,255,0.04)"/>
-<line x1="60" y1="100" x2="740" y2="100" stroke="rgba(255,255,255,0.04)"/>
-<text x="55" y="344" font-size="9" fill="rgba(255,255,255,0.2)" font-family="monospace" text-anchor="end">0</text>
-<text x="55" y="264" font-size="9" fill="rgba(255,255,255,0.2)" font-family="monospace" text-anchor="end">5</text>
-<text x="55" y="184" font-size="9" fill="rgba(255,255,255,0.2)" font-family="monospace" text-anchor="end">10</text>
-<text x="55" y="104" font-size="9" fill="rgba(255,255,255,0.2)" font-family="monospace" text-anchor="end">15</text>
-<polygon points="100,280 160,260 220,240 280,220 340,200 400,210 460,190 520,180 580,170 640,160 700,150 700,340 100,340" fill="rgba(214,63,24,0.06)"/>
-<polyline points="100,280 160,260 220,240 280,220 340,200 400,210 460,190 520,180 580,170 640,160 700,150" fill="none" stroke="#D63F18" stroke-width="2"/>
-<circle cx="100" cy="280" r="3" fill="#D63F18"/>
-<circle cx="160" cy="260" r="3" fill="#D63F18"/>
-<circle cx="220" cy="240" r="3" fill="#D63F18"/>
-<circle cx="280" cy="220" r="3" fill="#D63F18"/>
-<circle cx="340" cy="200" r="3" fill="#D63F18"/>
-<circle cx="400" cy="210" r="3" fill="#D63F18"/>
-<circle cx="460" cy="190" r="3" fill="#D63F18"/>
-<circle cx="520" cy="180" r="3" fill="#D63F18"/>
-<circle cx="580" cy="170" r="3" fill="#D63F18"/>
-<circle cx="640" cy="160" r="3" fill="#D63F18"/>
-<circle cx="700" cy="150" r="3" fill="#D63F18"/>
-<text x="400" y="370" font-size="11" fill="rgba(255,255,255,0.3)" font-family="monospace" text-anchor="middle">weekly throughput</text>
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+<rect width="640" height="360" fill="#050505"/>
+<!-- Grid -->
+<line x1="60" y1="300" x2="580" y2="300" stroke="rgba(255,255,255,0.08)"/>
+<line x1="60" y1="220" x2="580" y2="220" stroke="rgba(255,255,255,0.04)"/>
+<line x1="60" y1="140" x2="580" y2="140" stroke="rgba(255,255,255,0.04)"/>
+<!-- Y axis labels -->
+<text x="50" y="304" font-size="11" fill="rgba(255,255,255,0.15)" font-family="monospace" text-anchor="end">0</text>
+<text x="50" y="224" font-size="11" fill="rgba(255,255,255,0.15)" font-family="monospace" text-anchor="end">10</text>
+<text x="50" y="144" font-size="11" fill="rgba(255,255,255,0.15)" font-family="monospace" text-anchor="end">20</text>
+<!-- Area fill -->
+<polygon points="90,260 150,240 220,230 290,210 350,190 420,200 490,180 550,165 550,300 90,300" fill="rgba(214,63,24,0.06)"/>
+<!-- Line -->
+<polyline points="90,260 150,240 220,230 290,210 350,190 420,200 490,180 550,165" fill="none" stroke="#D63F18" stroke-width="3"/>
+<!-- Data points -->
+<circle cx="90" cy="260" r="5" fill="#D63F18"/>
+<circle cx="150" cy="240" r="5" fill="#D63F18"/>
+<circle cx="220" cy="230" r="5" fill="#D63F18"/>
+<circle cx="290" cy="210" r="5" fill="#D63F18"/>
+<circle cx="350" cy="190" r="5" fill="#D63F18"/>
+<circle cx="420" cy="200" r="5" fill="#D63F18"/>
+<circle cx="490" cy="180" r="5" fill="#D63F18"/>
+<circle cx="550" cy="165" r="5" fill="#D63F18"/>
+<!-- Label -->
+<text x="320" y="330" font-size="13" fill="rgba(255,255,255,0.2)" font-family="monospace" text-anchor="middle">weekly throughput (deliveries)</text>
 </svg>
