@@ -13,7 +13,7 @@ const posts = (await getCollection('blog'))
   <div class="hero-dark hero-centered">
     <div class="wide-wrap">
       <h1>Predictable Software<br>Delivery for Leaders<br>Who Can't Afford to <em>Miss</em></h1>
-      <p class="hero-subtext">Describe what you're building. In under 30 seconds, NolteOS scopes your product, forecasts the timeline, and commits to the cost — powered by 20 years of delivery data and 95% prediction accuracy.</p>
+      <p class="hero-subtext">Describe what you're building. In under 60 seconds, NolteOS generates a guaranteed delivery plan — scope, timeline, and cost — powered by 20 years of delivery data and 95% prediction accuracy.</p>
       <div class="hero-actions">
         <a class="btn-hero btn-hero-primary" href="https://os.nolte.io">Get Your Delivery Plan &rarr;</a>
         <a class="btn-hero btn-hero-secondary" href="/blog/the-predictability-gap">Read The Predictability Gap</a>
@@ -444,7 +444,6 @@ const posts = (await getCollection('blog'))
         <h2 class="section-heading">From the blog</h2>
         <p class="section-sub">How we think about software delivery, forecasting, and building products that ship.</p>
       </div>
-      <a class="blog-index-link" href="/blog">View all posts &rarr;</a>
     </div>
 
     <div class="blog-featured-grid">
@@ -467,7 +466,7 @@ const posts = (await getCollection('blog'))
     <div class="predictability-cta-inner">
       <div class="predictability-cta-content">
         <span class="eyebrow" style="color: var(--accent);">Forecast Your Build</span>
-        <h2>Get a delivery plan for your product in under 30 seconds.</h2>
+        <h2>Get a guaranteed delivery plan in under 60 seconds.</h2>
         <p>Describe what you're building in plain language. NolteOS analyzes your prompt against 20 years of delivery data and returns:</p>
         <ul class="cta-checklist">
           <li>Full scope — every delivery defined and priced</li>
@@ -480,29 +479,43 @@ const posts = (await getCollection('blog'))
       </div>
       <div class="predictability-cta-visual">
         <div class="os-preview">
-          <div class="os-section-label">Your Delivery Plan</div>
-          <div class="os-metrics-row">
-            <div class="os-metric-cell">
-              <div class="os-metric-label">Deliveries</div>
-              <div class="os-metric-val">80</div>
+          <div class="os-section-label">Your Delivery Roadmap</div>
+          <div class="os-roadmap">
+            <!-- Header -->
+            <div class="os-roadmap-header">
+              <div class="os-roadmap-col">Phase</div>
+              <div class="os-roadmap-months">
+                <span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
+              </div>
             </div>
-            <div class="os-metric-cell">
-              <div class="os-metric-label">Timeline</div>
-              <div class="os-metric-val">4 months</div>
+            <!-- Strategy -->
+            <div class="os-roadmap-row">
+              <div class="os-roadmap-label">Strategy<div class="os-roadmap-meta">10 deliveries &middot; $13,500</div></div>
+              <div class="os-roadmap-track">
+                <div class="os-roadmap-bar os-bar-strategy" style="width:25%;left:0"></div>
+              </div>
             </div>
-            <div class="os-metric-cell">
-              <div class="os-metric-label">Total Cost</div>
-              <div class="os-metric-val">$108K</div>
+            <!-- Build -->
+            <div class="os-roadmap-row">
+              <div class="os-roadmap-label">Build<div class="os-roadmap-meta">52 deliveries &middot; $70,200</div></div>
+              <div class="os-roadmap-track">
+                <div class="os-roadmap-bar os-bar-build" style="width:62%;left:18%"></div>
+              </div>
             </div>
-            <div class="os-metric-cell">
-              <div class="os-metric-label">Per Delivery</div>
-              <div class="os-metric-val">$1,350</div>
+            <!-- Launch -->
+            <div class="os-roadmap-row">
+              <div class="os-roadmap-label">Launch<div class="os-roadmap-meta">18 deliveries &middot; $24,300</div></div>
+              <div class="os-roadmap-track">
+                <div class="os-roadmap-bar os-bar-launch" style="width:25%;left:75%"></div>
+              </div>
             </div>
           </div>
-          <div class="os-model-bar">
-            <div class="os-model-option">Steady</div>
-            <div class="os-model-option os-model-active">Pace <span>Recommended</span></div>
-            <div class="os-model-option">Velocity</div>
+          <!-- Summary -->
+          <div class="os-roadmap-summary">
+            <span>80 deliveries</span>
+            <span>4 months</span>
+            <span>$108,000</span>
+            <span>$1,350/delivery</span>
           </div>
         </div>
       </div>

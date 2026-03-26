@@ -1856,37 +1856,74 @@ footer {
   color: rgba(255,255,255,0.25);
   margin-top: auto;
 }
-.os-metrics-row {
+/* Roadmap gantt */
+.os-roadmap {
+  margin-bottom: 0.75rem;
+}
+.os-roadmap-header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: 100px 1fr;
+  gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
-.os-model-bar {
-  display: flex;
-  gap: 0.5rem;
+.os-roadmap-col {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
 }
-.os-model-option {
-  flex: 1;
-  text-align: center;
+.os-roadmap-months {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.25);
+}
+.os-roadmap-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+.os-roadmap-label {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--white);
+}
+.os-roadmap-meta {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: rgba(255,255,255,0.25);
+  margin-top: 0.15rem;
+}
+.os-roadmap-track {
+  position: relative;
+  height: 32px;
+  background: rgba(255,255,255,0.02);
+}
+.os-roadmap-bar {
+  position: absolute;
+  top: 4px;
+  height: 24px;
+  border-radius: 2px;
+}
+.os-bar-strategy { background: var(--accent); opacity: 0.7; }
+.os-bar-build { background: var(--accent); }
+.os-bar-launch { background: var(--accent); opacity: 0.5; }
+.os-roadmap-summary {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.os-roadmap-summary span {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.04em;
-  color: rgba(255,255,255,0.3);
-  padding: 0.5rem;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
-}
-.os-model-active {
-  color: var(--white);
-  border-color: var(--accent);
-  background: rgba(214,63,24,0.06);
-}
-.os-model-active span {
-  display: block;
-  font-size: 8px;
-  color: var(--accent);
-  margin-top: 0.15rem;
+  color: rgba(255,255,255,0.4);
 }
 .os-metric-cell {
   background: rgba(255,255,255,0.02);
