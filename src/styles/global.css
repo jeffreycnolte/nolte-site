@@ -554,6 +554,11 @@ footer {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.footer-logo {
+  height: 18px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
 .footer-tagline {
   font-size: 13px;
   color: var(--gray-400);
@@ -1722,11 +1727,12 @@ footer {
   padding: 6rem 2rem;
 }
 .predictability-cta-inner {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 .predictability-cta h2 {
   font-family: var(--serif);
@@ -1852,8 +1858,35 @@ footer {
 }
 .os-metrics-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.os-model-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+.os-model-option {
+  flex: 1;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.3);
+  padding: 0.5rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.os-model-active {
+  color: var(--white);
+  border-color: var(--accent);
+  background: rgba(214,63,24,0.06);
+}
+.os-model-active span {
+  display: block;
+  font-size: 8px;
+  color: var(--accent);
+  margin-top: 0.15rem;
 }
 .os-metric-cell {
   background: rgba(255,255,255,0.02);
