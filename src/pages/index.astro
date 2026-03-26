@@ -298,11 +298,8 @@ const posts = (await getCollection('blog'))
 
     <div class="case-grid">
       <div class="case-card">
-        <div class="case-card-top">
-          <div class="case-card-metrics">
-            <span class="case-metric">47 <span class="case-metric-label">deliveries</span></span>
-            <span class="case-metric">100% <span class="case-metric-label">accuracy</span></span>
-          </div>
+        <div class="case-card-img">
+          <img src="/images/work/breeze/featured.avif" alt="Breeze Oral Care platform" />
         </div>
         <div class="case-card-body">
           <div class="case-card-meta-line">
@@ -317,11 +314,8 @@ const posts = (await getCollection('blog'))
         </div>
       </div>
       <div class="case-card">
-        <div class="case-card-top">
-          <div class="case-card-metrics">
-            <span class="case-metric">85 <span class="case-metric-label">deliveries</span></span>
-            <span class="case-metric">96% <span class="case-metric-label">accuracy</span></span>
-          </div>
+        <div class="case-card-img">
+          <img src="/images/work/pilou/featured.png" alt="Pilou financial platform" />
         </div>
         <div class="case-card-body">
           <div class="case-card-meta-line">
@@ -336,11 +330,8 @@ const posts = (await getCollection('blog'))
         </div>
       </div>
       <div class="case-card">
-        <div class="case-card-top">
-          <div class="case-card-metrics">
-            <span class="case-metric">120 <span class="case-metric-label">deliveries</span></span>
-            <span class="case-metric">95% <span class="case-metric-label">accuracy</span></span>
-          </div>
+        <div class="case-card-img">
+          <img src="/images/work/odie/featured.png" alt="Odie pet insurance" />
         </div>
         <div class="case-card-body">
           <div class="case-card-meta-line">
@@ -357,60 +348,57 @@ const posts = (await getCollection('blog'))
     </div>
   </div>
 
-  <!-- VERTICALS -->
+  <!-- WHO WE WORK WITH -->
   <div class="verticals">
-    <h2 class="section-heading">Where we deliver</h2>
-    <p class="section-sub">Industries where software delivery has to be predictable — because the cost of getting it wrong is too high.</p>
+    <h2 class="section-heading">Who we work with</h2>
+    <p class="section-sub">Leaders in regulated industries who need software delivery they can plan around.</p>
 
     <div class="verticals-grid">
       <a class="vertical-cell vertical-cell-link" href="/industries/insurance">
         <h3>Insurance</h3>
+        <p class="vertical-who">CTOs and product leaders at carriers, MGAs, and insurtechs</p>
         <ul class="vertical-items">
-          <li>State filing deadlines that don't move</li>
-          <li>Carrier and MGA platform builds under regulatory scrutiny</li>
-          <li>Legacy modernization at enterprise scale</li>
-          <li>Claims processing that must work on day one</li>
+          <li>Filing deadlines that regulators set, not product teams</li>
+          <li>Platform builds under carrier and state scrutiny</li>
+          <li>Legacy systems that can't fail during modernization</li>
         </ul>
-        <span class="vertical-cta">See our insurance practice &rarr;</span>
+        <div class="vertical-compliance">
+          <span class="compliance-tag">SOC 2</span>
+          <span class="compliance-tag">State Regulatory</span>
+        </div>
+        <span class="vertical-cta">Learn more &rarr;</span>
       </a>
       <a class="vertical-cell vertical-cell-link" href="/industries/healthcare">
         <h3>Healthcare</h3>
+        <p class="vertical-who">Founders and engineering leads building patient-facing products</p>
         <ul class="vertical-items">
-          <li>HIPAA compliance from day one, not retrofitted</li>
-          <li>Patient-facing products that can't ship late</li>
-          <li>Clinical workflow integrations with zero downtime</li>
-          <li>Regulatory deadlines set by agencies, not product teams</li>
+          <li>HIPAA compliance that can't be an afterthought</li>
+          <li>Clinical integrations with zero tolerance for downtime</li>
+          <li>Products where late delivery affects patient outcomes</li>
         </ul>
-        <span class="vertical-cta">See our healthcare practice &rarr;</span>
+        <div class="vertical-compliance">
+          <span class="compliance-tag">HIPAA</span>
+          <span class="compliance-tag">SOC 2</span>
+        </div>
+        <span class="vertical-cta">Learn more &rarr;</span>
       </a>
       <a class="vertical-cell vertical-cell-link" href="/industries/finance">
         <h3>Finance</h3>
+        <p class="vertical-who">CEOs and CTOs at fintechs navigating regulatory complexity</p>
         <ul class="vertical-items">
-          <li>Regulatory compliance built into every delivery</li>
-          <li>Audit trail visibility from day one</li>
-          <li>Real-time platforms with multi-system dependencies</li>
+          <li>Audit trails and compliance baked in from day one</li>
+          <li>KYC/AML flows that regulators will scrutinize</li>
           <li>Data handling that meets financial industry standards</li>
         </ul>
-        <span class="vertical-cta">See our finance practice &rarr;</span>
+        <div class="vertical-compliance">
+          <span class="compliance-tag">KYC/AML</span>
+          <span class="compliance-tag">SOC 2</span>
+        </div>
+        <span class="vertical-cta">Learn more &rarr;</span>
       </a>
     </div>
   </div>
 
-  <!-- TESTIMONIAL -->
-  <div class="testimonial-featured">
-    <div class="testimonial-featured-inner">
-      <img src="/images/logos/breeze.svg" alt="Breeze" class="testimonial-logo-img" />
-      <blockquote>"They can build anything and do so beautifully and on time. They have also helped me tremendously in thinking strategically, even if it means I'm paying them less in the short term."</blockquote>
-      <div class="testimonial-featured-author">
-        <img src="/images/team/josh-turnbull.png" alt="Dr. Josh Turnbull" class="testimonial-avatar-img" />
-        <div class="testimonial-info">
-          <span class="testimonial-name">Dr. Josh Turnbull</span>
-          <span class="testimonial-role">CEO, Breeze Oral Care</span>
-        </div>
-      </div>
-      <a class="testimonial-more-link" href="/testimonials">Read more testimonials &rarr;</a>
-    </div>
-  </div>
 
   <!-- INNOVATION -->
   <div class="innovation-section">
@@ -431,6 +419,19 @@ const posts = (await getCollection('blog'))
         <span class="innovation-card-number">03</span>
         <h3>Plug-and-Play Teams</h3>
         <p>Cross-functional squads that embed with your org and deliver from day one. No ramp-up. Scale with your roadmap.</p>
+      </div>
+    </div>
+    <div class="innovation-stack">
+      <span class="innovation-stack-label">Our stack &amp; partnerships</span>
+      <div class="innovation-stack-logos">
+        <img src="/images/logos/anthropic.svg" alt="Anthropic" class="stack-logo" style="height:20px" />
+        <span class="stack-text-logo">Claude</span>
+        <span class="stack-text-logo">TypeScript</span>
+        <span class="stack-text-logo">AWS</span>
+        <span class="stack-text-logo">OpenAI</span>
+        <span class="stack-text-logo">Next.js</span>
+        <span class="stack-text-logo">React</span>
+        <span class="stack-text-logo">Node</span>
       </div>
     </div>
   </div>

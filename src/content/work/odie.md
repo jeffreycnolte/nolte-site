@@ -20,18 +20,16 @@ metrics:
   cycleTime: "5.1d"
   onTime: "96%"
 testimonial:
-  quote: "Nolte understood from day one that missing a regulatory filing deadline wasn't an option — it meant losing the ability to operate in an entire state. They built their entire delivery plan around our compliance calendar, and we never missed a single deadline. That kind of reliability is rare."
-  author: "Mo Bharucha"
-  role: "CEO, Odie Pet Insurance"
+  quote: ""
+  author: ""
+  role: ""
 team:
-  - name: "Jeffrey Nolte"
-    role: "Delivery Lead"
-  - name: "David Park"
-    role: "Lead Architect"
-  - name: "Elena Torres"
-    role: "Full-Stack Engineer"
-  - name: "James Liu"
-    role: "Compliance Engineer"
+  - name: "Miles Thorson"
+    role: "Co-Founder"
+  - name: "Zabrina Janda"
+    role: "Co-Founder"
+  - name: "April Heasley"
+    role: "COO"
 platforms:
   - Web
 phases:

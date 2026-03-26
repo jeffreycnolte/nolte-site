@@ -24,12 +24,8 @@ testimonial:
   author: "Dr. Josh Turnbull"
   role: "Founder, Breeze Oral Care"
 team:
-  - name: "Jeffrey Nolte"
-    role: "Delivery Lead"
-  - name: "Marcus Chen"
-    role: "Lead Engineer"
-  - name: "Sarah Kim"
-    role: "Mobile Developer"
+  - name: "Dr. Josh Turnbull"
+    role: "Founder & CEO"
 platforms:
   - Web
   - iOS

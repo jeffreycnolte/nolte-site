@@ -5,8 +5,8 @@ date: 2026-03-04
 updated: 2026-03-10
 author: jeffrey-nolte
 category: delivery
-image: /images/blog/predictability-gap/hero.jpg
-imageAlt: "The Predictability Gap — Nolte"
+image: /images/blog/predictability-gap.svg
+imageAlt: "Forecast vs estimate data visualization"
 ---
 
 ### Every business function forecasts in order to be predictable. Software development does neither.

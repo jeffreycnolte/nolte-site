@@ -18,16 +18,14 @@ metrics:
   cycleTime: "4.8d"
   onTime: "97%"
 testimonial:
-  quote: "What stood out was the transparency. Every delivery had a price before we approved it, every timeline was visible in real time, and there were zero surprises on any invoice. After years of unpredictable agency relationships, working with Nolte felt like a different industry entirely."
-  author: "Laurent Dupont"
-  role: "CEO, Pilou"
+  quote: ""
+  author: "Andrea de la Garza"
+  role: "Co-Founder, Pilou"
 team:
-  - name: "Jeffrey Nolte"
-    role: "Delivery Lead"
-  - name: "Rachel Wang"
-    role: "Lead Engineer"
-  - name: "Anton Petrov"
-    role: "Compliance Architect"
+  - name: "Andrea de la Garza"
+    role: "Co-Founder"
+  - name: "Patricia Florencia"
+    role: "Co-Founder"
 platforms:
   - Web
 phases:

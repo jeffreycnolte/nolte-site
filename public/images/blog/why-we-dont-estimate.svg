@@ -1,0 +1,18 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="400" fill="#050505"/>
+<line x1="60" y1="340" x2="740" y2="340" stroke="rgba(255,255,255,0.1)"/>
+<line x1="60" y1="60" x2="60" y2="340" stroke="rgba(255,255,255,0.1)"/>
+<rect x="100" y="300" width="40" height="40" fill="rgba(214,63,24,0.15)"/>
+<rect x="160" y="260" width="40" height="80" fill="rgba(214,63,24,0.2)"/>
+<rect x="220" y="180" width="40" height="160" fill="rgba(214,63,24,0.3)"/>
+<rect x="280" y="100" width="40" height="240" fill="rgba(214,63,24,0.5)"/>
+<rect x="340" y="80" width="40" height="260" fill="#D63F18" opacity="0.7"/>
+<rect x="400" y="120" width="40" height="220" fill="rgba(214,63,24,0.5)"/>
+<rect x="460" y="200" width="40" height="140" fill="rgba(214,63,24,0.3)"/>
+<rect x="520" y="260" width="40" height="80" fill="rgba(214,63,24,0.2)"/>
+<rect x="580" y="300" width="40" height="40" fill="rgba(214,63,24,0.15)"/>
+<rect x="640" y="320" width="40" height="20" fill="rgba(214,63,24,0.1)"/>
+<text x="360" y="370" font-size="11" fill="rgba(255,255,255,0.3)" font-family="monospace" text-anchor="middle">cycle time distribution</text>
+<line x1="360" y1="70" x2="360" y2="340" stroke="rgba(214,63,24,0.4)" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="370" y="65" font-size="10" fill="rgba(214,63,24,0.6)" font-family="monospace">p50: 4.8d</text>
+</svg>

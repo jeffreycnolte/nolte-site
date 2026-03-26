@@ -6,9 +6,10 @@ Tasks to tackle after launch. Ordered by priority.
 
 ## P1 — Post-Launch Polish
 
-- [ ] **Blog SVG graphics** — Generate unique data-viz SVG headers for all 26 blog posts (forecast charts, cycle time distributions, throughput patterns, Monte Carlo fans) in the same dark bg + accent line style as the Predictability Gap card
+- [ ] **@Yanna — Case study delivery data from JIRA** — Pull real delivery metrics (deliveries count, cycle time, on-time %, accuracy) from JIRA for each case study: Breeze, Odie, Pilou. Update frontmatter in `src/content/work/*.md` with actual numbers.
+- [ ] **Blog SVG graphics for remaining posts** — Top 3 done (Predictability Gap, Why We Don't Estimate, Measuring Productivity). Generate unique data-viz SVG headers for remaining 23 blog posts in the same dark bg + accent line style. Each should reflect the post topic (WIP limits, Monte Carlo, throughput, etc.)
 - [ ] **Jeffrey headshot** — Replace initials placeholder with proper headshot in "We've been in your seat" section
-- [ ] **Testimonials page** — Build `/testimonials` page similar to withcoverage.com/testimonials, pulling from case study testimonials
+- [ ] **Testimonials section + page** — Collect real quotes from clients (Breeze, Odie, Pilou, others). Build testimonial section on homepage and dedicated `/testimonials` page similar to withcoverage.com/testimonials. Need: real quotes, headshots, approval from clients to publish.
 - [ ] **Case study images** — Source/create product screenshots for Odie, Pilou (Breeze already has real images)
 - [ ] **Mobile responsive audit** — Full pass on all pages at mobile/tablet breakpoints
 - [ ] **Blog post images** — Assign SVG data graphics or on-brand visuals to all blog posts

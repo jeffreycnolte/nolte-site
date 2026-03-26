@@ -64,15 +64,13 @@ function isActive(path: string) {
 
 <nav class={isHome ? 'nav-dark' : undefined}>
   <div class="inner">
-    <a class="wordmark" href="/">Nolte</a>
+    <a class="wordmark" href="/"><img src="/images/logos/nolte-black.svg" alt="Nolte" class="nav-logo" /><img src="/images/logos/nolte-white.svg" alt="Nolte" class="nav-logo-white" /></a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links">
       <a href="/work" aria-current={isActive('/work') ? 'page' : undefined}>Work</a>
       <a href="/about" aria-current={isActive('/about') ? 'page' : undefined}>About</a>
-      <a href="/blog" aria-current={isActive('/blog') ? 'page' : undefined}>Blog</a>
-      <a href="/delivery" aria-current={isActive('/delivery') ? 'page' : undefined}>Model</a>
       <a href="https://os.nolte.io" class="nav-cta">See Your Forecast</a>
     </div>
   </div>
