@@ -5,6 +5,8 @@ date: 2026-01-05
 updated: 2026-03-04
 author: jeffrey-nolte
 category: delivery
+image: /images/blog/why-we-dont-estimate.jpg
+imageAlt: "Why We Don't Estimate — Nolte"
 ---
 
 For the full picture of why this matters and how it connects to every business function, read [The Forecasting Gap](/blog/the-predictability-gap).

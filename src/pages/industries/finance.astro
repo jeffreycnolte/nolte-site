@@ -1,0 +1,142 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Financial Services Software Delivery" description="Predictable software delivery for financial services companies. KYC/AML, audit trails, and regulatory compliance — delivered on forecast." fullWidth>
+
+  <div class="hero-dark hero-centered">
+    <div class="wide-wrap">
+      <span class="eyebrow">Finance</span>
+      <h1>Software delivery built for<br><em>audit-ready environments</em></h1>
+      <p class="hero-subtext">Financial services software ships under regulatory scrutiny. Every feature, every data flow, every deployment needs to withstand examination. Your delivery process should too.</p>
+    </div>
+  </div>
+
+  <div class="ind-challenges">
+    <div class="wide-wrap">
+      <h2 class="section-heading">The problem with financial software</h2>
+      <p class="section-sub">Financial services technology has constraints that standard development processes aren't designed to handle.</p>
+
+      <div class="steps-grid">
+        <div class="step-cell">
+          <h3>KYC/AML Requirements</h3>
+          <p>Know Your Customer and Anti-Money Laundering aren't features — they're foundational constraints. Every user flow, every transaction, every data store needs to account for compliance from the architecture level up.</p>
+        </div>
+        <div class="step-cell">
+          <h3>Audit Trail Visibility</h3>
+          <p>Regulators and auditors need to trace every action through the system. That means immutable logging, version-controlled configurations, and documentation that proves what was built, when, and why.</p>
+        </div>
+        <div class="step-cell">
+          <h3>Data Handling Standards</h3>
+          <p>Financial data has strict handling requirements — encryption at rest and in transit, access controls, data residency rules. These aren't optional features to add later. They shape every technical decision.</p>
+        </div>
+        <div class="step-cell">
+          <h3>Regulatory Compliance</h3>
+          <p>SEC, FINRA, state regulators — financial services operates under multiple overlapping regulatory frameworks. Your development process either accounts for all of them or creates risk with every release.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ind-solution">
+    <div class="wide-wrap">
+      <span class="eyebrow">Predictive Delivery</span>
+      <h2>How we solve it</h2>
+      <p>Predictive delivery gives financial services teams a development process that's as disciplined and auditable as the systems they're building.</p>
+      <ul class="ind-solution-list">
+        <li><strong>Compliance architecture from day one.</strong> KYC/AML requirements, data handling standards, and audit logging are built into the delivery architecture — not bolted on before launch.</li>
+        <li><strong>Every delivery is auditable.</strong> Each delivery in NolteOS has a clear scope, acceptance criteria, validation record, and timestamp. Your compliance team gets the documentation trail they need without asking for it.</li>
+        <li><strong>Forecasted timelines for regulatory windows.</strong> NolteOS maps your delivery plan against real regulatory deadlines. You'll know whether you're on track for a compliance milestone weeks before it arrives.</li>
+        <li><strong>Fixed price, zero ambiguity.</strong> Every delivery has a committed price and definition of done. No surprise costs when regulatory requirements surface mid-build. No invoices for time spent understanding compliance.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="case-studies">
+    <div class="wide-wrap">
+      <h2 class="section-heading">Proven in production</h2>
+      <p class="section-sub">Real financial services software, delivered predictably.</p>
+    </div>
+
+    <div class="case-grid ind-case-single">
+      <div class="case-card">
+        <div class="case-card-top">
+          <span class="case-card-logo-text">Pilou</span>
+          <div class="case-card-metrics">
+            <span class="case-metric">85 <span class="case-metric-label">deliveries</span></span>
+            <span class="case-metric">96% <span class="case-metric-label">accuracy</span></span>
+          </div>
+        </div>
+        <div class="case-card-body">
+          <div class="case-card-meta-line">
+            <span class="case-pill">Finance</span>
+            <span class="case-stage">Series B</span>
+          </div>
+          <h3>Pilou</h3>
+          <p class="case-desc">Financial services platform built under regulatory and compliance requirements. Full audit trail visibility from day one across every delivery.</p>
+          <div class="case-meta">
+            <div class="case-meta-item"><span class="case-meta-value">2 years</span><span class="case-meta-label">Partnership</span></div>
+            <div class="case-meta-item"><span class="case-meta-value">85</span><span class="case-meta-label">Deliveries</span></div>
+            <div class="case-meta-item"><span class="case-meta-value">96%</span><span class="case-meta-label">Accuracy</span></div>
+            <div class="case-meta-item"><span class="case-meta-value">KYC/AML</span><span class="case-meta-label">Compliance</span></div>
+          </div>
+          <a class="case-link" href="/work/pilou">Read the full case study &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="predictability-cta">
+    <div class="predictability-cta-inner">
+      <div class="predictability-cta-content">
+        <div class="os-tag">NolteOS <span class="live-dot"></span></div>
+        <h2>See what predictable financial services delivery looks like.</h2>
+        <p>Describe what you're building. NolteOS forecasts the scope, timeline, and cost — before you commit a single line of code.</p>
+        <a class="btn-accent" href="https://os.nolte.io">See Your Forecast</a>
+      </div>
+    </div>
+  </div>
+
+</Base>
+
+<style>
+  .ind-challenges {
+    padding: 5rem 0;
+    background: var(--white);
+  }
+  .ind-solution {
+    padding: 5rem 0;
+    background: var(--gray-100);
+  }
+  .ind-solution h2 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .ind-solution p {
+    max-width: 640px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .ind-solution-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+    display: grid;
+    gap: 1.5rem;
+    max-width: 640px;
+  }
+  .ind-solution-list li {
+    line-height: 1.7;
+    color: var(--gray-600);
+  }
+  .ind-solution-list strong {
+    color: var(--black);
+  }
+  .ind-case-single {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .case-studies {
+    padding: 5rem 0;
+  }
+</style>

@@ -5,6 +5,8 @@ date: 2025-03-20
 updated: 2026-03-04
 author: jeffrey-nolte
 category: delivery
+image: /images/blog/measuring-productivity.jpg
+imageAlt: "Measuring Productivity in Software Development — Nolte"
 ---
 
 ### If you can't forecast from your productivity metrics, you're measuring the wrong things.

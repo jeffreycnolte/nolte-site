@@ -36,13 +36,13 @@ Target audience: CEOs, CTOs, CFOs, and product leaders at scaling companies who 
 |-------|-------|-------|
 | `--black` | `#000000` | Primary text, dark backgrounds |
 | `--white` | `#fafaf8` | Page background (warm white) |
-| `--accent` | `#fe5101` | Red Nolte — CTAs, highlights, category labels |
-| `--blue` | `#0369fc` | Digital Blue — secondary accent, links |
+| `--accent` | `#D63F18` | Nolte Red — CTAs and category pills only |
+| `--blue` | `#0369fc` | Digital Blue — minimal use, links only |
 | `--gray-100` | `#f2f1ed` | Light backgrounds, cards |
 | `--gray-200` | `#e0ded8` | Borders |
-| `--gray-400` | `#9e9b94` | Secondary text |
-| `--gradient-hero` | dark radial | Hero backgrounds |
-| `--gradient-warm` | orange→blue | Gradient text on emphasis |
+| `--gray-400` | `#9e9b94` | Labels, metadata |
+| `--gray-600` | `#5a5854` | Body copy (minimum contrast) |
+| `--gradient-hero` | pure dark | Hero backgrounds (no blue tint) |
 
 ### Layout
 - Max content width: 1100px (`.wide-wrap`)

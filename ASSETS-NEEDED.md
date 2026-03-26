@@ -7,20 +7,32 @@ Running list of images and assets needed to finalize the site. Check off items a
 ## Priority 1: Homepage
 
 ### Trust Bar — Client Logos
-Needed as SVG or transparent PNG, ideally monochrome/white variants for dark backgrounds and dark variants for light backgrounds.
-- [ ] Breeze Oral Care logo
-- [ ] Odie logo
-- [ ] Pilou logo
-- [ ] Wake logo
-- [ ] HBO logo
-- [ ] Amtrak logo
+- [x] HBO logo (`/images/logos/hbo.png`)
+- [x] Amtrak logo (`/images/logos/amtrak.png`)
+- [x] Odie logo (`/images/logos/odie.png`)
+- [x] Barry's logo (`/images/logos/barrys.png`)
+- [x] Bloomscape logo (`/images/logos/bloomscape.png`)
+- [x] Footprint logo (`/images/logos/footprint.png`)
+- [x] Breeze logo SVG (`/images/logos/breeze.svg`)
+- [x] Wake logo (`/images/logos/wake-logo.png`)
+- [ ] Pilou logo (new client — needs to be created or sourced)
+- Also available: Ralph Lauren, Wu-Tang, Stompy, HBO BW SVG, Amtrak BW SVG
 
 ### "We've Been in Your Seat" Section
-- [ ] Team photo or Jeffrey portrait — warm, authentic, not stock. Could be a candid team shot or working photo. Aspect ratio ~4:3.
+- [ ] Team photo or Jeffrey portrait — warm, authentic, not stock. Aspect ratio ~4:3.
 
 ### Testimonial Section
-- [x] Dr. Josh Turnbull headshot (`/images/work/breeze/josh.jpg` — already sourced)
-- [ ] Breeze logo (white variant for dark background)
+- [x] Dr. Josh Turnbull headshot (`/images/team/josh-turnbull.png` — from WP)
+- [x] Breeze logo SVG (`/images/logos/breeze.svg`)
+
+### Team Avatars (from WordPress)
+- [x] Yanna Lopes (`/images/team/yanna-lopes.png`)
+- [x] Dan Urruela (`/images/team/dan-urruela.png`)
+- [x] Candice (`/images/team/candice.png`)
+- [x] Dulce (`/images/team/dulce.png`)
+- [x] Lacey (`/images/team/lacey.png`)
+- [x] Mauri (`/images/team/mauri.png`)
+- [ ] Jeffrey Nolte headshot (needs to be provided)
 
 ---
 
