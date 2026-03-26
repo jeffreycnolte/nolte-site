@@ -6,17 +6,15 @@ Running list of images and assets needed to finalize the site. Check off items a
 
 ## Priority 1: Homepage
 
-### Trust Bar — Client Logos
-- [x] HBO logo (`/images/logos/hbo.png`)
-- [x] Amtrak logo (`/images/logos/amtrak.png`)
+### Trust Bar — Client Logos (industry-focused)
+Currently showing: Pilou, Odie, Turris, Barry's, Breeze, Penelope
+- [ ] **Pilou logo** — SVG or transparent PNG needed (currently text placeholder)
 - [x] Odie logo (`/images/logos/odie.png`)
+- [ ] **Turris logo** — SVG or transparent PNG needed (currently text placeholder)
 - [x] Barry's logo (`/images/logos/barrys.png`)
-- [x] Bloomscape logo (`/images/logos/bloomscape.png`)
-- [x] Footprint logo (`/images/logos/footprint.png`)
 - [x] Breeze logo SVG (`/images/logos/breeze.svg`)
-- [x] Wake logo (`/images/logos/wake-logo.png`)
-- [ ] Pilou logo (new client — needs to be created or sourced)
-- Also available: Ralph Lauren, Wu-Tang, Stompy, HBO BW SVG, Amtrak BW SVG
+- [ ] **Penelope logo** — SVG or transparent PNG needed (currently text placeholder)
+- All logos should be transparent PNG or SVG, similar visual weight, ideally ~500px wide
 
 ### "We've Been in Your Seat" Section
 - [ ] Team photo or Jeffrey portrait — warm, authentic, not stock. Aspect ratio ~4:3.
