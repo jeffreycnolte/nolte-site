@@ -1710,6 +1710,12 @@ footer {
 }
 .blog-featured-card-body {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.blog-featured-card-body p {
+  flex: 1;
 }
 .blog-featured-read {
   font-family: var(--mono);
@@ -1717,7 +1723,8 @@ footer {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
   display: block;
 }
 
