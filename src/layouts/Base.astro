@@ -116,6 +116,44 @@ function isActive(path: string) {
       toggle.setAttribute('aria-expanded', String(open));
     });
   }
+
+  // PostHog custom events
+  if (window.posthog) {
+    // Track all CTA clicks to os.nolte.io
+    document.querySelectorAll('a[href*="os.nolte.io"]').forEach(el => {
+      el.addEventListener('click', () => {
+        posthog.capture('cta_clicked', {
+          location: el.closest('.hero-dark') ? 'hero' :
+                    el.closest('.predictability-cta') ? 'footer_cta' :
+                    el.closest('.steps-cta-inline') ? 'steps_cta' :
+                    el.closest('nav') ? 'nav' :
+                    el.closest('.nolteos-callout') ? 'nolteos_section' :
+                    'other',
+          text: el.textContent.trim()
+        });
+      });
+    });
+
+    // Track case study clicks
+    document.querySelectorAll('a[href*="/work/"]').forEach(el => {
+      el.addEventListener('click', () => {
+        posthog.capture('case_study_clicked', {
+          study: el.getAttribute('href'),
+          from: window.location.pathname
+        });
+      });
+    });
+
+    // Track blog post clicks
+    document.querySelectorAll('a[href*="/blog/"]').forEach(el => {
+      el.addEventListener('click', () => {
+        posthog.capture('blog_clicked', {
+          post: el.getAttribute('href'),
+          from: window.location.pathname
+        });
+      });
+    });
+  }
 </script>
 
 </body>
