@@ -4,6 +4,21 @@ Tasks to tackle after launch. Ordered by priority.
 
 ---
 
+## P0 — Pre-Launch (Tonight)
+
+- [x] Hide pages: Our Story, Team, Wake case study
+- [ ] Design grid standardization across all pages
+- [ ] Work page: 3 case studies, categories, card design
+- [ ] Blog index: date formatting, read more, author/category, pagination
+- [ ] NolteOS page design system audit
+- [ ] QA test suite / skill
+
+## P0.5 — Tomorrow (1.5h migration window)
+
+- [ ] **Deep-dive migration audit** — Tools, technology, SEO (redirects, canonical URLs, meta tags, sitemap), content parity, analytics, forms/CTAs, DNS, SSL. Ensure nothing is missed migrating from WordPress/Pantheon to Astro/Netlify.
+- [ ] **WordPress migration plan** — Step-by-step 1.5h timeline: DNS switch, 301 redirects, SSL verification, smoke test, Pantheon sunset. Include rollback plan.
+- [ ] **Restore hidden pages** — Our Story (`src/pages/about/index.astro.draft`), Team (`src/pages/about/team.astro.draft`), Wake case study (remove `draft: true`)
+
 ## P1 — Post-Launch Polish
 
 - [ ] **@Yanna — Case study delivery data from JIRA** — Pull real delivery metrics (deliveries count, cycle time, on-time %, accuracy) from JIRA for each case study: Breeze, Odie, Pilou. Update frontmatter in `src/content/work/*.md` with actual numbers.

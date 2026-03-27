@@ -4,6 +4,7 @@ client: "Wake"
 description: "Mental wellness mobile app and HR dashboard. From strategy through launch across iOS, Android, and web."
 category: wellness
 date: 2024-03-01
+draft: true
 image: /images/work/wake-product.png
 imageAlt: "Wake mental wellness app interface"
 status: "Pre-Seed"

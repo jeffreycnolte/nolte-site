@@ -4,7 +4,7 @@ client: "Breeze Oral Care"
 description: "HIPAA-compliant dental platform with clinical workflow integrations. Discovery to launch in four months. On time, on budget, to the dollar."
 category: healthcare
 date: 2024-01-15
-image: /images/work/breeze/hero.jpg
+image: /images/work/breeze/featured.avif
 imageAlt: "Breeze Oral Care — Patient-facing dental platform"
 status: "Live"
 partnership: "2+ years"
