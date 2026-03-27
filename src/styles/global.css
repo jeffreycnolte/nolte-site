@@ -2395,6 +2395,13 @@ footer {
   .hero-split { grid-template-columns: 1fr; gap: 2rem; }
   .hero-visual { display: none; }
   .case-card-top { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+  .pgap-card { grid-template-columns: 1fr; }
+  .pgap-graphic { display: none; }
+  .trust-logos { flex-wrap: wrap; gap: 1.5rem; }
+  .case-grid { grid-template-columns: 1fr; }
+  .innovation-grid { grid-template-columns: 1fr; }
+  .os-roadmap-row { grid-template-columns: 80px 1fr; }
+  .steps-cta-inline { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
 @media (max-width: 600px) {
   .word-grid { grid-template-columns: 1fr; }
@@ -2409,9 +2416,31 @@ footer {
   .pillar { padding-right: 0; }
   .hero-dark { padding: 5rem 0 4rem; }
   .metrics-grid { grid-template-columns: 1fr; }
-  .trust-logos { gap: 1.5rem; }
+  .trust-logos { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .trust-logo-img { height: 18px !important; }
   .featured-inner { padding: 1.5rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .pgap-card { grid-template-columns: 1fr !important; }
+  .pgap-graphic { display: none !important; }
+  .founders-row { gap: 1.5rem; }
+  .founder-img { width: 100px; height: 100px; }
+  .founder .founder-img-wrap { width: 100px; height: 100px; }
+  .steps-cta-inline { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .case-grid { grid-template-columns: 1fr !important; }
+  .innovation-grid { grid-template-columns: 1fr !important; }
+  .verticals-grid { grid-template-columns: 1fr !important; }
+  .os-roadmap-header { display: none; }
+  .os-roadmap-row { grid-template-columns: 80px 1fr; }
+  .human-row { grid-template-columns: 1fr !important; }
+  .human-photo { order: -1; }
+  .delivery-perf-content { grid-template-columns: 1fr !important; }
+  .nav-cta { font-size: 9px !important; padding: 0.5rem 0.75rem !important; }
+  .predictability-cta { padding: 4rem 2rem; }
+  .cta-checklist li { font-size: 0.8125rem; }
+  .innovation-stack-logos { gap: 1rem; }
+  .stack-text-logo { font-size: 10px; }
+  .blog-featured-grid { grid-template-columns: 1fr !important; }
+  .blog-featured-img { aspect-ratio: 16/7; }
 }
 
 /* ===== BLOG SINGLE ===== */
