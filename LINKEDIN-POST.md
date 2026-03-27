@@ -56,14 +56,28 @@ This isn't "AI replaced my developer." This is "AI let me operate at the speed o
 
 We're launching this week. The site is at nolte-site.netlify.app if you want to see it.
 
-I've open-sourced the migration playbook on GitHub so you can do the same thing: [link to repo]
+I wrote the full playbook — every prompt, every phase, every decision point — so you can do the same thing with your WordPress site.
+
+**Comment "playbook" and follow me — I'll send you the GitHub link.**
+
+It covers: architecture, content migration, design iteration, SEO preservation, PostHog analytics, QA automation, and deployment. Step by step.
+
+—
+
+P.S. We're an Anthropic partner. This is how we build software for our clients too — predictably, with committed scope, timeline, and cost. If you're curious: os.nolte.io
 
 ---
 
-**P.S.** We're an Anthropic partner. This is how we build software for our clients too — predictably, with committed scope, timeline, and cost. That's what NolteOS does. If you're curious: os.nolte.io
+## Posting instructions
 
----
+**Image:** Use `/public/images/brand/before-after.svg` (open in browser, screenshot at 1200x627 for LinkedIn)
 
-*Suggested hashtags: #ClaudeCode #WordPress #WebDevelopment #AI #Anthropic #BuildInPublic*
+**Hashtags (add in first comment, not post body):**
+#ClaudeCode #WordPress #Astro #WebDevelopment #AI #Anthropic #BuildInPublic #Migration #Netlify #PLG
 
-*Suggested image: Screenshot of the before (WordPress) and after (new site) side by side*
+**Engagement strategy:**
+- Post between 7-9am EST Tuesday-Thursday for max visibility
+- Reply to every comment within 1 hour
+- When someone comments "playbook", reply with the GitHub link: https://github.com/jeffreycnolte/nolte-site/blob/main/WORDPRESS-TO-ASTRO-PLAYBOOK.md
+- Pin a follow-up comment: "The full playbook is open source. Follow for more on how we use Claude across our entire delivery workflow."
+- Tag @Anthropic and @ClaudeAI if they have company pages
