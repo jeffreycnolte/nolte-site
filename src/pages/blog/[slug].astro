@@ -23,7 +23,7 @@ const rawContent = post.body || '';
 const wordCount = rawContent.split(/\s+/).filter(Boolean).length;
 const readingTime = Math.max(1, Math.ceil(wordCount / 250));
 
-const siteUrl = 'https://nolte-site.netlify.app';
+const siteUrl = 'https://nolte.io';
 const postUrl = `${siteUrl}/blog/${post.id}/`;
 ---
 <Base
