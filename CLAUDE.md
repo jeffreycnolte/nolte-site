@@ -2,22 +2,31 @@
 
 ## What This Is
 
-Marketing site for Nolte (nolte.io) — a predictive software delivery company. Built with Astro 6, deployed to Netlify.
+Marketing site for Nolte (nolte.io) — a consultative product partner for regulated industries. Built with Astro 6, deployed to Netlify.
 
 **Live:** https://nolte-site.netlify.app
 **Netlify site:** nolte-site
+**Positioning brief:** See `NOLTE-POSITIONING-BRIEF.md` (v2) for the full governing document.
 
 ## Positioning
 
-Nolte provides **predictable software delivery for leaders who outsource engineering**. Key concepts:
+Nolte is a **consultative product partner for regulated industries**. We evolve ambitious ideas into products that ship — by doing the thinking most firms skip and backing the delivery with a guarantee.
 
+**Positioning line: Innovate Predictably** — the client owns the ambition, we derisk it and deliver it. Predictability is the methodology, not the pitch. The consultative partnership is the product.
+
+Key concepts:
+
+- **Consultative product partner** — not an innovation studio, not a dev shop, not staff augmentation
+- **Judgment before execution** — we figure out whether and how something should be built before writing code
+- **Operator-led** — founded by people who've built, scaled, and exited companies
+- **"We're not yes people"** — we challenge ideas, flag risks, say no when something shouldn't be built
+- **Regulated industries** — insurance, healthcare, financial services
+- **AI translates strategy into product** — senior humans do the thinking, AI and NolteOS handle execution
 - **NolteOS** — predictive delivery engine powered by 20 years of delivery data
-- **Pay-per-delivery pricing** — no hourly billing, no retainers
-- **Flow metrics** — cycle time, throughput, WIP, work item age
-- **95% forecast accuracy** across thousands of deliveries
-- **Little's Law** and **Monte Carlo simulation** for probabilistic forecasting
+- **Per-delivery pricing** — no hourly billing; we carry the execution risk
+- **95% forecast accuracy** — the guarantee that makes the consultative promise credible
 
-Target audience: CEOs, CTOs, CFOs, product leaders at scaling companies. Not early-stage startups.
+Target audience: Operators and leadership teams with business maturity making a product bet in a regulated space outside their current execution capability. Defined by the bet, not the stage.
 
 ## Tech Stack
 
@@ -86,8 +95,10 @@ npx netlify-cli deploy --prod --dir=dist  # Deploy
 ## Conventions
 
 - **No stock photos.** Use real product screenshots, styled HTML mockups, or abstract on-brand visuals.
-- **Positioning language:** "predictable delivery" not "agile development." "Leaders who outsource" not "non-tech founders." "Forecasting" not "estimation."
-- **Voice:** Direct, experienced, opinionated. Jeffrey Nolte's voice. Not salesy.
+- **DO use:** "Consultative product partner," "evolve ideas into products," "regulated industries," "operator-led," "judgment," "derisk," "delivery guarantee," "predictive delivery" (as methodology), "fixed per-delivery pricing," "we're not yes people," "innovate predictably" (as thesis).
+- **DO NOT use:** "Innovation studio," "agency," "dev shop," "staff augmentation," "resources" (for people), "offshore," "agile" as a selling point, "full-stack" as a differentiator, "end-to-end," "estimate" — we forecast, we predict, we commit. "Innovation" as something Nolte owns — the client owns the innovation, we enable and derisk it.
+- **Hierarchy:** Lead with consultative depth and judgment. Predictability is the methodology, not the pitch. The delivery guarantee is proof, not the headline.
+- **Voice:** Direct, confident, founder-to-founder. No hedging. Specific over vague. Back claims with numbers.
 - **Blog posts** should link to `/blog/the-predictability-gap` as the anchor piece.
 - **Internal links** use relative paths (`/blog/...`, `/work/...`), not `nolte.io/...`.
 - **Case study metrics** use real delivery data from NolteOS. Don't invent numbers without flagging them.

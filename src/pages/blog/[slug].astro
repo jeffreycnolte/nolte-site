@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import CtaSection from '../../components/CtaSection.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -34,7 +35,9 @@ const postUrl = `${siteUrl}/blog/${post.id}/`;
   author={author?.data.name}
   image={post.data.image}
   imageAlt={post.data.imageAlt}
+  fullWidth
 >
+  <div class="page-wrap">
   <article class="blog-article">
     {post.data.image && (
       <div class="blog-hero-image">
@@ -92,6 +95,7 @@ const postUrl = `${siteUrl}/blog/${post.id}/`;
       "name": author.data.name,
       "jobTitle": author.data.role,
       "url": `${siteUrl}/blog/author/${post.data.author}/`,
+      ...(author.data.linkedin ? { "sameAs": [author.data.linkedin] } : {}),
     } : undefined,
     "publisher": {
       "@type": "Organization",
@@ -115,4 +119,7 @@ const postUrl = `${siteUrl}/blog/${post.id}/`;
       { "@type": "ListItem", "position": category ? 3 : 2, "name": post.data.title },
     ],
   })} />
+  </div>
+
+  <CtaSection />
 </Base>

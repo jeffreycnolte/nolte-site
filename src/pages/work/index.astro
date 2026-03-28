@@ -1,132 +1,40 @@
 ---
 import Base from '../../layouts/Base.astro';
+import CaseCard from '../../components/CaseCard.astro';
+import CtaSection from '../../components/CtaSection.astro';
 import { getCollection } from 'astro:content';
 
 const studies = (await getCollection('work', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const logoMap: Record<string, { src: string; height: string }> = {
+  'breeze-oral-care': { src: '/images/logos/breeze.svg', height: '20px' },
+  'pilou':            { src: '/images/logos/pilou.png',   height: '22px' },
+  'odie':             { src: '/images/logos/odie.png',    height: '24px' },
+  'wake':             { src: '/images/logos/wake.png',    height: '20px' },
+};
 ---
 <Base title="Work — Case Studies" description="Case studies from healthcare, insurance, and finance. Predictable delivery from concept to market." fullWidth>
 
-  <div class="work-hero">
-    <div class="wide-wrap">
-      <span class="eyebrow">Case Studies</span>
-      <h1>Trusted partnerships</h1>
-      <p class="work-hero-sub">Teams building critical software we've taken from vision to production. Predictably.</p>
+  <div class="case-studies" style="padding-top: 2rem;">
+    <h2 class="section-heading">Products we shaped and <em>shipped</em></h2>
+    <p class="section-sub">From "should we build this?" to production — in industries where the stakes are real.</p>
+    <div class="case-grid">
+      {studies.map(study => (
+        <CaseCard
+          slug={study.id}
+          image={study.data.image}
+          imageAlt={study.data.imageAlt}
+          category={study.data.category}
+          client={study.data.client}
+          description={study.data.description}
+          partnership={study.data.partnership}
+          logo={logoMap[study.id]}
+        />
+      ))}
     </div>
   </div>
 
-  <div class="work-index">
-    <div class="wide-wrap">
-      <div class="work-grid-cards">
-        {studies.map(study => (
-          <a class="work-index-card" href={`/work/${study.id}`}>
-            {study.data.image && (
-              <div class="work-index-card-img">
-                <img src={study.data.image} alt={study.data.imageAlt || study.data.client} />
-              </div>
-            )}
-            <div class="work-index-card-body">
-              <div class="case-card-meta-line">
-                <span class={`case-pill case-pill-${study.data.category}`}>{study.data.category}</span>
-              </div>
-              <h3>{study.data.client}</h3>
-              <p>{study.data.description}</p>
-              <div class="work-index-card-meta">
-                <span class="work-index-meta-value">{study.data.partnership}</span>
-                <span class="work-index-meta-label">Partnership</span>
-              </div>
-              <span class="case-link">Read Case Study</span>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </div>
+  <CtaSection />
 
 </Base>
-
-<style>
-  .work-hero {
-    background: var(--black);
-    padding: 8rem 2rem 4rem;
-    color: var(--white);
-  }
-  .work-hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    margin-bottom: 0.5rem;
-  }
-  .work-hero-sub {
-    font-size: 1rem;
-    color: rgba(255,255,255,0.5);
-    max-width: 540px;
-  }
-  .work-index {
-    padding: 5rem 2rem;
-  }
-  .work-grid-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--gray-200);
-    border: 1px solid var(--gray-200);
-  }
-  .work-index-card {
-    background: var(--white);
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    transition: background 0.2s;
-  }
-  .work-index-card:hover {
-    background: var(--gray-100);
-  }
-  .work-index-card-img {
-    aspect-ratio: 16/10;
-    overflow: hidden;
-    background: var(--gray-100);
-  }
-  .work-index-card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .work-index-card-body {
-    padding: 1.5rem 2rem 2rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  .work-index-card-body h3 {
-    font-family: var(--serif);
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  .work-index-card-body p {
-    font-size: 0.9375rem;
-    color: var(--gray-600);
-    line-height: 1.6;
-    flex: 1;
-  }
-  .work-index-card-meta {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .work-index-meta-value {
-    font-family: var(--sans);
-    font-weight: 600;
-    font-size: 0.9375rem;
-    display: block;
-  }
-  .work-index-meta-label {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--gray-400);
-  }
-  @media (max-width: 768px) {
-    .work-grid-cards { grid-template-columns: 1fr; }
-  }
-</style>

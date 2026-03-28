@@ -31,11 +31,11 @@ team:
 platforms:
   - Web
 phases:
-  - name: "Discovery"
+  - name: "Strategy"
     duration: "4 weeks"
-  - name: "Build"
+  - name: "Launch"
     duration: "5 months"
-  - name: "Scale"
+  - name: "Evolve"
     duration: "Ongoing"
 ---
 

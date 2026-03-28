@@ -53,10 +53,35 @@ function isActive(path: string) {
     "@type": "Organization",
     "name": "Nolte",
     "url": Astro.site?.href,
-    "description": "Predictable software delivery. Fixed price per delivery.",
+    "description": "Consultative product partner for regulated industries. We evolve ambitious ideas into shipped products — when getting it wrong is not an option.",
+    "foundingDate": "2016",
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "contact@nolte.io"
+      "email": "contact@nolte.io",
+      "contactType": "sales"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/nolte/"
+    ],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Jeffrey Nolte",
+        "jobTitle": "Managing Director",
+        "sameAs": "https://www.linkedin.com/in/jeffreynolte/"
+      }
+    ],
+    "knowsAbout": ["software delivery", "product strategy", "regulated industries", "healthcare technology", "insurance technology", "financial technology"]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nolte",
+    "url": Astro.site?.href,
+    "description": "Consultative product partner for regulated industries.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nolte"
     }
   })} />
 </head>
@@ -70,9 +95,8 @@ function isActive(path: string) {
     </button>
     <div class="nav-links">
       <a href="/work" aria-current={isActive('/work') ? 'page' : undefined}>Work</a>
-      <a href="/about/nolteos" aria-current={isActive('/about/nolteos') ? 'page' : undefined}>NolteOS</a>
-      <a href="/blog" aria-current={isActive('/blog') ? 'page' : undefined}>Blog</a>
-      <a href="https://os.nolte.io" class="nav-cta">Get Your Delivery Plan</a>
+      <a href="/contact" aria-current={isActive('/contact') ? 'page' : undefined}>Let's Talk</a>
+      <a href="https://os.nolte.io" class="nav-cta">Build Your Roadmap</a>
     </div>
   </div>
 </nav>
@@ -83,12 +107,13 @@ function isActive(path: string) {
   <div class="footer-grid">
     <div class="footer-col">
       <img src="/images/logos/nolte-black.svg" alt="Nolte" class="footer-logo" />
-      <p class="footer-tagline">Predictable software delivery for leaders who can't afford to miss.</p>
+      <p class="footer-tagline">We evolve ambitious ideas into shipped products — when getting it wrong is not an option.</p>
+      <a href="https://www.linkedin.com/company/nolte/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
       <a href="/about/nolteos">NolteOS</a>
-      <a href="mailto:contact@nolte.io">Contact</a>
+      <a href="/contact">Contact</a>
     </div>
     <div class="footer-col">
       <h4>Work</h4>
@@ -98,8 +123,6 @@ function isActive(path: string) {
     <div class="footer-col">
       <h4>Resources</h4>
       <a href="/blog">Blog</a>
-      <a href="https://os.nolte.io">Get Your Delivery Plan</a>
-      <a href="mailto:contact@nolte.io">Contact</a>
     </div>
   </div>
   <div class="footer-bottom">

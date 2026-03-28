@@ -38,9 +38,9 @@ platforms:
 phases:
   - name: "Strategy"
     duration: "6 weeks"
-  - name: "MVP Build"
+  - name: "Launch"
     duration: "4 months"
-  - name: "Iteration"
+  - name: "Evolve"
     duration: "12 months"
 ---
 

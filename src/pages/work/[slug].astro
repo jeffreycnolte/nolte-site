@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import CtaSection from '../../components/CtaSection.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -16,6 +17,20 @@ const categories = await getCollection('categories');
 const category = categories.find(c => c.id === study.data.category);
 
 const { metrics, testimonial, team, platforms, phases } = study.data;
+
+const clientLogos: Record<string, { src: string; height: string }> = {
+  'breeze-oral-care': { src: '/images/logos/breeze.svg', height: '28px' },
+  'pilou':            { src: '/images/logos/pilou.png',   height: '26px' },
+  'odie':             { src: '/images/logos/odie.png',    height: '28px' },
+  'wake':             { src: '/images/logos/wake.png',    height: '24px' },
+};
+
+const testimonialAvatars: Record<string, string> = {
+  'breeze-oral-care': '/images/work/breeze/josh.jpg',
+};
+
+const clientLogo = clientLogos[study.id];
+const testimonialAvatar = testimonialAvatars[study.id];
 ---
 <Base
   title={`${study.data.client} — Case Study`}
@@ -23,6 +38,7 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
   type="article"
   image={study.data.image}
   imageAlt={study.data.imageAlt}
+  fullWidth
 >
   <article class="case-study">
 
@@ -65,163 +81,198 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
       )}
     </div>
 
-    {/* ===== PHASE TIMELINE ===== */}
-    {phases && phases.length > 0 && (
-      <div class="cs-phases">
-        <span class="cs-section-label">Project Phases</span>
-        <div class="cs-phase-track">
-          {phases.map((phase, i) => (
-            <div class="cs-phase">
-              <div class="cs-phase-marker">
-                <span class="cs-phase-dot"></span>
-                {i < phases.length - 1 && <span class="cs-phase-line"></span>}
-              </div>
-              <div class="cs-phase-info">
-                <span class="cs-phase-name">{phase.name}</span>
-                <span class="cs-phase-duration">{phase.duration}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    )}
+    {/* ===== CONTAINED CONTENT ===== */}
+    <div class="cs-container">
 
-    {/* ===== CONTENT + SIDEBAR LAYOUT ===== */}
-    <div class="cs-body">
-      <div class="cs-content">
-        <div class="prose">
-          <Content />
-        </div>
-      </div>
-
-      <aside class="cs-sidebar">
-        <div class="cs-sidebar-section">
-          <span class="cs-sidebar-heading">Client</span>
-          <span class="cs-sidebar-value">{study.data.client}</span>
-        </div>
-        <div class="cs-sidebar-section">
-          <span class="cs-sidebar-heading">Industry</span>
-          <span class="cs-sidebar-value">{category?.data.title || study.data.category}</span>
-        </div>
-        <div class="cs-sidebar-section">
-          <span class="cs-sidebar-heading">Status</span>
-          <span class="cs-sidebar-value">{study.data.status}</span>
-        </div>
-        <div class="cs-sidebar-section">
-          <span class="cs-sidebar-heading">Partnership</span>
-          <span class="cs-sidebar-value">{study.data.partnership}</span>
-        </div>
-        {platforms && platforms.length > 0 && (
-          <div class="cs-sidebar-section">
-            <span class="cs-sidebar-heading">Platforms</span>
-            <div class="cs-tag-list">
-              {platforms.map(p => <span class="cs-tag">{p}</span>)}
-            </div>
-          </div>
-        )}
-        {study.data.services && (
-          <div class="cs-sidebar-section">
-            <span class="cs-sidebar-heading">Services</span>
-            <ul class="cs-service-list">
-              {study.data.services.map(s => <li>{s}</li>)}
-            </ul>
-          </div>
-        )}
-      </aside>
-    </div>
-
-    {/* ===== DELIVERY DATA VISUALIZATION ===== */}
-    {metrics && (
-      <div class="cs-delivery-data">
-        <span class="cs-section-label">Delivery Data</span>
-        <div class="shot-window shot-window-dark">
-          <div class="shot-toolbar">
-            <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
-          </div>
-          <div class="shot-content">
-            <div class="shot-metrics-grid">
-              <div class="shot-metric-card">
-                <span class="shot-metric-label">Total Deliveries</span>
-                <span class="shot-metric-val">{metrics.deliveries}</span>
-              </div>
-              <div class="shot-metric-card">
-                <span class="shot-metric-label">Forecast Accuracy</span>
-                <span class="shot-metric-val">{metrics.accuracy}</span>
-              </div>
-              <div class="shot-metric-card">
-                <span class="shot-metric-label">Avg Cycle Time</span>
-                <span class="shot-metric-val">{metrics.cycleTime}</span>
-              </div>
-              <div class="shot-metric-card">
-                <span class="shot-metric-label">Timeline</span>
-                <span class="shot-metric-val">{metrics.timeline}</span>
-              </div>
-            </div>
-            {metrics.onTime && (
-              <div class="shot-progress">
-                <span class="shot-progress-label">On-Time Delivery Rate</span>
-                <div class="shot-progress-bar">
-                  <div class="shot-progress-fill" style={`width: ${metrics.onTime}`}></div>
+      {/* ===== PHASE TIMELINE ===== */}
+      {phases && phases.length > 0 && (
+        <div class="cs-phases">
+          <span class="cs-section-label">Partnership Phases</span>
+          <div class="cs-phase-track">
+            {phases.map((phase, i) => (
+              <div class="cs-phase">
+                <div class="cs-phase-marker">
+                  <span class="cs-phase-dot"></span>
+                  {i < phases.length - 1 && <span class="cs-phase-line"></span>}
                 </div>
-                <div class="shot-progress-legend">
-                  <span>{metrics.onTime} on time</span>
-                  <span>Target: 95%</span>
+                <div class="cs-phase-info">
+                  <span class="cs-phase-name">{phase.name}</span>
+                  <span class="cs-phase-duration">{phase.duration}</span>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ===== CONTENT + SIDEBAR LAYOUT ===== */}
+      <div class="cs-body">
+        <div class="cs-content">
+          <div class="prose">
+            <Content />
+          </div>
+        </div>
+
+        <aside class="cs-sidebar">
+          <div class="cs-sidebar-section">
+            <span class="cs-sidebar-heading">Client</span>
+            {clientLogo ? (
+              <img src={clientLogo.src} alt={study.data.client} class="cs-sidebar-logo" style={`height:${clientLogo.height}`} />
+            ) : (
+              <span class="cs-sidebar-value">{study.data.client}</span>
             )}
           </div>
-        </div>
-      </div>
-    )}
-
-    {/* ===== TESTIMONIAL ===== */}
-    {testimonial && (
-      <div class="cs-testimonial">
-        <blockquote>
-          <p>&ldquo;{testimonial.quote}&rdquo;</p>
-          <footer>
-            <strong>{testimonial.author}</strong>
-            <span>{testimonial.role}</span>
-          </footer>
-        </blockquote>
-      </div>
-    )}
-
-    {/* ===== TEAM ===== */}
-    {team && team.length > 0 && (
-      <div class="cs-team">
-        <span class="cs-section-label">Project Team</span>
-        <div class="cs-team-grid">
-          {team.map(member => (
-            <div class="cs-team-member">
-              <div class="cs-team-avatar">
-                {member.name.split(' ').map(n => n[0]).join('')}
-              </div>
-              <div class="cs-team-info">
-                <span class="cs-team-name">{member.name}</span>
-                <span class="cs-team-role">{member.role}</span>
+          <div class="cs-sidebar-section">
+            <span class="cs-sidebar-heading">Industry</span>
+            <span class="cs-sidebar-value">{category?.data.title || study.data.category}</span>
+          </div>
+          <div class="cs-sidebar-section">
+            <span class="cs-sidebar-heading">Status</span>
+            <span class="cs-sidebar-value">{study.data.status}</span>
+          </div>
+          <div class="cs-sidebar-section">
+            <span class="cs-sidebar-heading">Partnership</span>
+            <span class="cs-sidebar-value">{study.data.partnership}</span>
+          </div>
+          {platforms && platforms.length > 0 && (
+            <div class="cs-sidebar-section">
+              <span class="cs-sidebar-heading">Platforms</span>
+              <div class="cs-tag-list">
+                {platforms.map(p => <span class="cs-tag">{p}</span>)}
               </div>
             </div>
-          ))}
+          )}
+          {study.data.services && (
+            <div class="cs-sidebar-section">
+              <span class="cs-sidebar-heading">Services</span>
+              <ul class="cs-service-list">
+                {study.data.services.map(s => <li>{s}</li>)}
+              </ul>
+            </div>
+          )}
+        </aside>
+      </div>
+
+    </div>
+
+    {/* ===== TESTIMONIAL (dark, full-width — after content, before data) ===== */}
+    {testimonial && testimonial.quote && (
+      <div class="home-testimonial-dark">
+        <div class="home-testimonial-inner">
+          {clientLogo && (
+            <img src={clientLogo.src} alt={study.data.client} class="home-testimonial-logo" />
+          )}
+          <blockquote>
+            <p>&ldquo;{testimonial.quote}&rdquo;</p>
+          </blockquote>
+          <div class="home-testimonial-attr">
+            {testimonialAvatar && (
+              <img src={testimonialAvatar} alt={testimonial.author} class="home-testimonial-avatar" />
+            )}
+            <div class="home-testimonial-attr-text">
+              <strong>{testimonial.author}</strong>
+              <span>{testimonial.role}</span>
+            </div>
+          </div>
         </div>
       </div>
     )}
 
+    <div class="cs-container">
+
+      {/* ===== DELIVERY DATA VISUALIZATION ===== */}
+      {metrics && (
+        <div class="cs-delivery-data">
+          <span class="cs-section-label">Delivery Data</span>
+          <div class="shot-window shot-window-dark">
+            <div class="shot-toolbar">
+              <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+            </div>
+            <div class="shot-content">
+              <div class="shot-metrics-grid">
+                <div class="shot-metric-card">
+                  <span class="shot-metric-label">Total Deliveries</span>
+                  <span class="shot-metric-val">{metrics.deliveries}</span>
+                </div>
+                <div class="shot-metric-card">
+                  <span class="shot-metric-label">Forecast Accuracy</span>
+                  <span class="shot-metric-val">{metrics.accuracy}</span>
+                </div>
+                <div class="shot-metric-card">
+                  <span class="shot-metric-label">Avg Cycle Time</span>
+                  <span class="shot-metric-val">{metrics.cycleTime}</span>
+                </div>
+                <div class="shot-metric-card">
+                  <span class="shot-metric-label">Timeline</span>
+                  <span class="shot-metric-val">{metrics.timeline}</span>
+                </div>
+              </div>
+              {metrics.onTime && (
+                <div class="shot-progress">
+                  <span class="shot-progress-label">On-Time Delivery Rate</span>
+                  <div class="shot-progress-bar">
+                    <div class="shot-progress-fill" style={`width: ${metrics.onTime}`}></div>
+                  </div>
+                  <div class="shot-progress-legend">
+                    <span>{metrics.onTime} on time</span>
+                    <span>Target: 95%</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ===== TEAM ===== */}
+      {team && team.length > 0 && (
+        <div class="cs-team">
+          <span class="cs-section-label">Project Team</span>
+          <div class="cs-team-grid">
+            {team.map(member => (
+              <div class="cs-team-member">
+                <div class="cs-team-avatar">
+                  {member.name.split(' ').map(n => n[0]).join('')}
+                </div>
+                <div class="cs-team-info">
+                  <span class="cs-team-name">{member.name}</span>
+                  <span class="cs-team-role">{member.role}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+    </div>
+
   </article>
+
+  {/* ===== GLOBAL CTA (full-width, outside article) ===== */}
+  <CtaSection />
+
 </Base>
 
 <style>
+  /* ===== CONTAINER ===== */
+  .cs-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
   /* ===== COMBINED HERO ===== */
   .cs-hero {
     background: var(--black);
     color: var(--white);
-    margin: -5rem -2rem 0;
     display: flex;
     min-height: 480px;
+    margin-top: -5rem;
   }
   .cs-hero-content {
     flex: 1;
-    padding: 6rem 3rem 3rem;
+    padding: 8rem 3rem 3rem;
+    padding-left: max(2rem, calc((100vw - 1100px) / 2));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -258,7 +309,7 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
   .cs-eyebrow {
     font-family: var(--mono);
     font-size: 11px;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent);
     display: block;
@@ -285,7 +336,6 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
     gap: 1px;
     margin-top: auto;
     background: rgba(255,255,255,0.1);
-    border-radius: 6px;
     overflow: hidden;
   }
   .cs-metric {
@@ -318,9 +368,9 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
   }
   .cs-section-label {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.06em;
     color: var(--gray-400);
     display: block;
     margin-bottom: 1.5rem;
@@ -385,7 +435,7 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
     top: 2rem;
     background: var(--gray-100);
     padding: 1.5rem;
-    border-radius: 6px;
+    border: 1px solid var(--gray-200);
   }
   .cs-sidebar-section {
     padding: 0.75rem 0;
@@ -407,6 +457,13 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
     font-size: 14px;
     font-weight: 500;
   }
+  .cs-sidebar-logo {
+    display: block;
+    width: auto;
+    object-fit: contain;
+    margin-top: 4px;
+    filter: brightness(0);
+  }
   .cs-tag-list {
     display: flex;
     gap: 6px;
@@ -417,7 +474,6 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
     font-size: 11px;
     padding: 3px 8px;
     background: var(--gray-200);
-    border-radius: 3px;
     color: var(--gray-600);
   }
   .cs-service-list {
@@ -437,41 +493,6 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
     margin-bottom: 4rem;
   }
 
-  /* ===== TESTIMONIAL ===== */
-  .cs-testimonial {
-    margin: 4rem 0;
-    padding: 3rem 0;
-    border-top: 1px solid var(--gray-200);
-    border-bottom: 1px solid var(--gray-200);
-  }
-  .cs-testimonial blockquote {
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: none;
-  }
-  .cs-testimonial blockquote p {
-    font-family: var(--serif);
-    font-size: 1.6rem;
-    line-height: 1.5;
-    color: var(--black);
-    margin-bottom: 1.5rem;
-    font-style: italic;
-  }
-  .cs-testimonial footer {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .cs-testimonial footer strong {
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .cs-testimonial footer span {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--gray-400);
-  }
 
   /* ===== TEAM ===== */
   .cs-team {
@@ -513,6 +534,7 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
     color: var(--gray-400);
     font-family: var(--mono);
   }
+
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {
@@ -563,9 +585,6 @@ const { metrics, testimonial, team, platforms, phases } = study.data;
     .cs-sidebar {
       position: static;
       order: -1;
-    }
-    .cs-testimonial blockquote p {
-      font-size: 1.25rem;
     }
     .cs-team-grid {
       grid-template-columns: 1fr;

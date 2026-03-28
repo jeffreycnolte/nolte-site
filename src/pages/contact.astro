@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Let's Talk — Nolte" description="Tell us about your product idea. We'll tell you what we think — honestly.">
+
+  <div class="contact-page">
+    <div class="contact-header">
+      <h1>Let's talk.</h1>
+      <p>Tell us about your product idea. We'll tell you what we think — honestly. No pitch, no pressure. If it's a fit, we'll show you what the engagement looks like.</p>
+    </div>
+
+    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden" style="display:none">
+        <label>Don't fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your name *</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company or project name</label>
+        <input type="text" id="company" name="company" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">What are you building? *</label>
+        <textarea id="message" name="message" rows="5" required placeholder="The product, the market, the challenges you're facing. The more context, the better our first conversation will be."></textarea>
+      </div>
+
+      <button type="submit" class="btn-accent">Send it over &rarr;</button>
+      <p class="form-note">We respond within one business day. No automated sequences, no SDRs — you'll hear from someone who's done this work.</p>
+      <div class="form-status" id="form-status"></div>
+    </form>
+  </div>
+
+</Base>
+
+<script>
+  const form = document.querySelector('.contact-form');
+  const status = document.getElementById('form-status');
+  const submitBtn = form?.querySelector('button[type="submit"]');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!submitBtn || !status) return;
+
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    status.className = 'form-status';
+    status.textContent = '';
+
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      company: formData.get('company'),
+      message: formData.get('message'),
+    };
+
+    try {
+      // Submit to Netlify function → Clarify
+      const res = await fetch('/.netlify/functions/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      // Also submit to Netlify forms as backup
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      }).catch(() => {});
+
+      if (res.ok) {
+        form.reset();
+        status.className = 'form-status form-status-success';
+        status.textContent = "Got it — we'll be in touch within one business day.";
+      } else {
+        throw new Error('Request failed');
+      }
+    } catch {
+      status.className = 'form-status form-status-error';
+      status.textContent = 'Something went wrong. Please email us at contact@nolte.io.';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  });
+</script>
+
+<style>
+  .contact-page {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 2rem 0 6rem;
+  }
+  .contact-header {
+    margin-bottom: 3rem;
+  }
+  .contact-header h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .contact-header p {
+    font-size: 1.0625rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .form-group label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+  }
+  .form-group input,
+  .form-group textarea {
+    font-family: var(--sans);
+    font-size: 1rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+    color: var(--black);
+    transition: border-color 0.15s;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--black);
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--gray-300);
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+  .contact-form .btn-accent {
+    align-self: flex-start;
+  }
+  .form-note {
+    font-size: 0.8125rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+    margin-top: -0.5rem;
+  }
+  .form-status {
+    font-family: var(--sans);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    padding: 0;
+    margin-top: -0.5rem;
+  }
+  .form-status-success {
+    color: #059669;
+  }
+  .form-status-error {
+    color: #dc2626;
+  }
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+</style>

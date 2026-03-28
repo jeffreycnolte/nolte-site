@@ -1,0 +1,46 @@
+---
+/**
+ * Case study card — used on homepage and work index.
+ * Single source of truth for card layout, logo display, and link style.
+ */
+interface Props {
+  slug: string;
+  image?: string;
+  imageAlt?: string;
+  category: string;
+  client: string;
+  description: string;
+  partnership?: string;
+  logo?: { src: string; height: string };
+}
+
+const { slug, image, imageAlt, category, client, description, partnership, logo } = Astro.props;
+---
+
+<div class="case-card">
+  {image && (
+    <div class="case-card-img">
+      <img src={image} alt={imageAlt || client} loading="lazy" />
+    </div>
+  )}
+  <div class="case-card-body">
+    <div class="case-card-meta-line">
+      <span class={`case-pill case-pill-${category}`}>{category}</span>
+    </div>
+    {logo ? (
+      <img src={logo.src} alt={client} class="case-card-logo-img" style={`height:${logo.height}`} />
+    ) : (
+      <h3 style="font-family: var(--serif); font-size: 1.25rem; margin-bottom: 0.5rem;">{client}</h3>
+    )}
+    <p class="case-desc">{description}</p>
+    {partnership && (
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <span class="case-meta-value">{partnership}</span>
+          <span class="case-meta-label">Partnership</span>
+        </div>
+      </div>
+    )}
+    <a class="case-link" href={`/work/${slug}`}>View Case Study &rarr;</a>
+  </div>
+</div>

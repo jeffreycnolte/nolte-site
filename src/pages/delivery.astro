@@ -1,8 +1,21 @@
 ---
 import Base from '../layouts/Base.astro';
----
-<Base title="What is a Delivery?">
+import CtaSection from '../components/CtaSection.astro';
 
+const siteUrl = 'https://nolte-site.netlify.app';
+
+const faqItems = [
+  { q: "Can I name the business objective this delivery serves?", a: "Every delivery must trace back to a real business outcome — revenue, retention, activation, risk reduction, cost savings, time savings. Not a technical objective. A specific, observable result." },
+  { q: "Can I describe what is observably different in the business after this ships?", a: "Before this delivery, the business or user could not do something — or did it worse, slower, or at greater risk. After it ships, something observable is different." },
+  { q: "Are the acceptance criteria written in plain language, before implementation starts?", a: "The delivery must have agreed acceptance criteria written in plain language, verifiable by a non-engineer, and defined before implementation begins. These are the contract between Nolte and the client." },
+  { q: "Can someone other than the builder validate it against those criteria?", a: "Someone other than the person who built it must confirm it does what it was supposed to do. It passed the agreed acceptance criteria defined before implementation started." },
+  { q: "Will this be live in production when it counts as done?", a: "Staging does not count. A demo does not count. A delivery is live, accessible, and doing its job in the real environment where it creates value." },
+  { q: "Can this be completed within one delivery cycle?", a: "A delivery must be completable within a single week of active work. If a piece of work is too large, it must be broken into smaller deliveries — each with its own business objective and acceptance criteria. This rule protects forecast accuracy." },
+];
+---
+<Base title="What is a Delivery?" description="A delivery is a discrete, validated unit of work that produces a measurable change in a business objective — shipped, tested, and observable in production." fullWidth>
+
+  <div class="page-wrap">
   <header class="hero">
     <span class="eyebrow">Predictive Delivery Model</span>
     <h1>What is<br><em>a delivery?</em></h1>
@@ -224,6 +237,9 @@ import Base from '../layouts/Base.astro';
     <p style="margin-top: 1rem;">Predictive software delivery is built around commitment. We commit to a delivery, define what done means before we start, validate it in production against those criteria, and stand behind the forecast with a guarantee.</p>
     <p style="margin-top: 1rem;">Every forecast we make, every invoice we send, every conversation about what you got for your investment — it all rests on this definition being clear, consistent, and lived.</p>
   </div>
+  </div>
+
+  <CtaSection />
 
 </Base>
 
@@ -260,3 +276,16 @@ import Base from '../layouts/Base.astro';
     }
   }
 </script>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a,
+    },
+  })),
+})} />

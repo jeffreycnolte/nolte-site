@@ -1,29 +1,174 @@
 ---
 import Base from '../layouts/Base.astro';
+import CaseCard from '../components/CaseCard.astro';
+import CtaSection from '../components/CtaSection.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
   .filter(p => !p.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
----
-<Base title="Predictable Software Delivery" fullWidth>
 
-  <!-- DARK HERO -->
+const caseLogos: Record<string, { src: string; height: string }> = {
+  'breeze-oral-care': { src: '/images/logos/breeze.svg', height: '20px' },
+  'pilou':            { src: '/images/logos/pilou.png',   height: '22px' },
+  'odie':             { src: '/images/logos/odie.png',    height: '24px' },
+  'wake':             { src: '/images/logos/wake.png',    height: '20px' },
+};
+---
+<Base title="Innovate Predictably — Nolte" description="We evolve ambitious ideas into shipped products — when getting it wrong is not an option. Senior operators shape the thinking. NolteOS and a predictive delivery system guarantee the build." fullWidth>
+
+  <!-- ═══════════════════════════════════════════
+       1. HERO — The bet we derisk + for whom
+       ═══════════════════════════════════════════ -->
   <div class="hero-dark hero-centered">
-    <div class="wide-wrap hero-split">
-      <div class="hero-content">
-        <h1>Predictable Software<br>Delivery for Leaders<br>Who Can't Afford to <em>Miss</em></h1>
-        <p class="hero-subtext">NolteOS turns 20 years of delivery data into predictable, fixed-price software delivery. Describe what you're building and get a delivery plan with 95% accuracy on scope, timeline, and cost.</p>
-        <div class="hero-actions">
-          <a class="btn-hero btn-hero-primary" href="https://os.nolte.io">Get Your Delivery Plan &rarr;</a>
-          <a class="btn-hero btn-hero-secondary" href="/blog/the-predictability-gap">Read The Predictability Gap</a>
-        </div>
-        <p class="hero-micro">No signup required. Describe your product &rarr; get scope, timeline, and cost instantly.</p>
+    <div class="wide-wrap hero-editorial">
+      <span class="hero-eyebrow">Innovate Predictably</span>
+      <h1>We evolve ambitious ideas into shipped products — when getting it wrong is not an <em>option</em></h1>
+      <p class="hero-subtext hero-subtext-centered">Nolte is a consultative product partner for regulated industries. We put senior operators in the room to shape the thinking, then use NolteOS and a predictive delivery system to guarantee the build.</p>
+      <div class="hero-actions hero-actions-centered">
+        <a class="btn-hero btn-hero-primary" href="https://os.nolte.io">Build Your Product Roadmap &rarr;</a>
+        <a class="btn-hero btn-hero-secondary" href="/contact">Let's Talk</a>
       </div>
-      <div class="hero-visual">
-        <div class="os-preview os-preview-hero">
-          <div class="os-section-label">Your Delivery Roadmap</div>
+      <p class="hero-micro hero-micro-centered">Build your product roadmap in under 60 seconds. We surface the risks, the opportunities, and the competitive landscape.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       2. PROOF STRIP — Fast credibility
+       ═══════════════════════════════════════════ -->
+  <div class="proof-strip">
+    <div class="proof-items">
+      <div class="proof-item">
+        <span class="proof-value">20 years</span>
+        <span class="proof-label">Delivery data</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-value">Zero → Exit</span>
+        <span class="proof-label">Operator experience</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-value">95%</span>
+        <span class="proof-label">Forecast accuracy</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-value">15</span>
+        <span class="proof-label">0→1 Cos Launched</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST LOGOS -->
+  <div class="trust-bar trust-bar-light">
+    <p class="trust-label">Products we've shaped and shipped</p>
+    <div class="trust-logos">
+      <img src="/images/logos/pilou.png" alt="Pilou" class="trust-logo-img" />
+      <img src="/images/logos/odie.png" alt="Odie" class="trust-logo-img" />
+      <img src="/images/logos/securecpg.svg" alt="Secure CPG" class="trust-logo-img" />
+      <img src="/images/logos/barrys.png" alt="Barry's" class="trust-logo-img" />
+      <img src="/images/logos/breeze.svg" alt="Breeze" class="trust-logo-img" />
+      <img src="/images/logos/hbo.png" alt="HBO" class="trust-logo-img" />
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       3. WHAT WE DO — Consultative → Execution arc
+       ═══════════════════════════════════════════ -->
+  <div class="build-modes">
+    <div class="wide-wrap">
+      <span class="eyebrow" style="color: var(--accent);">What We Do</span>
+      <h2 class="section-heading">The consultative depth most firms skip — backed by a delivery <em>guarantee</em></h2>
+      <p class="section-sub">We don't start by writing code. We start by figuring out if the thing should be built, how it should be shaped, and what it takes to survive the regulatory environment.</p>
+    </div>
+    <div class="build-modes-grid">
+      <div class="build-mode">
+        <span class="build-mode-num">01</span>
+        <h3>Shape the Thinking</h3>
+        <p class="build-mode-lead">We figure out whether and how something should be built.</p>
+        <p>Market analysis, competitive positioning, product architecture, regulatory navigation, business model pressure-testing. Senior operators do the thinking before a line of code gets written. That's not a phase we rush through — it's the most valuable thing we do.</p>
+      </div>
+      <div class="build-mode">
+        <span class="build-mode-num">02</span>
+        <h3>Build the Product</h3>
+        <p class="build-mode-lead">NolteOS translates strategic decisions into shipped product.</p>
+        <p>The senior operator figures out the right thing to build. NolteOS and our delivery system handle the execution layer — faster, more consistently, and more aligned to the original intent than a chain of handoffs ever could. The strategic layer is human judgment. The execution layer is systematized.</p>
+      </div>
+      <div class="build-mode">
+        <span class="build-mode-num">03</span>
+        <h3>Guarantee the Delivery</h3>
+        <p class="build-mode-lead">Fixed price per delivery. If it doesn't ship, you don't pay.</p>
+        <p>NolteOS uses 20 years of experience and historic delivery data to predict scope, timeline, and cost before work begins. 95% forecast accuracy. Per-delivery pricing means we carry the execution risk — which means we're economically motivated to get the strategy right.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       4. WHY NOLTE — Judgment, operators, "not yes people"
+       ═══════════════════════════════════════════ -->
+  <div class="human-section">
+    <div class="human-row">
+      <div class="human-photo">
+        <span class="eyebrow">Founders &amp; Leadership</span>
+        <div class="founders-row">
+          <div class="founder">
+            <img src="/images/team/jeffrey-nolte-web.png" alt="Jeffrey Nolte" class="founder-img" loading="lazy" />
+            <span class="founder-name">Jeffrey Nolte <a href="https://www.linkedin.com/in/jeffreynolte/" target="_blank" rel="noopener" class="founder-linkedin" aria-label="Jeffrey Nolte on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></span>
+            <span class="founder-role">Managing Director</span>
+            <span class="founder-exits">2x Exits</span>
+            <span class="founder-bio">20 years building and scaling product companies in regulated industries.</span>
+          </div>
+          <div class="founder">
+            <div class="founder-img-wrap"><img src="/images/team/yanna-lopes-web.jpg" alt="Yanna Lopes" loading="lazy" /></div>
+            <span class="founder-name">Yanna Lopes <a href="https://www.linkedin.com/in/yannalopes/" target="_blank" rel="noopener" class="founder-linkedin" aria-label="Yanna Lopes on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></span>
+            <span class="founder-role">Head of Products</span>
+            <span class="founder-exits">1x Exit</span>
+            <span class="founder-bio">Legal background turned product leader. Shapes strategy and holds the line on quality.</span>
+          </div>
+        </div>
+      </div>
+      <div class="human-content">
+        <h2>We're not yes people</h2>
+        <p>We've built companies, navigated boards, made payroll, and sold businesses. When we tell you something won't work, it's because we've been the founder who learned that the hard way — with our own money on the line.</p>
+        <p>We challenge product theses. We flag risks. We change the whole direction if needed. We often say no if the risk is too high and we can't build toward long-term success or partnership. A dev shop takes the money. We protect the founder from a bad bet.</p>
+        <p class="human-quote">"We're real partners. We raise the issues. We'll change the whole idea if needed to ensure success." <span class="human-quote-attr">— Yanna Lopes, Head of Products</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       5. DELIVERY GUARANTEE — Dark proof band
+       ═══════════════════════════════════════════ -->
+  <div class="guarantee-section">
+    <div class="guarantee-inner">
+      <div class="guarantee-text">
+        <span class="guarantee-eyebrow">The Delivery Guarantee</span>
+        <h2>Predictability is our methodology,<br>not our pitch.</h2>
+        <p>Every firm promises to deliver. We back ours with a system: NolteOS uses 20 years of experience and historic delivery data to predict scope, timeline, and cost before work begins. Fixed price per delivery. If it doesn't ship, you don't pay. The pricing model puts our revenue on the line — which is why we invest so heavily in getting the strategy right first.</p>
+        <div class="guarantee-metrics">
+          <div class="guarantee-metric">
+            <span class="guarantee-metric-val">95%</span>
+            <span class="guarantee-metric-label">Prediction Accuracy</span>
+          </div>
+          <div class="guarantee-metric">
+            <span class="guarantee-metric-val">75/mo</span>
+            <span class="guarantee-metric-label">Deliveries Shipped</span>
+          </div>
+          <div class="guarantee-metric">
+            <span class="guarantee-metric-val">4.8d</span>
+            <span class="guarantee-metric-label">Avg Cycle Time</span>
+          </div>
+          <div class="guarantee-metric">
+            <span class="guarantee-metric-val">97%</span>
+            <span class="guarantee-metric-label">On-Time Rate</span>
+          </div>
+        </div>
+      </div>
+      <div class="guarantee-visual">
+        <div class="os-preview">
+          <div class="os-section-label">NolteOS — Delivery Forecast</div>
           <div class="os-roadmap">
             <div class="os-roadmap-header">
               <div class="os-roadmap-col">Phase</div>
@@ -50,342 +195,84 @@ const posts = (await getCollection('blog'))
     </div>
   </div>
 
-  <!-- PILLARS -->
-  <div class="pillars">
-    <div class="pillars-grid">
-      <div class="pillar">
-        <span class="pillar-label">Delivery</span>
-        <h3>Guaranteed Delivery</h3>
-        <p>Fixed price per delivery. You only pay for what we ship. Our incentives are structurally aligned with yours.</p>
-      </div>
-      <div class="pillar">
-        <span class="pillar-label">Accuracy</span>
-        <h3>95% Prediction Accuracy</h3>
-        <p>NolteOS uses 20 years of flow data to predict delivery. No estimates, no guesswork, no surprises.</p>
-      </div>
-      <div class="pillar">
-        <span class="pillar-label">Experience</span>
-        <h3>Founders Who've Exited</h3>
-        <p>We've built companies from zero, scaled them, and sold them. That experience shapes every decision we make.</p>
-      </div>
-      <div class="pillar">
-        <span class="pillar-label">Model</span>
-        <h3>Efficiency Over Activity</h3>
-        <p>We measure outcomes delivered, not hours billed. When your interests come first, speed becomes profitable.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- TRUST LOGOS -->
-  <div class="trust-bar trust-bar-light">
-    <p class="trust-label">Companies we've delivered for</p>
-    <div class="trust-logos">
-      <img src="/images/logos/pilou.png" alt="Pilou" class="trust-logo-img" style="height:20px" />
-      <img src="/images/logos/odie.png" alt="Odie" class="trust-logo-img" style="height:22px" />
-      <img src="/images/logos/securecpg.svg" alt="Secure CPG" class="trust-logo-img" style="height:22px" />
-      <img src="/images/logos/barrys.png" alt="Barry's" class="trust-logo-img" style="height:18px" />
-      <img src="/images/logos/breeze.svg" alt="Breeze" class="trust-logo-img" style="height:22px" />
-      <img src="/images/logos/penelope.svg" alt="Penelope" class="trust-logo-img" style="height:20px" />
-    </div>
-  </div>
-
-  <!-- HUMAN: WHO WE ARE -->
-  <div class="human-section">
-    <div class="human-row">
-      <div class="human-photo">
-        <span class="eyebrow">Nolte's Leadership</span>
-        <div class="founders-row">
-          <div class="founder">
-            <img src="/images/team/jeffrey-nolte-web.png" alt="Jeffrey Nolte" class="founder-img" />
-            <span class="founder-name">Jeffrey Nolte <a href="https://www.linkedin.com/in/jeffreynolte/" target="_blank" rel="noopener" class="founder-linkedin" aria-label="Jeffrey Nolte on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></span>
-            <span class="founder-role">Managing Director</span>
-          </div>
-          <div class="founder">
-            <div class="founder-img-wrap"><img src="/images/team/yanna-lopes-web.jpg" alt="Yanna Lopes" /></div>
-            <span class="founder-name">Yanna Lopes <a href="https://www.linkedin.com/in/yannalopes/" target="_blank" rel="noopener" class="founder-linkedin" aria-label="Yanna Lopes on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></span>
-            <span class="founder-role">Head of Products</span>
-          </div>
-        </div>
-        <p class="founders-experience">Our leadership team has led engineering orgs, launched products from zero to acquisition, raised capital, and navigated exits.</p>
-      </div>
-      <div class="human-content">
-        <h2>We've been in your seat</h2>
-        <p>Nolte was founded by operators who've built companies from zero, scaled them, and sold them. We know what it feels like to approve a six-figure software engagement and hope it works out. That's why we built a system that removes hope from the equation.</p>
-        <p>We're a distributed team across the Americas — designers, engineers, and product strategists who measure success by what ships, not what's billed.</p>
-        <a class="human-link" href="/about/nolteos">Learn about NolteOS &rarr;</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- DELIVERY PERFORMANCE -->
-  <div class="delivery-performance">
-    <div class="wide-wrap">
-      <div class="delivery-perf-content">
-        <div class="delivery-perf-text">
-          <span class="eyebrow">Live Delivery Data</span>
-          <h2>Week over week performance</h2>
-          <p>Real delivery metrics from active engagements. Not vanity numbers — the same data our clients see in NolteOS.</p>
-          <div class="delivery-perf-stats">
-            <div class="dp-stat">
-              <span class="dp-stat-value">95%</span>
-              <span class="dp-stat-label">Prediction Accuracy</span>
-            </div>
-            <div class="dp-stat">
-              <span class="dp-stat-value">75/mo</span>
-              <span class="dp-stat-label">Deliveries Shipped</span>
-            </div>
-            <div class="dp-stat">
-              <span class="dp-stat-value">4.8d</span>
-              <span class="dp-stat-label">Avg Cycle Time</span>
-            </div>
-            <div class="dp-stat">
-              <span class="dp-stat-value">20yrs</span>
-              <span class="dp-stat-label">Delivery Data</span>
-            </div>
-          </div>
-        </div>
-        <div class="delivery-perf-chart">
-          <div class="shot-window shot-window-dark">
-            <div class="shot-toolbar">
-              <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
-            </div>
-            <div class="shot-content" style="padding: 1.5rem;">
-              <div class="perf-chart-header">
-                <span class="perf-chart-title">Weekly Deliveries</span>
-                <span class="perf-chart-range">Last 8 Weeks</span>
-              </div>
-              <div class="perf-chart-bars">
-                <div class="perf-bar-group">
-                  <div class="perf-bar" style="height: 65%;"><span class="perf-bar-val">14</span></div>
-                  <span class="perf-bar-label">W1</span>
-                </div>
-                <div class="perf-bar-group">
-                  <div class="perf-bar" style="height: 78%;"><span class="perf-bar-val">17</span></div>
-                  <span class="perf-bar-label">W2</span>
-                </div>
-                <div class="perf-bar-group">
-                  <div class="perf-bar" style="height: 72%;"><span class="perf-bar-val">16</span></div>
-                  <span class="perf-bar-label">W3</span>
-                </div>
-                <div class="perf-bar-group">
-                  <div class="perf-bar" style="height: 85%;"><span class="perf-bar-val">19</span></div>
-                  <span class="perf-bar-label">W4</span>
-                </div>
-                <div class="perf-bar-group">
-                  <div class="perf-bar" style="height: 70%;"><span class="perf-bar-val">15</span></div>
-                  <span class="perf-bar-label">W5</span>
-                </div>
-                <div class="perf-bar-group">
-                  <div class="perf-bar" style="height: 82%;"><span class="perf-bar-val">18</span></div>
-                  <span class="perf-bar-label">W6</span>
-                </div>
-                <div class="perf-bar-group">
-                  <div class="perf-bar" style="height: 90%;"><span class="perf-bar-val">20</span></div>
-                  <span class="perf-bar-label">W7</span>
-                </div>
-                <div class="perf-bar-group">
-                  <div class="perf-bar perf-bar-current" style="height: 80%;"><span class="perf-bar-val">18</span></div>
-                  <span class="perf-bar-label">W8</span>
-                </div>
-              </div>
-              <div class="perf-chart-footer">
-                <span>Deployments: 142</span>
-                <span>On-time: 97%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- THE PREDICTABILITY GAP -->
-  <div class="pgap-section">
-    <div class="wide-wrap">
-      <a class="pgap-card" href="/blog/the-predictability-gap">
-        <div class="pgap-graphic">
-          <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" class="pgap-svg">
-            <line x1="40" y1="30" x2="40" y2="170" stroke="rgba(255,255,255,0.06)" />
-            <line x1="110" y1="30" x2="110" y2="170" stroke="rgba(255,255,255,0.06)" />
-            <line x1="180" y1="30" x2="180" y2="170" stroke="rgba(255,255,255,0.06)" />
-            <line x1="250" y1="30" x2="250" y2="170" stroke="rgba(255,255,255,0.06)" />
-            <line x1="30" y1="60" x2="290" y2="60" stroke="rgba(255,255,255,0.06)" />
-            <line x1="30" y1="100" x2="290" y2="100" stroke="rgba(255,255,255,0.06)" />
-            <line x1="30" y1="140" x2="290" y2="140" stroke="rgba(255,255,255,0.06)" />
-            <polyline points="40,80 80,120 110,70 145,135 180,90 215,140 250,65 285,125" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,4" />
-            <polyline points="40,105 80,100 110,97 145,94 180,91 215,88 250,86 285,84" fill="none" stroke="#D63F18" stroke-width="2" />
-            <polygon points="40,95 80,90 110,87 145,84 180,81 215,78 250,76 285,74 285,94 250,96 215,98 180,101 145,104 110,107 80,110 40,115" fill="rgba(214,63,24,0.08)" />
-            <text x="285" y="130" font-size="8" fill="rgba(255,255,255,0.25)" font-family="monospace" text-anchor="end">estimate</text>
-            <text x="285" y="80" font-size="8" fill="rgba(214,63,24,0.7)" font-family="monospace" text-anchor="end">forecast</text>
-          </svg>
-        </div>
-        <div class="pgap-content">
-          <span class="pgap-tag">Featured Article</span>
-          <h2>The Predictability Gap</h2>
-          <p>Every business function forecasts in order to be predictable. Software development does neither. It's the only function on the P&L where leadership approves spend without knowing what will be delivered, when, or what it will cost.</p>
-          <span class="pgap-link">Read the full article &rarr;</span>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- HOW PREDICTIVE DELIVERY WORKS -->
+  <!-- ═══════════════════════════════════════════
+       6. HOW IT WORKS — Strategy → Launch → Evolve
+       ═══════════════════════════════════════════ -->
   <div class="how-it-works">
     <div class="wide-wrap">
-      <h2 class="section-heading">How Predictive Delivery Works</h2>
-      <p class="section-sub">Scope. Timeline. Cost. Guaranteed before you commit.</p>
+      <h2 class="section-heading">How It Works</h2>
+      <p class="section-sub">One continuous partnership. We don't hand off — we grow with you.</p>
     </div>
     <div class="steps-grid">
       <div class="step-cell">
         <div class="step-num">1</div>
-        <h3>Scope</h3>
-        <span class="step-subtitle">Describe what you're building</span>
-        <p>Tell us what you need. We break it into discrete, measurable deliveries — each with a clear definition of done and a fixed price.</p>
-        <div class="step-visual">
-          <span class="sv-key">input</span> &rarr; <span class="sv-val">what you're building</span><br>
-          <span class="sv-key">output</span> &rarr; <span class="sv-val">scoped deliveries</span><br>
-          <span class="sv-key">each</span> &rarr; <span class="sv-val">definition of done + price</span>
-        </div>
+        <h3>Strategy</h3>
+        <span class="step-subtitle">We challenge, shape, and define</span>
+        <p>We pressure-test your product thesis — market positioning, regulatory landscape, competitive defensibility. Then we shape the product architecture and define every delivery before the build begins. If something shouldn't be built, we say so.</p>
       </div>
       <div class="step-cell">
         <div class="step-num">2</div>
-        <h3>Timeline</h3>
-        <span class="step-subtitle">NolteOS predicts your build</span>
-        <p>Our delivery engine uses 20 years of flow data to predict exactly when each delivery lands. 95% accuracy — not an estimate, a commitment.</p>
-        <div class="step-visual">
-          <span class="sv-key">accuracy</span> &rarr; <span class="sv-val">95.2%</span><br>
-          <span class="sv-key">delivery</span> &rarr; <span class="sv-val">Week 8</span><br>
-          <span class="sv-key">confidence</span> &rarr; <span class="sv-val">Monte Carlo</span>
-        </div>
+        <h3>Launch</h3>
+        <span class="step-subtitle">We build and ship predictably</span>
+        <p>NolteOS translates strategic decisions into working product. Every delivery is scoped, priced, and tracked. Fixed price per delivery — you pay for what ships, and you see progress in real time.</p>
       </div>
       <div class="step-cell">
         <div class="step-num">3</div>
-        <h3>Cost</h3>
-        <span class="step-subtitle">Fixed price per delivery</span>
-        <p>You pay for what ships. If it doesn't ship, you don't pay. The price is committed before work begins. We carry the risk.</p>
-        <div class="step-visual">
-          <span class="sv-key">price</span> &rarr; <span class="sv-val">fixed per delivery</span><br>
-          <span class="sv-key">billing</span> &rarr; <span class="sv-val">zero hourly</span><br>
-          <span class="sv-key">risk</span> &rarr; <span class="sv-val">we carry it</span>
-        </div>
+        <h3>Evolve</h3>
+        <span class="step-subtitle">We grow the product with you</span>
+        <p>Launch is not the end — it's the beginning. We continue to shape strategy, ship features, and evolve the product as the business grows. Our best partnerships are measured in years, not sprints.</p>
       </div>
     </div>
     <a class="steps-cta-inline" href="https://os.nolte.io">
-      <span class="steps-cta-action">See it in action &rarr;</span>
-      <span class="steps-cta-sub">Predict your project in 30 seconds</span>
+      <span class="steps-cta-action">Build Your Product Roadmap &rarr;</span>
+      <span class="steps-cta-sub">Risks, opportunities, and competitive landscape in under 60 seconds</span>
     </a>
   </div>
 
-  <!-- NOLTEOS CALLOUT -->
-  <div class="nolteos-callout">
-    <div class="nolteos-callout-inner">
-      <div class="nolteos-callout-content">
-        <div class="os-tag">NolteOS <span class="live-dot"></span></div>
-        <h2>The predictability engine behind every delivery</h2>
-        <p>NolteOS uses 20 years of delivery data to predict scope, timeline, and cost before work begins. It's how we price per delivery, not per hour — and how our clients know exactly what they're getting before they commit.</p>
-        <ul class="nolteos-callout-features">
-          <li>95% prediction accuracy across all engagements</li>
-          <li>Real-time delivery tracking and metrics</li>
-          <li>Transparent scope, timeline, and cost visibility</li>
-        </ul>
-        <a class="nolteos-callout-link" href="https://os.nolte.io">Get Your Delivery Plan &rarr;</a>
-      </div>
-      <div class="nolteos-callout-preview">
-        <div class="shot-window shot-window-dark">
-          <div class="shot-toolbar">
-            <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
-          </div>
-          <div class="shot-content">
-            <div class="nolteos-mini-metrics">
-              <div class="nolteos-mini-metric">
-                <span class="nolteos-mini-label">Prediction Accuracy</span>
-                <span class="nolteos-mini-value">95.2%</span>
-              </div>
-              <div class="nolteos-mini-metric">
-                <span class="nolteos-mini-label">Cycle Time</span>
-                <span class="nolteos-mini-value">4.8d</span>
-              </div>
-              <div class="nolteos-mini-metric">
-                <span class="nolteos-mini-label">Weekly Throughput</span>
-                <span class="nolteos-mini-value">18</span>
-              </div>
-              <div class="nolteos-mini-metric">
-                <span class="nolteos-mini-label">On-Time Rate</span>
-                <span class="nolteos-mini-value">97%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CASE STUDIES -->
+  <!-- ═══════════════════════════════════════════
+       7. CASE STUDIES — Products we shaped and shipped
+       ═══════════════════════════════════════════ -->
   <div class="case-studies">
-    <h2 class="section-heading">Trusted partnerships</h2>
-    <p class="section-sub">Teams building critical software we've taken from vision to production. Predictably.</p>
+    <h2 class="section-heading">Products we shaped and <em>shipped</em></h2>
+    <p class="section-sub">From "should we build this?" to production — in industries where the stakes are real.</p>
 
     <div class="case-grid">
-      <div class="case-card">
-        <div class="case-card-img">
-          <img src="/images/work/breeze/featured.avif" alt="Breeze Oral Care platform" />
-        </div>
-        <div class="case-card-body">
-          <div class="case-card-meta-line">
-            <span class="case-pill case-pill-healthcare">Healthcare</span>
-          </div>
-          <img src="/images/logos/breeze.svg" alt="Breeze" class="case-card-logo-img" style="height:20px" />
-          <p class="case-desc">Dental platform built from discovery to launch in four months. On time, on budget, to the dollar.</p>
-          <div class="case-meta">
-            <div class="case-meta-item"><span class="case-meta-value">2 years</span><span class="case-meta-label">Partnership</span></div>
-          </div>
-          <a class="case-link" href="/work/breeze-oral-care">Read Case Study</a>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-card-img">
-          <img src="/images/work/pilou/featured.png" alt="Pilou financial platform" />
-        </div>
-        <div class="case-card-body">
-          <div class="case-card-meta-line">
-            <span class="case-pill case-pill-finance">Finance</span>
-          </div>
-          <img src="/images/logos/pilou.png" alt="Pilou" class="case-card-logo-img" style="height:22px" />
-          <p class="case-desc">Financial services platform built under regulatory requirements with full audit trail visibility from day one.</p>
-          <div class="case-meta">
-            <div class="case-meta-item"><span class="case-meta-value">2 years</span><span class="case-meta-label">Partnership</span></div>
-          </div>
-          <a class="case-link" href="/work/pilou">Read Case Study</a>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-card-img">
-          <img src="/images/work/odie/featured.png" alt="Odie pet insurance" />
-        </div>
-        <div class="case-card-body">
-          <div class="case-card-meta-line">
-            <span class="case-pill case-pill-insurance">Insurance</span>
-          </div>
-          <img src="/images/logos/odie.png" alt="Odie" class="case-card-logo-img" style="height:24px" />
-          <p class="case-desc">Insurance platform built from zero under carrier requirements and state regulatory obligations. Thousands of active policyholders.</p>
-          <div class="case-meta">
-            <div class="case-meta-item"><span class="case-meta-value">3 years</span><span class="case-meta-label">Partnership</span></div>
-          </div>
-          <a class="case-link" href="/work/odie">Read Case Study</a>
+      <CaseCard slug="breeze-oral-care" image="/images/work/breeze/featured.avif" imageAlt="Breeze Oral Care platform" category="healthcare" client="Breeze Oral Care" description="Strategic workshops, customer development, market positioning, then full build and launch. Discovery to live product in four months — on time, on budget, to the dollar." partnership="2+ years" logo={caseLogos['breeze-oral-care']} />
+      <CaseCard slug="pilou" image="/images/work/pilou/featured.png" imageAlt="Pilou financial platform" category="finance" client="Pilou" description="Fintech platform rebuilt under CNBV regulatory requirements. Product strategy, KYC architecture, digital signatures, banking SDK integration — navigating compliance at every step." partnership="2 years" logo={caseLogos['pilou']} />
+      <CaseCard slug="odie" image="/images/work/odie/featured.png" imageAlt="Odie pet insurance" category="insurance" client="Odie" description="Pet insurance MGA built from zero under carrier requirements and state regulatory obligations. Product strategy through build — thousands of active policyholders." partnership="3 years" logo={caseLogos['odie']} />
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIAL
+       ═══════════════════════════════════════════ -->
+  <div class="home-testimonial-dark">
+    <div class="home-testimonial-inner">
+      <img src="/images/logos/breeze.svg" alt="Breeze" class="home-testimonial-logo" />
+      <blockquote>
+        <p>&ldquo;I feel so lucky to work with this brilliant team of people. They can build anything and do so beautifully and on time.&rdquo;</p>
+      </blockquote>
+      <div class="home-testimonial-attr">
+        <img src="/images/work/breeze/josh.jpg" alt="Dr. Joshua Turnbull" class="home-testimonial-avatar" />
+        <div class="home-testimonial-attr-text">
+          <strong>Dr. Joshua Turnbull</strong>
+          <span>CEO at Breeze</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- WHO WE WORK WITH -->
+  <!-- ═══════════════════════════════════════════
+       8. INDUSTRIES — Regulated verticals
+       ═══════════════════════════════════════════ -->
   <div class="verticals">
-    <h2 class="section-heading">Who we work with</h2>
-    <p class="section-sub">Leaders in regulated industries who need software delivery they can plan around.</p>
+    <h2 class="section-heading">Industries we know <em>deeply</em></h2>
+    <p class="section-sub">We build in industries where compliance, timing, and getting it wrong have real consequences. That domain understanding is the foundation of everything we do.</p>
 
     <div class="verticals-grid">
       <a class="vertical-cell vertical-cell-link" href="/industries/insurance">
         <h3>Insurance</h3>
-        <p class="vertical-who">CTOs and product leaders at carriers, MGAs, and insurtechs</p>
+        <p class="vertical-who">Carriers, MGAs, and insurtechs making product bets under regulatory scrutiny</p>
         <ul class="vertical-items">
           <li>Filing deadlines that regulators set, not product teams</li>
           <li>Platform builds under carrier and state scrutiny</li>
@@ -399,7 +286,7 @@ const posts = (await getCollection('blog'))
       </a>
       <a class="vertical-cell vertical-cell-link" href="/industries/healthcare">
         <h3>Healthcare</h3>
-        <p class="vertical-who">Founders and engineering leads building patient-facing products</p>
+        <p class="vertical-who">Operators building patient-facing digital products for the first time</p>
         <ul class="vertical-items">
           <li>HIPAA compliance that can't be an afterthought</li>
           <li>Clinical integrations with zero tolerance for downtime</li>
@@ -413,7 +300,7 @@ const posts = (await getCollection('blog'))
       </a>
       <a class="vertical-cell vertical-cell-link" href="/industries/finance">
         <h3>Finance</h3>
-        <p class="vertical-who">CEOs and CTOs at fintechs navigating regulatory complexity</p>
+        <p class="vertical-who">Financial operators going digital under compliance constraints</p>
         <ul class="vertical-items">
           <li>Audit trails and compliance baked in from day one</li>
           <li>KYC/AML flows that regulators will scrutinize</li>
@@ -428,47 +315,12 @@ const posts = (await getCollection('blog'))
     </div>
   </div>
 
-
-  <!-- INNOVATION -->
-  <div class="innovation-section">
-    <h2 class="section-heading">Predictable <em>innovation</em></h2>
-    <p class="section-sub">Startup speed with enterprise accountability. Here's how we do it.</p>
-    <div class="innovation-grid">
-      <div class="innovation-card">
-        <span class="innovation-card-number">01</span>
-        <h3>Operators, Not Vendors</h3>
-        <p>We've built and exited companies. That experience shapes how we scope, prioritize, and deliver — like owners, not contractors.</p>
-      </div>
-      <div class="innovation-card">
-        <span class="innovation-card-number">02</span>
-        <h3>AI-Augmented Delivery</h3>
-        <p>As an Anthropic partner, we've standardized on Claude across our entire delivery workflow — from code to predictive modeling. AI-native, not bolted on.</p>
-      </div>
-      <div class="innovation-card">
-        <span class="innovation-card-number">03</span>
-        <h3>Plug-and-Play Teams</h3>
-        <p>Cross-functional squads that embed with your org and deliver from day one. No ramp-up. Scale with your roadmap.</p>
-      </div>
-    </div>
-    <div class="innovation-stack">
-      <span class="innovation-stack-label">Our stack &amp; partnerships</span>
-      <div class="innovation-stack-logos">
-        <img src="/images/logos/anthropic.svg" alt="Anthropic" class="stack-logo" style="height:20px" />
-        <span class="stack-text-logo">Claude</span>
-        <span class="stack-text-logo">TypeScript</span>
-        <span class="stack-text-logo">AWS</span>
-        <span class="stack-text-logo">OpenAI</span>
-        <span class="stack-text-logo">Next.js</span>
-        <span class="stack-text-logo">React</span>
-        <span class="stack-text-logo">Node</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- BLOG POSTS -->
+  <!-- ═══════════════════════════════════════════
+       9. BLOG / ESSAYS
+       ═══════════════════════════════════════════ -->
   <div class="blog-featured">
-    <h2 class="section-heading">From the blog</h2>
-    <p class="section-sub">How we think about predictable delivery and building products that ship.</p>
+    <h2 class="section-heading">How we think about building</h2>
+    <p class="section-sub">Judgment, delivery methodology, and lessons from building in regulated industries.</p>
 
     <div class="blog-featured-grid">
       {posts.map(post => (
@@ -485,65 +337,9 @@ const posts = (await getCollection('blog'))
     </div>
   </div>
 
-  <!-- GLOBAL PREDICTABILITY CTA -->
-  <div class="predictability-cta">
-    <div class="predictability-cta-inner">
-      <div class="predictability-cta-content">
-        <span class="eyebrow" style="color: var(--accent);">Predict Your Build</span>
-        <h2>Get a guaranteed delivery plan in under 60 seconds.</h2>
-        <p>Describe what you're building in plain language. NolteOS analyzes your prompt against 20 years of delivery data and returns:</p>
-        <ul class="cta-checklist">
-          <li>Full scope — every delivery defined and priced</li>
-          <li>Timeline prediction — week-by-week delivery roadmap</li>
-          <li>Total cost — committed before work begins</li>
-          <li>Delivery risk assessment — based on 200+ engagements</li>
-        </ul>
-        <a class="btn-accent" href="https://os.nolte.io">Get Your Delivery Plan &rarr;</a>
-        <span class="cta-micro">No signup. No sales call. Instant results.</span>
-      </div>
-      <div class="predictability-cta-visual">
-        <div class="os-preview">
-          <div class="os-section-label">Your Delivery Roadmap</div>
-          <div class="os-roadmap">
-            <!-- Header -->
-            <div class="os-roadmap-header">
-              <div class="os-roadmap-col">Phase</div>
-              <div class="os-roadmap-months">
-                <span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
-              </div>
-            </div>
-            <!-- Strategy -->
-            <div class="os-roadmap-row">
-              <div class="os-roadmap-label">Strategy<div class="os-roadmap-meta">10 deliveries &middot; $13,500</div></div>
-              <div class="os-roadmap-track">
-                <div class="os-roadmap-bar os-bar-strategy" style="width:25%;left:0"></div>
-              </div>
-            </div>
-            <!-- Build -->
-            <div class="os-roadmap-row">
-              <div class="os-roadmap-label">Build<div class="os-roadmap-meta">52 deliveries &middot; $70,200</div></div>
-              <div class="os-roadmap-track">
-                <div class="os-roadmap-bar os-bar-build" style="width:62%;left:18%"></div>
-              </div>
-            </div>
-            <!-- Launch -->
-            <div class="os-roadmap-row">
-              <div class="os-roadmap-label">Launch<div class="os-roadmap-meta">18 deliveries &middot; $24,300</div></div>
-              <div class="os-roadmap-track">
-                <div class="os-roadmap-bar os-bar-launch" style="width:25%;left:75%"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Summary -->
-          <div class="os-roadmap-summary">
-            <span>80 deliveries</span>
-            <span>4 months</span>
-            <span>$108,000</span>
-            <span>$1,350/delivery</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- ═══════════════════════════════════════════
+       10. GLOBAL CTA — Product Opportunity Assessment
+       ═══════════════════════════════════════════ -->
+  <CtaSection />
 
 </Base>

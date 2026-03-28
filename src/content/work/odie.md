@@ -33,11 +33,11 @@ team:
 platforms:
   - Web
 phases:
-  - name: "Foundation"
+  - name: "Strategy"
     duration: "8 weeks"
-  - name: "Platform Build"
+  - name: "Launch"
     duration: "6 months"
-  - name: "Scale"
+  - name: "Evolve"
     duration: "2+ years"
 ---
 

@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import CtaSection from '../../components/CtaSection.astro';
 ---
 <Base title="NolteOS" description="The delivery operating system that powers predictable, forecast-based software delivery. Real-time visibility into every deliverable, decision, and metric — for you and your team." fullWidth>
 
@@ -9,8 +10,8 @@ import Base from '../../layouts/Base.astro';
       <span class="os-eyebrow">The Delivery Operating System</span>
       <h1>Complete visibility into <em>every delivery</em></h1>
       <p class="os-hero-sub">NolteOS is how we manage your engagement — and how you stay in control of it. Real-time metrics, decision tracking, weekly delivery status, and async approvals. No status meetings required.</p>
-      <div class="hero-actions">
-        <a class="btn-hero btn-hero-primary" href="https://os.nolte.io">Get Your Delivery Plan</a>
+      <div class="hero-actions hero-actions-centered">
+        <a class="btn-hero btn-hero-primary" href="https://os.nolte.io">Build Your Product Roadmap &rarr;</a>
       </div>
     </div>
   </div>
@@ -397,21 +398,6 @@ import Base from '../../layouts/Base.astro';
     </div>
   </div>
 
-  <!-- TESTIMONIAL -->
-  <div class="testimonial">
-    <div class="testimonial-inner">
-      <blockquote>They can build anything and do so beautifully and on time. They have also helped me tremendously in thinking strategically, even if it means I'm paying them less in the short term. They act like a partner in my business.</blockquote>
-      <cite>Dr. Josh Turnbull &mdash; Founder, Breeze Oral Care</cite>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="footer-cta">
-    <div class="wide-wrap">
-      <h2>See it for <em>yourself.</em></h2>
-      <p>Describe what you're building. Get a predictable delivery plan with scope, timeline, and cost — powered by NolteOS.</p>
-      <a class="btn-accent" href="https://os.nolte.io">Get Your Delivery Plan</a>
-    </div>
-  </div>
+  <CtaSection />
 
 </Base>

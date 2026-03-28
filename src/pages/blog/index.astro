@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import CtaSection from '../../components/CtaSection.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
@@ -24,9 +25,9 @@ function formatAuthor(slug: string): string {
 
   <div class="blog-hero">
     <div class="wide-wrap">
-      <span class="eyebrow">Writing</span>
-      <h1>From the <em>Studio</em></h1>
-      <p class="blog-hero-sub">How we think about predictive delivery, flow metrics, and building software where failure is not an option.</p>
+      <span class="eyebrow">Blog</span>
+      <h1>How we think about <em>building</em></h1>
+      <p class="blog-hero-sub">Judgment, delivery methodology, and lessons from building in regulated industries.</p>
     </div>
   </div>
 
@@ -130,28 +131,37 @@ function formatAuthor(slug: string): string {
     }
   </script>
 
+  <CtaSection />
+
 </Base>
 
-<style>
+<style is:global>
   /* Dark hero */
   .blog-hero {
     background: var(--black);
-    padding: 8rem 2rem 4rem;
+    padding: 6rem 2rem 3rem;
+    margin-top: -5rem;
     color: var(--white);
   }
   .blog-hero .eyebrow {
     font-family: var(--mono);
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     color: var(--accent);
     margin-bottom: 1rem;
     display: block;
   }
   .blog-hero h1 {
     font-family: var(--serif);
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+  .blog-hero h1 em {
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
   }
   .blog-hero-sub {
     font-size: 1rem;
@@ -236,10 +246,11 @@ function formatAuthor(slug: string): string {
     flex: 1;
   }
   .blog-card-footer {
-    margin-top: 1.5rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
   }
   .blog-card-meta {
     font-family: var(--mono);
@@ -261,12 +272,16 @@ function formatAuthor(slug: string): string {
     font-family: var(--mono);
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent);
+    letter-spacing: 0.08em;
+    color: var(--black);
     text-decoration: none;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 0.25rem;
+    align-self: flex-start;
+    transition: border-color 0.15s;
   }
   .blog-card-link:hover {
-    text-decoration: underline;
+    border-color: var(--black);
   }
 
   /* Pagination */
@@ -283,15 +298,16 @@ function formatAuthor(slug: string): string {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    background: var(--black);
+    background: var(--accent);
     color: var(--white);
     border: none;
-    padding: 0.75rem 2.5rem;
+    padding: 0.85rem 2.25rem;
     cursor: pointer;
-    transition: background 0.2s;
+    line-height: 1;
+    transition: opacity 0.15s;
   }
   .blog-load-more:hover {
-    background: var(--accent);
+    opacity: 0.9;
   }
   .blog-page-count {
     font-family: var(--mono);
@@ -310,11 +326,6 @@ function formatAuthor(slug: string): string {
   @media (max-width: 580px) {
     .blog-grid {
       grid-template-columns: 1fr;
-    }
-    .blog-card-footer {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.75rem;
     }
   }
 </style>
