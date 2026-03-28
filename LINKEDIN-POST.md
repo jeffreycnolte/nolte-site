@@ -19,7 +19,7 @@ So I sat down with Claude Code and rebuilt everything from scratch.
 - Full design system: normalized typography, responsive at every breakpoint
 - SEO/GEO: JSON-LD schemas, FAQPage, sitemaps, canonical URLs, OG tags
 - Contact form → Clarify CRM via Netlify serverless function
-- 69 redirect rules preserving every old WordPress URL
+- ~70 redirect rules preserving every old WordPress URL
 - PostHog analytics with session replay, scroll depth, UTM capture
 - Custom 404 page, privacy policy, terms of service
 - Mobile responsive across all templates
@@ -87,10 +87,10 @@ P.S. Goodbye WordPress. You were great for 20 years. I mean that.
 - Tag @Anthropic and @ClaudeAI if they have company pages
 
 **Key stats for comments/replies:**
-- 37 commits over 8 days
+- 42 commits over 8 days
 - 61 pages built
 - 29 blog posts migrated
-- 69 redirect rules
-- 220 files in the project
+- ~70 redirect rules
+- 3 reusable components
 - First commit: March 19, last commit: March 27
 - Build time: 1.9 seconds
