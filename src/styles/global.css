@@ -1449,9 +1449,9 @@ footer {
   color: var(--black);
 }
 .trust-logo-img {
-  height: 18px;
+  height: 24px;
   width: auto;
-  max-width: 90px;
+  max-width: 110px;
   object-fit: contain;
   opacity: 0.4;
   filter: grayscale(100%) brightness(0);
