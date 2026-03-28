@@ -89,7 +89,7 @@ Why this engagement matters. What it demonstrates about how we work.
 | `title` | Yes | string | Full client name |
 | `client` | Yes | string | Display name (can be shorter) |
 | `description` | Yes | string | One sentence for cards and SEO. Under 200 chars. |
-| `category` | Yes | string | Must match a category slug: `healthcare`, `insurance`, `finance`, `wellness`, `delivery` |
+| `category` | Yes | string | Must match a category slug: `healthcare`, `insurance`, `finance`, `wellness`, `real-estate`, `delivery` |
 | `date` | Yes | date | Project start date (YYYY-MM-DD) |
 | `image` | Yes | path | Featured image path (see Step 2) |
 | `imageAlt` | Yes | string | Descriptive alt text for the image |
@@ -227,7 +227,23 @@ Before publishing, verify the case study does NOT include:
 
 ---
 
-## Step 6: Build and Deploy
+## Step 6: Ordering
+
+Case studies are sorted by date (newest first). **Always set the `date` field so new case studies appear at the end of the list** unless you've been told to feature it differently.
+
+To place a new case study at the end, use a date earlier than the oldest existing study. Check the current dates:
+
+```bash
+grep "^date:" src/content/work/*.md
+```
+
+If the oldest is `2020-08-15`, use `2020-01-15` or earlier for your new study.
+
+To feature a case study at the top, use a recent date.
+
+---
+
+## Step 7: Build and Deploy
 
 ```bash
 # Test locally
@@ -251,7 +267,7 @@ git push origin main
 |--------|------|----------|-------------|
 | Breeze Oral Care | `breeze-oral-care` | healthcare | 2+ years |
 | Barry's | `barrys-bootcamp` | wellness | 5+ years |
-| Klipster | `klipster` | wellness | 2+ years |
+| Klipster | `klipster` | real-estate | 2+ years |
 | Odie | `odie` | insurance | 3 years |
 | Pilou | `pilou` | finance | 2 years |
 | Wake | `wake` | wellness | 12 months |

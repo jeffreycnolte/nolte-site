@@ -2,7 +2,7 @@
 title: "Klipster"
 client: "Klipster"
 description: "A real estate discovery platform with live streaming property tours, agent-driven content, and rental applications — from MVP strategy through App Store launch and continuous evolution."
-category: wellness
+category: real-estate
 date: 2023-08-15
 image: /images/work/klipster/featured.jpg
 imageAlt: "Klipster — Real estate discovery app with live property tours"
