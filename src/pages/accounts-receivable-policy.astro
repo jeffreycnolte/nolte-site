@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Accounts Receivable Policy — Nolte" description="Nolte's policy for managing outstanding client payments.">
+
+  <header class="hero">
+    <span class="eyebrow">Client Resources</span>
+    <h1>Accounts Receivable <em>Policy</em></h1>
+  </header>
+
+  <div class="prose legal-prose">
+
+    <h2>Payment Terms</h2>
+    <p>Invoices are issued monthly via QuickBooks Online and are due within 7 days of the invoice date. Clients have 7 days to dispute charges; after this period, invoices are considered final and accepted.</p>
+
+    <h2>Collection Timeline</h2>
+    <p>If payment is not received by the due date, the following escalation process applies:</p>
+
+    <table>
+      <thead>
+        <tr><th>Days Past Due</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>7 days</td><td>First payment reminder</td></tr>
+        <tr><td>14 days</td><td>Second payment reminder</td></tr>
+        <tr><td>21 days</td><td>Payment request email (CC: Project Manager)</td></tr>
+        <tr><td>30 days</td><td>Notice that services will cease in 3 days without payment</td></tr>
+        <tr><td>33 days</td><td>Account suspension notification</td></tr>
+        <tr><td>90 days</td><td>Final notice before debt collection referral (15-day window)</td></tr>
+        <tr><td>105 days</td><td>Account referred to collection agency</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Account Suspension</h2>
+    <p>Accounts that are 30 or more days past due may be suspended. No further work will be performed until payment is received. No new credit will be extended to delinquent accounts until current status is restored.</p>
+
+    <h2>Client Verification</h2>
+    <p>Upon engagement, Nolte collects standard identification information including name, address, contact details, company position, and relevant identification documents.</p>
+
+    <h2>Contact</h2>
+    <p>For finance inquiries, contact <a href="mailto:accounting@nolte.io">accounting@nolte.io</a>.</p>
+
+  </div>
+
+</Base>
+
+<style>
+  .legal-prose {
+    max-width: 640px;
+  }
+  .legal-prose h2 {
+    margin-top: 2.5rem;
+  }
+  .legal-prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+  }
+  .legal-prose th {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid var(--gray-200);
+  }
+  .legal-prose td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    color: var(--gray-600);
+  }
+</style>

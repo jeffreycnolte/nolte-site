@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Team — Nolte" description="The operators behind Nolte. Founded by people who've built, scaled, and exited companies in regulated industries.">
+
+  <header class="hero">
+    <span class="eyebrow">Founders & Leadership</span>
+    <h1>The team behind <em>Nolte</em></h1>
+    <p class="hero-subtext">We're not a bench of engineers waiting for assignments. We're operators who've built companies, navigated boards, made payroll, and sold businesses. That experience is the foundation of everything we do.</p>
+  </header>
+
+  <div class="team-section">
+    <div class="team-founders">
+
+      <div class="team-member">
+        <img src="/images/team/jeffrey-nolte-web.png" alt="Jeffrey Nolte" class="team-member-img" loading="lazy" />
+        <div class="team-member-info">
+          <h2>Jeffrey Nolte</h2>
+          <span class="team-member-role">Founder & Managing Director</span>
+          <span class="team-member-exits">2x Exits</span>
+          <p>Jeffrey founded Nolte in 2006 and has spent two decades building, scaling, and exiting technology companies. He developed NolteOS — a predictive delivery system that replaces estimation with data-backed forecasting, achieving 95% accuracy across thousands of deliveries. Active technology investor and Chairman of Buenacopa. Splits time between Austin, TX and Mexico City.</p>
+          <a href="https://www.linkedin.com/in/jeffreynolte/" target="_blank" rel="noopener" class="team-member-link">LinkedIn &rarr;</a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="/images/team/yanna-lopes-web.jpg" alt="Yanna Lopes" class="team-member-img" loading="lazy" />
+        <div class="team-member-info">
+          <h2>Yanna Lopes</h2>
+          <span class="team-member-role">Head of Products</span>
+          <span class="team-member-exits">1x Exit</span>
+          <p>Legal background turned product leader. Yanna shapes product strategy and holds the line on quality across every engagement. She challenges assumptions, flags risks, and ensures every product decision is grounded in business reality — not wishful thinking.</p>
+          <a href="https://www.linkedin.com/in/yannalopes/" target="_blank" rel="noopener" class="team-member-link">LinkedIn &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</Base>
+
+<style>
+  .team-section {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 0 4rem;
+  }
+  .team-founders {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .team-member {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .team-member-img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(0.2);
+  }
+  .team-member-info h2 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+  }
+  .team-member-role {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 0.35rem;
+  }
+  .team-member-exits {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(254, 81, 1, 0.08);
+    padding: 0.2em 0.5em;
+    margin-bottom: 1rem;
+  }
+  .team-member-info p {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+  .team-member-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 0.25rem;
+    transition: border-color 0.15s;
+  }
+  .team-member-link:hover {
+    border-color: var(--black);
+  }
+  @media (max-width: 580px) {
+    .team-member {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .team-member-img {
+      max-width: 140px;
+    }
+  }
+</style>

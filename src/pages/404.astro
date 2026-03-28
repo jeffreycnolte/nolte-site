@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="404 — Lost in the Build" description="This page doesn't exist.">
+
+  <div class="four-oh-four">
+    <span class="four-oh-four-code">404</span>
+    <h1>This delivery didn't <em>ship.</em></h1>
+    <p>The page you're looking for doesn't exist — or it shipped to a different URL. Unlike our client work, this one we can't forecast.</p>
+    <div class="four-oh-four-actions">
+      <a class="btn-accent" href="/">Back to Home</a>
+      <a class="four-oh-four-link" href="/work">View Case Studies</a>
+      <a class="four-oh-four-link" href="/blog">Read the Blog</a>
+    </div>
+  </div>
+
+</Base>
+
+<style>
+  .four-oh-four {
+    text-align: center;
+    padding: 4rem 2rem 8rem;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .four-oh-four-code {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .four-oh-four h1 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .four-oh-four h1 em {
+    font-style: italic;
+    color: var(--gray-400);
+  }
+  .four-oh-four p {
+    color: var(--gray-600);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+  .four-oh-four-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .four-oh-four-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 0.25rem;
+    transition: border-color 0.15s;
+  }
+  .four-oh-four-link:hover {
+    border-color: var(--black);
+  }
+</style>

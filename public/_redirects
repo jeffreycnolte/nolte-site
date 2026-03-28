@@ -1,0 +1,101 @@
+# === Page redirects (old WordPress URLs → new Astro URLs) ===
+
+# Contact
+/talk-to-us              /contact              301
+
+# Team
+/team/jeffrey-nolte      /blog/author/jeffrey-nolte  301
+
+# Legacy pages
+/what-happened-to-moxie  /what-happened-to-moxie  200
+/web-mobile-product-development-and-support-2  /  301
+
+# Legal (old → new)
+/privacy-policy          /privacy              301
+/tos                     /terms                301
+
+# Case studies (slug changes)
+/work/breeze-case-study           /work/breeze-oral-care  301
+/work/odie-digital-product        /work/odie              301
+/work/pilou-product-development   /work/pilou             301
+/work/wake-product-development    /work/wake              301
+
+# Case studies not yet migrated → work index
+/work/footprint-digital-product   /work                   301
+/work/jules-digital-product       /work                   301
+/work/lumos-digital-product       /work                   301
+/work/morphus-digital-product     /work                   301
+/work/wevolv-case-study           /work                   301
+/work/squadup                     /work                   301
+
+# Nolte Care (legacy service pages)
+/nolte-care-plan-details          /                       301
+/nolte-care-service-terms         /                       301
+/nolte-care-client-billing-guide  /client-billing-guide    301
+
+# WordPress blog slugs (old long URLs → new short slugs)
+/the-hidden-costs-of-technical-debt-a-must-read-for-non-technical-founders  /blog/the-hidden-costs-of-technical-debt  301
+/using-example-mapping-to-better-serve-our-clients  /blog/using-example-mapping  301
+/how-the-kanban-methodology-benefits-founders  /blog/how-the-kanban-methodology-benefits-founders  301
+/the-three-non-negotiables-of-successful-digital-product  /blog/the-three-non-negotiables-of-a-successful-digital-product  301
+/mvp-validation-why-the-best-products-start-before-theyre-built  /blog/mvp-validation  301
+/validate-before-you-build-a-guide-for-early-stage-founders  /blog/validate-before-you-build  301
+/the-perfect-product-roadmap  /blog/the-perfect-product-roadmap  301
+/navigating-ai-for-non-tech-founders  /blog/navigating-ai-for-non-tech-founders  301
+/leading-tech-teams-without-a-tech-background-what-really-works  /blog/leading-tech-teams-without-a-tech-background  301
+/tailoring-your-team-for-startup-success  /blog/tailoring-your-team-for-startup-success  301
+/scaling-tech-teams-strategies  /blog/scaling-tech-teams-strategies  301
+/the-ideal-team-structure-for-early-stage-startups-engaging-with-an-agency  /blog/ideal-team-structure-for-startups  301
+/exploring-your-options-partnering-with-a-technical-co-founder-or-hiring-a-technical-expert-for-your-startup  /blog/exploring-your-options-technical-cofounder-vs-agency  301
+/decoding-tech-debt-for-non-tech-founders  /blog/decoding-tech-debt-for-non-tech-founders  301
+/engineers-build-solutions-they-dont-check-off-tasks  /blog/engineers-build-solutions  301
+/what-does-is-mean-to-be-a-senior-engineer  /blog/what-does-it-mean-to-be-a-senior-engineer  301
+/enhancing-developer-experience-for-non-tech-founders  /blog/enhancing-developer-experience-for-non-tech-founders  301
+/what-investors-look-for-during-the-product-development-stage  /blog/what-investors-look-for  301
+/the-4-most-common-blockers-startup-founders-face-in-product-development-and-how-to-avoid  /blog/common-blockers-in-product-development  301
+/deep-work-the-right-mindset-in-a-distracted-world  /blog/deep-work  301
+/5-tips-to-stay-focused-in-a-distracted-world  /blog/5-tips-to-stay-focused  301
+/shifting-your-culture-in-3-steps  /blog/shifting-your-culture-in-3-steps  301
+/founder-wellness-why-your-wellbeing-affects-the-success-of-your-startup  /blog/founder-wellness  301
+/why-we-dont-estimate-and-how-we-still-predict-delivery  /blog/why-we-dont-estimate  301
+/what-experience-taught-us-turning-lessons-into-strategy  /blog/what-experience-taught-us  301
+/budgeting-for-software-development-when-delivery-is-forecastable  /blog/budgeting-for-software-development  301
+/measuring-productivity-in-software-development  /blog/measuring-productivity-in-software-development  301
+/the-predictability-gap  /blog/the-predictability-gap  301
+
+# WordPress categories → Astro categories
+/category/delivery-methodology    /blog/category/delivery      301
+/category/founder-operations      /blog/category/founders      301
+/category/product-strategy        /blog/category/product       301
+/category/team-scaling            /blog/category/leadership    301
+/category/technical-leadership    /blog/category/engineering   301
+/category/boilerplate-topics      /blog                        301
+
+# WordPress tags → blog
+/tag/*                   /blog                 301
+
+# WordPress author pages → Astro author pages
+/author/jnolte           /blog/author/jeffrey-nolte  301
+/author/yanna-lopes      /blog/author/yanna-lopes    301
+/author/dan-urruela      /blog/author/dan-urruela    301
+/author/*                /blog                        301
+
+# WordPress pagination
+/blog/page/*             /blog                 301
+/page/*                  /                     301
+
+# WordPress artifacts
+/wp-admin                /                     301
+/wp-login.php            /                     301
+/wp-content/*            /                     404
+/wp-json/*               /                     404
+/xmlrpc.php              /                     404
+
+# RSS feed
+/feed                    /blog/rss.xml         301
+/feed/                   /blog/rss.xml         301
+
+# Sitemap
+/sitemap_index.xml       /sitemap-index.xml    301
+/wp-sitemap.xml          /sitemap-index.xml    301
+/wp-sitemap-posts-post-1.xml  /sitemap-0.xml  301

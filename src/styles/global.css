@@ -601,6 +601,9 @@ footer {
   margin: 3rem auto 0;
   padding: 1.5rem 0;
   border-top: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer-bottom p {
   font-family: var(--mono);
@@ -608,6 +611,21 @@ footer {
   color: var(--gray-400);
   letter-spacing: 0.05em;
   margin: 0;
+}
+.footer-legal {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-legal a {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gray-400);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-legal a:hover {
+  color: var(--black);
 }
 
 /* BLOG */

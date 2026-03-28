@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Payment Instructions — Nolte" description="Banking details and payment methods for Nolte clients.">
+
+  <header class="hero">
+    <span class="eyebrow">Client Resources</span>
+    <h1>Payment <em>Instructions</em></h1>
+  </header>
+
+  <div class="prose legal-prose">
+
+    <h2>Legal Entity</h2>
+    <p><strong>Moxie Media Group, Inc (DBA Nolte)</strong></p>
+
+    <h2>Banking Details</h2>
+    <p><strong>Bank:</strong> Chase Bank<br>
+    <strong>Location:</strong> 623 Broadway, New York, NY 10012<br>
+    <strong>Routing Number:</strong> 021000021<br>
+    <strong>Account Number:</strong> 689570518</p>
+
+    <h2>Accepted Payment Methods</h2>
+    <p>We accept electronic payments only via ACH or wire transfer. Physical checks are not accepted.</p>
+
+    <h2>W-9</h2>
+    <p>A W-9 form is available upon request. Contact <a href="mailto:accounting@nolte.io">accounting@nolte.io</a> to request a copy.</p>
+
+    <h2>Questions</h2>
+    <p>For billing or payment questions, contact <a href="mailto:accounting@nolte.io">accounting@nolte.io</a>.</p>
+
+  </div>
+
+</Base>
+
+<style>
+  .legal-prose {
+    max-width: 640px;
+  }
+  .legal-prose h2 {
+    margin-top: 2.5rem;
+  }
+</style>
