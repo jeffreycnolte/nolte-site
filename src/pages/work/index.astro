@@ -8,10 +8,11 @@ const studies = (await getCollection('work', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const logoMap: Record<string, { src: string; height: string }> = {
-  'breeze-oral-care': { src: '/images/logos/breeze.svg', height: '20px' },
-  'pilou':            { src: '/images/logos/pilou.png',   height: '22px' },
-  'odie':             { src: '/images/logos/odie.png',    height: '24px' },
-  'wake':             { src: '/images/logos/wake.png',    height: '20px' },
+  'breeze-oral-care':  { src: '/images/logos/breeze.svg',  height: '20px' },
+  'pilou':             { src: '/images/logos/pilou.png',   height: '22px' },
+  'odie':              { src: '/images/logos/odie.png',    height: '24px' },
+  'wake':              { src: '/images/logos/wake.png',    height: '20px' },
+  'barrys-bootcamp':   { src: '/images/logos/barrys.png',  height: '18px' },
 };
 ---
 <Base title="Work — Case Studies" description="Case studies from healthcare, insurance, and finance. Predictable delivery from concept to market." fullWidth>
