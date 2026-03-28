@@ -2,82 +2,95 @@
 
 ---
 
-**I migrated our company site off WordPress in a single Claude Code session. Here's what actually happened.**
+**After 20 years on WordPress, I moved our entire site to a modern stack in a week. With Claude Code. Here's the real story.**
 
-We've been on WordPress/Pantheon for years. It worked, but it was slow to update, expensive to maintain, and didn't reflect how we actually work — which is predictive, data-driven software delivery.
+This one is bittersweet.
 
-So I sat down with Claude Code and said: "Let's build a new site from scratch, migrate everything, and launch before end of week."
+I started with WordPress in 2006. It was the first CMS I ever used professionally. I contributed to the community, built dozens of client sites on it, and ran our own company site on WordPress/Pantheon for years.
 
-Here's what we shipped in one extended session:
+But the honest truth: it wasn't working anymore. Slow to update, expensive to maintain, and it didn't reflect how we actually build software — which is predictive, data-driven, and fast.
 
-**Architecture → Live site**
-- Astro 6 static site, deployed to Netlify
-- 52 pages: homepage, 3 case studies, 26 blog posts, industry pages, NolteOS product page
-- Content collections with type-safe schemas
-- Full SEO: sitemap, RSS, JSON-LD, Open Graph, canonical URLs
+So I sat down with Claude Code and rebuilt everything from scratch.
 
-**WordPress migration**
-- Exported 2,342 media files from Pantheon
-- Migrated all blog content with frontmatter
-- Downloaded real client logos, team photos, product screenshots
-- Preserved URL structure for SEO continuity
+**What we shipped — March 19-27, 2026 (8 days):**
 
-**Design iteration in real-time**
-- I gave feedback directly on screenshots: "the circles need to be the same size" / "make the logos the same color" / "this grid is off"
-- Claude adjusted CSS, took a screenshot, I reviewed, we iterated
-- We went through ~50 design rounds on the homepage alone
+- 61 pages: homepage, 4 case studies, 29 blog posts, team, contact, industry pages, legal, NolteOS
+- 3 reusable components (CtaSection, CaseCard, BaseHead)
+- Full design system: normalized typography, responsive at every breakpoint
+- SEO/GEO: JSON-LD schemas, FAQPage, sitemaps, canonical URLs, OG tags
+- Contact form → Clarify CRM via Netlify serverless function
+- 69 redirect rules preserving every old WordPress URL
+- PostHog analytics with session replay, scroll depth, UTM capture
+- Custom 404 page, privacy policy, terms of service
+- Mobile responsive across all templates
 
-**The parts that surprised me:**
-- Claude pulled real images from our WordPress export, resized them, and wired them into the site
-- It created SVG data visualizations for blog post headers — cycle time charts, throughput graphs, forecast vs. estimate lines — all on-brand
-- It built a QA test suite I can run after every deploy
-- It migrated our entire backlog into 32 GitHub issues with priority labels
-- PostHog analytics with custom event tracking, scroll depth, UTM capture — done in 10 minutes
+**The cost comparison — this is the part that matters:**
+
+If I had hired an agency (and I know, because I run one):
+
+| | Agency Quote | Claude Code |
+|---|---|---|
+| Strategy & positioning | $8-12K | My time |
+| UX/UI design | $15-25K | My time + Claude |
+| Frontend development | $20-35K | Claude |
+| Content migration | $3-5K | Claude |
+| SEO setup | $3-5K | Claude |
+| CRM integration | $2-4K | Claude |
+| QA & responsive testing | $3-5K | Claude |
+| **Total** | **$54-91K** | **~$200 (Claude subscription)** |
+| **Timeline** | **8-14 weeks** | **8 days** |
+
+That's not a typo. And the quality is production-grade — not a prototype, not an MVP. A live site with a design system, component architecture, SEO infrastructure, and CRM integration.
 
 **What I actually did vs. what Claude did:**
 
-Me:
-- Product decisions (positioning, copy, what to show/hide)
-- Design direction ("this looks off", "align with the grid", "use their brand logo")
-- Content judgment ("use real names, not fabricated ones")
-- Provided assets (headshots, client logos, brand guidelines)
+Me: Product decisions. Positioning. Copy. Design direction. "This looks off." "Remove that quote." "The type is inconsistent." Every judgment call was mine.
 
-Claude:
-- All code (HTML, CSS, Astro, JavaScript)
-- WordPress data extraction and migration
-- Image downloading, resizing, optimization
-- SEO infrastructure
-- Analytics implementation
-- GitHub issue creation
-- QA automation
+Claude: All code. All CSS. All components. WordPress migration. Image optimization. SEO schemas. Serverless functions. Responsive testing. GitHub issues. Redirects.
 
 **The honest take:**
-This isn't "AI replaced my developer." This is "AI let me operate at the speed of my decisions." Every design choice, every copy edit, every positioning call was mine. Claude just removed the 2-week lag between deciding and shipping.
 
-We're launching this week. The site is at nolte-site.netlify.app if you want to see it.
+This isn't "AI replaced my team." This is a founder operating at the speed of decisions instead of the speed of sprints.
 
-I wrote the full playbook — every prompt, every phase, every decision point — so you can do the same thing with your WordPress site.
+I knew exactly what I wanted. I've done this work for 20 years. Claude removed the 8-14 week lag between deciding and shipping.
 
-**Comment "playbook" and follow me — I'll send you the GitHub link.**
+If you don't know what you want — if you need someone to challenge your thesis, shape the strategy, and tell you what shouldn't be built — that's what Nolte does. AI doesn't replace judgment. It removes the friction after judgment has been applied.
 
-It covers: architecture, content migration, design iteration, SEO preservation, PostHog analytics, QA automation, and deployment. Step by step.
+The site is live at nolte.io.
+
+**Comment "playbook" and follow me — I'll send you the open-source migration guide.**
 
 —
 
-P.S. We're an Anthropic partner. This is how we build software for our clients too — predictably, with committed scope, timeline, and cost. If you're curious: os.nolte.io
+P.S. Goodbye WordPress. You were great for 20 years. I mean that.
 
 ---
 
 ## Posting instructions
 
-**Image:** Use `/public/images/brand/before-after.svg` (open in browser, screenshot at 1200x627 for LinkedIn)
+**Images:** Take screenshots of:
+1. Homepage hero (desktop) — the "Innovate Predictably" hero
+2. Case study page (Breeze) — showing the dark testimonial
+3. Mobile view — showing responsive nav + hero
+4. The cost comparison table from this post (create as image)
+
+**Format:** 1200x627px for LinkedIn. Post as a carousel if possible.
 
 **Hashtags (add in first comment, not post body):**
-#ClaudeCode #WordPress #Astro #WebDevelopment #AI #Anthropic #BuildInPublic #Migration #Netlify #PLG
+#ClaudeCode #WordPress #Astro #WebDevelopment #AI #Anthropic #BuildInPublic #Migration #Netlify
 
 **Engagement strategy:**
 - Post between 7-9am EST Tuesday-Thursday for max visibility
 - Reply to every comment within 1 hour
 - When someone comments "playbook", reply with the GitHub link: https://github.com/jeffreycnolte/nolte-site/blob/main/WORDPRESS-TO-ASTRO-PLAYBOOK.md
-- Pin a follow-up comment: "The full playbook is open source. Follow for more on how we use Claude across our entire delivery workflow."
+- Pin a follow-up comment: "The full playbook is open source. 20 years of WordPress → Astro/Netlify in 8 days. Follow for more on how we use Claude across our entire delivery workflow."
 - Tag @Anthropic and @ClaudeAI if they have company pages
+
+**Key stats for comments/replies:**
+- 37 commits over 8 days
+- 61 pages built
+- 29 blog posts migrated
+- 69 redirect rules
+- 220 files in the project
+- First commit: March 19, last commit: March 27
+- Build time: 1.9 seconds
