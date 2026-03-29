@@ -116,3 +116,43 @@ Check:
 - Gallery images load
 - Mobile responsive
 - No sensitive information exposed
+
+## Step 8: File GitHub Issues for Missing Content
+
+After the case study is published, audit it for any gaps or follow-up items and create a **single** GitHub issue that tracks everything needed to complete the case study. This ensures nothing falls through the cracks.
+
+**Scan for these common gaps:**
+- [ ] Missing or placeholder metrics (deliveries, accuracy, cycle time) — needs real NolteOS data
+- [ ] No testimonial quote from the client
+- [ ] Missing gallery images or product screenshots
+- [ ] Missing press coverage that could be added
+- [ ] Placeholder or low-quality featured image
+- [ ] Missing team members (only partial team listed)
+- [ ] Content sections that feel thin or need client input
+- [ ] Logo is missing or low quality
+
+**Create one issue per case study using `gh`:**
+
+```bash
+gh issue create \
+  --title "Content follow-ups: [Client Name] case study" \
+  --label "P2 - content" \
+  --body "$(cat <<'EOF'
+## Missing content for `/work/[slug]`
+
+The case study is live but needs the following items resolved:
+
+- [ ] Item 1
+- [ ] Item 2
+- [ ] ...
+
+These items require input from the client or internal team and could not be resolved during the initial build.
+EOF
+)"
+```
+
+**Rules:**
+- Only create an issue if there are actual gaps. If the case study is complete, skip this step.
+- Use the `P2 - content` label.
+- Each checklist item should be specific and actionable (e.g., "Get testimonial quote from Sam Mogil" not "Add testimonial").
+- Note which items need client approval vs. internal data (e.g., NolteOS metrics).
