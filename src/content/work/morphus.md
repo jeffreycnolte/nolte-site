@@ -4,8 +4,8 @@ client: "Morphus"
 description: "A premium multi-sensory wellness system combining vibration, light, and sound — we built the digital product ecosystem from companion app to e-commerce platform, turning patented hardware into a connected consumer experience."
 category: wellness
 date: 2024-06-01
-image: /images/work/morphus/hero.webp
-imageAlt: "Morphus — Multi-sensory wellness lounge experience"
+image: /images/work/morphus/chair-1.jpg
+imageAlt: "The Morphus Lounge — premium multi-sensory wellness chair"
 status: "Live"
 partnership: "1+ year"
 services:
