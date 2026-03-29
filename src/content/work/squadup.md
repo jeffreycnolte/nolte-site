@@ -2,8 +2,9 @@
 title: "SquadUP"
 client: "SquadUP"
 description: "A PE-backed event platform with a proven backend trapped behind years of frontend debt. We rebuilt the entire user-facing layer in four months — modernizing the experience without touching what already worked."
-category: consumer
+category: saas
 date: 2025-09-08
+order: 11
 image: /images/work/squadup/featured.jpg
 imageAlt: "SquadUP — Modern event management dashboard"
 status: "Live"

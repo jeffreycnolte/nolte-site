@@ -26,6 +26,8 @@ Calculate:
 
 Search the web for:
 - **Company website** — understand their product, market, and positioning
+- **Business model** — determine if B2B SaaS, B2C, B2B2C, marketplace, etc. This drives the category.
+- **Industry** — identify the primary industry (insurance, finance, healthcare, wellness, real-estate, sustainability, saas, consumer). Use the most specific regulated category that applies. Check `src/content/categories/` for existing categories; create a new one if needed.
 - **Press coverage** — find articles from major publications (extract publication name, headline, and a short pull quote under 20 words)
 - **App Store / Google Play** — if it's a mobile app, check ratings and descriptions
 - **Crunchbase** — funding stage, founding date, team size
@@ -65,8 +67,9 @@ Required fields:
 title: "Client Name"
 client: "Client Name"
 description: "One sentence under 200 chars"
-category: healthcare | insurance | finance | wellness | real-estate | delivery
-date: YYYY-MM-DD  # Use project start date. Later dates = higher in sort order.
+category: insurance | finance | healthcare | wellness | real-estate | sustainability | saas | consumer
+date: YYYY-MM-DD  # Use project start date
+order: N  # See ordering rules below
 image: /images/work/[slug]/featured.jpg
 status: "Live"
 partnership: "X+ years"
@@ -77,6 +80,25 @@ metrics:
   accuracy: "XX%"
   cycleTime: "X.Xd"
 ```
+
+### Ordering Rules (CRITICAL)
+
+Case studies are sorted by the `order` field, NOT by date. The order reflects Nolte's positioning — regulated industries first.
+
+**Industry tier priority:**
+1. Insurance
+2. Finance
+3. Healthcare
+4. Everything else (wellness, real-estate, sustainability, saas, consumer)
+
+**Within each tier:** longer partnerships rank higher.
+
+**To assign an order value:**
+1. Read the `order` field from every existing case study in `src/content/work/`
+2. Determine where the new study fits based on industry tier + partnership duration
+3. Assign the next available integer. Use gaps (e.g., 10, 20, 30) if you want room for future inserts, or renumber as needed.
+
+**Do not skip this.** A missing or wrong `order` value will cause the case study to sort incorrectly on the work index page.
 
 Optional fields to add if data exists:
 ```yaml
@@ -97,10 +119,12 @@ testimonial:
 
 ## Step 6: Update Logo Maps
 
-Add the client logo to all 3 files:
-- `src/pages/index.astro` → `caseLogos`
-- `src/pages/work/index.astro` → `logoMap`
-- `src/pages/work/[slug].astro` → `clientLogos`
+Add the client logo to **ALL 3** files. Missing any one of these means the logo won't show on that page:
+- `src/pages/index.astro` → `caseLogos` (homepage featured section)
+- `src/pages/work/index.astro` → `logoMap` (work index grid)
+- `src/pages/work/[slug].astro` → `clientLogos` (case study sidebar)
+
+**Verify after adding:** search for the client slug across all three files to confirm all three maps have the entry.
 
 ## Step 7: Verify
 
