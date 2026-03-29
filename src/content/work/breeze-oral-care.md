@@ -4,6 +4,7 @@ client: "Breeze Oral Care"
 description: "A founder with a vision for dental care and investor commitments to meet. We shaped the product strategy, navigated HIPAA, and shipped a live platform in four months — on time, on budget, to the dollar."
 category: healthcare
 date: 2024-01-15
+order: 4
 image: /images/work/breeze/featured.avif
 imageAlt: "Breeze Oral Care — Patient-facing dental platform"
 status: "Live"

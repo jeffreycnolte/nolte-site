@@ -4,6 +4,7 @@ client: "Odie"
 description: "Insurance platform built from zero to Series A under carrier requirements and state regulatory obligations."
 category: insurance
 date: 2023-06-01
+order: 1
 image: /images/work/odie/featured.png
 imageAlt: "Odie insurance platform interface"
 status: "Series A"

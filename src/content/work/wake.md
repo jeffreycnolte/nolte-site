@@ -4,6 +4,7 @@ client: "Wake"
 description: "A mental wellness platform built from strategy to market launch in four months — mobile apps for iOS and Android, an HR dashboard, and a scalable API for a pre-seed startup entering the B2B2C wellness space."
 category: wellness
 date: 2024-03-01
+order: 8
 image: /images/work/wake/ending.jpg
 imageAlt: "Wake mental wellness platform"
 status: "Pre-Seed"
