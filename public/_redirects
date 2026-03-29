@@ -20,11 +20,12 @@
 /work/pilou-product-development   /work/pilou             301
 /work/wake-product-development    /work/wake              301
 
-# Case studies not yet migrated → work index
-/work/footprint-digital-product   /work                   301
-/work/jules-digital-product       /work                   301
-/work/lumos-digital-product       /work                   301
-/work/morphus-digital-product     /work                   301
+# Case studies (old long-form slugs → current pages)
+/work/footprint-digital-product   /work/footprint         301
+/work/jules-digital-product       /work/jules             301
+/work/lumos-digital-product       /work/lumos             301
+/work/morphus-digital-product     /work/morphus           301
+/work/wake-early-stage-startup-mobile-product-development  /work/wake  301
 /work/wevolv-case-study           /work                   301
 /work/squadup                     /work                   301
 
@@ -61,9 +62,31 @@
 /what-experience-taught-us-turning-lessons-into-strategy  /blog/what-experience-taught-us  301
 /budgeting-for-software-development-when-delivery-is-forecastable  /blog/budgeting-for-software-development  301
 /measuring-productivity-in-software-development  /blog/measuring-productivity-in-software-development  301
+/measuring-productivity-in-digital-product-development  /blog/measuring-productivity-in-software-development  301
 /the-predictability-gap  /blog/the-predictability-gap  301
 
+# WordPress slugs with no matching Astro post (GSC 404s)
+/demystifying-the-role-of-a-non-technical-founder              /blog/category/founders  301
+/why-business-and-technology-need-to-speak-the-same-language    /blog/category/product   301
+/how-a-non-technical-founder-can-build-a-digital-product        /blog/category/founders  301
+/building-the-right-mvp                                        /blog/mvp-validation     301
+/how-to-measure-success-in-digital-products                    /blog/category/delivery  301
+/understanding-the-digital-product-lifecycle                   /blog/category/product   301
+/the-power-of-empathy-in-business                              /blog/category/culture   301
+/what-is-a-product-manager-and-why-does-your-product-development-team-need-one  /blog/category/product  301
+/pros-cons-partnering-web-development-agency                   /blog/category/founders  301
+/bloomscape                                                    /work                    301
+
+# Old blog posts not migrated (410 Gone — tells Google to stop crawling)
+/blog/a-continuous-image-ticker-built-with-pure-css             /blog                    410
+/blog/a-continuous-image-ticker-built-with-pure-css/            /blog                    410
+/blog/slow-running-animations-in-safari                        /blog                    410
+/blog/slow-running-animations-in-safari/                       /blog                    410
+/blog/how-to-measure-and-monitor-site-performance-with-googles-core-web-vitals   /blog   410
+/blog/how-to-measure-and-monitor-site-performance-with-googles-core-web-vitals/  /blog   410
+
 # WordPress categories → Astro categories
+/category/company-culture            /blog/category/culture       301
 /category/delivery-methodology    /blog/category/delivery      301
 /category/founder-operations      /blog/category/founders      301
 /category/product-strategy        /blog/category/product       301
@@ -87,13 +110,18 @@
 # WordPress artifacts
 /wp-admin                /                     301
 /wp-login.php            /                     301
+/wp-*.php                /                     404
 /wp-content/*            /                     404
+/wp-includes/*           /                     404
 /wp-json/*               /                     404
 /xmlrpc.php              /                     404
 
 # RSS feed
 /feed                    /blog/rss.xml         301
 /feed/                   /blog/rss.xml         301
+/navigating-ai-for-non-tech-founders/feed  /blog/rss.xml  301
+/comments/feed           /blog/rss.xml         301
+/*/feed                  /blog/rss.xml         301
 
 # Sitemap
 /sitemap_index.xml       /sitemap-index.xml    301
