@@ -4,6 +4,7 @@ client: "Klipster"
 description: "A real estate discovery platform with live streaming property tours, agent-driven content, and rental applications — from MVP strategy through App Store launch and continuous evolution."
 category: real-estate
 date: 2023-08-15
+order: 6
 image: /images/work/klipster/featured.jpg
 imageAlt: "Klipster — Real estate discovery app with live property tours"
 status: "Live"
@@ -43,6 +44,10 @@ phases:
   - name: "Evolve"
     duration: "2+ years"
 press:
+  - publication: "New York Post"
+    headline: "Real estate execs launch Klipster for securing a home"
+    quote: "Real estate execs launch Klipster for securing a home"
+    url: "https://nypost.com/2025/10/29/real-estate/real-estate-execs-launch-klipster-for-securing-a-home/"
   - publication: "HousingWire"
     headline: "Scroll, Swipe, Sold: Klipster App Brings the TikTok Effect to Real Estate"
     quote: "Klipster brings the TikTok effect to real estate"
