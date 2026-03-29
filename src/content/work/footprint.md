@@ -17,7 +17,7 @@ services:
   - Branding
 metrics:
   deliveries: 42
-  timeline: "12 months"
+  timeline: "1 year"
   accuracy: "95%"
   cycleTime: "4.2d"
   onTime: "97%"
