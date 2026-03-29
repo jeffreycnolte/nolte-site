@@ -4,6 +4,7 @@ client: "Barry's"
 description: "A custom instructor payroll and incentive system for one of the world's most recognized fitness brands — connecting class management, HR, and multi-location studio operations across the US."
 category: wellness
 date: 2020-08-15
+order: 5
 image: /images/work/barrys/featured.jpg
 imageAlt: "Barry's Bootcamp — Instructor payroll and incentive platform"
 status: "Live"

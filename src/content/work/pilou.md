@@ -4,6 +4,7 @@ client: "Pilou"
 description: "Financial services platform built under regulatory and compliance requirements with full audit trail visibility."
 category: finance
 date: 2024-01-15
+order: 2
 image: /images/work/pilou/featured.png
 imageAlt: "Pilou financial platform"
 status: "Live"

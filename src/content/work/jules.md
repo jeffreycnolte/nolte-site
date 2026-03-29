@@ -4,6 +4,7 @@ client: "Jules"
 description: "Climate tech SaaS platform that evolved from a consumer carbon tracking app into an employer-sponsored climate benefits platform — earning Product Hunt's Product of the Day along the way."
 category: sustainability
 date: 2023-09-01
+order: 7
 image: /images/work/jules/featured.png
 imageAlt: "Jules climate benefits platform interface"
 status: "Launched"
