@@ -94,6 +94,7 @@ npx netlify-cli deploy --prod --dir=dist  # Deploy
 
 ## Conventions
 
+- **Time durations:** 12+ months → express in years (1, 1.5, 2, 2+, etc.). Under 12 months → keep as months. Applies to case study timelines, phase durations, and any client-facing copy.
 - **No stock photos.** Use real product screenshots, styled HTML mockups, or abstract on-brand visuals.
 - **DO use:** "Consultative product partner," "evolve ideas into products," "regulated industries," "operator-led," "judgment," "derisk," "delivery guarantee," "predictive delivery" (as methodology), "fixed per-delivery pricing," "we're not yes people," "innovate predictably" (as thesis).
 - **DO NOT use:** "Innovation studio," "agency," "dev shop," "staff augmentation," "resources" (for people), "offshore," "agile" as a selling point, "full-stack" as a differentiator, "end-to-end," "estimate" — we forecast, we predict, we commit. "Innovation" as something Nolte owns — the client owns the innovation, we enable and derisk it.

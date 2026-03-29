@@ -8,7 +8,7 @@ order: 8
 image: /images/work/wake/ending.jpg
 imageAlt: "Wake mental wellness platform"
 status: "Pre-Seed"
-partnership: "18 months"
+partnership: "1.5 years"
 services:
   - Product Strategy
   - Product Design
@@ -16,7 +16,7 @@ services:
   - Web Development
 metrics:
   deliveries: 62
-  timeline: "18 months"
+  timeline: "1.5 years"
   accuracy: "94%"
   cycleTime: "5.5d"
   onTime: "95%"
