@@ -4,7 +4,7 @@ client: "Lumos"
 description: "A secure marketplace for litigation finance — connecting litigants with funders through an invite-only platform built on trust, verification, and a curated community."
 category: finance
 date: 2023-03-01
-image: /images/work/lumos/featured.jpg
+image: /images/work/lumos/featured.png
 imageAlt: "Lumos — Secure litigation finance marketplace"
 status: "Live"
 partnership: "4 months"
@@ -33,6 +33,19 @@ phases:
     duration: "4 weeks"
   - name: "Build"
     duration: "12 weeks"
+gallery:
+  - src: "/images/work/lumos/dashboard-new.png"
+    alt: "Lumos platform dashboard — investor deal flow and case management"
+    caption: "Investor dashboard with curated case opportunities"
+  - src: "/images/work/lumos/design-system.png"
+    alt: "Lumos UI Library — custom design system components"
+    caption: "Custom UI library built for consistency and trust"
+  - src: "/images/work/lumos/before-after.png"
+    alt: "Lumos before and after — design evolution from v1 to final product"
+    caption: "Design evolution from broken v1 to market-ready product"
+  - src: "/images/work/lumos/waitlist.png"
+    alt: "Lumos go-to-market waitlist landing page"
+    caption: "Go-to-market landing page with waiting list mechanism"
 ---
 
 ## The Bet
@@ -54,17 +67,25 @@ This wasn't a standard two-sided marketplace. Litigation finance sits at the int
 
 We started with a one-month discovery phase — not just requirements gathering, but the strategic work that would determine whether the product had a viable path to market.
 
+![Lumos initial audit — evaluating the existing platform](/images/work/lumos/initial-audit.jpg)
+
 **Market analysis** — We mapped the litigation finance ecosystem, analyzed competitors, and identified the specific gaps Lumos could own. The insight: existing platforms competed on deal volume. Lumos could compete on trust and curation.
 
 **Customer profiling** — Demographics and psychographics for both sides of the marketplace. Investors wanted deal flow quality and due diligence support. Case holders wanted transparency and control over their funding process. These profiles shaped every design decision.
+
+![Lumos discovery — market analysis and product strategy](/images/work/lumos/discovery.png)
 
 **User interviews** — Direct conversations with potential users on both sides revealed unmet needs the existing product hadn't addressed. The feedback confirmed the trust thesis and exposed specific friction points in how litigants and funders evaluate each other.
 
 **Design and tech evaluation** — We proposed a fresh design concept and recommended a modern tech stack (TypeScript with NestJS and NextJS, PostgreSQL) to replace the existing codebase entirely. A rebuild, not a patch.
 
+![Lumos before and after — from broken v1 to polished product](/images/work/lumos/before-after.png)
+
 ## The Build
 
 With the strategic foundation in place, we moved into a three-month execution phase. The team — software engineers, a product designer, a communication expert, and a product manager — worked in a Kanban-based cadence with frequent stakeholder sessions to keep Madeleine close to every decision.
+
+![Lumos investor dashboard — curated case opportunities and deal flow](/images/work/lumos/dashboard-new.png)
 
 **Investor and litigant dashboards** — Separate views tailored to each user type. Investors see curated case opportunities with the information they need for due diligence. Litigants manage their cases and funding requests with full visibility into the process.
 
@@ -72,7 +93,11 @@ With the strategic foundation in place, we moved into a three-month execution ph
 
 **User profiles and case management** — Structured profiles that let both parties present themselves credibly. Case management tools that organize the information funders need to make decisions.
 
+![Lumos UI Library — custom design system for consistency across the platform](/images/work/lumos/design-system.png)
+
 **Lumos UI Library** — A custom design system built for consistency across the platform. Every component reflects the trust and professionalism the brand demands.
+
+![Lumos go-to-market waitlist landing page](/images/work/lumos/waitlist.png)
 
 **Go-to-market landing page** — A waiting list mechanism to gauge market interest and build community before launch. The landing page was designed to communicate Lumos's value proposition and convert early adopters.
 
