@@ -8,6 +8,7 @@ image: /images/work/jules/featured.png
 imageAlt: "Jules climate benefits platform interface"
 status: "Launched"
 partnership: "2 years"
+order: 9
 services:
   - Product Strategy
   - Product Management

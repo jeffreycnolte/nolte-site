@@ -8,6 +8,7 @@ image: /images/work/klipster/featured.jpg
 imageAlt: "Klipster — Real estate discovery app with live property tours"
 status: "Live"
 partnership: "2+ years"
+order: 8
 services:
   - Product Strategy
   - Mobile Development

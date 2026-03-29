@@ -229,17 +229,18 @@ Before publishing, verify the case study does NOT include:
 
 ## Step 6: Ordering
 
-Case studies are sorted by date (newest first). **Always set the `date` field so new case studies appear at the end of the list** unless you've been told to feature it differently.
+Case studies use an explicit `order` field in frontmatter (lower number = shown first). Do NOT rely on the `date` field for display order.
 
-To place a new case study at the end, use a date earlier than the oldest existing study. Check the current dates:
+**Ordering rules:**
+1. **Industry tier** (primary) — regulated industries first: Insurance → Finance → Healthcare → Other
+2. **Partnership duration** (secondary within tier) — longer partnerships rank higher
 
+Check current order values:
 ```bash
-grep "^date:" src/content/work/*.md
+grep "^order:" src/content/work/*.md
 ```
 
-If the oldest is `2020-08-15`, use `2020-01-15` or earlier for your new study.
-
-To feature a case study at the top, use a recent date.
+When adding a new case study, determine its tier, place by partnership duration, and renumber subsequent studies. See `.claude/skills/case-study-ordering.md` for the full current order table.
 
 ---
 
@@ -263,14 +264,18 @@ git push origin main
 
 ## Existing Case Studies
 
-| Client | Slug | Category | Partnership |
-|--------|------|----------|-------------|
-| Breeze Oral Care | `breeze-oral-care` | healthcare | 2+ years |
-| Barry's | `barrys-bootcamp` | wellness | 5+ years |
-| Klipster | `klipster` | real-estate | 2+ years |
-| Odie | `odie` | insurance | 3 years |
-| Pilou | `pilou` | finance | 2 years |
-| Wake | `wake` | wellness | 12 months |
+| Order | Client | Slug | Category | Partnership |
+|-------|--------|------|----------|-------------|
+| 1 | Odie | `odie` | insurance | 3 years |
+| 2 | Pilou | `pilou` | finance | 2 years |
+| 3 | Lumos | `lumos` | finance | 4 months |
+| 4 | Breeze Oral Care | `breeze-oral-care` | healthcare | 2+ years |
+| 5 | Barry's | `barrys-bootcamp` | wellness | 5+ years |
+| 6 | Wake | `wake` | wellness | 18 months |
+| 7 | Morphus | `morphus` | wellness | 1+ year |
+| 8 | Klipster | `klipster` | real-estate | 2+ years |
+| 9 | Jules | `jules` | sustainability | 2 years |
+| 10 | Footprint | `footprint` | consumer | 1 year |
 
 ---
 

@@ -8,6 +8,7 @@ image: /images/work/wake/ending.jpg
 imageAlt: "Wake mental wellness platform"
 status: "Pre-Seed"
 partnership: "18 months"
+order: 6
 services:
   - Product Strategy
   - Product Design

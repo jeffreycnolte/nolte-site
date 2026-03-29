@@ -8,6 +8,7 @@ image: /images/work/barrys/featured.jpg
 imageAlt: "Barry's Bootcamp — Instructor payroll and incentive platform"
 status: "Live"
 partnership: "5+ years"
+order: 5
 services:
   - Systems Integration
   - Payroll Architecture

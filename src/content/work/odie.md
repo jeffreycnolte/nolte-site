@@ -8,6 +8,7 @@ image: /images/work/odie/featured.png
 imageAlt: "Odie insurance platform interface"
 status: "Series A"
 partnership: "3 years"
+order: 1
 services:
   - Product Strategy
   - Platform Architecture
