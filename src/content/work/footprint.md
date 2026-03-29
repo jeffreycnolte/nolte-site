@@ -4,7 +4,7 @@ client: "Footprint"
 description: "A secure mobile platform for families to preserve and share children's memories — without the privacy risks of social media. Built from strategy through launch on iOS and Android."
 category: consumer
 date: 2023-07-19
-image: /images/work/footprint/main.png
+image: /images/work/footprint/development.png
 imageAlt: "Footprint app — secure family memory sharing"
 status: "Live"
 partnership: "1 year"
