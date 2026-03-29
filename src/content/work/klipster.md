@@ -42,6 +42,33 @@ phases:
     duration: "8 months"
   - name: "Evolve"
     duration: "2+ years"
+press:
+  - publication: "HousingWire"
+    headline: "Scroll, Swipe, Sold: Klipster App Brings the TikTok Effect to Real Estate"
+    quote: "Klipster brings the TikTok effect to real estate"
+    url: "https://www.housingwire.com/articles/scroll-swipe-sold-klipster-app-brings-the-tiktok-effect-to-real-estate/"
+  - publication: "Yahoo Finance"
+    headline: "Swipe, Scroll, Apply: Klipster Brings the TikTok Effect to Real Estate"
+    quote: "The first-ever creator's platform built for the real estate economy"
+    url: "https://finance.yahoo.com/news/swipe-scroll-apply-klipster-brings-130000593.html"
+  - publication: "Inman"
+    headline: "Klipster Tech Review"
+    quote: "Helps agents create and share listing and social marketing content"
+    url: "https://www.inman.com/2026/01/06/klipster-wont-rescue-video-listing-apps-tech-review/"
+  - publication: "AM New York"
+    headline: "Real Estate Hasn't Changed in 20 Years. These Industry Vets Are Fixing That"
+    quote: "Listing platforms haven't really changed in 20 years"
+    url: "https://www.amny.com/sponsored/klipster-app-real-estate/"
+gallery:
+  - src: "/images/work/klipster/screens.png"
+    alt: "Klipster app — property discovery, live streaming, and simulcasting"
+    caption: "Discovery, live tours, and cross-platform simulcasting"
+  - src: "/images/work/klipster/property-detail.jpg"
+    alt: "Klipster property detail view with agent profile and live event"
+    caption: "Property details with agent profiles and live event access"
+  - src: "/images/work/klipster/application.jpg"
+    alt: "Klipster rental application flow"
+    caption: "Single application form across multiple properties"
 ---
 
 ## The Bet
