@@ -51,6 +51,7 @@ const work = defineCollection({
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     services: z.array(z.string()).optional(),
+    order: z.number().default(99),
     draft: z.boolean().default(false),
     metrics: z.object({
       deliveries: z.number(),

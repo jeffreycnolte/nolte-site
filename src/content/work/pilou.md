@@ -9,6 +9,7 @@ image: /images/work/pilou/featured.png
 imageAlt: "Pilou financial platform"
 status: "Live"
 partnership: "2 years"
+order: 2
 services:
   - Product Strategy
   - Platform Architecture
