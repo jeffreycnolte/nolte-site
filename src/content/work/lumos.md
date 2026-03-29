@@ -5,7 +5,7 @@ description: "A secure marketplace for litigation finance — connecting litigan
 category: finance
 date: 2023-03-01
 image: /images/work/lumos/featured.png
-imageAlt: "Lumos — Secure litigation finance marketplace"
+imageAlt: "Lumos — Go-to-market landing page with waiting list mechanism"
 status: "Live"
 partnership: "4 months"
 services:
