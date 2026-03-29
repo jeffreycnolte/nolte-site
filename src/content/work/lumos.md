@@ -4,7 +4,7 @@ client: "Lumos"
 description: "A secure marketplace for litigation finance — connecting litigants with funders through an invite-only platform built on trust, verification, and a curated community."
 category: finance
 date: 2023-03-01
-image: /images/work/lumos/featured.png
+image: /images/work/lumos/waitlist.png
 imageAlt: "Lumos — Go-to-market landing page with waiting list mechanism"
 status: "Live"
 partnership: "4 months"
