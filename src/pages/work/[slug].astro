@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import CtaSection from '../../components/CtaSection.astro';
+import PressBar from '../../components/PressBar.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -16,14 +17,17 @@ const { Content } = await render(study);
 const categories = await getCollection('categories');
 const category = categories.find(c => c.id === study.data.category);
 
-const { metrics, testimonial, team, platforms, phases } = study.data;
+const { metrics, testimonial, team, platforms, phases, press, gallery } = study.data;
 
 const clientLogos: Record<string, { src: string; height: string }> = {
-  'breeze-oral-care': { src: '/images/logos/breeze.svg', height: '28px' },
-  'pilou':            { src: '/images/logos/pilou.png',   height: '26px' },
-  'odie':             { src: '/images/logos/odie.png',    height: '28px' },
-  'wake':             { src: '/images/logos/wake.png',    height: '24px' },
-  'footprint':        { src: '/images/logos/footprint.png', height: '26px' },
+  'breeze-oral-care':  { src: '/images/logos/breeze.svg',  height: '28px' },
+  'pilou':             { src: '/images/logos/pilou.png',   height: '26px' },
+  'odie':              { src: '/images/logos/odie.png',    height: '28px' },
+  'wake':              { src: '/images/logos/wake.png',    height: '24px' },
+  'footprint':         { src: '/images/logos/footprint.png', height: '26px' },
+  'barrys-bootcamp':   { src: '/images/logos/barrys.png',  height: '22px' },
+  'klipster':          { src: '/images/logos/klipster.png', height: '22px' },
+  'morphus':           { src: '/images/logos/morphus.svg',  height: '14px' },
 };
 
 const testimonialAvatars: Record<string, string> = {
@@ -175,6 +179,25 @@ const testimonialAvatar = testimonialAvatars[study.id];
               <span>{testimonial.role}</span>
             </div>
           </div>
+        </div>
+      </div>
+    )}
+
+    {/* ===== PRESS COVERAGE ===== */}
+    {press && press.length > 0 && (
+      <PressBar items={press} />
+    )}
+
+    {/* ===== GALLERY ===== */}
+    {gallery && gallery.length > 0 && (
+      <div class="cs-gallery">
+        <div class="cs-gallery-inner">
+          {gallery.map(img => (
+            <figure class="cs-gallery-item">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+              {img.caption && <figcaption>{img.caption}</figcaption>}
+            </figure>
+          ))}
         </div>
       </div>
     )}
@@ -536,6 +559,35 @@ const testimonialAvatar = testimonialAvatars[study.id];
     font-family: var(--mono);
   }
 
+
+  /* ===== GALLERY ===== */
+  .cs-gallery {
+    padding: 4rem 2rem;
+    background: var(--gray-100);
+  }
+  .cs-gallery-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .cs-gallery-item {
+    margin: 0;
+  }
+  .cs-gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .cs-gallery-item figcaption {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-top: 0.75rem;
+  }
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {

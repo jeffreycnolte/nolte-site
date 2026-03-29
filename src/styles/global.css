@@ -1870,6 +1870,16 @@ footer {
   color: var(--accent);
   background: rgba(214,63,24,0.05);
 }
+.case-pill-wellness {
+  border-color: #D4145A;
+  color: #D4145A;
+  background: rgba(212,20,90,0.05);
+}
+.case-pill-real-estate {
+  border-color: #7C3AED;
+  color: #7C3AED;
+  background: rgba(124,58,237,0.05);
+}
 .case-card-body {
   padding: 1.5rem 2rem 2rem;
   display: flex;

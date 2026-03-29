@@ -72,6 +72,17 @@ const work = defineCollection({
       name: z.string(),
       duration: z.string(),
     })).optional(),
+    press: z.array(z.object({
+      publication: z.string(),
+      headline: z.string(),
+      quote: z.string(),
+      url: z.string().url(),
+    })).optional(),
+    gallery: z.array(z.object({
+      src: z.string(),
+      alt: z.string(),
+      caption: z.string().optional(),
+    })).optional(),
   }),
 });
 
