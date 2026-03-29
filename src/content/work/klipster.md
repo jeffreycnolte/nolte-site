@@ -43,6 +43,10 @@ phases:
   - name: "Evolve"
     duration: "2+ years"
 press:
+  - publication: "New York Post"
+    headline: "Real estate execs launch Klipster for securing a home"
+    quote: "Real estate execs launch Klipster for securing a home"
+    url: "https://nypost.com/2025/10/29/real-estate/real-estate-execs-launch-klipster-for-securing-a-home/"
   - publication: "HousingWire"
     headline: "Scroll, Swipe, Sold: Klipster App Brings the TikTok Effect to Real Estate"
     quote: "Klipster brings the TikTok effect to real estate"
