@@ -10,40 +10,51 @@ import Base from '../layouts/Base.astro';
       <div class="wide-wrap">
         <span class="label">LIVING STYLE GUIDE</span>
         <h1>Nolte Brand System</h1>
-        <p class="brand-hero-sub">The source of truth for typography, color, spacing, and components. Updated with every change.</p>
+        <p class="brand-hero-sub">Source of truth for typography, color, spacing, and every component used on the site. Updated with every change.</p>
+        <div class="brand-hero-meta">
+          <span>Last updated: March 2026</span>
+          <span>·</span>
+          <a href="/brand#components">Jump to Components →</a>
+        </div>
       </div>
     </div>
 
-    <!-- COLOR -->
-    <section class="brand-section">
+    <!-- ─── 01. COLOR ─── -->
+    <section class="brand-section" id="color">
       <div class="wide-wrap">
         <span class="label">01</span>
         <h2 class="section-heading">Color Palette</h2>
+        <p class="brand-section-intro">Five core tokens. No other colors introduced. Blue is for links only. Red is for CTAs and category pills only. Stats, headings, and body copy use black or white.</p>
 
+        <h3>Primary</h3>
         <div class="swatch-grid">
           <div class="swatch">
             <div class="swatch-block" style="background: var(--black);"></div>
             <span class="swatch-name">Black</span>
             <code class="swatch-value">#000000</code>
             <code class="swatch-var">--black</code>
+            <span class="swatch-usage">Text, dark sections, borders</span>
           </div>
           <div class="swatch">
             <div class="swatch-block" style="background: var(--accent);"></div>
-            <span class="swatch-name">Red Nolte</span>
+            <span class="swatch-name">Nolte Red</span>
             <code class="swatch-value">#D63F18</code>
             <code class="swatch-var">--accent</code>
+            <span class="swatch-usage">CTAs and category pills <em>only</em></span>
           </div>
           <div class="swatch">
             <div class="swatch-block" style="background: var(--blue);"></div>
             <span class="swatch-name">Digital Blue</span>
             <code class="swatch-value">#0369fc</code>
             <code class="swatch-var">--blue</code>
+            <span class="swatch-usage">Links only — minimal use</span>
           </div>
           <div class="swatch">
             <div class="swatch-block" style="background: var(--white); border: 1px solid var(--gray-200);"></div>
             <span class="swatch-name">Warm White</span>
             <code class="swatch-value">#fafaf8</code>
             <code class="swatch-var">--white</code>
+            <span class="swatch-usage">Page background</span>
           </div>
         </div>
 
@@ -54,93 +65,107 @@ import Base from '../layouts/Base.astro';
             <span class="swatch-name">Gray 100</span>
             <code class="swatch-value">#f2f1ed</code>
             <code class="swatch-var">--gray-100</code>
+            <span class="swatch-usage">Card backgrounds, alt sections</span>
           </div>
           <div class="swatch">
             <div class="swatch-block" style="background: var(--gray-200);"></div>
             <span class="swatch-name">Gray 200</span>
             <code class="swatch-value">#e0ded8</code>
             <code class="swatch-var">--gray-200</code>
+            <span class="swatch-usage">Borders, dividers</span>
           </div>
           <div class="swatch">
             <div class="swatch-block" style="background: var(--gray-400);"></div>
             <span class="swatch-name">Gray 400</span>
             <code class="swatch-value">#9e9b94</code>
             <code class="swatch-var">--gray-400</code>
+            <span class="swatch-usage">Labels, metadata, muted text</span>
           </div>
           <div class="swatch">
             <div class="swatch-block" style="background: var(--gray-600);"></div>
             <span class="swatch-name">Gray 600</span>
             <code class="swatch-value">#5a5854</code>
             <code class="swatch-var">--gray-600</code>
+            <span class="swatch-usage">Body copy minimum contrast</span>
           </div>
         </div>
 
-        <h3>Dark Mode</h3>
+        <h3>Dark Surfaces</h3>
         <div class="swatch-grid">
           <div class="swatch">
             <div class="swatch-block" style="background: var(--dark);"></div>
             <span class="swatch-name">Dark</span>
             <code class="swatch-value">#050505</code>
             <code class="swatch-var">--dark</code>
+            <span class="swatch-usage">Hero bg, dark sections</span>
           </div>
           <div class="swatch">
             <div class="swatch-block" style="background: var(--dark-surface);"></div>
             <span class="swatch-name">Dark Surface</span>
             <code class="swatch-value">#0d0d0d</code>
             <code class="swatch-var">--dark-surface</code>
+            <span class="swatch-usage">Cards within dark sections</span>
           </div>
           <div class="swatch">
             <div class="swatch-block" style="background: var(--dark-border);"></div>
             <span class="swatch-name">Dark Border</span>
             <code class="swatch-value">#1e1e1e</code>
             <code class="swatch-var">--dark-border</code>
+            <span class="swatch-usage">Borders within dark sections</span>
           </div>
         </div>
 
-        <h3>Gradients</h3>
+        <h3>Gradients (dark only — no blue tints)</h3>
         <div class="swatch-grid">
-          <!-- gradient-warm removed per design review -->
           <div class="swatch">
             <div class="swatch-block" style="background: var(--gradient-dark);"></div>
             <span class="swatch-name">Dark</span>
             <code class="swatch-var">--gradient-dark</code>
+            <span class="swatch-usage">Subtle dark section variation</span>
           </div>
           <div class="swatch">
             <div class="swatch-block" style="background: var(--gradient-hero);"></div>
             <span class="swatch-name">Hero</span>
             <code class="swatch-var">--gradient-hero</code>
+            <span class="swatch-usage">Main hero backgrounds</span>
           </div>
+        </div>
+
+        <div class="brand-rule">
+          <span class="brand-rule-label">Rule</span>
+          <p>Red is for action only. Never use it in headings, body copy, or decorative elements. Blue is for inline links only — not buttons, not borders. Stats are always black/white. Dark sections are pure dark — no color tints.</p>
         </div>
       </div>
     </section>
 
-    <!-- TYPOGRAPHY -->
-    <section class="brand-section brand-section-alt">
+    <!-- ─── 02. TYPOGRAPHY ─── -->
+    <section class="brand-section brand-section-alt" id="typography">
       <div class="wide-wrap">
         <span class="label">02</span>
         <h2 class="section-heading">Typography</h2>
+        <p class="brand-section-intro">Three fonts, three purposes. Instrument Serif for headings. DM Mono for labels and metadata. Geist for body text. Headings are never colored — black on light, white on dark.</p>
 
         <div class="type-specimen">
           <div class="type-sample">
             <span class="label">HEADINGS — Instrument Serif</span>
-            <p class="type-demo" style="font-family: var(--serif); font-size: 3rem; line-height: 1.1;">Predictable Software Delivery</p>
-            <p class="type-demo" style="font-family: var(--serif); font-size: 2rem; line-height: 1.2;">The quick brown fox jumps over the lazy dog</p>
-            <p class="type-demo" style="font-family: var(--serif); font-size: 1.25rem; font-style: italic; line-height: 1.3;">Italic emphasis for <em>key words</em> — no color mixing in headings</p>
+            <p class="type-demo" style="font-family: var(--serif); font-size: 3rem; line-height: 1.1; color: var(--black);">Predictable Software Delivery</p>
+            <p class="type-demo" style="font-family: var(--serif); font-size: 2rem; line-height: 1.2; color: var(--black);">Leaders who outsource need <em style="font-style:italic; color: var(--gray-600);">predictable</em> outcomes</p>
+            <p class="type-demo" style="font-family: var(--serif); font-size: 1.5rem; font-style: italic; line-height: 1.3; color: var(--black);">Italic emphasis on key words in headlines — one word maximum</p>
             <code class="swatch-var">--serif: 'Instrument Serif', Georgia, serif</code>
           </div>
 
           <div class="type-sample">
             <span class="label">BODY — Geist</span>
-            <p class="type-demo" style="font-family: var(--sans); font-size: 1.125rem; line-height: 1.7;">NolteOS turns 20 years of delivery data into predictable, fixed-price software delivery. Describe what you're building and get a delivery plan with 95% accuracy on scope, timeline, and cost. Every engagement is priced per delivery with a committed cost before work begins.</p>
-            <p class="type-demo" style="font-family: var(--sans); font-size: 0.9375rem; line-height: 1.7; color: var(--gray-600);">Secondary body text at smaller size with muted color for descriptions and supporting content.</p>
+            <p class="type-demo" style="font-family: var(--sans); font-size: 1.0625rem; line-height: 1.7; color: var(--gray-600);">NolteOS turns 20 years of delivery data into predictable, fixed-price software delivery. Describe what you're building and get a delivery plan with 95% accuracy on scope, timeline, and cost.</p>
+            <p class="type-demo" style="font-family: var(--sans); font-size: 0.9375rem; line-height: 1.7; color: var(--gray-600);">Secondary body text at 15px for descriptions and supporting content.</p>
             <code class="swatch-var">--sans: 'Geist', system-ui, sans-serif</code>
           </div>
 
           <div class="type-sample">
             <span class="label">LABELS — DM Mono</span>
-            <p class="type-demo" style="font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">Case Study · Healthcare · 2 Years</p>
-            <p class="type-demo" style="font-family: var(--mono); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.08em;">Get Your Delivery Plan →</p>
+            <p class="type-demo" style="font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-400);">Case Study · Healthcare · 2 Years</p>
             <p class="type-demo" style="font-family: var(--mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent);">Insurance · Finance · Healthcare</p>
+            <p class="type-demo" style="font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--black);">Get Your Delivery Plan →</p>
             <code class="swatch-var">--mono: 'DM Mono', monospace</code>
           </div>
         </div>
@@ -148,161 +173,359 @@ import Base from '../layouts/Base.astro';
         <h3>Type Scale</h3>
         <div class="type-scale">
           <div class="type-scale-row">
-            <code>3rem / 48px</code>
-            <span style="font-family: var(--serif); font-size: 3rem; line-height: 1;">Page Title</span>
+            <code>clamp(2.5–2.75rem)</code>
+            <span style="font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 2.75rem); line-height: 1;">Hero H1</span>
           </div>
           <div class="type-scale-row">
-            <code>2rem / 32px</code>
-            <span style="font-family: var(--serif); font-size: 2rem; line-height: 1;">Section Heading</span>
+            <code>clamp(1.6–2.2rem)</code>
+            <span style="font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1;">Section H2</span>
           </div>
           <div class="type-scale-row">
             <code>1.5rem / 24px</code>
-            <span style="font-family: var(--serif); font-size: 1.5rem; line-height: 1;">Card Heading</span>
+            <span style="font-family: var(--serif); font-size: 1.5rem; line-height: 1;">Card H3</span>
           </div>
           <div class="type-scale-row">
-            <code>1.125rem / 18px</code>
-            <span style="font-family: var(--sans); font-size: 1.125rem; line-height: 1;">Body Large</span>
+            <code>1.0625rem / 17px</code>
+            <span style="font-family: var(--sans); font-size: 1.0625rem; line-height: 1;">Body</span>
           </div>
           <div class="type-scale-row">
-            <code>1rem / 16px</code>
-            <span style="font-family: var(--sans); font-size: 1rem; line-height: 1;">Body</span>
+            <code>0.9375rem / 15px</code>
+            <span style="font-family: var(--sans); font-size: 0.9375rem; line-height: 1; color: var(--gray-600);">Body Secondary</span>
           </div>
           <div class="type-scale-row">
             <code>0.75rem / 12px</code>
-            <span style="font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1;">Label</span>
+            <span style="font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-400); line-height: 1;">Label</span>
+          </div>
+          <div class="type-scale-row">
+            <code>0.6875rem / 11px</code>
+            <span style="font-family: var(--mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); line-height: 1;">Eyebrow / Category</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COMPONENTS -->
-    <section class="brand-section">
+    <!-- ─── 03. COMPONENTS ─── -->
+    <section class="brand-section" id="components">
       <div class="wide-wrap">
         <span class="label">03</span>
         <h2 class="section-heading">Components</h2>
 
-        <h3>Buttons</h3>
-        <div class="component-row">
-          <a class="btn-hero btn-hero-primary" href="#" onclick="return false">Primary CTA</a>
-          <a class="btn-hero btn-hero-secondary" href="#" onclick="return false">Secondary CTA</a>
+        <!-- BUTTONS -->
+        <h3>Buttons &amp; CTAs</h3>
+        <p class="brand-component-note">Primary CTA is always Nolte Red. Text is "Get Your Delivery Plan". Secondary is outlined white on dark backgrounds.</p>
+        <div class="component-row" style="background: var(--dark); padding: 2rem; gap: 1rem;">
+          <a class="btn-hero btn-hero-primary" href="#" onclick="return false">Get Your Delivery Plan</a>
+          <a class="btn-hero btn-hero-secondary" href="#" onclick="return false">Learn More</a>
+        </div>
+        <div class="component-row" style="background: var(--white); padding: 1.5rem 0; gap: 1rem; border-bottom: 1px solid var(--gray-200);">
+          <a class="nav-cta" href="#" onclick="return false">Get Your Delivery Plan</a>
+          <a href="#" style="color: var(--blue); font-size: 0.9375rem;" onclick="return false">Inline link →</a>
         </div>
 
+        <!-- LABELS & PILLS -->
         <h3>Labels &amp; Pills</h3>
-        <div class="component-row">
+        <p class="brand-component-note">DM Mono, uppercase. Eyebrow labels are gray-400. Category pills have colored border matching industry. No filled background.</p>
+        <div class="component-row" style="flex-wrap: wrap; gap: 1rem;">
           <span class="label">Eyebrow Label</span>
-          <span class="case-type">Healthcare</span>
-          <span class="case-type" style="color: var(--blue); border-color: var(--blue);">Finance</span>
-          <span class="case-type" style="color: var(--accent); border-color: var(--accent);">Insurance</span>
+          <span class="case-pill">General</span>
+          <span class="case-pill case-pill-healthcare">Healthcare</span>
+          <span class="case-pill case-pill-finance">Finance</span>
+          <span class="case-pill case-pill-insurance">Insurance</span>
+          <span class="case-type">Metadata Label</span>
         </div>
 
-        <h3>Cards</h3>
-        <div class="component-demo-grid">
-          <div class="pillar-card">
-            <span class="label">01</span>
-            <h3>Pillar Card</h3>
-            <p>Used for process steps, features, and value propositions. Orange top border accent.</p>
-          </div>
-          <div class="pillar-card">
-            <span class="label">02</span>
-            <h3>With Content</h3>
-            <p>Cards use the gray-100 background with consistent padding and the serif heading font.</p>
+        <!-- PILLAR CARDS -->
+        <h3>Pillar Cards (4-col dark)</h3>
+        <p class="brand-component-note">Used for value props in hero pillars section. Dark background, accent top border, white text.</p>
+        <div class="component-demo-dark" style="padding: 0;">
+          <div class="pillars-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="pillar">
+              <span class="pillar-label">01</span>
+              <h3>Predictable</h3>
+              <p>Scope, cost, and timeline committed before work begins.</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-label">02</span>
+              <h3>Forecasted</h3>
+              <p>Monte Carlo simulation on 20 years of delivery data.</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-label">03</span>
+              <h3>Fixed Price</h3>
+              <p>Pay per delivery. No hourly billing, no retainers.</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-label">04</span>
+              <h3>Data-Driven</h3>
+              <p>Flow metrics, cycle time, throughput — NolteOS tracks everything.</p>
+            </div>
           </div>
         </div>
 
-        <h3>Stats</h3>
-        <div class="component-row" style="gap: 3rem;">
+        <!-- CASE CARDS -->
+        <h3>Case Study Cards (3-col grid)</h3>
+        <p class="brand-component-note">Image top, client logo, category pill, serif heading, metrics footer. No rounded corners.</p>
+        <div class="case-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="case-card">
+            <div class="case-card-img" style="background: var(--gray-100); display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: var(--mono); font-size: 10px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.08em;">Featured Image</span>
+            </div>
+            <div class="case-card-top">
+              <div class="case-card-metrics">
+                <span><span class="case-metric">95%</span><span class="case-metric-label">Accuracy</span></span>
+                <span><span class="case-metric">47</span><span class="case-metric-label">Deliveries</span></span>
+              </div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-meta-line">
+                <span class="case-pill case-pill-healthcare">Healthcare</span>
+              </div>
+              <h3>Client Name</h3>
+              <p class="case-desc">One-line description of the engagement and what was built.</p>
+              <div class="case-meta">
+                <span class="case-metric-inline">4.2d avg cycle</span>
+                <span class="case-metric-inline">2 years</span>
+              </div>
+              <span class="case-link">Read case study →</span>
+            </div>
+          </div>
+          <div class="case-card">
+            <div class="case-card-img" style="background: var(--gray-200); display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: var(--mono); font-size: 10px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.08em;">Featured Image</span>
+            </div>
+            <div class="case-card-top">
+              <div class="case-card-metrics">
+                <span><span class="case-metric">100%</span><span class="case-metric-label">Accuracy</span></span>
+                <span><span class="case-metric">23</span><span class="case-metric-label">Deliveries</span></span>
+              </div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-meta-line">
+                <span class="case-pill case-pill-insurance">Insurance</span>
+              </div>
+              <h3>Client Name</h3>
+              <p class="case-desc">One-line description of the engagement and what was built.</p>
+              <div class="case-meta">
+                <span class="case-metric-inline">3.8d avg cycle</span>
+                <span class="case-metric-inline">8 months</span>
+              </div>
+              <span class="case-link">Read case study →</span>
+            </div>
+          </div>
+          <div class="case-card">
+            <div class="case-card-img" style="background: #e8e7e3; display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: var(--mono); font-size: 10px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.08em;">Featured Image</span>
+            </div>
+            <div class="case-card-top">
+              <div class="case-card-metrics">
+                <span><span class="case-metric">96%</span><span class="case-metric-label">Accuracy</span></span>
+                <span><span class="case-metric">85</span><span class="case-metric-label">Deliveries</span></span>
+              </div>
+            </div>
+            <div class="case-card-body">
+              <div class="case-card-meta-line">
+                <span class="case-pill case-pill-finance">Finance</span>
+              </div>
+              <h3>Client Name</h3>
+              <p class="case-desc">One-line description of the engagement and what was built.</p>
+              <div class="case-meta">
+                <span class="case-metric-inline">4.8d avg cycle</span>
+                <span class="case-metric-inline">2 years</span>
+              </div>
+              <span class="case-link">Read case study →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATS ROW -->
+        <h3>Stats Row</h3>
+        <p class="brand-component-note">Large numbers, serif font, black. No color on the numbers themselves.</p>
+        <div class="component-row" style="gap: 4rem; padding: 2rem 0; border-bottom: 1px solid var(--gray-200);">
           <div>
             <span class="stat-value">95%</span>
-            <span class="label">Forecast Accuracy</span>
+            <span class="label" style="display: block; margin-top: 0.25rem;">Forecast Accuracy</span>
           </div>
           <div>
             <span class="stat-value">20yrs</span>
-            <span class="label">Delivery Data</span>
+            <span class="label" style="display: block; margin-top: 0.25rem;">Delivery Data</span>
           </div>
           <div>
             <span class="stat-value">75/mo</span>
-            <span class="label">Deliveries</span>
+            <span class="label" style="display: block; margin-top: 0.25rem;">Active Deliveries</span>
+          </div>
+          <div>
+            <span class="stat-value">4.2d</span>
+            <span class="label" style="display: block; margin-top: 0.25rem;">Avg Cycle Time</span>
           </div>
         </div>
 
-        <h3>Metric Cards (Dark)</h3>
+        <!-- METRIC CARDS (DARK) -->
+        <h3>Metric Cards (NolteOS dark UI)</h3>
+        <p class="brand-component-note">2×2 grid on dark background. Used in case study sidebars and the NolteOS page. Classes: <code>.shot-metrics-grid</code>, <code>.shot-metric-card</code>.</p>
         <div class="component-demo-dark">
-          <div class="shot-metrics-grid" style="max-width: 500px;">
+          <div class="shot-metrics-grid" style="max-width: 460px;">
             <div class="shot-metric-card">
-              <div class="shot-metric-value">95.2%</div>
-              <div class="shot-metric-label">Forecast Accuracy</div>
+              <span class="shot-metric-label">Forecast Accuracy</span>
+              <span class="shot-metric-val">95.2%</span>
             </div>
             <div class="shot-metric-card">
-              <div class="shot-metric-value">4.8d</div>
-              <div class="shot-metric-label">Avg Cycle Time</div>
+              <span class="shot-metric-label">Avg Cycle Time</span>
+              <span class="shot-metric-val">4.8d</span>
             </div>
             <div class="shot-metric-card">
-              <div class="shot-metric-value">47</div>
-              <div class="shot-metric-label">Deliveries</div>
+              <span class="shot-metric-label">Deliveries</span>
+              <span class="shot-metric-val">47</span>
             </div>
             <div class="shot-metric-card">
-              <div class="shot-metric-value">98%</div>
-              <div class="shot-metric-label">On-Time Rate</div>
+              <span class="shot-metric-label">On-Time Rate</span>
+              <span class="shot-metric-val">98%</span>
             </div>
           </div>
         </div>
+
+        <!-- BLOG CARDS -->
+        <h3>Blog Featured Cards</h3>
+        <p class="brand-component-note">3-col grid on homepage. Image top (16:9), category pill, serif title, body excerpt, "Read article →" link.</p>
+        <div class="blog-featured-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); max-width: 1100px;">
+          <div class="blog-featured-card" style="background: var(--white);">
+            <div class="blog-featured-img" style="background: var(--gray-100); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: var(--mono); font-size: 10px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.08em;">Post Image</span>
+            </div>
+            <div class="blog-featured-card-body">
+              <span class="case-pill" style="display: inline-block; margin-bottom: 0.75rem; margin-top: 1.5rem;">Delivery</span>
+              <h3 style="font-family: var(--serif); font-size: 1.125rem; font-weight: 400; margin-bottom: 0.75rem;">The Predictability Gap: Why Software Projects Miss</h3>
+              <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">Why most software projects miss deadlines and what data-driven delivery changes.</p>
+              <span class="blog-featured-read">Read article →</span>
+            </div>
+          </div>
+          <div class="blog-featured-card" style="background: var(--white);">
+            <div class="blog-featured-img" style="background: var(--gray-200); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: var(--mono); font-size: 10px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.08em;">Post Image</span>
+            </div>
+            <div class="blog-featured-card-body">
+              <span class="case-pill" style="display: inline-block; margin-bottom: 0.75rem; margin-top: 1.5rem;">Engineering</span>
+              <h3 style="font-family: var(--serif); font-size: 1.125rem; font-weight: 400; margin-bottom: 0.75rem;">Flow Metrics Every Engineering Team Should Track</h3>
+              <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">Cycle time, throughput, WIP, and work item age — the four metrics that predict delivery.</p>
+              <span class="blog-featured-read">Read article →</span>
+            </div>
+          </div>
+          <div class="blog-featured-card" style="background: var(--white);">
+            <div class="blog-featured-img" style="background: #e8e7e3; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: var(--mono); font-size: 10px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.08em;">Post Image</span>
+            </div>
+            <div class="blog-featured-card-body">
+              <span class="case-pill" style="display: inline-block; margin-bottom: 0.75rem; margin-top: 1.5rem;">Leadership</span>
+              <h3 style="font-family: var(--serif); font-size: 1.125rem; font-weight: 400; margin-bottom: 0.75rem;">When to Outsource Engineering and When Not To</h3>
+              <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">A decision framework for leaders considering their first outsourced engineering team.</p>
+              <span class="blog-featured-read">Read article →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- INDUSTRY VERTICALS (3-col) -->
+        <h3>Industry Vertical Cards</h3>
+        <p class="brand-component-note">3-col grid on dark background. Used in the "Who We Work With" section. Link to practice pages at <code>/industries/[slug]</code>.</p>
+        <div class="component-demo-dark" style="padding: 2.5rem;">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--dark-border);">
+            <a href="/industries/healthcare" style="background: var(--dark-surface); padding: 2rem; text-decoration: none; display: block; border-top: 2px solid var(--accent);">
+              <span class="pillar-label">Healthcare</span>
+              <h3 style="font-family: var(--serif); font-size: 1.125rem; font-weight: 400; color: var(--white); margin-bottom: 0.5rem;">Regulated. Complex. Critical delivery windows.</h3>
+              <p style="font-size: 0.875rem; color: rgba(255,255,255,0.45); line-height: 1.6;">HIPAA compliance, EHR integrations, clinical workflow tools.</p>
+              <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); display: block; margin-top: 1.5rem;">View practice →</span>
+            </a>
+            <a href="/industries/insurance" style="background: var(--dark-surface); padding: 2rem; text-decoration: none; display: block; border-top: 2px solid var(--accent);">
+              <span class="pillar-label">Insurance</span>
+              <h3 style="font-family: var(--serif); font-size: 1.125rem; font-weight: 400; color: var(--white); margin-bottom: 0.5rem;">Regulatory filing deadlines can't move.</h3>
+              <p style="font-size: 0.875rem; color: rgba(255,255,255,0.45); line-height: 1.6;">MGA platforms, carrier portals, compliance-first engineering.</p>
+              <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); display: block; margin-top: 1.5rem;">View practice →</span>
+            </a>
+            <a href="/industries/finance" style="background: var(--dark-surface); padding: 2rem; text-decoration: none; display: block; border-top: 2px solid var(--accent);">
+              <span class="pillar-label">Finance</span>
+              <h3 style="font-family: var(--serif); font-size: 1.125rem; font-weight: 400; color: var(--white); margin-bottom: 0.5rem;">Audit trails, compliance, and zero-downtime delivery.</h3>
+              <p style="font-size: 0.875rem; color: rgba(255,255,255,0.45); line-height: 1.6;">Fintech platforms, KYC/AML systems, banking integrations.</p>
+              <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); display: block; margin-top: 1.5rem;">View practice →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- TRUST BAR -->
+        <h3>Trust Bar</h3>
+        <p class="brand-component-note">Always on a dark background directly below the hero. Logo images: grayscale, brightness(0), opacity 0.5. No text fallbacks.</p>
       </div>
     </section>
 
-    <!-- SPACING -->
-    <section class="brand-section brand-section-alt">
+    <!-- Trust bar demo (full bleed) -->
+    <div class="trust-bar">
+      <p class="trust-label">Who we work with</p>
+      <div class="trust-logos">
+        <img src="/images/logos/breeze.svg" alt="Breeze" class="trust-logo-img" />
+        <img src="/images/logos/odie.png" alt="Odie" class="trust-logo-img" />
+        <img src="/images/logos/hbo.png" alt="HBO" class="trust-logo-img" />
+        <img src="/images/logos/amtrak.png" alt="Amtrak" class="trust-logo-img" />
+        <img src="/images/logos/barrys.png" alt="Barry's" class="trust-logo-img" />
+        <img src="/images/logos/bloomscape.png" alt="Bloomscape" class="trust-logo-img" />
+      </div>
+    </div>
+
+    <!-- ─── 04. SPACING & LAYOUT ─── -->
+    <section class="brand-section brand-section-alt" id="spacing">
       <div class="wide-wrap">
         <span class="label">04</span>
         <h2 class="section-heading">Spacing &amp; Layout</h2>
 
-        <div class="spacing-demo">
-          <div class="spacing-item">
-            <div class="spacing-block" style="width: 100%; height: 0.5rem; background: var(--accent);"></div>
-            <code>0.5rem / 8px</code>
-            <span>Element gap</span>
+        <h3>Layout Widths</h3>
+        <div class="layout-widths">
+          <div class="layout-width-row">
+            <code>1100px</code>
+            <div class="layout-width-bar" style="width: 100%; background: var(--black);"></div>
+            <span>Max content width — <code>.wide-wrap</code></span>
           </div>
-          <div class="spacing-item">
-            <div class="spacing-block" style="width: 100%; height: 1rem; background: var(--accent);"></div>
-            <code>1rem / 16px</code>
-            <span>Card padding, small gap</span>
+          <div class="layout-width-row">
+            <code>780px</code>
+            <div class="layout-width-bar" style="width: 70.9%; background: var(--gray-400);"></div>
+            <span>Blog / prose max-width — <code>.page-wrap</code></span>
           </div>
-          <div class="spacing-item">
-            <div class="spacing-block" style="width: 100%; height: 2rem; background: var(--accent);"></div>
-            <code>2rem / 32px</code>
-            <span>Section padding (horizontal)</span>
-          </div>
-          <div class="spacing-item">
-            <div class="spacing-block" style="width: 100%; height: 3rem; background: var(--accent);"></div>
-            <code>3rem / 48px</code>
-            <span>Content gap</span>
-          </div>
-          <div class="spacing-item">
-            <div class="spacing-block" style="width: 100%; height: 5rem; background: var(--accent);"></div>
-            <code>5rem / 80px</code>
-            <span>Section spacing (vertical)</span>
+          <div class="layout-width-row">
+            <code>100%</code>
+            <div class="layout-width-bar" style="width: 100%; background: var(--gray-200);"></div>
+            <span>Full-bleed sections (hero, trust bar, footer CTA)</span>
           </div>
         </div>
 
-        <h3>Layout Widths</h3>
+        <h3>Spacing Scale</h3>
         <div class="spacing-demo">
-          <div class="spacing-item">
-            <code>1100px</code>
-            <span>Max content width (.wide-wrap)</span>
+          <div class="spacing-item"><code>0.5rem</code><div class="spacing-swatch" style="height: 8px;"></div><span>Element gap, small labels</span></div>
+          <div class="spacing-item"><code>1rem</code><div class="spacing-swatch" style="height: 16px;"></div><span>Within-component spacing</span></div>
+          <div class="spacing-item"><code>1.5rem</code><div class="spacing-swatch" style="height: 24px;"></div><span>Component internal padding</span></div>
+          <div class="spacing-item"><code>2rem</code><div class="spacing-swatch" style="height: 32px;"></div><span>Container horizontal padding</span></div>
+          <div class="spacing-item"><code>3rem</code><div class="spacing-swatch" style="height: 48px;"></div><span>Intra-section gap</span></div>
+          <div class="spacing-item"><code>5–6rem</code><div class="spacing-swatch" style="height: 80px;"></div><span>Section spacing (vertical)</span></div>
+        </div>
+
+        <h3>Mobile Breakpoints</h3>
+        <div class="breakpoints-table">
+          <div class="bp-row bp-header">
+            <span>Breakpoint</span>
+            <span>What changes</span>
           </div>
-          <div class="spacing-item">
-            <code>780px</code>
-            <span>Prose / blog content max-width</span>
+          <div class="bp-row">
+            <code>768px</code>
+            <span>Nav collapses to hamburger. Case grid, footer grid, OS grids → single column. Hero font sizes reduce.</span>
           </div>
-          <div class="spacing-item">
-            <code>100%</code>
-            <span>Full-bleed sections (hero, dark sections)</span>
+          <div class="bp-row">
+            <code>600px</code>
+            <span>Trust logos wrap. Additional fine-tuning of spacing and typography.</span>
+          </div>
+          <div class="bp-row">
+            <code>480px</code>
+            <span>Hero h1 font size reduction. Blog grid collapses.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PATTERNS -->
-    <section class="brand-section">
+    <!-- ─── 05. PATTERNS & RULES ─── -->
+    <section class="brand-section" id="patterns">
       <div class="wide-wrap">
         <span class="label">05</span>
         <h2 class="section-heading">Patterns &amp; Rules</h2>
@@ -310,28 +533,108 @@ import Base from '../layouts/Base.astro';
         <div class="rules-grid">
           <div class="rule-card">
             <h3>Dark / Light Rhythm</h3>
-            <p>Alternate between dark (hero, callouts, footer CTA) and light (content, cards) sections. Don't stack more than two dark sections consecutively.</p>
+            <p>Alternate dark and light sections. Never stack more than two dark sections consecutively. Dark sections: hero, trust bar, pillars, industry verticals, footer CTA.</p>
           </div>
           <div class="rule-card">
-            <h3>Accent Usage</h3>
-            <p>Red (#D63F18) for CTAs and category pills only. Headings are black or white — no color mixing. Blue used minimally for links. Stats use black uniformly.</p>
+            <h3>Accent (Red) Usage</h3>
+            <p>Nolte Red (#D63F18) for CTAs, category pills, and accent top-borders on step cards only. Never in body copy, headings, or decorative elements.</p>
           </div>
           <div class="rule-card">
             <h3>Label Pattern</h3>
-            <p>DM Mono, uppercase, letter-spacing 0.08–0.12em, font-size 0.6875–0.75rem. Used for eyebrows, metadata, nav links, and category tags.</p>
+            <p>DM Mono, uppercase, letter-spacing 0.08–0.12em, 0.6875–0.75rem. Used for: eyebrows, metadata, nav links, section numbers (01, 02...), category tags.</p>
           </div>
           <div class="rule-card">
-            <h3>Card Borders</h3>
-            <p>Use 2px solid orange top-border on process/step cards. Use 1px gray-200 border on content cards. No rounded corners — sharp edges throughout.</p>
+            <h3>No Rounded Corners</h3>
+            <p>Cards, buttons, pills — all use sharp corners (border-radius: 0). The only exception is team/founder photos which use 50% circle crop.</p>
           </div>
           <div class="rule-card">
-            <h3>Imagery</h3>
-            <p>Real product screenshots in device frames. Team photography (not stock). Abstract geometric visuals for blog posts. No generic stock photos.</p>
+            <h3>Imagery Rules</h3>
+            <p>Real product screenshots in device frames. Team photography — not stock. Abstract geometric visuals for blog posts. No generic AI-generated imagery.</p>
           </div>
           <div class="rule-card">
-            <h3>Voice in Design</h3>
-            <p>Direct, confident, data-driven. Lead with numbers. Use "predictable delivery" not "agile." Say "leaders who outsource" not "non-tech founders."</p>
+            <h3>Voice in Copy</h3>
+            <p>Say "predictable delivery" — not "agile." Say "leaders who outsource" — not "non-tech founders." Say "forecasting" — not "estimation." Lead with data.</p>
           </div>
+          <div class="rule-card">
+            <h3>CTA Text</h3>
+            <p>Global CTA is always "Get Your Delivery Plan" → os.nolte.io. Never "Contact Us", "Get Started", or "See Your Forecast". One CTA per page minimum.</p>
+          </div>
+          <div class="rule-card">
+            <h3>Section Numbers</h3>
+            <p>Use zero-padded numbers (01, 02, 03) for ordered sections via DM Mono labels. Use req-item counter pattern for requirement/process lists.</p>
+          </div>
+          <div class="rule-card">
+            <h3>Hero Structure</h3>
+            <p>Dark hero with 2/3 : 1/3 split. Copy left aligned with the Nolte logo. Visual/graphic right-aligned to container edge. Eyebrow label → H1 → subtext → CTA buttons.</p>
+          </div>
+        </div>
+
+        <h3>NolteOS Product Shot Classes</h3>
+        <p class="brand-component-note">Styled HTML mock UIs — no images. All defined in <code>global.css</code> under <code>/* ===== NOLTEOS MARKETING PAGE ===== */</code>. See <a href="/about/nolteos">/about/nolteos</a> for full examples.</p>
+        <div class="code-ref-grid">
+          <div class="code-ref"><code>.shot-window</code><span>Browser chrome mockup (light)</span></div>
+          <div class="code-ref"><code>.shot-window-dark</code><span>Browser chrome mockup (dark)</span></div>
+          <div class="code-ref"><code>.shot-metrics-grid</code><span>2×2 KPI card grid (dark)</span></div>
+          <div class="code-ref"><code>.shot-kanban</code><span>Kanban board (dark)</span></div>
+          <div class="code-ref"><code>.shot-approvals</code><span>Approvals list (dark)</span></div>
+          <div class="code-ref"><code>.shot-meeting</code><span>Meeting/calendar block (dark)</span></div>
+          <div class="code-ref"><code>.shot-delivery-cols</code><span>Delivery status columns (dark)</span></div>
+          <div class="code-ref"><code>.shot-progress</code><span>Progress bar (used in case studies)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 06. TESTING MAP ─── -->
+    <section class="brand-section brand-section-alt" id="testing">
+      <div class="wide-wrap">
+        <span class="label">06</span>
+        <h2 class="section-heading">Regression Test Map</h2>
+        <p class="brand-section-intro">The regression test script (<code>scripts/regression-test.sh</code>) is change-aware. It reads <code>git diff</code> and only runs tests relevant to what changed. Run <code>--all</code> to force the full suite.</p>
+
+        <div class="breakpoints-table">
+          <div class="bp-row bp-header">
+            <span>File Changed</span>
+            <span>Tests That Run</span>
+          </div>
+          <div class="bp-row">
+            <code>src/styles/global.css</code>
+            <span>Responsive checks · Performance</span>
+          </div>
+          <div class="bp-row">
+            <code>src/components/BaseHead.astro</code>
+            <span>SEO · Analytics</span>
+          </div>
+          <div class="bp-row">
+            <code>src/layouts/Base.astro</code>
+            <span>SEO · Analytics · Availability · Content</span>
+          </div>
+          <div class="bp-row">
+            <code>src/pages/index.astro</code>
+            <span>Availability · Content Integrity · SEO</span>
+          </div>
+          <div class="bp-row">
+            <code>src/pages/blog/* or src/content/blog/*</code>
+            <span>Availability · Key Page Content</span>
+          </div>
+          <div class="bp-row">
+            <code>src/pages/work/* or src/content/work/*</code>
+            <span>Availability · Key Page Content</span>
+          </div>
+          <div class="bp-row">
+            <code>astro.config.* / package.json</code>
+            <span>Full suite (all 7 categories)</span>
+          </div>
+          <div class="bp-row">
+            <code>No changes detected</code>
+            <span>Full suite (safety fallback)</span>
+          </div>
+        </div>
+
+        <div class="brand-rule" style="margin-top: 2rem;">
+          <span class="brand-rule-label">Usage</span>
+          <p><code>./scripts/regression-test.sh</code> — auto-detect mode against production<br>
+          <code>./scripts/regression-test.sh http://localhost:4321 --all</code> — full suite against local<br>
+          <code>./scripts/regression-test.sh https://nolte-site.netlify.app --all</code> — full suite against staging</p>
         </div>
       </div>
     </section>
@@ -343,24 +646,62 @@ import Base from '../layouts/Base.astro';
 <style>
   .brand-guide { padding-bottom: 5rem; }
 
+  /* Hero */
   .brand-hero {
     background: var(--dark);
     color: var(--white);
     padding: 6rem 2rem 4rem;
   }
-  .brand-hero h1 { font-family: var(--serif); font-size: 3rem; margin: 1rem 0 0.75rem; }
-  .brand-hero-sub { color: var(--gray-400); font-size: 1.0625rem; max-width: 540px; }
+  .brand-hero h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); margin: 1rem 0 0.75rem; color: var(--white); }
+  .brand-hero-sub { color: rgba(255,255,255,0.6); font-size: 1.0625rem; max-width: 580px; }
+  .brand-hero-meta {
+    margin-top: 1.5rem;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.06em;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .brand-hero-meta a { color: var(--accent); text-decoration: none; }
+  .brand-hero-meta a:hover { text-decoration: underline; }
 
+  /* Sections */
   .brand-section { padding: 4rem 2rem; }
   .brand-section-alt { background: var(--gray-100); }
-  .brand-section h3 { font-family: var(--serif); font-size: 1.5rem; margin: 3rem 0 1.5rem; }
+  .brand-section h3 { font-family: var(--serif); font-size: 1.25rem; margin: 2.5rem 0 0.75rem; color: var(--black); }
+  .brand-section-intro { font-size: 0.9375rem; color: var(--gray-600); max-width: 680px; line-height: 1.65; margin-bottom: 0.25rem; }
+  .brand-component-note { font-size: 0.875rem; color: var(--gray-400); font-family: var(--sans); margin-bottom: 1rem; line-height: 1.6; }
+  .brand-component-note code { font-family: var(--mono); font-size: 0.8125rem; background: var(--gray-100); padding: 1px 5px; color: var(--black); }
 
   /* Swatches */
   .swatch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 1.5rem 0; }
-  .swatch-block { width: 100%; aspect-ratio: 1.6; border-radius: 4px; }
-  .swatch-name { display: block; font-family: var(--sans); font-weight: 500; font-size: 0.9375rem; margin-top: 0.75rem; }
-  .swatch-value { display: block; font-family: var(--mono); font-size: 0.75rem; color: var(--gray-600); margin-top: 0.25rem; }
-  .swatch-var { display: block; font-family: var(--mono); font-size: 0.6875rem; color: var(--gray-400); margin-top: 0.125rem; }
+  .swatch-block { width: 100%; aspect-ratio: 1.6; }
+  .swatch-name { display: block; font-family: var(--sans); font-weight: 600; font-size: 0.875rem; margin-top: 0.75rem; }
+  .swatch-value { display: block; font-family: var(--mono); font-size: 0.6875rem; color: var(--gray-600); margin-top: 0.2rem; }
+  .swatch-var { display: block; font-family: var(--mono); font-size: 0.625rem; color: var(--gray-400); margin-top: 0.1rem; }
+  .swatch-usage { display: block; font-size: 0.75rem; color: var(--gray-400); margin-top: 0.25rem; line-height: 1.4; }
+  .swatch-usage em { color: var(--accent); font-style: normal; }
+
+  /* Brand rule callout */
+  .brand-rule {
+    background: var(--white);
+    border-left: 3px solid var(--accent);
+    padding: 1.25rem 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .brand-rule-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .brand-rule p { font-size: 0.9375rem; color: var(--gray-600); line-height: 1.65; margin: 0; }
+  .brand-rule code { font-family: var(--mono); font-size: 0.8125rem; background: var(--gray-100); padding: 1px 5px; color: var(--black); }
 
   /* Type specimens */
   .type-specimen { display: flex; flex-direction: column; gap: 3rem; margin: 1.5rem 0; }
@@ -368,36 +709,67 @@ import Base from '../layouts/Base.astro';
   .type-demo { margin: 0.75rem 0; }
 
   /* Type scale */
-  .type-scale { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0; }
+  .type-scale { display: flex; flex-direction: column; gap: 0; margin: 1.5rem 0; }
   .type-scale-row {
     display: flex; align-items: baseline; gap: 2rem;
-    padding: 0.75rem 0; border-bottom: 1px solid var(--gray-200);
+    padding: 0.875rem 0; border-bottom: 1px solid var(--gray-200);
   }
-  .type-scale-row code { font-family: var(--mono); font-size: 0.6875rem; color: var(--gray-400); min-width: 120px; }
+  .type-scale-row code { font-family: var(--mono); font-size: 0.6875rem; color: var(--gray-400); min-width: 130px; }
 
-  /* Components */
-  .component-row { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0; }
-  .component-demo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 1.5rem 0; max-width: 700px; }
-  .component-demo-dark { background: var(--dark); padding: 2rem; border-radius: 4px; margin: 1.5rem 0; }
+  /* Component row */
+  .component-row { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin: 1rem 0 2rem; }
+  .component-demo-dark { background: var(--dark); margin: 1rem 0 2rem; overflow: hidden; }
 
-  /* Spacing */
-  .spacing-demo { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0; }
+  /* Case links in brand */
+  .case-link { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 1.5rem 2rem; padding-bottom: 1.5rem; }
+
+  /* Layout widths */
+  .layout-widths { display: flex; flex-direction: column; gap: 1.25rem; margin: 1.5rem 0; }
+  .layout-width-row { display: flex; align-items: center; gap: 1.5rem; }
+  .layout-width-row code { font-family: var(--mono); font-size: 0.75rem; color: var(--gray-600); min-width: 80px; }
+  .layout-width-row span { font-size: 0.875rem; color: var(--gray-600); white-space: nowrap; }
+  .layout-width-bar { height: 4px; max-width: 300px; flex-shrink: 0; }
+
+  /* Spacing demo */
+  .spacing-demo { display: flex; flex-direction: column; gap: 0.75rem; margin: 1.5rem 0; }
   .spacing-item { display: flex; align-items: center; gap: 1.5rem; }
-  .spacing-item code { font-family: var(--mono); font-size: 0.75rem; color: var(--gray-600); min-width: 100px; }
-  .spacing-item span { font-size: 0.9375rem; color: var(--gray-600); }
-  .spacing-block { flex-shrink: 0; max-width: 200px; }
+  .spacing-item code { font-family: var(--mono); font-size: 0.75rem; color: var(--gray-600); min-width: 80px; }
+  .spacing-item span { font-size: 0.875rem; color: var(--gray-600); }
+  .spacing-swatch { background: var(--accent); min-width: 60px; max-width: 200px; flex: 1; opacity: 0.7; }
+
+  /* Breakpoints / test map table */
+  .breakpoints-table { margin: 1.5rem 0; border: 1px solid var(--gray-200); }
+  .bp-row { display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; padding: 0.875rem 1.25rem; border-bottom: 1px solid var(--gray-200); align-items: start; }
+  .bp-row:last-child { border-bottom: none; }
+  .bp-header { background: var(--gray-100); font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); }
+  .bp-row code { font-family: var(--mono); font-size: 0.8125rem; color: var(--black); }
+  .bp-row span { font-size: 0.875rem; color: var(--gray-600); line-height: 1.5; }
 
   /* Rules grid */
   .rules-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 1.5rem 0; }
   .rule-card { background: var(--gray-100); padding: 1.5rem; border-top: 2px solid var(--accent); }
-  .rule-card h3 { font-family: var(--serif); font-size: 1.125rem; margin: 0 0 0.75rem; }
-  .rule-card p { font-size: 0.9375rem; color: var(--gray-600); line-height: 1.6; }
+  .rule-card h3 { font-family: var(--serif); font-size: 1rem; margin: 0 0 0.75rem; font-weight: 400; }
+  .rule-card p { font-size: 0.875rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
+
+  /* Code reference grid */
+  .code-ref-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1px solid var(--gray-200); margin: 1.5rem 0; }
+  .code-ref { display: flex; align-items: center; gap: 1.5rem; padding: 0.875rem 1.25rem; border-bottom: 1px solid var(--gray-200); border-right: 1px solid var(--gray-200); }
+  .code-ref:nth-child(even) { border-right: none; }
+  .code-ref code { font-family: var(--mono); font-size: 0.8125rem; color: var(--black); white-space: nowrap; }
+  .code-ref span { font-size: 0.875rem; color: var(--gray-600); }
+
+  /* Blog featured card (in brand page) */
+  .blog-featured-card { display: flex; flex-direction: column; }
 
   @media (max-width: 768px) {
     .swatch-grid { grid-template-columns: repeat(2, 1fr); }
-    .component-demo-grid { grid-template-columns: 1fr; }
     .rules-grid { grid-template-columns: 1fr; }
-    .type-scale-row { flex-direction: column; gap: 0.5rem; }
+    .code-ref-grid { grid-template-columns: 1fr; }
+    .code-ref { border-right: none; }
+    .bp-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .type-scale-row { flex-direction: column; gap: 0.25rem; }
     .brand-hero h1 { font-size: 2rem; }
+    .pillars-grid { grid-template-columns: 1fr 1fr !important; }
+    .layout-width-row span { display: none; }
   }
 </style>

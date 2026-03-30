@@ -28,7 +28,7 @@ Search the web for:
 - **Company website** — understand their product, market, and positioning
 - **Business model** — determine if B2B SaaS, B2C, B2B2C, marketplace, etc. This drives the category.
 - **Industry** — identify the primary industry (insurance, finance, healthcare, wellness, real-estate, sustainability, saas, consumer). Use the most specific regulated category that applies. Check `src/content/categories/` for existing categories; create a new one if needed.
-- **Press coverage** — find articles from major publications (extract publication name, headline, and a short pull quote under 20 words)
+- **Press coverage** — find articles from major publications (see Step 2b for detailed process)
 - **App Store / Google Play** — if it's a mobile app, check ratings and descriptions
 - **Crunchbase** — funding stage, founding date, team size
 - **Social media** — LinkedIn company page for employee count and positioning
@@ -37,6 +37,97 @@ Download from their website:
 - **Logo** — preferably SVG or high-res PNG wordmark
 - **Featured image** — hero image, product screenshot, or brand photography
 - Save to: `public/images/logos/[client].png` and `public/images/work/[client-slug]/featured.jpg`
+
+## Step 2b: Press Coverage Research (CRITICAL)
+
+This step is mandatory for every case study. Press coverage adds credibility.
+
+### Finding articles
+
+Search for the client across these publication types:
+1. **Industry-specific** — search `"[client name]" site:[industry-publication].com`
+2. **Business press** — search `"[client name]" site:yahoo.com OR site:reuters.com OR site:bloomberg.com`
+3. **Local press** — search `"[client name]" site:nypost.com OR site:amny.com`
+4. **Tech press** — search `"[client name]" site:techcrunch.com OR site:wired.com`
+5. **General** — search `"[client name]" launch OR funding OR raises`
+
+If a search returns no results, try the client name without quotes, try founder names, try the product name.
+
+**IMPORTANT:** If the user says press exists but search doesn't find it, ask for the URL. Don't assume it doesn't exist — paywalls and recent articles may not be indexed yet.
+
+### For each article found, extract:
+- Publication name (exact, e.g., "New York Post" not "NY Post")
+- Article headline
+- A pull quote under 20 words (from the article body, not the headline — unless headline is the best quote)
+- Full article URL
+
+### Press logos (MANDATORY)
+
+Every press entry MUST have a corresponding logo in `public/images/press/`. The PressBar component maps publication names to logo files.
+
+**Check existing logos first:**
+```bash
+ls public/images/press/
+```
+
+**Current logo inventory:**
+| Publication | File | Type |
+|---|---|---|
+| AM New York | `amnewyork.svg` | Real vector logo |
+| Yahoo Finance | `yahoo-finance.svg` | Real vector logo |
+| HousingWire | `housingwire.svg` | SVG text wordmark |
+| Inman | `inman.svg` | SVG text wordmark |
+| New York Post | `nypost.svg` | SVG text wordmark |
+
+**If the publication logo doesn't exist, you MUST create one before adding the press entry.**
+
+How to source a press logo:
+1. **Best:** Download the actual SVG/PNG from the publication's website (look in `<header>`, `<footer>`, or press kit pages)
+2. **Good:** Search `"[publication] logo SVG"` or check brandfetch.com, seeklogo.com, vtlogo.com
+3. **Fallback:** Create an SVG text wordmark that matches the publication's font style:
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 [width] [height]" fill="none">
+  <text x="0" y="[baseline]" font-family="[font]" font-size="[size]" font-weight="[weight]" fill="#181818">[Publication Name]</text>
+</svg>
+```
+
+Font guidance for common publication styles:
+- **Serif newspapers** (NY Post, WSJ): `font-family="'Times New Roman', Georgia, serif"` weight 700-900
+- **Sans-serif tech** (TechCrunch, Wired): `font-family="'Helvetica Neue', Arial, sans-serif"` weight 800
+- **Serif magazines** (Inman, Forbes): `font-family="'Playfair Display', Georgia, serif"` weight 900
+
+Save to: `public/images/press/[slug].svg`
+
+**Then register the logo in the PressBar component** (`src/components/PressBar.astro`):
+
+```javascript
+const logoMap: Record<string, string> = {
+  // ... existing entries
+  'Publication Name': '/images/press/[slug].svg',
+};
+```
+
+The `publication` field in frontmatter MUST match the key in `logoMap` exactly (case-sensitive).
+
+### Press entry format in frontmatter:
+
+```yaml
+press:
+  - publication: "New York Post"    # Must match logoMap key exactly
+    headline: "Article headline"
+    quote: "Pull quote under 20 words"
+    url: "https://full-article-url"
+```
+
+**Priority order:** If there are many articles, prioritize by publication prestige:
+1. Major newspapers (NY Post, WSJ, NYT)
+2. Industry leaders (The Real Deal, HousingWire, Inman)
+3. Business press (Yahoo Finance, Bloomberg, Reuters)
+4. Wire services (PR Newswire, Business Wire)
+5. Local/niche (AM New York, tech blogs)
+
+Show 3-5 press entries max. More than that dilutes impact.
 
 ## Step 3: Sensitivity Review
 
@@ -103,7 +194,7 @@ Case studies are sorted by the `order` field, NOT by date. The order reflects No
 Optional fields to add if data exists:
 ```yaml
 press:
-  - publication: "Publication Name"
+  - publication: "Publication Name"  # Must match PressBar logoMap key
     headline: "Article Title"
     quote: "Short pull quote under 20 words"
     url: "https://..."
@@ -136,14 +227,14 @@ npm run dev     # Preview at localhost:4321/work/[slug]
 Check:
 - Case study page renders correctly
 - Logo shows on cards (homepage + work index)
-- Press bar renders if press data provided
+- **Press bar renders with logos** (not just text fallback) — verify each publication has a logo file and a logoMap entry
 - Gallery images load
 - Mobile responsive
 - No sensitive information exposed
 
 ## Step 8: File GitHub Issues for Missing Content
 
-After the case study is published, audit it for any gaps or follow-up items and create a **single** GitHub issue that tracks everything needed to complete the case study. This ensures nothing falls through the cracks.
+After the case study is published, audit it for any gaps or follow-up items and create a **single** GitHub issue that tracks everything needed to complete the case study.
 
 **Scan for these common gaps:**
 - [ ] Missing or placeholder metrics (deliveries, accuracy, cycle time) — needs real NolteOS data
@@ -154,6 +245,7 @@ After the case study is published, audit it for any gaps or follow-up items and 
 - [ ] Missing team members (only partial team listed)
 - [ ] Content sections that feel thin or need client input
 - [ ] Logo is missing or low quality
+- [ ] **Press logos using text fallback instead of real brand assets**
 
 **Create one issue per case study using `gh`:**
 
