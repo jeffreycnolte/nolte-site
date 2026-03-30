@@ -1,6 +1,6 @@
 # WordPress → Astro Migration Playbook (with Claude Code)
 
-> How we migrated nolte.io from WordPress/Pantheon to Astro 6/Netlify in 8 days using Claude Code — and the lessons we learned doing it.
+> How we migrated nolte.io from WordPress/Pantheon to Astro 6/Netlify in 10 days using Claude Code — and the lessons we learned doing it.
 
 **What this covers:** Strategy, architecture, content migration, design system, componentization, SEO/GEO, CRM integration, DNS cutover, and post-launch monitoring.
 
@@ -337,14 +337,14 @@ The ratio is roughly: **80% Claude execution, 20% your decisions.** But that 20%
 
 | Metric | Value |
 |--------|-------|
-| Pages built | 61 |
+| Pages built | 72 |
 | Blog posts migrated | 29 |
-| Case studies | 4 |
-| Reusable components | 3 |
+| Case studies | 6 |
+| Reusable components | 4 |
 | Redirect rules | ~70 |
-| Commits | 42 |
-| Calendar days | 8 (March 19-27, 2026) |
-| Build time | 1.9 seconds |
+| Commits | 65 |
+| Calendar days | 10 (March 19-29, 2026) |
+| Build time | 2.5 seconds |
 | WordPress dependency | Eliminated |
 
 ---
@@ -361,7 +361,7 @@ The ratio is roughly: **80% Claude execution, 20% your decisions.** But that 20%
 | CRM integration | $2-4K | Claude |
 | QA & responsive testing | $3-5K | Claude |
 | **Total** | **$54-91K** | **~$200 (Claude sub)** |
-| **Timeline** | **8-14 weeks** | **8 days** |
+| **Timeline** | **8-14 weeks** | **10 days** |
 
 ---
 

@@ -12,10 +12,10 @@ But the honest truth: it wasn't working anymore. Slow to update, expensive to ma
 
 So I sat down with Claude Code and rebuilt everything from scratch.
 
-**What we shipped — March 19-27, 2026 (8 days):**
+**What we shipped — March 19-29, 2026 (10 days):**
 
-- 61 pages: homepage, 4 case studies, 29 blog posts, team, contact, industry pages, legal, NolteOS
-- 3 reusable components (CtaSection, CaseCard, BaseHead)
+- 72 pages: homepage, 6 case studies (with press coverage bars and image galleries), 29 blog posts, team, contact, industry pages, legal, NolteOS
+- 4 reusable components (CtaSection, CaseCard, PressBar, BaseHead)
 - Full design system: normalized typography, responsive at every breakpoint
 - SEO/GEO: JSON-LD schemas, FAQPage, sitemaps, canonical URLs, OG tags
 - Contact form → Clarify CRM via Netlify serverless function
@@ -23,6 +23,7 @@ So I sat down with Claude Code and rebuilt everything from scratch.
 - PostHog analytics with session replay, scroll depth, UTM capture
 - Custom 404 page, privacy policy, terms of service
 - Mobile responsive across all templates
+- DNS migration, SSL provisioning, and full production cutover
 
 **The cost comparison — this is the part that matters:**
 
@@ -38,7 +39,7 @@ If I had hired an agency (and I know, because I run one):
 | CRM integration | $2-4K | Claude |
 | QA & responsive testing | $3-5K | Claude |
 | **Total** | **$54-91K** | **~$200 (Claude subscription)** |
-| **Timeline** | **8-14 weeks** | **8 days** |
+| **Timeline** | **8-14 weeks** | **10 days** |
 
 That's not a typo. And the quality is production-grade — not a prototype, not an MVP. A live site with a design system, component architecture, SEO infrastructure, and CRM integration.
 
@@ -52,7 +53,7 @@ Claude: All code. All CSS. All components. WordPress migration. Image optimizati
 
 This isn't "AI replaced my team." This is a founder operating at the speed of decisions instead of the speed of sprints.
 
-I knew exactly what I wanted. I've done this work for 20 years. Claude removed the 8-14 week lag between deciding and shipping.
+I knew exactly what I wanted. I've done this work for 20 years. Claude removed the 8-14 week lag between deciding and shipping. Ten days from first commit to live on nolte.io with SSL, DNS cutover, and every old WordPress URL redirecting properly.
 
 If you don't know what you want — if you need someone to challenge your thesis, shape the strategy, and tell you what shouldn't be built — that's what Nolte does. AI doesn't replace judgment. It removes the friction after judgment has been applied.
 
@@ -83,14 +84,16 @@ P.S. Goodbye WordPress. You were great for 20 years. I mean that.
 - Post between 7-9am EST Tuesday-Thursday for max visibility
 - Reply to every comment within 1 hour
 - When someone comments "playbook", reply with the GitHub link: https://github.com/jeffreycnolte/nolte-site/blob/main/WORDPRESS-TO-ASTRO-PLAYBOOK.md
-- Pin a follow-up comment: "The full playbook is open source. 20 years of WordPress → Astro/Netlify in 8 days. Follow for more on how we use Claude across our entire delivery workflow."
+- Pin a follow-up comment: "The full playbook is open source. 20 years of WordPress → Astro/Netlify in 10 days. Follow for more on how we use Claude across our entire delivery workflow."
 - Tag @Anthropic and @ClaudeAI if they have company pages
 
 **Key stats for comments/replies:**
-- 42 commits over 8 days
-- 61 pages built
+- 65 commits over 10 days
+- 72 pages built
+- 6 case studies (with press bars and image galleries)
 - 29 blog posts migrated
 - ~70 redirect rules
-- 3 reusable components
-- First commit: March 19, last commit: March 27
-- Build time: 1.9 seconds
+- 4 reusable components (CtaSection, CaseCard, PressBar, BaseHead)
+- First commit: March 19, last commit: March 29
+- Build time: 2.5 seconds
+- Full DNS migration + SSL cutover completed
