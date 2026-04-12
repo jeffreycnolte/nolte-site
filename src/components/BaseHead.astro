@@ -28,7 +28,7 @@ const {
 const siteTitle = 'Nolte';
 const fullTitle = title === siteTitle ? title : `${title} — ${siteTitle}`;
 const canonical = new URL(canonicalURL, Astro.site);
-const ogImage = image ? new URL(image, Astro.site).href : undefined;
+const ogImage = image ? new URL(image, Astro.site).href : new URL('/images/og-default.png', Astro.site).href;
 ---
 
 <meta charset="UTF-8">
