@@ -1,0 +1,97 @@
+# Claude Code — Automated Bug Fix Workflow
+#
+# HOW IT WORKS:
+# 1. You create a GitHub issue and mention @claude in the body
+#    — OR mention @claude in a comment on any existing issue
+# 2. This workflow detects the mention and triggers
+# 3. Claude Code checks out the repo, reads the issue + comments, explores the code
+# 4. It creates a fix, runs the build to validate, and opens a PR
+# 5. You review the PR and merge
+#
+# TRIGGER EXAMPLES:
+#   In an issue body:    "The blog cards are unstyled after load more. @claude fix this."
+#   In a comment:        "@claude this is a CSS scoping issue, check the blog index styles"
+#
+# SECURITY:
+# - Only triggers when @claude is mentioned (not on every issue)
+# - Uses a repo-scoped ANTHROPIC_API_KEY secret
+# - Claude can only modify code in this repo
+# - All changes go through a PR — nothing merges without your review
+
+name: Claude Fix
+
+on:
+  # Trigger on new issues that mention @claude in the body
+  issues:
+    types: [opened]
+
+  # Trigger on comments that mention @claude
+  issue_comment:
+    types: [created]
+
+jobs:
+  fix:
+    # Only run if the issue body or comment contains @claude
+    # github.event.comment is set for comment events; github.event.issue for issue events
+    if: |
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'issues' && contains(github.event.issue.body, '@claude'))
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write       # Create branches and push commits
+      pull-requests: write   # Open PRs
+      issues: write          # Comment on the issue with status
+
+    steps:
+      # 1. Check out the full repo so Claude can read all files
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Set up Node.js so Claude can run `npm run build` to validate
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      # 3. Install dependencies so build/test commands work
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Run Claude Code with the issue context as the prompt
+      - name: Run Claude Code
+        uses: anthropic/claude-code-action@beta
+        with:
+          # Build the prompt dynamically based on whether this was an issue or comment trigger
+          prompt: |
+            You are fixing a bug in the Nolte marketing site (Astro 6).
+
+            **Issue #${{ github.event.issue.number }}:** ${{ github.event.issue.title }}
+
+            **Issue body:**
+            ${{ github.event.issue.body }}
+
+            ${{ github.event.comment.body && format('**Additional context from comment:**\n{0}', github.event.comment.body) || '' }}
+
+            Your task:
+            1. Read the issue carefully and understand the bug
+            2. Explore the codebase to find the relevant files
+            3. Identify the root cause
+            4. Implement a fix
+            5. Run `npm run build` to verify the fix doesn't break the build
+            6. Create a clear commit message explaining what was fixed and why
+
+            Important:
+            - Follow the conventions in CLAUDE.md
+            - Only change what's necessary to fix the bug — no unrelated cleanup
+            - If the issue is unclear or you can't reproduce it, comment on the issue explaining what you found
+
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          model: claude-sonnet-4-20250514
+          max_turns: 30
+          allowed_tools: "Bash,Read,Write,Edit,Glob,Grep"
+          direct_prompt: false
