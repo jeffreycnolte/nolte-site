@@ -9,7 +9,6 @@ image: /images/work/footprint/development.png
 imageAlt: "Footprint app — secure family memory sharing"
 status: "Live"
 partnership: "1 year"
-order: 10
 services:
   - Product Strategy
   - Product Management

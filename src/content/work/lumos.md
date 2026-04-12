@@ -9,7 +9,6 @@ image: /images/work/lumos/featured.png
 imageAlt: "Lumos — Secure litigation finance marketplace"
 status: "Live"
 partnership: "4 months"
-order: 3
 services:
   - Product Strategy
   - Market Analysis

@@ -9,7 +9,6 @@ image: /images/work/breeze/featured.avif
 imageAlt: "Breeze Oral Care — Patient-facing dental platform"
 status: "Live"
 partnership: "2+ years"
-order: 4
 services:
   - Product Strategy
   - Market Positioning

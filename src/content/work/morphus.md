@@ -9,7 +9,6 @@ image: /images/work/morphus/chair-1.jpg
 imageAlt: "The Morphus Lounge — premium multi-sensory wellness chair"
 status: "Live"
 partnership: "1+ year"
-order: 7
 services:
   - Product Strategy
   - E-Commerce Platform

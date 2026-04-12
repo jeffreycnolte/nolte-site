@@ -45,7 +45,6 @@ const work = defineCollection({
     description: z.string(),
     category: z.string(),
     date: z.coerce.date(),
-    order: z.number().optional(),
     status: z.string(),
     partnership: z.string(),
     image: z.string().optional(),
