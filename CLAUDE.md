@@ -52,8 +52,9 @@ npx netlify-cli deploy --prod --dir=dist  # Deploy
 - Schema: title, description, date, author, category, image (optional), draft
 
 ### Case Studies (`src/content/work/*.md`)
-- 4 studies: Breeze Oral Care, Odie, Pilou, Wake
-- Schema includes: metrics (deliveries, timeline, accuracy, cycleTime, onTime), testimonial, team, platforms, phases
+- 10 studies ordered by industry tier then partnership duration (see `order` field)
+- Schema includes: metrics (deliveries, timeline, accuracy, cycleTime, onTime), testimonial, team, platforms, phases, order
+- **When creating or modifying case studies, you MUST follow `.claude/skills/case-study-creation.md`.** This covers research, asset sourcing, press discovery, sensitivity review, content writing, ordering, and verification. Do not skip phases.
 
 ### Authors (`src/content/authors/*.json`)
 - 3 authors with name, role, bio, linkedin

@@ -45,12 +45,12 @@ const work = defineCollection({
     description: z.string(),
     category: z.string(),
     date: z.coerce.date(),
-    order: z.number().optional(),
     status: z.string(),
     partnership: z.string(),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     services: z.array(z.string()).optional(),
+    order: z.number().default(99),
     draft: z.boolean().default(false),
     metrics: z.object({
       deliveries: z.number(),
