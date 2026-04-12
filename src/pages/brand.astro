@@ -451,6 +451,84 @@ import Base from '../layouts/Base.astro';
         <!-- TRUST BAR -->
         <h3>Trust Bar</h3>
         <p class="brand-component-note">Always on a dark background directly below the hero. Logo images: grayscale, brightness(0), opacity 0.5. No text fallbacks.</p>
+
+        <!-- NAVIGATION -->
+        <h3>Navigation</h3>
+        <p class="brand-component-note">Logo left, nav links center, CTA right. DM Mono labels, red CTA button. Dark variant for hero sections.</p>
+        <div class="component-row" style="background: var(--white); border: 1px solid var(--gray-200); padding: 1.5rem 2rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1100px;">
+            <div style="display: flex; align-items: center;">
+              <img src="/images/logos/nolte-logo.svg" alt="Nolte" style="height: 18px; width: auto;" />
+            </div>
+            <div style="display: flex; gap: 2rem; align-items: center;">
+              <a href="/work" style="font-family: var(--mono); font-size: 12px; color: var(--gray-400); letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none;">Work</a>
+              <a href="/blog" style="font-family: var(--mono); font-size: 12px; color: var(--gray-400); letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none;">Blog</a>
+              <a href="/contact" style="font-family: var(--mono); font-size: 12px; color: var(--gray-400); letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none;">Contact</a>
+            </div>
+            <a class="nav-cta" href="#" onclick="return false">Get Your Delivery Plan</a>
+          </div>
+        </div>
+
+        <!-- PRESS BAR -->
+        <h3>Press Coverage Bar</h3>
+        <p class="brand-component-note">Used on case study pages. Grid layout with publication logos and pull quotes. Logos mapped by publication slug in component. Classes: <code>.press-section</code>, <code>.press-quote</code>.</p>
+        <div class="component-row" style="background: var(--gray-100); padding: 2rem;">
+          <div style="max-width: 1100px; margin: 0 auto;">
+            <span style="display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 2rem; text-align: center;">In the Press</span>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--gray-200);">
+              <div style="background: var(--white); padding: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-400);">TechCrunch</span>
+                <p style="font-family: var(--serif); font-size: 1.1rem; font-style: italic; line-height: 1.4; color: var(--black); margin: 0;">"Nolte's predictive delivery approach is changing how software gets built."</p>
+              </div>
+              <div style="background: var(--white); padding: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-400);">VentureBeat</span>
+                <p style="font-family: var(--serif); font-size: 1.1rem; font-style: italic; line-height: 1.4; color: var(--black); margin: 0;">"95% forecast accuracy backed by two decades of delivery data."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA SECTION -->
+        <h3>Main CTA Section</h3>
+        <p class="brand-component-note">Pre-footer CTA across all pages. "Build your product roadmap" with NolteOS preview. Dark background with 2/3 : 1/3 content/visual split. Classes: <code>.predictability-cta</code>, <code>.os-preview</code>.</p>
+        <div class="component-demo-dark" style="padding: 4rem 2rem;">
+          <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: center;">
+            <div>
+              <span style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 1rem;">Start Here</span>
+              <h2 style="font-family: var(--serif); font-size: 2rem; line-height: 1.2; color: var(--white); margin-bottom: 1rem;">Build your product roadmap in under 60 seconds.</h2>
+              <p style="font-size: 1.0625rem; line-height: 1.7; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">Describe your product idea in plain language. NolteOS analyzes it against 20 years of experience and historic delivery data.</p>
+              <ul style="margin: 1.5rem 0; color: rgba(255,255,255,0.8); line-height: 1.7;">
+                <li>Competitive landscape — where you can differentiate and win</li>
+                <li>Risk areas — regulatory, technical, and market challenges</li>
+                <li>Delivery forecast — scope, timeline, and cost to get there</li>
+              </ul>
+              <a class="btn-hero btn-hero-primary" href="#" onclick="return false" style="margin-top: 2rem;">Build Your Product Roadmap →</a>
+            </div>
+            <div style="background: var(--dark-surface); border: 1px solid var(--dark-border); padding: 1.5rem;">
+              <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 1rem;">Product Opportunity Assessment</div>
+              <div style="display: grid; gap: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid var(--dark-border);">
+                  <div>
+                    <div style="color: var(--white); font-size: 0.875rem;">Regulatory</div>
+                    <div style="font-family: var(--mono); font-size: 10px; color: var(--gray-400); text-transform: uppercase;">HIPAA · State filing</div>
+                  </div>
+                  <div style="width: 60px; height: 4px; background: var(--dark-border); position: relative;">
+                    <div style="position: absolute; left: 0; width: 35%; height: 100%; background: var(--accent);"></div>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid var(--dark-border);">
+                  <div>
+                    <div style="color: var(--white); font-size: 0.875rem;">Market Fit</div>
+                    <div style="font-family: var(--mono); font-size: 10px; color: var(--gray-400); text-transform: uppercase;">Competitive positioning</div>
+                  </div>
+                  <div style="width: 60px; height: 4px; background: var(--dark-border); position: relative;">
+                    <div style="position: absolute; left: 30%; width: 55%; height: 100%; background: var(--blue);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -635,6 +713,127 @@ import Base from '../layouts/Base.astro';
           <p><code>./scripts/regression-test.sh</code> — auto-detect mode against production<br>
           <code>./scripts/regression-test.sh http://localhost:4321 --all</code> — full suite against local<br>
           <code>./scripts/regression-test.sh https://nolte-site.netlify.app --all</code> — full suite against staging</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 07. MAINTENANCE ─── -->
+    <section class="brand-section brand-section-alt" id="maintenance">
+      <div class="wide-wrap">
+        <span class="label">07</span>
+        <h2 class="section-heading">Style Guide Maintenance</h2>
+        <p class="brand-section-intro">Process for keeping this style guide current with every component change. Follow this checklist when creating new components or modifying existing ones.</p>
+
+        <h3>New Component Checklist</h3>
+        <div class="req-list">
+          <div class="req-item">
+            <div class="req-num">01</div>
+            <div class="req-content">
+              <h3>Create the Component</h3>
+              <p>Build your component in <code>src/components/</code> or define CSS classes in <code>src/styles/global.css</code>. Follow existing naming conventions and design patterns.</p>
+            </div>
+          </div>
+          <div class="req-item">
+            <div class="req-num">02</div>
+            <div class="req-content">
+              <h3>Document in Brand Guide</h3>
+              <p>Add a new section to this page under "Components" with: component name, usage note, live example, and relevant CSS classes. Use the existing component sections as templates.</p>
+            </div>
+          </div>
+          <div class="req-item">
+            <div class="req-num">03</div>
+            <div class="req-content">
+              <h3>Update Component Audit</h3>
+              <p>Add the new component to the audit list below. Include the component name, file location, and documentation status.</p>
+            </div>
+          </div>
+          <div class="req-item">
+            <div class="req-num">04</div>
+            <div class="req-content">
+              <h3>Test Integration</h3>
+              <p>Run <code>npm run build</code> to ensure the component works across all pages. Test responsive behavior and accessibility.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Component Audit</h3>
+        <p class="brand-component-note">Complete inventory of all UI components used site-wide. Check this list when making changes to ensure nothing gets missed.</p>
+        <div class="breakpoints-table">
+          <div class="bp-row bp-header">
+            <span>Component</span>
+            <span>Location</span>
+            <span>Brand Guide Status</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>BaseHead</strong></span>
+            <span><code>src/components/BaseHead.astro</code></span>
+            <span style="color: var(--gray-400);">Meta component (not UI)</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>CaseCard</strong></span>
+            <span><code>src/components/CaseCard.astro</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>PressBar</strong></span>
+            <span><code>src/components/PressBar.astro</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>CtaSection</strong></span>
+            <span><code>src/components/CtaSection.astro</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>Navigation</strong></span>
+            <span><code>src/layouts/Base.astro</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>Buttons & CTAs</strong></span>
+            <span><code>src/styles/global.css</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>Labels & Pills</strong></span>
+            <span><code>src/styles/global.css</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>Pillar Cards</strong></span>
+            <span><code>src/styles/global.css</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>Stats Row</strong></span>
+            <span><code>src/styles/global.css</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>Blog Featured Cards</strong></span>
+            <span><code>src/styles/global.css</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>Industry Vertical Cards</strong></span>
+            <span><code>src/styles/global.css</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>Trust Bar</strong></span>
+            <span><code>src/styles/global.css</code></span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+          <div class="bp-row">
+            <span><strong>NolteOS Mock UIs</strong></span>
+            <span><code>src/styles/global.css</code> (shot-* classes)</span>
+            <span style="color: var(--accent);">✓ Documented</span>
+          </div>
+        </div>
+
+        <div class="brand-rule" style="margin-top: 2rem;">
+          <span class="brand-rule-label">Automation Opportunity</span>
+          <p>Consider adding a build step that scans <code>src/components/</code> and <code>global.css</code> for new component classes and flags missing documentation. This could be part of the regression test suite.</p>
         </div>
       </div>
     </section>
