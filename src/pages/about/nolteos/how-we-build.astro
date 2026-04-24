@@ -1,0 +1,921 @@
+---
+import Base from '../../../layouts/Base.astro';
+import CtaSection from '../../../components/CtaSection.astro';
+---
+<Base
+  title="How We Build — NolteOS — Nolte"
+  description="The AI-integrated development methodology behind NolteOS. Every AI action is human-approved. Every decision is logged. Every delivery is validated before it counts."
+  fullWidth
+>
+
+  <!-- HERO -->
+  <div class="hero-dark hero-centered" style="margin-top: -5rem;">
+    <div class="wide-wrap">
+      <span class="eyebrow">NolteOS — How We Build</span>
+      <h1>AI accelerates execution.<br><em>Humans approve every step.</em></h1>
+      <p class="hero-subtext">The dashboard shows you what shipped. This is the process that produces it. Structured AI development with human sign-off at every gate — enforced by infrastructure, not team discipline.</p>
+    </div>
+  </div>
+
+  <!-- THE PROBLEM -->
+  <div class="hwb-section hwb-white">
+    <div class="wide-wrap">
+      <div class="hwb-split">
+        <div class="hwb-split-copy">
+          <span class="eyebrow">The Problem</span>
+          <h2>AI makes individuals faster.<br>It doesn't make teams predictable.</h2>
+          <p>Most AI tooling solves the wrong problem. Engineers get a 10x productivity boost. Throughput stays the same because coordination, handoffs, and decision clarity don't improve. Worse: AI introduces new failure modes. Hallucinations ship. Implementations diverge from approved specs. There's no audit trail when something goes wrong.</p>
+          <p>In regulated industries, that's not a workflow issue — it's a liability.</p>
+        </div>
+        <div class="hwb-split-visual">
+          <div class="hwb-compare-card">
+            <div class="hwb-compare-row bad">
+              <span class="hwb-compare-icon">✗</span>
+              <div>
+                <strong>AI as autocomplete</strong>
+                <span>Individual productivity gain, zero coordination improvement. No audit trail. No approval gates.</span>
+              </div>
+            </div>
+            <div class="hwb-compare-row bad">
+              <span class="hwb-compare-icon">✗</span>
+              <div>
+                <strong>Autonomous agents</strong>
+                <span>Fast, but unaccountable. In regulated environments, "the AI did it" is not a compliance answer.</span>
+              </div>
+            </div>
+            <div class="hwb-compare-row good">
+              <span class="hwb-compare-icon">✓</span>
+              <div>
+                <strong>Structured AI delivery</strong>
+                <span>AI proposes. Humans approve. Every decision logged. Every delivery validated. Audit trail by design.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THREE PHASES -->
+  <div class="hwb-section hwb-dark">
+    <div class="wide-wrap">
+      <span class="eyebrow">The Process</span>
+      <h2 class="hwb-centered-heading">Three phases. One continuous loop.</h2>
+      <p class="hwb-centered-sub">Every engagement moves through the same structured process. The phases map to how Nolte engages: Strategy, Launch, Evolve. The loop repeats at every delivery.</p>
+
+      <div class="hwb-phases-grid">
+        <div class="hwb-phase">
+          <div class="hwb-phase-num">01</div>
+          <h3>Shape</h3>
+          <p class="hwb-phase-tagline">Define before you build</p>
+          <p>Business goals are decomposed into structured deliveries. AI assists with specification drafting, surface clarifying questions, and identifies scope risks. Every delivery spec is human-approved before implementation begins.</p>
+          <ul class="hwb-phase-list">
+            <li>Business objective linked to every delivery</li>
+            <li>Acceptance criteria written before code</li>
+            <li>Scope approved by stakeholder, not inferred</li>
+            <li>Decomposed into cycle-time-bounded units</li>
+          </ul>
+        </div>
+        <div class="hwb-phase">
+          <div class="hwb-phase-num">02</div>
+          <h3>Build</h3>
+          <p class="hwb-phase-tagline">Propose, review, execute</p>
+          <p>AI proposes an implementation plan against the approved spec. It flags ambiguities and asks questions before touching code. The engineer reviews the plan, resolves open questions, and approves before execution begins. Code ships only with explicit sign-off.</p>
+          <ul class="hwb-phase-list">
+            <li>Implementation plan generated from approved spec</li>
+            <li>Ambiguities surfaced before execution</li>
+            <li>Engineer approves plan before any code runs</li>
+            <li>Execution logged against the approved plan</li>
+          </ul>
+        </div>
+        <div class="hwb-phase">
+          <div class="hwb-phase-num">03</div>
+          <h3>Validate</h3>
+          <p class="hwb-phase-tagline">Ship only what's verified</p>
+          <p>Every delivery is validated against its acceptance criteria — by someone other than the builder. Not "done implementing" — done, in production, observable, meeting the criteria that were written before a line of code was written. That's when it counts in NolteOS.</p>
+          <ul class="hwb-phase-list">
+            <li>Validated against pre-written acceptance criteria</li>
+            <li>Validated by non-builder (client or QA)</li>
+            <li>Live in production, not staging</li>
+            <li>Delivery logged and metrics updated</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE APPROVAL LOOP -->
+  <div class="hwb-section hwb-white">
+    <div class="wide-wrap">
+      <div class="hwb-split reverse">
+        <div class="hwb-split-copy">
+          <span class="eyebrow">The Core Loop</span>
+          <h2>The pattern that repeats<br>at every delivery.</h2>
+          <p>Regardless of phase, the same loop runs. AI doesn't operate autonomously — it moves forward only when humans have reviewed and approved the next step. This isn't a cultural practice. It's enforced by the infrastructure.</p>
+          <p>The result: a complete, timestamped record of every proposal, every question, every approval, and every execution. Not because someone documented it — because the process produces it automatically.</p>
+        </div>
+        <div class="hwb-split-visual">
+          <div class="hwb-loop-diagram">
+            <div class="hwb-loop-step">
+              <div class="hwb-loop-num">1</div>
+              <div class="hwb-loop-label">
+                <strong>Propose</strong>
+                <span>AI generates a concrete, reviewable plan</span>
+              </div>
+            </div>
+            <div class="hwb-loop-arrow">↓</div>
+            <div class="hwb-loop-step">
+              <div class="hwb-loop-num">2</div>
+              <div class="hwb-loop-label">
+                <strong>Question</strong>
+                <span>AI surfaces ambiguities before proceeding</span>
+              </div>
+            </div>
+            <div class="hwb-loop-arrow">↓</div>
+            <div class="hwb-loop-step hwb-loop-human">
+              <div class="hwb-loop-num">3</div>
+              <div class="hwb-loop-label">
+                <strong>Approve</strong>
+                <span>Human reviews, resolves, and signs off</span>
+              </div>
+            </div>
+            <div class="hwb-loop-arrow">↓</div>
+            <div class="hwb-loop-step">
+              <div class="hwb-loop-num">4</div>
+              <div class="hwb-loop-label">
+                <strong>Execute</strong>
+                <span>AI implements against the approved plan</span>
+              </div>
+            </div>
+            <div class="hwb-loop-arrow">↓</div>
+            <div class="hwb-loop-step hwb-loop-human">
+              <div class="hwb-loop-num">5</div>
+              <div class="hwb-loop-label">
+                <strong>Validate</strong>
+                <span>Human confirms completion against criteria</span>
+              </div>
+            </div>
+            <div class="hwb-loop-human-label">Human decision points</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCKUP: SPEC + IMPLEMENTATION PLAN -->
+  <div class="hwb-section hwb-gray">
+    <div class="wide-wrap">
+      <span class="eyebrow">In Practice</span>
+      <h2 class="hwb-centered-heading">What this looks like at the delivery level</h2>
+      <p class="hwb-centered-sub">Every delivery moves through the same structured sequence. Here's what a single delivery looks like from spec to ship.</p>
+
+      <div class="hwb-mockup-row">
+
+        <div class="hwb-mockup-card">
+          <div class="hwb-mockup-label">1 — Delivery Spec</div>
+          <div class="shot-window">
+            <div class="shot-toolbar">
+              <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+            </div>
+            <div class="shot-content hwb-shot-content">
+              <div class="hwb-spec-header">
+                <span class="hwb-spec-title">Insurance Quote Request Form</span>
+                <span class="hwb-spec-badge approved">Approved</span>
+              </div>
+              <div class="hwb-spec-row">
+                <span class="hwb-spec-label">Business objective</span>
+                <span class="hwb-spec-val">Enable users to submit quote requests tied to carrier requirements</span>
+              </div>
+              <div class="hwb-spec-row">
+                <span class="hwb-spec-label">Type</span>
+                <span class="hwb-spec-val">Story — User-facing feature</span>
+              </div>
+              <div class="hwb-spec-section-title">Acceptance criteria</div>
+              <div class="hwb-spec-criteria">
+                <div class="hwb-criteria-item">User can complete and submit quote form in under 3 minutes</div>
+                <div class="hwb-criteria-item">Required fields validated before submission</div>
+                <div class="hwb-criteria-item">Submission triggers carrier API call with correct payload</div>
+                <div class="hwb-criteria-item">Confirmation displayed and emailed within 30 seconds</div>
+              </div>
+              <div class="hwb-spec-footer">
+                <span>Approved by J. Turnbull · Mar 14, 2026 · 09:41am</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hwb-mockup-card">
+          <div class="hwb-mockup-label">2 — Implementation Plan</div>
+          <div class="shot-window shot-window-dark">
+            <div class="shot-toolbar">
+              <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+            </div>
+            <div class="shot-content hwb-shot-content">
+              <div class="hwb-plan-header">
+                <span class="hwb-plan-title">Implementation Plan — Quote Request Form</span>
+              </div>
+              <div class="hwb-plan-clarifications">
+                <div class="hwb-clarification-label">Clarifications before execution</div>
+                <div class="hwb-clarification-item">
+                  <span class="hwb-q">Q</span>
+                  <span>Which carrier API endpoint — Majesco or IVANS?</span>
+                  <span class="hwb-resolved">Resolved: IVANS</span>
+                </div>
+                <div class="hwb-clarification-item">
+                  <span class="hwb-q">Q</span>
+                  <span>Should ZIP code auto-populate state field?</span>
+                  <span class="hwb-resolved">Resolved: Yes</span>
+                </div>
+              </div>
+              <div class="hwb-plan-steps-label">Steps</div>
+              <div class="hwb-plan-step done">
+                <span class="hwb-check">✓</span> Build form component with validation
+              </div>
+              <div class="hwb-plan-step done">
+                <span class="hwb-check">✓</span> Wire IVANS API integration
+              </div>
+              <div class="hwb-plan-step done">
+                <span class="hwb-check">✓</span> Implement confirmation email trigger
+              </div>
+              <div class="hwb-plan-step done">
+                <span class="hwb-check">✓</span> Deploy to production
+              </div>
+              <div class="hwb-plan-approved">
+                <span class="hwb-plan-approved-label">Plan approved by engineer · Executed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hwb-mockup-card">
+          <div class="hwb-mockup-label">3 — Validation</div>
+          <div class="shot-window">
+            <div class="shot-toolbar">
+              <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
+            </div>
+            <div class="shot-content hwb-shot-content">
+              <div class="hwb-val-header">
+                <span class="hwb-val-title">Delivery Validation</span>
+                <span class="hwb-spec-badge approved">Done</span>
+              </div>
+              <div class="hwb-val-criteria-label">Acceptance criteria check</div>
+              <div class="hwb-val-item checked">
+                <span class="hwb-check">✓</span> Form completed in &lt;3 min — confirmed
+              </div>
+              <div class="hwb-val-item checked">
+                <span class="hwb-check">✓</span> Required field validation — working
+              </div>
+              <div class="hwb-val-item checked">
+                <span class="hwb-check">✓</span> Carrier API call verified in logs
+              </div>
+              <div class="hwb-val-item checked">
+                <span class="hwb-check">✓</span> Confirmation email received — 18s
+              </div>
+              <div class="hwb-val-footer">
+                <span class="hwb-val-validator">Validated by Y. Lopes · Mar 15, 2026</span>
+                <span class="hwb-val-status">Live in production</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY THIS PRODUCES ACCURACY -->
+  <div class="hwb-section hwb-white">
+    <div class="wide-wrap">
+      <div class="hwb-accuracy-grid">
+        <div class="hwb-accuracy-copy">
+          <span class="eyebrow">Forecast Accuracy</span>
+          <h2>Structure is why we can commit to a number.</h2>
+          <p>95% forecast accuracy isn't a marketing claim — it's a measurable output of a structured process. When every delivery has the same defined shape (approved spec, clarified ambiguities, execution against plan, non-builder validation), cycle time becomes consistent. Consistent cycle time produces reliable throughput data. Reliable throughput data is how you forecast.</p>
+          <p>Unstructured AI development produces variable output. Variable output breaks forecasts. The approval loop isn't bureaucracy — it's what makes the number real.</p>
+        </div>
+        <div class="hwb-accuracy-stats">
+          <div class="hwb-stat">
+            <span class="hwb-stat-val">95%</span>
+            <span class="hwb-stat-label">Forecast accuracy across all active engagements</span>
+          </div>
+          <div class="hwb-stat">
+            <span class="hwb-stat-val">4.8d</span>
+            <span class="hwb-stat-label">Average cycle time — consistent because the process is consistent</span>
+          </div>
+          <div class="hwb-stat">
+            <span class="hwb-stat-val">97%</span>
+            <span class="hwb-stat-label">On-time delivery rate — structure eliminates the surprises</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGULATED INDUSTRIES -->
+  <div class="hwb-section hwb-dark">
+    <div class="wide-wrap">
+      <span class="eyebrow">Regulated Industries</span>
+      <h2 class="hwb-centered-heading">The audit trail isn't a side effect.<br>It's the point.</h2>
+      <p class="hwb-centered-sub">In most development contexts, documentation is a chore. In regulated industries, it's a compliance requirement. The NolteOS build process produces it automatically.</p>
+
+      <div class="hwb-regulated-grid">
+        <div class="hwb-regulated-item">
+          <h3>Every decision is timestamped</h3>
+          <p>Who approved what, when, and why — automatically captured at the delivery level and surfaced in your Decisions & Approvals dashboard. Not reconstructed after the fact. Recorded as it happens.</p>
+        </div>
+        <div class="hwb-regulated-item">
+          <h3>Acceptance criteria as compliance evidence</h3>
+          <p>Every delivery has pre-written, plain-language acceptance criteria. Validated by a non-builder. That's the same structure regulators use for test documentation — because it is test documentation.</p>
+        </div>
+        <div class="hwb-regulated-item">
+          <h3>No code ships without sign-off</h3>
+          <p>Implementation plans are reviewed and approved before execution. In healthcare, financial services, and insurance, "the AI wrote it" is not a sufficient explanation. The approval record is.</p>
+        </div>
+        <div class="hwb-regulated-item">
+          <h3>Git as the source of truth</h3>
+          <p>Every approval, every decision, every spec lives as a permanent record — not in a database that can be edited, but in version-controlled history. Auditors get a trace that doesn't change after the fact.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOLTEOS CONNECTION -->
+  <div class="hwb-section hwb-white">
+    <div class="wide-wrap hwb-connection-wrap">
+      <span class="eyebrow">The Connection</span>
+      <h2>The process produces the data.<br>NolteOS surfaces it.</h2>
+      <p class="hwb-connection-sub">The dashboard you see as a client isn't a reporting layer added on top of development — it's a direct output of how we build. Decisions logged in the build process surface in Decisions & Approvals. Deliveries validated by non-builders move to Done in Kanban. Consistent cycle time updates your forecast in real time.</p>
+      <div class="hwb-connection-links">
+        <a class="hwb-connection-link" href="/about/nolteos">
+          <strong>See the client dashboard →</strong>
+          <span>What you see in NolteOS — metrics, kanban, decisions, and weekly status</span>
+        </a>
+        <a class="hwb-connection-link" href="/delivery">
+          <strong>What counts as a delivery →</strong>
+          <span>The definition, requirements, and types — what makes a delivery valid</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <CtaSection />
+
+</Base>
+
+<style>
+  /* ─── Layout ──────────────────────────────────── */
+  .hwb-section {
+    padding: 5rem 0;
+  }
+  .hwb-white { background: var(--white); }
+  .hwb-gray  { background: var(--gray-100); }
+  .hwb-dark  {
+    background: var(--gradient-hero);
+    color: var(--white);
+  }
+  .hwb-centered-heading {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin: 0.5rem 0 1rem;
+    text-align: center;
+  }
+  .hwb-centered-sub {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .hwb-dark .hwb-centered-sub {
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ─── Split layout ────────────────────────────── */
+  .hwb-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .hwb-split.reverse { direction: rtl; }
+  .hwb-split.reverse > * { direction: ltr; }
+  .hwb-split-copy h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin: 0.5rem 0 1.25rem;
+    line-height: 1.2;
+  }
+  .hwb-split-copy p {
+    color: var(--gray-600);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+
+  /* ─── Problem comparison card ─────────────────── */
+  .hwb-compare-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .hwb-compare-row {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--gray-100);
+    align-items: flex-start;
+  }
+  .hwb-compare-row:last-child { border-bottom: none; }
+  .hwb-compare-row.bad { opacity: 0.7; }
+  .hwb-compare-row.good { background: #f0fdf4; }
+  .hwb-compare-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .hwb-compare-row.bad .hwb-compare-icon { color: var(--gray-400); }
+  .hwb-compare-row.good .hwb-compare-icon { color: #16a34a; }
+  .hwb-compare-row strong {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+  .hwb-compare-row span {
+    font-size: 0.8rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+  }
+
+  /* ─── Phases grid ─────────────────────────────── */
+  .hwb-phases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .hwb-phase {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  .hwb-phase-num {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+  .hwb-phase h3 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    margin: 0 0 0.25rem;
+    color: var(--white);
+  }
+  .hwb-phase-tagline {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1rem;
+  }
+  .hwb-phase p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+  .hwb-phase-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .hwb-phase-list li {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+    padding-left: 1rem;
+    position: relative;
+  }
+  .hwb-phase-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* ─── Approval loop diagram ───────────────────── */
+  .hwb-loop-diagram {
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+  }
+  .hwb-loop-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+  }
+  .hwb-loop-step.hwb-loop-human {
+    border-color: var(--accent);
+    background: #fff7f4;
+  }
+  .hwb-loop-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .hwb-loop-human .hwb-loop-num {
+    background: var(--accent);
+  }
+  .hwb-loop-label strong {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+  }
+  .hwb-loop-label span {
+    font-size: 0.78rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+  }
+  .hwb-loop-arrow {
+    text-align: center;
+    color: var(--gray-300);
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    line-height: 1;
+  }
+  .hwb-loop-human-label {
+    margin-top: 1rem;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-align: right;
+  }
+
+  /* ─── Delivery mockup row ─────────────────────── */
+  .hwb-mockup-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .hwb-mockup-card {}
+  .hwb-mockup-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray-500);
+    margin-bottom: 0.75rem;
+  }
+  .hwb-shot-content {
+    font-size: 0.78rem;
+  }
+
+  /* spec mockup */
+  .hwb-spec-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+  .hwb-spec-title {
+    font-weight: 600;
+    font-size: 0.82rem;
+    line-height: 1.3;
+  }
+  .hwb-spec-badge {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .hwb-spec-badge.approved {
+    background: #dcfce7;
+    color: #16a34a;
+  }
+  .hwb-spec-row {
+    margin-bottom: 0.6rem;
+  }
+  .hwb-spec-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-500);
+    margin-bottom: 0.15rem;
+  }
+  .hwb-spec-val {
+    color: var(--black);
+    line-height: 1.4;
+    font-size: 0.78rem;
+  }
+  .hwb-spec-section-title {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-500);
+    margin: 0.75rem 0 0.4rem;
+  }
+  .hwb-spec-criteria {
+    display: grid;
+    gap: 0.3rem;
+    margin-bottom: 0.75rem;
+  }
+  .hwb-criteria-item {
+    padding: 0.35rem 0.5rem;
+    background: var(--gray-100);
+    border-radius: 3px;
+    font-size: 0.75rem;
+    color: var(--gray-700);
+    line-height: 1.4;
+  }
+  .hwb-spec-footer {
+    font-size: 0.65rem;
+    color: var(--gray-400);
+    font-family: var(--mono);
+    border-top: 1px solid var(--gray-100);
+    padding-top: 0.5rem;
+  }
+
+  /* plan mockup (dark) */
+  .hwb-plan-header {
+    margin-bottom: 0.75rem;
+  }
+  .hwb-plan-title {
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.3;
+  }
+  .hwb-plan-clarifications {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 0.6rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .hwb-clarification-label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0.4rem;
+  }
+  .hwb-clarification-item {
+    display: grid;
+    grid-template-columns: 16px 1fr auto;
+    gap: 0.4rem;
+    align-items: start;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+  }
+  .hwb-q {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .hwb-resolved {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: #4ade80;
+    white-space: nowrap;
+  }
+  .hwb-plan-steps-label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0.4rem;
+  }
+  .hwb-plan-step {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .hwb-plan-step.done { color: rgba(255,255,255,0.9); }
+  .hwb-check { color: #4ade80; flex-shrink: 0; }
+  .hwb-plan-approved {
+    margin-top: 0.75rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .hwb-plan-approved-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* validation mockup */
+  .hwb-val-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .hwb-val-title {
+    font-weight: 600;
+    font-size: 0.82rem;
+  }
+  .hwb-val-criteria-label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray-500);
+    margin-bottom: 0.5rem;
+  }
+  .hwb-val-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    line-height: 1.4;
+  }
+  .hwb-val-item.checked { color: var(--black); }
+  .hwb-val-item .hwb-check { color: #16a34a; }
+  .hwb-val-footer {
+    margin-top: 0.75rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .hwb-val-validator {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--gray-500);
+  }
+  .hwb-val-status {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: #16a34a;
+  }
+
+  /* ─── Accuracy section ────────────────────────── */
+  .hwb-accuracy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .hwb-accuracy-copy h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin: 0.5rem 0 1.25rem;
+    line-height: 1.2;
+  }
+  .hwb-accuracy-copy p {
+    color: var(--gray-600);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .hwb-accuracy-stats {
+    display: grid;
+    gap: 2rem;
+  }
+  .hwb-stat {}
+  .hwb-stat-val {
+    display: block;
+    font-family: var(--serif);
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .hwb-stat-label {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+  }
+
+  /* ─── Regulated grid ──────────────────────────── */
+  .hwb-regulated-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .hwb-regulated-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 1.75rem;
+  }
+  .hwb-regulated-item h3 {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--white);
+    margin: 0 0 0.75rem;
+  }
+  .hwb-regulated-item p {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ─── Connection section ──────────────────────── */
+  .hwb-connection-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hwb-connection-wrap h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin: 0.5rem 0 1rem;
+    line-height: 1.2;
+  }
+  .hwb-connection-sub {
+    color: var(--gray-600);
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+  .hwb-connection-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    text-align: left;
+  }
+  .hwb-connection-link {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .hwb-connection-link:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .hwb-connection-link strong {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+    color: var(--black);
+  }
+  .hwb-connection-link span {
+    font-size: 0.8rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+  }
+
+  /* ─── Responsive ──────────────────────────────── */
+  @media (max-width: 900px) {
+    .hwb-split,
+    .hwb-split.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 2.5rem;
+    }
+    .hwb-phases-grid,
+    .hwb-mockup-row {
+      grid-template-columns: 1fr;
+    }
+    .hwb-accuracy-grid,
+    .hwb-regulated-grid,
+    .hwb-connection-links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

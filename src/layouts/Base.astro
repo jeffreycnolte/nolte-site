@@ -67,8 +67,17 @@ function isActive(path: string) {
       {
         "@type": "Person",
         "name": "Jeffrey Nolte",
-        "jobTitle": "Managing Director",
+        "jobTitle": "Founder & Managing Director",
+        "description": "Jeffrey founded Nolte in 2006 and has spent two decades building, scaling, and exiting technology companies in regulated industries. Developed NolteOS — a predictive delivery system achieving 95% forecast accuracy. Active investor and Chairman of Buenacopa.",
+        "url": "https://nolte.io/about",
         "sameAs": "https://www.linkedin.com/in/jeffreynolte/"
+      },
+      {
+        "@type": "Person",
+        "name": "Yanna Lopes",
+        "jobTitle": "Head of Products",
+        "description": "Legal background turned product leader. Shapes strategy and holds the line on quality across Nolte's regulated industry engagements.",
+        "sameAs": "https://www.linkedin.com/in/yannalopes/"
       }
     ],
     "knowsAbout": ["software delivery", "product strategy", "regulated industries", "healthcare technology", "insurance technology", "financial technology"]
@@ -95,6 +104,7 @@ function isActive(path: string) {
     </button>
     <div class="nav-links">
       <a href="/work" aria-current={isActive('/work') ? 'page' : undefined}>Work</a>
+      <a href="/about/nolteos/how-we-build" aria-current={isActive('/about/nolteos/how-we-build') ? 'page' : undefined}>How We Build</a>
       <a href="/contact" aria-current={isActive('/contact') ? 'page' : undefined}>Let's Talk</a>
       <a href="https://os.nolte.io" class="nav-cta">Build Your Roadmap</a>
     </div>
@@ -112,13 +122,21 @@ function isActive(path: string) {
     </div>
     <div class="footer-col">
       <h4>Company</h4>
+      <a href="/about">About</a>
       <a href="/about/nolteos">NolteOS</a>
+      <a href="/about/nolteos/how-we-build">How We Build</a>
       <a href="/contact">Contact</a>
     </div>
     <div class="footer-col">
       <h4>Work</h4>
       <a href="/work">Case Studies</a>
       <a href="/delivery">Delivery Model</a>
+    </div>
+    <div class="footer-col">
+      <h4>Industries</h4>
+      <a href="/industries/insurance">Insurance</a>
+      <a href="/industries/healthcare">Healthcare</a>
+      <a href="/industries/finance">Financial Services</a>
     </div>
     <div class="footer-col">
       <h4>Resources</h4>
